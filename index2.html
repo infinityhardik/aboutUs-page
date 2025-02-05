@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mahadev Traders | Premium Plywood & Door Wholesaler Rajkot</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Leading premium plywood wholesaler in Rajkot. Authorized distributor of Marlex, Zevik, Simson. Top-quality flush doors & block boards. ISO certified wholesale supplier.">
+    <meta name="keywords" content="Premium Plywood Wholesaler Rajkot, Flush Door Manufacturers Gujarat, Marlex Distributors Rajkot, Zevik Dealer Gujarat">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Premium Plywood & Door Solutions | Mahadev Traders Rajkot">
+    <meta property="og:description" content="30+ years of excellence in premium building materials. Authorized wholesaler of leading brands in Rajkot.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --accent: #E67E22;
+            --surface: #ffffff;
+            --surface-dark: #1a1a1a;
+        }
+        
+        /* Neo-skeuomorphic Design System */
+        .neo-card {
+            background: var(--surface);
+            border-radius: 24px;
+            box-shadow: 
+                20px 20px 60px rgba(0,0,0,0.05),
+                -20px -20px 60px rgba(255,255,255,0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .neo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                25px 25px 75px rgba(0,0,0,0.1),
+                -25px -25px 75px rgba(255,255,255,0.9);
+        }
+        
+        /* Gradient Morphing Background */
+        .morphing-bg {
+            background: linear-gradient(45deg, #2C3E50, #c63bd3, #2C3E50);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        
+        /* Holographic Brand Effect */
+        .brand-logo {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .brand-logo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.8) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: rotate(45deg);
+            animation: holographicShine 3s ease-in-out infinite;
+        }
+        
+        @keyframes holographicShine {
+            0% { transform: translateX(-100%) rotate(45deg) }
+            100% { transform: translateX(100%) rotate(45deg) }
+        }
+        
+        /* Hero Section with Parallax */
+        .hero {
+            min-height: 100vh;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            transform-style: preserve-3d;
+            transform: translateZ(-100px);
+        }
+        
+        /* Product Card 3D Transform */
+        .product-card {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        
+        /* Micro-interactions */
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-button:hover::after {
+            left: 100%;
+        }
+        
+        /* Dark Mode Styles */
+        [data-theme="dark"] {
+            --surface: var(--surface-dark);
+            --text: #ffffff;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .neo-card {
+                margin: 1rem 0;
+            }
+            
+            .hero-content {
+                transform: none;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WholesaleStore",
+      "name": "Mahadev Traders",
+      "description": "Premium plywood and door wholesaler in Rajkot",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "postalCode": "360004",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.2594208",
+        "longitude": "70.7973544"
+      },
+      "openingHours": "Mo-Sa 09:00-19:30"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3 neo-card">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/api/placeholder/150/50" alt="Mahadev Traders Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#brands">Brands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#specifications">Specs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-primary ms-2" id="themeSwitcher">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero morphing-bg d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content text-white">
+                        <h1 class="display-4 fw-bold mb-4">Premium Building Materials Wholesale</h1>
+                        <p class="lead mb-4">Trusted by contractors and architects for over 30 years</p>
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-light btn-lg cta-button">Get Quote</button>
+                            <button class="btn btn-outline-light btn-lg">View Catalog</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/favicon.webp" alt="Premium Plywood Collection" class="img-fluid rounded-4 neo-card">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Authorized Distributors</h2>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="brand-logo neo-card p-4">
+                        <img src="/api/placeholder/150/80" alt="Marlex Plywood" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Repeat for other brands -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Premium Products</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card neo-card p-4">
+                        <img src="/api/placeholder/400/300" alt="Marine Plywood" class="img-fluid rounded mb-3">
+                        <h3>Marine Plywood</h3>
+                        <p>Water-resistant, premium grade plywood for marine applications</p>
+                        <button class="btn btn-primary cta-button">View Details</button>
+                    </div>
+                </div>
+                <!-- Repeat for other products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section id="specifications" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Technical Specifications</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="neo-card p-4">
+                        <h3>Quality Parameters</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                BWP Grade (Boiling Water Proof)
+                            </li>
+                            <!-- Add more specs -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="neo-card p-4">
+                        <h3>Certifications</h3>
+                        <div class="d-flex gap-3">
+                            <img src="/api/placeholder/100/100" alt="ISO 9001" class="img-fluid">
+                            <!-- Add more certification badges -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="neo-card p-4">
+                        <h2>Get in Touch</h2>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary cta-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="neo-card p-4 h-100">
+                        <h2>Visit Us</h2>
+                        <p>Nr. S.T. Workshop, Gondal Road<br>Rajkot - 360004, Gujarat</p>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4900053825672!2d70.79735447615813!3d22.259420879716018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca62d2502869%3A0xa6b8e085d78a67eb!2sMahadev%20Traders%20Plywood%20Block-Board%20%26%20Flush-Door%20Wholesaler!5e0!3m2!1sen!2sin!4v1708942227797!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Premium building materials wholesaler serving Gujarat since 1990</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>
+                        <i class="fas fa-phone me-2"></i> +91-6355-360-702<br>
+                        <i class="fas fa-envelope me-2"></i> mahadevtraders@hotmail.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Mahadev Traders. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Theme Switcher
+        const themeSwitcher = document.getElementById('themeSwitcher');
+        themeSwitcher.addEventListener('click', () => {
+            document.body.setAttribute('data-theme', 
+                document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+            themeSwitcher.querySelector('i').classList.toggle('fa-sun');
+            themeSwitcher.querySelector('i').classList.toggle('fa-moon');
+        });
+
+        // Parallax Effect
+        document.addEventListener('mousemove', (e) => {
+            const hero = document.querySelector('.hero-content');
+            const mouseX = (window.innerWidth / 2 - e.clientX) / 50;
+            const mouseY = (window.innerHeight / 2 - e.clientY) / 50;
+            hero.style.transform = `translateZ(-100px) rotateX(${mouseY}deg) rotateY(${mouseX}deg)`;
+        });
+
+        // Navbar Color Change on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'var(--surface)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'transparent';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Lazy Loading Images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Validation and Submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Add form validation and submission logic here
+                const formData = new FormData(contactForm);
+                console.log('Form submitted:', Object.fromEntries(formData));
+                // Add API call or email service integration
+            });
+        }
+
+        // Progressive Web App Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('ServiceWorker registration successful');
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed:', err);
+                });
+        }
+    </script>
+</body>
+</html>
