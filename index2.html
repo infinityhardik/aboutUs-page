@@ -1,445 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mahadev Traders | Premium Plywood & Door Wholesaler Rajkot</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Leading premium plywood wholesaler in Rajkot. Authorized distributor of Marlex, Zevik, Simson. Top-quality flush doors & block boards. ISO certified wholesale supplier.">
-    <meta name="keywords" content="Premium Plywood Wholesaler Rajkot, Flush Door Manufacturers Gujarat, Marlex Distributors Rajkot, Zevik Dealer Gujarat">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Premium Plywood & Door Solutions | Mahadev Traders Rajkot">
-    <meta property="og:description" content="30+ years of excellence in premium building materials. Authorized wholesaler of leading brands in Rajkot.">
-    <meta property="og:type" content="website">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" as="style">
-    
-    <!-- Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary: #2C3E50;
-            --accent: #E67E22;
-            --surface: #ffffff;
-            --surface-dark: #1a1a1a;
-        }
-        
-        /* Neo-skeuomorphic Design System */
-        .neo-card {
-            background: var(--surface);
-            border-radius: 24px;
-            box-shadow: 
-                20px 20px 60px rgba(0,0,0,0.05),
-                -20px -20px 60px rgba(255,255,255,0.8);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .neo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 
-                25px 25px 75px rgba(0,0,0,0.1),
-                -25px -25px 75px rgba(255,255,255,0.9);
-        }
-        
-        /* Gradient Morphing Background */
-        .morphing-bg {
-            background: linear-gradient(45deg, #2C3E50, #c63bd3, #2C3E50);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50% }
-            50% { background-position: 100% 50% }
-            100% { background-position: 0% 50% }
-        }
-        
-        /* Holographic Brand Effect */
-        .brand-logo {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .brand-logo::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                45deg,
-                rgba(255,255,255,0) 0%,
-                rgba(255,255,255,0.8) 50%,
-                rgba(255,255,255,0) 100%
-            );
-            transform: rotate(45deg);
-            animation: holographicShine 3s ease-in-out infinite;
-        }
-        
-        @keyframes holographicShine {
-            0% { transform: translateX(-100%) rotate(45deg) }
-            100% { transform: translateX(100%) rotate(45deg) }
-        }
-        
-        /* Hero Section with Parallax */
-        .hero {
-            min-height: 100vh;
-            perspective: 1000px;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            transform-style: preserve-3d;
-            transform: translateZ(-100px);
-        }
-        
-        /* Product Card 3D Transform */
-        .product-card {
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
-        }
-        
-        .product-card:hover {
-            transform: rotateY(10deg) rotateX(5deg);
-        }
-        
-        /* Micro-interactions */
-        .cta-button {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: -100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .cta-button:hover::after {
-            left: 100%;
-        }
-        
-        /* Dark Mode Styles */
-        [data-theme="dark"] {
-            --surface: var(--surface-dark);
-            --text: #ffffff;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .neo-card {
-                margin: 1rem 0;
-            }
-            
-            .hero-content {
-                transform: none;
-            }
-        }
-    </style>
-    
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WholesaleStore",
-      "name": "Mahadev Traders",
-      "description": "Premium plywood and door wholesaler in Rajkot",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Nr. S.T. Workshop, Gondal Road",
-        "addressLocality": "Rajkot",
-        "addressRegion": "Gujarat",
-        "postalCode": "360004",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "22.2594208",
-        "longitude": "70.7973544"
-      },
-      "openingHours": "Mo-Sa 09:00-19:30"
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="HandheldFriendly" content="true" />
+  <title>Mahadev Traders - Plywood, Block-Board &amp; Flush-Doors</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.webp" />
+
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+
+  <style>
+    /* Global Variables & Reset */
+    :root {
+      --primary: #1a73e8;
+      --accent: #d93025;
+      --bg-dark: #0a0a0a;
+      --text-light: #ffffff;
+      --navbar-height: 70px;
+      --transition-speed: 0.3s;
     }
-    </script>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--navbar-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 1000;
+      transition: background var(--transition-speed), backdrop-filter var(--transition-speed);
+    }
+    .navbar.transparent {
+      background: transparent;
+      backdrop-filter: none;
+    }
+    .navbar.solid {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar .brand a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+    .navbar .menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .navbar .menu a {
+      font-size: 1rem;
+      color: var(--text-light);
+      transition: color var(--transition-speed);
+    }
+    .navbar .menu a:hover {
+      color: var(--accent);
+    }
+    .navbar .btn-call a {
+      background: #28a745;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+      color: var(--text-light);
+      transition: background var(--transition-speed);
+    }
+    .navbar .btn-call a:hover {
+      background: #218838;
+    }
+
+    /* Hero Section with Wave Clip-Path & Animated Gradient */
+    .hero {
+      position: relative;
+      height: 100vh;
+      padding-top: var(--navbar-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      animation: gradientAnimation 10s ease infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    @keyframes gradientAnimation {
+      0% { background: linear-gradient(135deg, var(--primary), var(--accent)); }
+      50% { background: linear-gradient(135deg, var(--accent), var(--primary)); }
+      100% { background: linear-gradient(135deg, var(--primary), var(--accent)); }
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 1rem;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Expertise / Features Section */
+    .expertise {
+      padding: 4rem 2rem;
+      background: #111;
+      text-align: center;
+    }
+    .expertise h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .expertise h3 {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: var(--accent);
+    }
+    .expertise .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .expertise .feature {
+      flex: 1 1 250px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .expertise .feature h4 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .expertise .feature p {
+      font-size: 1rem;
+    }
+
+    /* About Us / Our Legacy Section */
+    .about-us {
+      padding: 4rem 2rem;
+      background: #181818;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about-us .about-image {
+      flex: 1 1 300px;
+    }
+    .about-us .about-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .about-us .about-content {
+      flex: 2 1 400px;
+      text-align: left;
+    }
+    .about-us .about-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .about-us .about-content p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Gallery / Brand Slider Section */
+    .gallery {
+      padding: 4rem 2rem;
+      background: #111;
+      text-align: center;
+    }
+    .gallery h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .gallery .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery .slider img {
+      width: 200px;
+      border-radius: 8px;
+      scroll-snap-align: center;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 4rem 2rem;
+      background: #181818;
+    }
+    .faq h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .faq .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq .accordion-item {
+      background: rgba(255, 255, 255, 0.1);
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq .accordion-header {
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq .accordion-body {
+      padding: 1rem;
+      display: none;
+      font-size: 1rem;
+    }
+    .faq .accordion-item.active .accordion-body {
+      display: block;
+    }
+    .faq .accordion-header .arrow {
+      transition: transform var(--transition-speed);
+    }
+    .faq .accordion-item.active .accordion-header .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Contacts Sections */
+    .contacts {
+      padding: 4rem 2rem;
+      background: #111;
+    }
+    .contacts .contact-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .contacts .contact-info {
+      flex: 1 1 300px;
+    }
+    .contacts .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .contacts .contact-info p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .contacts .contact-map {
+      flex: 2 1 400px;
+    }
+    .contacts .contact-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2rem;
+      background: #181818;
+      text-align: center;
+      color: var(--text-light);
+    }
+    .footer .footer-menu {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .footer .footer-menu a {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .footer .social-icons a {
+      font-size: 1.5rem;
+      color: var(--text-light);
+    }
+    .footer p {
+      font-size: 0.875rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 2.5rem; }
+      .hero-content h2 { font-size: 1.5rem; }
+      .hero-content p { font-size: 1rem; }
+      .about-us {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top py-3 neo-card">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="/api/placeholder/150/50" alt="Mahadev Traders Logo" class="img-fluid">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#brands">Brands</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#specifications">Specs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-sm btn-outline-primary ms-2" id="themeSwitcher">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+
+  <!-- Navbar -->
+  <nav class="navbar transparent" id="navbar">
+    <div class="brand"><a href="index.html">Mahadev Traders</a></div>
+    <div class="menu">
+      <a href="products.html">Products</a>
+      <a href="index.html#hero-17-u5n0FEbTtT">About</a>
+      <a href="index.html#hero-17-u5n0FEbTtT">Vaives.com</a>
+    </div>
+    <div class="btn-call">
+      <a href="tel:+916355360702">Call Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero-17-u5n0FEbTtT">
+    <div class="hero-content">
+      <h1><strong>Mahadev Traders</strong></h1>
+      <h2>Plywood, Block-Board &amp; Flush-Doors</h2>
+      <p>Experience High-Quality Plywood, Block-Board and Flush-Door Products with Mahadev Traders</p>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="expertise" id="features-24-u5n0FEbOQ8">
+    <h2><strong>Expertise</strong></h2>
+    <h3>Unleashing 30 Years of Mastery in Plywood, Block-Board and Flush-Door relating to Furniture Industry</h3>
+    <div class="features">
+      <div class="feature">
+        <h4><strong>Quality</strong></h4>
+        <p>Uncompromising standards for top-notch products</p>
+      </div>
+      <div class="feature">
+        <h4><strong>Variety</strong></h4>
+        <p>Diverse range of Affordable and Premium Plywood, Block-Board, &amp; Flush-Doors</p>
+      </div>
+      <div class="feature">
+        <h4><strong>Innovation</strong></h4>
+        <p>Pioneering new trends in technology</p>
+      </div>
+      <div class="feature">
+        <h4><strong>Reliability</strong></h4>
+        <p>Trusted by generations for premium and quality solutions at an affordable price</p>
+      </div>
+      <div class="feature">
+        <h4><strong>Commitment</strong></h4>
+        <p>Dedicated to customer satisfaction and excellence</p>
+      </div>
+      <div class="feature">
+        <h4><strong>Passion</strong></h4>
+        <p>Fueling our craft with a love for Customer Satisfaction</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us / Our Legacy Section -->
+  <section class="about-us" id="about-us-5-u5n0FEcXJt">
+    <div class="about-image">
+      <img src="assets/images/photo-1591195853095-f1681b00e29c.jpeg" alt="Mahadev Traders Legacy">
+    </div>
+    <div class="about-content">
+      <h2><strong>Our Legacy</strong></h2>
+      <p>Embark on a journey with Mahadev Traders, the trailblazers of Rajkot's Furniture industry.</p>
+      <p>With a rich history spanning over three decades, we stand as the epitome of quality and innovation.</p>
+      <p>At Mahadev Traders, we blend tradition with modernity to deliver products that exceed expectations. We are the Pioneers of Plywood/Timber Wholesale and Retail on Gondal Road and that is the reason why We Proudly Belong to the Elite Group of Oldest Firms in Rajkot. We Believe in Providing Best Quality at Competitive Prices in order to Provide Maximum Satisfaction to Our Valuable Customers in an Uncertain Market. You are 100% assured that we provide the Best Plywood Price in Rajkot. We do provide Best Flush-Door Price in Rajkot and we also provide Best Block-Board Price in Rajkot.</p>
+      <p>Vaives.com is our proprietary technology for Order Management System @ Mahadev Traders Plywood, Block-Board and Flush-Door Wholesaler, Rajkot. We constantly thrive to innovate our Products pertaining to Plywood, Block-Board and Flush-Door while leveraging technology at scale and mass distribution for the ever evolving new generations across landscapes.</p>
+    </div>
+  </section>
+
+  <!-- Gallery / Brands Slider Section -->
+  <section class="gallery" id="gallery-13-u5n0FEeHov">
+    <h2>Our Brands</h2>
+    <div class="slider">
+      <img src="assets/images/marlex-1200x764.webp" alt="Marlex Logo" loading="lazy">
+      <img src="assets/images/zevik-1200x762.webp" alt="Zevik Plywood Logo" loading="lazy">
+      <img src="assets/images/simson-1200x681.webp" alt="Simson Plywood Logo" loading="lazy">
+      <img src="assets/images/limelite-1200x515.webp" alt="Limelite Plywood Logo" loading="lazy">
+      <img src="assets/images/greytone-1200x510.webp" alt="Greytone Plywood Logo" loading="lazy">
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq-1-u5n0FEeZjf">
+    <h2><strong>FAQ</strong></h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span><strong>Why Choose Us?</strong></span>
+          <span class="arrow">&#9660;</span>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero morphing-bg d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="hero-content text-white">
-                        <h1 class="display-4 fw-bold mb-4">Premium Building Materials Wholesale</h1>
-                        <p class="lead mb-4">Trusted by contractors and architects for over 30 years</p>
-                        <div class="d-flex gap-3">
-                            <button class="btn btn-light btn-lg cta-button">Get Quote</button>
-                            <button class="btn btn-outline-light btn-lg">View Catalog</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="assets/favicon.webp" alt="Premium Plywood Collection" class="img-fluid rounded-4 neo-card">
-                </div>
-            </div>
+        <div class="accordion-body">
+          <p>With over 30 years of expertise, we're setting high bar for quality and service in Rajkot. Visit and Experience our range of offerings.</p>
         </div>
-    </section>
-
-    <!-- Brands Section -->
-    <section id="brands" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Authorized Distributors</h2>
-            <div class="row g-4">
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="brand-logo neo-card p-4">
-                        <img src="/api/placeholder/150/80" alt="Marlex Plywood" class="img-fluid">
-                    </div>
-                </div>
-                <!-- Repeat for other brands -->
-            </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span><strong>What Do We Offer?</strong></span>
+          <span class="arrow">&#9660;</span>
         </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Premium Products</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="product-card neo-card p-4">
-                        <img src="/api/placeholder/400/300" alt="Marine Plywood" class="img-fluid rounded mb-3">
-                        <h3>Marine Plywood</h3>
-                        <p>Water-resistant, premium grade plywood for marine applications</p>
-                        <button class="btn btn-primary cta-button">View Details</button>
-                    </div>
-                </div>
-                <!-- Repeat for other products -->
-            </div>
+        <div class="accordion-body">
+          <p>From Plywood, Block-Boards and Flush-Doors to Laminates, we've got your wooden dreams covered with a touch of class and a dash of durability!</p>
         </div>
-    </section>
-
-    <!-- Specifications Section -->
-    <section id="specifications" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Technical Specifications</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="neo-card p-4">
-                        <h3>Quality Parameters</h3>
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="fas fa-check-circle text-success me-2"></i>
-                                BWP Grade (Boiling Water Proof)
-                            </li>
-                            <!-- Add more specs -->
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="neo-card p-4">
-                        <h3>Certifications</h3>
-                        <div class="d-flex gap-3">
-                            <img src="/api/placeholder/100/100" alt="ISO 9001" class="img-fluid">
-                            <!-- Add more certification badges -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span><strong>Why Trust Us?</strong></span>
+          <span class="arrow">&#9660;</span>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="neo-card p-4">
-                        <h2>Get in Touch</h2>
-                        <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary cta-button">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="neo-card p-4 h-100">
-                        <h2>Visit Us</h2>
-                        <p>Nr. S.T. Workshop, Gondal Road<br>Rajkot - 360004, Gujarat</p>
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4900053825672!2d70.79735447615813!3d22.259420879716018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca62d2502869%3A0xa6b8e085d78a67eb!2sMahadev%20Traders%20Plywood%20Block-Board%20%26%20Flush-Door%20Wholesaler!5e0!3m2!1sen!2sin!4v1708942227797!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="accordion-body">
+          <p>We're not just the pioneers; we're the trendsetters in wholesale and retail, making your satisfaction our top priority!</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>Premium building materials wholesaler serving Gujarat since 1990</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact</h5>
-                    <p>
-                        <i class="fas fa-phone me-2"></i> +91-6355-360-702<br>
-                        <i class="fas fa-envelope me-2"></i> mahadevtraders@hotmail.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="text-center">
-                <p>&copy; 2025 Mahadev Traders. All rights reserved.</p>
-            </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span><strong>Where to Find Us?</strong></span>
+          <span class="arrow">&#9660;</span>
         </div>
-    </footer>
+        <div class="accordion-body">
+          <p>Located on the prestigious Gondal Road, we proudly stand as one of the oldest and most trusted firms in Rajkot!</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span><strong>What Sets Us Apart?</strong></span>
+          <span class="arrow">&#9660;</span>
+        </div>
+        <div class="accordion-body">
+          <p>In a market full of uncertainties, we guarantee top-notch quality at unbeatable prices, ensuring smiles on our customers' faces!</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
-    <script>
-        // Theme Switcher
-        const themeSwitcher = document.getElementById('themeSwitcher');
-        themeSwitcher.addEventListener('click', () => {
-            document.body.setAttribute('data-theme', 
-                document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-            themeSwitcher.querySelector('i').classList.toggle('fa-sun');
-            themeSwitcher.querySelector('i').classList.toggle('fa-moon');
-        });
+  <!-- Contacts Section -->
+  <section class="contacts">
+    <!-- Office Contact -->
+    <div class="contact-item">
+      <div class="contact-info">
+        <h2><strong>Reach Us @ Office</strong></h2>
+        <p>
+          Phone: +91-6355-360-702<br><br>
+          Email: mahadevtraders@hotmail.com<br><br>
+          Address: Nr. S.T. Workshop, Gondal Road, Rajkot - 360004<br><br>
+          Working Hours:<br>
+          Mon - Sat: 9am - 7:30pm<br>
+          Sun: 9am - 12:00pm
+        </p>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4900053825672!2d70.79735447615813!3d22.259420879716018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca62d2502869%3A0xa6b8e085d78a67eb!2sMahadev%20Traders%20Plywood%20Block-Board%20%26%20Flush-Door%20Wholesaler!5e0!3m2!1sen!2sin!4v1708942227797!5m2!1sen!2sin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- Warehouse Contact -->
+    <div class="contact-item">
+      <div class="contact-info">
+        <h2><strong>Reach Us @ Warehouse</strong></h2>
+        <p>
+          Phone: +91-6355-360-702<br><br>
+          Email: mahadevtraders@hotmail.com<br><br>
+          Address: Nr. Poojara Mobile, Samrat Industrial Area, Gondal Road, Rajkot - 360004<br><br>
+          Working Hours:<br>
+          Mon - Sat: 9am - 7:30pm<br>
+          Sun: 9am - 12:00pm
+        </p>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d548.8850341107261!2d70.79812552644768!3d22.261177765699497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cba63c1e68a5%3A0xbfb2353835b71a5!2sMahadev%20Traders%20Plywood%2C%20Block-Board%20%26%20Flush-Door%20Warehouse!5e0!3m2!1sen!2sin!4v1708942358834!5m2!1sen!2sin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
-        // Parallax Effect
-        document.addEventListener('mousemove', (e) => {
-            const hero = document.querySelector('.hero-content');
-            const mouseX = (window.innerWidth / 2 - e.clientX) / 50;
-            const mouseY = (window.innerHeight / 2 - e.clientY) / 50;
-            hero.style.transform = `translateZ(-100px) rotateX(${mouseY}deg) rotateY(${mouseX}deg)`;
-        });
+  <!-- Footer Section -->
+  <footer class="footer" id="baseFooter">
+    <div class="footer-menu">
+      <a href="index.html#hero-17-u5n0FEbTtT">About</a>
+      <a href="products.html">Products</a>
+      <a href="products.html">Services</a>
+      <a href="tel:+916355360702">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://wa.me/916355360702" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:mahadevtraders@hotmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.google.com/maps/@22.2601548,70.7992952,17.25z/data=!5m1!1e1" target="_blank">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Plywood" target="_blank">
+        <i class="fab fa-wikipedia-w"></i>
+      </a>
+    </div>
+    <p>© 2024. All Rights Reserved.</p>
+  </footer>
 
-        // Navbar Color Change on Scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'var(--surface)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.background = 'transparent';
-                navbar.style.boxShadow = 'none';
-            }
-        });
+  <script>
+    // Navbar Scroll Effect: Switch from transparent to solid glassmorphic style
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.remove('transparent');
+        navbar.classList.add('solid');
+      } else {
+        navbar.classList.remove('solid');
+        navbar.classList.add('transparent');
+      }
+    });
 
-        // Lazy Loading Images
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-
-            images.forEach(img => imageObserver.observe(img));
-        });
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Form Validation and Submission
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                // Add form validation and submission logic here
-                const formData = new FormData(contactForm);
-                console.log('Form submitted:', Object.fromEntries(formData));
-                // Add API call or email service integration
-            });
-        }
-
-        // Progressive Web App Registration
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(registration => {
-                    console.log('ServiceWorker registration successful');
-                })
-                .catch(err => {
-                    console.log('ServiceWorker registration failed:', err);
-                });
-        }
-    </script>
+    // FAQ Accordion Behavior
+    document.querySelectorAll('.faq .accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
