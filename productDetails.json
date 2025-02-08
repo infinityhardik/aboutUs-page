@@ -1,0 +1,195 @@
+{
+  "categories": [
+    {
+      "name": "Plywood",
+      "slug": "plywood",
+      "products": [
+        {
+          "title": "Marlex Waterproof (100% BWP) Plywood",
+          "type": "Plywood",
+          "grade": "100% Boiling Waterproof Plywood (BWP)",
+          "brand": "Marlex",
+          "core": "Red and Red Core",
+          "face": "Gurjan Face",
+          "thickness": "19mm / 12mm / 9mm / 6 mm",
+          "priceCategory": "Luxury and Ultra Premium Plywood",
+          "images": [
+            "assets/images/marlex-1200x764.webp",
+            "https://i.postimg.cc/RZV8Rx8x/MX-WP-3.jpg",
+            "https://i.postimg.cc/0NKVWk0F/MX-WP-4.jpg",
+            "https://i.postimg.cc/nr22jCnj/MX-WP-1.jpg"
+          ],
+          "description": "Ultra Premium 100% Boiling Waterproof Plywood…"
+        },
+        {
+          "title": "Marlex Premium (MR) Plywood",
+          "type": "Plywood",
+          "grade": "Moisture Resistant (MR) Grade / Semi-WP",
+          "brand": "Marlex",
+          "core": "Red and Red Core",
+          "face": "Gurjan Face",
+          "thickness": "19mm / 12mm / 9mm / 6 mm",
+          "priceCategory": "Ultra Premium Plywood",
+          "images": [
+            "assets/images/marlex-1200x764.webp",
+            "https://i.postimg.cc/25nYHzt6/Marlex-Ply-2.jpg",
+            "https://i.postimg.cc/76DkdFvN/Marlex-Ply-4.jpg",
+            "https://i.postimg.cc/bJHzvz0M/Marlex-Ply-5.jpg"
+          ],
+          "description": "Guaranteed Premium 100% Semi-Waterproof Plywood…"
+        },
+        {
+          "title": "Zevik Plywood",
+          "type": "Plywood",
+          "grade": "Moisture Resistant (MR) Grade / Semi-WP",
+          "brand": "Zevik",
+          "core": "Red and White Core",
+          "face": "Gurjan Face",
+          "thickness": "19mm / 15mm / 12mm / 9mm / 6 mm",
+          "priceCategory": "Premium Plywood",
+          "images": [
+            "assets/images/zevik-1200x762.webp",
+            "https://i.postimg.cc/bYxTq47t/Zevik-4.jpg",
+            "https://i.postimg.cc/QxjqC0Dn/Zevik-3.jpg",
+            "https://i.postimg.cc/L6v31L64/Zevik-2.jpg"
+          ],
+          "description": "Premium 100% Semi-Waterproof Plywood…"
+        },
+        {
+          "title": "Greytone Gurjan / Okuma Plywood",
+          "type": "Plywood",
+          "grade": "Moisture Resistant (MR) Grade / Semi-WP",
+          "brand": "Greytone",
+          "core": "Red and White Core",
+          "face": "Gurjan Face / Okuma Face",
+          "thickness": "19mm / 12mm / 9mm / 6 mm",
+          "priceCategory": "Mid Premium Plywood",
+          "images": [
+            "assets/images/greytone-1200x510.webp",
+            "https://i.postimg.cc/SxZcthwW/GT-GJ-3.jpg",
+            "https://i.postimg.cc/9QXGpMNm/GT-GJ-1.jpg",
+            "https://i.postimg.cc/L6cqbsXK/GT-OK-3.jpg",
+            "https://i.postimg.cc/fTttCdMf/GT-OK-1.jpg",
+            "https://i.postimg.cc/tJhhrVjT/GT-GJ-2.jpg"
+          ],
+          "description": "Mid-Premium MR Grade Plywood in Gurjan and Okuma…"
+        },
+        {
+          "title": "Limelite Pro Plywood",
+          "type": "Plywood",
+          "grade": "Commercial / Non-Dipping",
+          "brand": "Limelite Pro",
+          "core": "Red and White Core",
+          "face": "Gurjan Face",
+          "thickness": "19mm / 12mm / 9mm / 6 mm",
+          "priceCategory": "Affordable and Entry-Level Plywood",
+          "images": [
+            "assets/images/limelite-pro-1200x515.webp",
+            "https://i.postimg.cc/G3BpYsPP/LL-Pro-7.jpg",
+            "https://i.postimg.cc/sxGbXzhS/LL-Pro-8.jpg",
+            "https://i.postimg.cc/LXXrcL4x/LL-Pro-6.jpg",
+            "https://i.postimg.cc/Sj03YP6P/LL-Pro-4.jpg"
+          ],
+          "description": "Entry-Level Budget Commercial Grade Plywood…"
+        },
+        {
+          "title": "Limelite Plywood",
+          "type": "Plywood",
+          "grade": "Commercial / Non-Dipping",
+          "brand": "Limelite Pro",
+          "core": "Mix Red and White Core",
+          "face": "Gurjan / Okuma Face",
+          "thickness": "19mm / 12mm / 9mm / 6 mm",
+          "priceCategory": "Commercial Budget Plywood",
+          "images": [
+            "assets/images/limelite-1200x515.webp",
+            "https://i.postimg.cc/T27R3jKq/LL-GJ-Com-1.jpg",
+            "https://i.postimg.cc/PJRhVHgF/LL-GJ-Com-2.jpg",
+            "https://i.postimg.cc/1zGmmLFf/LL-GJ-Com-3.jpg",
+            "https://i.postimg.cc/CdTrx6kx/LL-OK-3.jpg",
+            "https://i.postimg.cc/D0KY2Mqy/LL-GJ-2.jpg"
+          ],
+          "description": "Entry-Level Commercial Budget Plywood…"
+        }
+      ]
+    },
+    {
+      "name": "Flush Doors",
+      "slug": "flush-doors",
+      "products": [
+        {
+          "title": "Marlex Waterproof (100% BWP) Flush-Door",
+          "type": "Flush-Door",
+          "grade": "Boiling Waterproof (BWP) / PF",
+          "brand": "Marlex",
+          "core": "Pinewood A Grade / Triple Core",
+          "face": "Gurjan Face",
+          "thickness": "25mm / 30mm / 35mm",
+          "priceCategory": "Premium A Grade Doors",
+          "images": [
+            "assets/images/marlex-1200x764.webp",
+            "https://i.postimg.cc/j5mBWY1z/Marlex-Flush-Door-1.jpg",
+            "https://i.postimg.cc/d3CprSMg/Marlex-Flush-Door-2.jpg"
+          ],
+          "description": "Ultra Premium 100% Boiling Waterproof Flush-Door…"
+        },
+        {
+          "title": "Simson Flush-Door",
+          "type": "Flush-Door",
+          "grade": "Moisture Resistant (MR) / Semi-Waterproof",
+          "brand": "Simson",
+          "core": "Pinewood AB Grade / Triple Core",
+          "face": "Gurjan Face",
+          "thickness": "25mm / 30mm",
+          "priceCategory": "Budget Friendly Doors",
+          "images": [
+            "assets/images/simson-1200x681.webp",
+            "https://i.postimg.cc/SNyfWvp8/Simson-Flush-Door-1.jpg",
+            "https://i.postimg.cc/Nfp7bkgn/Simson-Flush-Door-Screen-Printing.jpg",
+            "https://i.postimg.cc/RC1TJz24/Simson-Plain-Flush-Door.jpg"
+          ],
+          "description": "Budget Friendly MR Grade Flush-Door…"
+        }
+      ]
+    },
+    {
+      "name": "Block Boards",
+      "slug": "block-boards",
+      "products": [
+        {
+          "title": "Marlex Block-Board",
+          "type": "Block-Board",
+          "grade": "A Grade",
+          "brand": "Marlex",
+          "core": "Pinewood Triple Core",
+          "face": "Gurjan Face",
+          "thickness": "25mm / 19mm",
+          "priceCategory": "Premium Block-Board",
+          "images": [
+            "assets/images/marlex-1200x764.webp",
+            "https://i.postimg.cc/j5mBWY1z/Marlex-Flush-Door-1.jpg",
+            "https://i.postimg.cc/d3CprSMg/Marlex-Flush-Door-2.jpg"
+          ],
+          "description": "Premium A Grade Block Board…"
+        },
+        {
+          "title": "Simson Block-Board",
+          "type": "Block-Board",
+          "grade": "AB Grade",
+          "brand": "Simson",
+          "core": "Pinewood Triple Core",
+          "face": "Gurjan Face",
+          "thickness": "25mm",
+          "priceCategory": "Budget Friendly Block-Board",
+          "images": [
+            "assets/images/simson-1200x681.webp",
+            "https://i.postimg.cc/4ywtLXTc/1.jpg",
+            "https://i.postimg.cc/6qBnfyFw/2.jpg",
+            "https://i.postimg.cc/Y2x1qzmS/3.jpg"
+          ],
+          "description": "Budget Friendly Block-Board…"
+        }
+      ]
+    }
+  ]
+}

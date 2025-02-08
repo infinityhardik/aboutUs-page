@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://about.vaives.com</loc>
-    <lastmod>2024-07-31</lastmod>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,15 +12,15 @@
   <!-- Products Page -->
   <url>
     <loc>https://about.vaives.com/products.html</loc>
-    <lastmod>2024-07-31</lastmod>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Services Page -->
   <url>
-    <loc>https://about.vaives.com/services.html</loc>
-    <lastmod>2024-07-31</lastmod>
+    <loc>https://vaives.com/</loc>
+    <lastmod>2025-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
