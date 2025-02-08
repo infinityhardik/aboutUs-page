@@ -42,13 +42,13 @@
       --navbar-height: 70px;
       --transition-speed: 0.3s;
     }
-
+  
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+  
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: var(--bg-dark);
@@ -56,12 +56,12 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
+  
     a {
       text-decoration: none;
       color: inherit;
     }
-
+  
     /* Navbar Styles */
     .navbar {
       position: fixed;
@@ -76,12 +76,12 @@
       z-index: 1000;
       transition: all var(--transition-speed);
     }
-
+  
     .navbar.transparent {
       background: transparent;
       backdrop-filter: none;
     }
-
+  
     .navbar.solid {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -90,19 +90,19 @@
         0 8px 32px 0 rgba(31, 38, 135, 0.37);
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
-
+  
     .navbar .brand a {
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--text-light);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
-
+  
     .navbar .menu {
       display: flex;
       gap: 1.5rem;
     }
-
+  
     .navbar .menu a {
       font-size: 1rem;
       color: var(--text-light);
@@ -112,14 +112,14 @@
       position: relative;
       overflow: hidden;
     }
-
+  
     .navbar .menu a:hover {
       background: rgba(255, 255, 255, 0.1);
       box-shadow:
         inset 2px 2px 5px rgba(255, 255, 255, 0.1),
         inset -2px -2px 5px rgba(0, 0, 0, 0.1);
     }
-
+  
     .navbar .menu a::after {
       content: '';
       position: absolute;
@@ -131,11 +131,11 @@
       transition: all var(--transition-speed);
       transform: translateX(-50%);
     }
-
+  
     .navbar .menu a:hover::after {
       width: 80%;
     }
-
+  
     .navbar .btn-call a {
       background: linear-gradient(145deg, #2f9e4f, #28a745);
       padding: 0.5rem 1.5rem;
@@ -147,14 +147,14 @@
         3px 3px 6px rgba(0, 0, 0, 0.2),
         -3px -3px 6px rgba(255, 255, 255, 0.1);
     }
-
+  
     .navbar .btn-call a:hover {
       transform: translateY(-2px);
       box-shadow:
         4px 4px 8px rgba(0, 0, 0, 0.3),
         -4px -4px 8px rgba(255, 255, 255, 0.15);
     }
-
+  
     .hamburger {
       display: none;
       cursor: pointer;
@@ -162,7 +162,7 @@
       border-radius: 8px;
       transition: all var(--transition-speed);
     }
-
+  
     .hamburger span {
       display: block;
       width: 25px;
@@ -172,8 +172,8 @@
       transition: all var(--transition-speed);
       border-radius: 3px;
     }
-
-    /* Hero Section */
+  
+    /* Hero Section with Wave-Clip Transition & Colorful Gradient */
     .hero {
       position: relative;
       height: 100vh;
@@ -182,25 +182,32 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
+      /* A vibrant 4-color gradient background */
+      background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
       animation: gradientAnimation 10s ease infinite;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      /* Wave clip shape at the bottom */
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+      transition: clip-path var(--transition-speed) ease;
     }
-
+  
+    /* Change the wave shape on hover */
+    .hero:hover {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%);
+    }
+  
+    /* Gradient Animation for a Dynamic, Colorful Effect */
     @keyframes gradientAnimation {
       0% {
-        background: linear-gradient(135deg, var(--primary), var(--accent));
+        background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
       }
-
       50% {
-        background: linear-gradient(135deg, var(--accent), var(--primary));
+        background: linear-gradient(135deg, var(--accent), #fbbc05, #34a853, var(--primary));
       }
-
       100% {
-        background: linear-gradient(135deg, var(--primary), var(--accent));
+        background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
       }
     }
-
+  
     .hero::after {
       content: "";
       position: absolute;
@@ -211,70 +218,70 @@
       background: rgba(0, 0, 0, 0.45);
       z-index: 1;
     }
-
+  
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 800px;
       padding: 1rem;
     }
-
+  
     .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
-
+  
     .hero-content h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-
+  
     .hero-content p {
       font-size: 1.25rem;
       margin-bottom: 2rem;
     }
-
+  
     /* Expertise Section */
     .expertise {
       padding: 4rem 2rem;
       background: #111;
       text-align: center;
     }
-
+  
     .expertise h2 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
-
+  
     .expertise h3 {
       font-size: 1.25rem;
       margin-bottom: 2rem;
       color: var(--accent);
     }
-
+  
     .expertise .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
     }
-
+  
     .expertise .feature {
       flex: 1 1 250px;
       background: rgba(255, 255, 255, 0.1);
       padding: 1rem;
       border-radius: 8px;
     }
-
+  
     .expertise .feature h4 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
-
+  
     .expertise .feature p {
       font-size: 1rem;
     }
-
+  
     /* About Us Section */
     .about-us {
       padding: 4rem 2rem;
@@ -284,43 +291,43 @@
       align-items: center;
       gap: 2rem;
     }
-
+  
     .about-us .about-image {
       flex: 1 1 300px;
     }
-
+  
     .about-us .about-image img {
       width: 100%;
       border-radius: 8px;
     }
-
+  
     .about-us .about-content {
       flex: 2 1 400px;
       text-align: left;
     }
-
+  
     .about-us .about-content h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-
+  
     .about-us .about-content p {
       font-size: 1rem;
       margin-bottom: 1rem;
     }
-
+  
     /* Gallery Section */
     .gallery {
       padding: 4rem 2rem;
       background: #111;
       text-align: center;
     }
-
+  
     .gallery h2 {
       font-size: 2rem;
       margin-bottom: 2rem;
     }
-
+  
     .gallery .slider {
       display: flex;
       overflow-x: auto;
@@ -328,37 +335,37 @@
       padding: 1rem;
       scroll-snap-type: x mandatory;
     }
-
+  
     .gallery .slider img {
       width: 200px;
       border-radius: 8px;
       scroll-snap-align: center;
     }
-
+  
     /* FAQ Section */
     .faq {
       padding: 4rem 2rem;
       background: #181818;
     }
-
+  
     .faq h2 {
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 2rem;
     }
-
+  
     .faq .accordion {
       max-width: 800px;
       margin: 0 auto;
     }
-
+  
     .faq .accordion-item {
       background: rgba(255, 255, 255, 0.1);
       margin-bottom: 1rem;
       border-radius: 8px;
       overflow: hidden;
     }
-
+  
     .faq .accordion-header {
       padding: 1rem;
       cursor: pointer;
@@ -367,120 +374,120 @@
       justify-content: space-between;
       align-items: center;
     }
-
+  
     .faq .accordion-body {
       padding: 1rem;
       display: none;
       font-size: 1rem;
     }
-
+  
     .faq .accordion-item.active .accordion-body {
       display: block;
     }
-
+  
     .faq .accordion-header .arrow {
       transition: transform var(--transition-speed);
     }
-
+  
     .faq .accordion-item.active .accordion-header .arrow {
       transform: rotate(180deg);
     }
-
+  
     /* Contacts Section */
     .contacts {
       padding: 4rem 2rem;
       background: #111;
     }
-
+  
     .contacts .contact-item {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       margin-bottom: 2rem;
     }
-
+  
     .contacts .contact-info {
       flex: 1 1 300px;
     }
-
+  
     .contacts .contact-info h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-
+  
     .contacts .contact-info p {
       font-size: 1rem;
       line-height: 1.5;
     }
-
+  
     .contacts .contact-map {
       flex: 2 1 400px;
     }
-
+  
     .contacts .contact-map iframe {
       width: 100%;
       height: 300px;
       border: 0;
       border-radius: 8px;
     }
-
+  
     /* Footer Section */
     .footer {
       padding: 2rem;
       background: #181818;
       text-align: center;
     }
-
+  
     .footer .footer-menu {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       margin-bottom: 1rem;
     }
-
+  
     .footer .footer-menu a {
       font-size: 1rem;
       color: var(--text-light);
     }
-
+  
     .footer .social-icons {
       display: flex;
       justify-content: center;
       gap: 1rem;
       margin-bottom: 1rem;
     }
-
+  
     .footer .social-icons a {
       font-size: 1.5rem;
       color: var(--text-light);
     }
-
+  
     .footer p {
       font-size: 0.875rem;
     }
-
+  
     /* Responsive Design */
     @media (max-width: 768px) {
       .navbar {
         padding: 0 1rem;
       }
-
+  
       .hamburger {
         display: block;
       }
-
+  
       .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
       }
-
+  
       .hamburger.active span:nth-child(2) {
         opacity: 0;
       }
-
+  
       .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
       }
-
+  
       .navbar .menu {
         position: fixed;
         top: var(--navbar-height);
@@ -499,11 +506,11 @@
           0 8px 32px 0 rgba(31, 38, 135, 0.37),
           inset 0 0 15px rgba(255, 255, 255, 0.1);
       }
-
+  
       .navbar .menu.active {
         right: 0;
       }
-
+  
       .navbar .menu a {
         display: block;
         padding: 1rem;
@@ -513,39 +520,39 @@
           inset 2px 2px 5px rgba(255, 255, 255, 0.1),
           inset -2px -2px 5px rgba(0, 0, 0, 0.1);
       }
-
+  
       .hero-content h1 {
         font-size: 2.5rem;
       }
-
+  
       .hero-content h2 {
         font-size: 1.5rem;
       }
-
+  
       .hero-content p {
         font-size: 1rem;
       }
-
+  
       .about-us {
         flex-direction: column;
       }
-
+  
       .expertise .features {
         gap: 1rem;
       }
-
+  
       .expertise .feature {
         flex: 1 1 100%;
       }
-
+  
       .gallery .slider {
         gap: 1rem;
       }
-
+  
       .gallery .slider img {
         width: 150px;
       }
-
+  
       .contacts .contact-item {
         flex-direction: column;
       }
@@ -753,12 +760,15 @@
     <div class="footer-menu">
       <a href="#about-us">About</a>
       <a href="products.html">Products</a>
-      <a href="products.html">Services</a>
+      <a href="https://vaives.com" target="_blank">Services</a>
       <a href="tel:+916355360702">Contact</a>
     </div>
     <div class="social-icons">
       <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank">
         <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/mt_plywood/" target="_blank">
+        <i class="fab fa-instagram"></i>
       </a>
       <a href="https://wa.me/916355360702" target="_blank">
         <i class="fab fa-whatsapp"></i>
