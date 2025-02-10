@@ -9,20 +9,105 @@
   <link rel="canonical" href="https://about.vaives.com/products" />
 
   <!-- SEO Meta Tags -->
-  <meta name="description" 
+  <meta name="description"
     content="Mahadev Traders is your trusted Plywood, Block-Board & Flush-Door wholesaler in Rajkot, Gujarat, offering premium products with over 30 years’ experience. We are the authorized dealer of Marlex Plywood, Zevik, Simson, Greytone, Limelite & Limelite Pro, and a leading timber merchant. Through our proprietary order management system at Vaives.com, we deliver top-quality plywood, flush doors, and block boards at competitive prices across India. Discover the best Plywood Price, Flush Door Price, and Block Board Price today!" />
   <meta name="keywords"
-    content="Plywood Rajkot, Flush Door Gujarat, Block Board Wholesaler, Marlex Plywood, Zevik, Simson, Greytone, Limelite, Limelite Pro, Mahadev, Traders, Plywood, Block-Board, Flush-Door, Door, Wholesaler, Best, Rajkot, Laminate, Wood, Quality, Best, Vaives, Price">
+    content="Plywood Rajkot, Flush Door Gujarat, Block Board Wholesaler, Marlex Plywood, Zevik, Simson, Greytone, Limelite, Limelite Pro, Mahadev, Traders, Plywood, Block-Board, Flush-Door, Door, Wholesaler, Best, Rajkot, Laminate, Wood, Quality, Best, Vaives, Price, plywood price rajkot, flush door price rajkot, block board price rajkot, marlex plywood dealer rajkot, zevik plywood dealer, simson plywood price, greytone plywood dealer, limelite plywood price, wholesale plywood rajkot, best plywood dealer rajkot, cheap plywood price gujarat, plywood wholesaler rajkot, timber merchant rajkot, flush door wholesale gujarat, block board dealer rajkot">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Mahadev Traders Plywood Block-Board & Flush-Door Wholesaler - Vaives.com">
 
   <!-- Open Graph Tags -->
   <meta property="og:title"
-    content="Products @ Mahadev Traders Plywood, Block-Board &amp; Flush-Doors Wholesaler, Rajkot. | Product Page | Vaives.com">
+    content="Products from Mahadev Traders Plywood, Block-Board &amp; Flush-Doors Wholesaler, Rajkot. | Product Page | Vaives.com">
   <meta property="og:description"
     content="Discover high-quality plywood, block boards, and flush doors from top brands in Rajkot.">
   <meta property="og:image" content="https://about.vaives.com/assets/favicon.webp">
   <meta property="og:url" content="https://about.vaives.com" />
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WholesaleStore",
+      "name": "Mahadev Traders: Plywood, Block Board & Flush Door Wholesaler",
+      "image": "assets/favicon.webp",
+      "description": "Leading wholesaler of high-quality plywood, block boards, and flush doors for furniture manufacturing in Rajkot with best prices. Authorized dealer of premium brands.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+        "addressLocality": "Rajkot",
+        "postalCode": "360004",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "22.259443",
+        "longitude": "70.7997218"
+      },
+      "url": "https://about.vaives.com",
+      "telephone": "+916355360702",
+      "priceRange": "₹₹",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "19:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "09:00",
+          "closes": "12:00"
+        }
+      ],
+      "brand": [
+        "Marlex",
+        "Zevik",
+        "Simson",
+        "Greytone",
+        "Limelite"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Plywood Products",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Premium Plywood",
+              "description": "High-quality plywood for furniture manufacturing and cabinetry."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Block Boards",
+              "description": "Durable block boards perfect for furniture manufacturing and interior design."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Flush Doors",
+              "description": "Premium quality flush doors designed for modern furniture and interiors."
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
   <!-- Preconnect & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,519 +118,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    /* Global Reset & Variables */
-    :root {
-      --primary: #1a73e8;
-      --accent: #d93025;
-      --bg-dark: #0a0a0a;
-      --text-light: #ffffff;
-      --navbar-height: 70px;
-      --transition-speed: 0.3s;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: var(--navbar-height);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-      z-index: 1000;
-      transition: background var(--transition-speed);
-    }
-
-    .navbar.transparent {
-      background: transparent;
-    }
-
-    .navbar.solid {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-    }
-
-    .navbar .brand a {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--text-light);
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .navbar .menu a {
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background var(--transition-speed);
-    }
-
-    .navbar .menu a:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .btn-call a {
-      background: linear-gradient(145deg, #2f9e4f, #28a745);
-      padding: 0.5rem 1.5rem;
-      border-radius: 8px;
-      color: var(--text-light);
-      font-weight: 600;
-      transition: transform var(--transition-speed);
-    }
-
-    .btn-call a:hover {
-      transform: translateY(-2px);
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: var(--text-light);
-      margin: 5px 0;
-    }
-
-    /* Hero Section */
-    .hero {
-      margin-top: var(--navbar-height);
-      padding: 2rem;
-      text-align: center;
-      background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
-      animation: gradientAnimation 10s ease infinite;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 1;
-    }
-
-    .hero .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Products Section */
-    .product-categories {
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
-      animation: gradientAnimation 10s ease infinite;
-      position: relative;
-    }
-
-    .product-categories::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 1;
-    }
-
-    /* Center content and constrain width */
-    .pc-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .product-categories h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Highlight and Layout for Product Category */
-    .product-category {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-
-    /* Enhanced Product Grid Layout */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      align-items: stretch;
-      padding: 0 1rem;
-    }
-
-    /* Refined Product Card Styling */
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      min-height: 400px;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    /* Card Footer and Text Alignment */
-    .card-footer {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .card-text {
-      text-align: center;
-    }
-
-    .card-text h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card-text p {
-      font-size: 0.95rem;
-      color: #ddd;
-    }
-
-    /* Improved Details Accordion Styling */
-    .product-details-accordion {
-      width: 100%;
-      margin-top: 1rem;
-    }
-
-    .product-details-accordion summary {
-      background: var(--primary);
-      color: var(--text-light);
-      padding: 0.75rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      list-style: none;
-    }
-
-    .product-details-accordion summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .product-details-accordion summary:hover {
-      background: var(--accent);
-    }
-
-    .product-details-content {
-      padding: 1rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .product-details-content p {
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
-    }
-
-    /* Integrated Image Carousel inside Details */
-    .product-gallery {
-      margin: 1rem 0;
-    }
-
-    .gallery-main-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: contain;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .gallery-thumbnails {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .gallery-thumbnails img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 4px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: border 0.2s ease;
-    }
-
-    .gallery-thumbnails img:hover {
-      border-color: var(--accent);
-    }
-
-    /* Gallery Modal (for full-screen carousel) */
-    .gallery-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .gallery-modal-content {
-      position: relative;
-      max-width: 800px;
-      width: 100%;
-      background: #181818;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .carousel-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .carousel-image {
-      width: 100%;
-      max-height: 500px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .carousel-prev,
-    .carousel-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--primary);
-      border: none;
-      color: var(--text-light);
-      font-size: 2rem;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    .carousel-prev {
-      left: 10px;
-    }
-
-    .carousel-next {
-      right: 10px;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 2rem;
-      background: #181818;
-      text-align: center;
-    }
-
-    .footer .footer-menu,
-    .footer .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .footer a {
-      color: var(--text-light);
-      font-size: 1rem;
-    }
-
-    @keyframes gradientAnimation {
-      0% {
-        background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
-      }
-
-      50% {
-        background: linear-gradient(135deg, var(--accent), #fbbc05, #34a853, var(--primary));
-      }
-
-      100% {
-        background: linear-gradient(135deg, var(--primary), var(--accent), #fbbc05, #34a853);
-      }
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
-      .navbar {
-        padding: 0 1rem;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero h2 {
-        font-size: 1.25rem;
-      }
-
-      /* Hide the menu by default on mobile */
-      .navbar .menu {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: var(--navbar-height);
-        right: 0;
-        background: rgba(10, 10, 10, 0.95);
-        width: 100%;
-        padding: 2rem 1rem;
-      }
-
-      /* Show the menu when active */
-      .navbar .menu.active {
-        display: flex;
-      }
-
-      .navbar .menu a {
-        padding: 0.75rem;
-        font-size: 1.1rem;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 0 0.5rem;
-      }
-
-      .product-category {
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .product-card {
-        padding: 0.75rem;
-        min-height: auto;
-      }
-
-      .product-card img {
-        height: 150px;
-      }
-
-      .card-text h3 {
-        font-size: 1.1rem;
-      }
-
-      .card-text p {
-        font-size: 0.9rem;
-      }
-
-      .gallery-modal-content {
-        max-width: 95%;
-        padding: 0.75rem;
-      }
-
-      .carousel-prev,
-      .carousel-next {
-        font-size: 1.5rem;
-        padding: 0.25rem 0.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .navbar .brand a {
-        font-size: 1.25rem;
-      }
-
-      .btn-call a {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-      }
-
-      .navbar .menu a {
-        font-size: 1rem;
-      }
-
-      .hero {
-        padding: 1.5rem;
-      }
-
-      .hero h1 {
-        font-size: 1.75rem;
-      }
-
-      .hero h2 {
-        font-size: 1.1rem;
-      }
-
-      .pc-content {
-        padding: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -606,6 +179,18 @@
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
+
+    <!-- Added structured data for address -->
+    <address itemscope itemtype="http://schema.org/Organization">
+      <span itemprop="name">Mahadev Traders Plywood Block-Board &amp; Flush-Door Wholesaler</span>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Nr. S.T. Workshop, Gondal Road</span>,
+        <span itemprop="addressLocality">Rajkot</span>,
+        <span itemprop="postalCode">360004</span>,
+        <span itemprop="addressRegion">Gujarat</span>
+      </div>
+    </address>
+    <br>
     <p>© 2025. All Rights Reserved.</p>
   </footer>
 
@@ -812,37 +397,8 @@
         });
       })
       .catch(error => console.error('Error loading products JSON:', error));
-
-    // Navbar scroll effect and hamburger toggle
-    const navbar = document.getElementById('navbar');
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.remove('transparent');
-        navbar.classList.add('solid');
-      } else {
-        navbar.classList.remove('solid');
-        navbar.classList.add('transparent');
-      }
-    });
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      menu.classList.toggle('active');
-    });
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        menu.classList.remove('active');
-      });
-    });
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-        hamburger.classList.remove('active');
-        menu.classList.remove('active');
-      }
-    });
   </script>
+  <script src="navbar.js"></script>
 </body>
 
 </html>
