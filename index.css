@@ -1,16 +1,30 @@
 /* ===================================================
-   Global Reset & Variables
-   =================================================== */
+   Refactored CSS: Stunning UI & UX with Extra Animations
+=================================================== */
+/* ---------- Global Reset & Variables ---------- */
 :root {
-  --primary: #1a73e8;
-  --accent: #d93025;
-  --bg-dark: #0a0a0a;
-  --text-light: #ffffff;
+  /* Colors */
+  --color-primary: #1a73e8;
+  --color-accent: #d93025;
+  --color-bg-dark: #0a0a0a;
+  --color-text: #ffffff;
+
+  /* Layout & Sizing */
   --navbar-height: 70px;
+  --border-radius: 8px;
+
+  /* Timing */
   --transition-speed: 0.3s;
+  --gradient-duration: 12s;
+
+  /* Shadows */
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --shadow-heavy: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,20 +32,31 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-light);
+  background: var(--color-bg-dark);
+  color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
+/* ---------- Basic Elements ---------- */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 /* ===================================================
-     Navbar
-     =================================================== */
+   Navbar
+=================================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -43,27 +68,26 @@ a {
   justify-content: space-between;
   padding: 0 2rem;
   z-index: 1000;
-  transition: all var(--transition-speed);
+  transition: background var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 .navbar.transparent {
   background: transparent;
-  backdrop-filter: none;
 }
 
 .navbar.solid {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1),
-    0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), var(--shadow-heavy);
 }
 
 .navbar .brand a {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-light);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .navbar .menu {
@@ -72,19 +96,16 @@ a {
 }
 
 .navbar .menu a {
-  font-size: 1rem;
-  color: var(--text-light);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all var(--transition-speed);
   position: relative;
-  overflow: hidden;
+  font-size: 1rem;
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background var(--transition-speed) ease;
 }
 
 .navbar .menu a:hover {
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1),
-    inset -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .menu a::after {
@@ -92,10 +113,11 @@ a {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0;
+  width: 0%;
   height: 2px;
-  background: var(--accent);
-  transition: all var(--transition-speed);
+  background: var(--color-accent);
+  transition: width var(--transition-speed) ease,
+    left var(--transition-speed) ease;
   transform: translateX(-50%);
 }
 
@@ -106,16 +128,17 @@ a {
 .navbar .btn-call a {
   background: linear-gradient(145deg, #2f9e4f, #28a745);
   padding: 0.5rem 1.5rem;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   font-weight: 600;
-  color: var(--text-light);
-  transition: all var(--transition-speed);
+  color: var(--color-text);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
     -3px -3px 6px rgba(255, 255, 255, 0.1);
 }
 
 .navbar .btn-call a:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),
     -4px -4px 8px rgba(255, 255, 255, 0.15);
 }
@@ -124,23 +147,23 @@ a {
   display: none;
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 8px;
-  transition: all var(--transition-speed);
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed) ease;
 }
 
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--text-light);
+  background: var(--color-text);
   margin: 5px 0;
-  transition: all var(--transition-speed);
-  border-radius: 3px;
+  transition: transform var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
 }
 
 /* ===================================================
-     Hero Section
-     =================================================== */
+   Hero Section
+=================================================== */
 .hero {
   position: relative;
   height: 100vh;
@@ -151,12 +174,14 @@ a {
   text-align: center;
   background: linear-gradient(
     135deg,
-    var(--primary),
-    var(--accent),
+    var(--color-primary),
+    var(--color-accent),
     #fbbc05,
     #34a853
   );
-  animation: gradientAnimation 10s ease infinite;
+  /* Combined background gradient animation with a new wave clip animation */
+  animation: gradientShift var(--gradient-duration) ease infinite,
+    waveClip 5s ease-in-out infinite;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   transition: clip-path var(--transition-speed) ease;
 }
@@ -168,45 +193,49 @@ a {
 .hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
+/* Added a pulsing shadow effect to hero content */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 1rem;
+  box-shadow: var(--shadow-light);
+  animation: dynamicShadow 3s ease-in-out infinite;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1s ease both;
 }
 
 .hero-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1.2s ease both;
 }
 
 .hero-content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  animation: fadeInUp 1.4s ease both;
 }
 
 /* ---------------------------------------------------
-     Gradient Animation
-  --------------------------------------------------- */
-@keyframes gradientAnimation {
-  0% {
+   Animations
+--------------------------------------------------- */
+@keyframes gradientShift {
+  0%,
+  100% {
     background: linear-gradient(
       135deg,
-      var(--primary),
-      var(--accent),
+      var(--color-primary),
+      var(--color-accent),
       #fbbc05,
       #34a853
     );
@@ -214,46 +243,95 @@ a {
   50% {
     background: linear-gradient(
       135deg,
-      var(--accent),
+      var(--color-accent),
       #fbbc05,
       #34a853,
-      var(--primary)
-    );
-  }
-  100% {
-    background: linear-gradient(
-      135deg,
-      var(--primary),
-      var(--accent),
-      #fbbc05,
-      #34a853
+      var(--color-primary)
     );
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* NEW: Wave clip animation for hero section */
+@keyframes waveClip {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+}
+
+/* NEW: Dynamic pulsing shadow animation */
+@keyframes dynamicShadow {
+  0% {
+    box-shadow: var(--shadow-light);
+  }
+  50% {
+    box-shadow: var(--shadow-heavy);
+  }
+  100% {
+    box-shadow: var(--shadow-light);
+  }
+}
+
+/* NEW: Modal fade-in animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* NEW: Slide-down animation for accordion content */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===================================================
-     Product Categories & Grid
-     =================================================== */
+   Product Categories & Grid
+=================================================== */
 .product-categories {
   padding: 4rem 2rem;
   background: linear-gradient(
     135deg,
-    var(--primary),
-    var(--accent),
+    var(--color-primary),
+    var(--color-accent),
     #fbbc05,
     #34a853
   );
-  animation: gradientAnimation 10s ease infinite;
+  animation: gradientShift var(--gradient-duration) ease infinite;
   position: relative;
 }
 
 .product-categories::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
@@ -270,6 +348,7 @@ a {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  animation: fadeInUp 1s ease both;
 }
 
 .product-category {
@@ -277,38 +356,46 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 1.5rem;
   margin-bottom: 2rem;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed) ease;
+}
+
+.product-category:hover {
+  transform: translateY(-3px);
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  align-items: stretch;
   padding: 0 1rem;
 }
 
+/* ===================================================
+   Product Card & Details Accordion
+=================================================== */
 .product-card {
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
   overflow: hidden;
   min-height: 400px;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-heavy);
 }
 
 .product-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   margin-bottom: 1rem;
 }
 
@@ -334,30 +421,28 @@ a {
   color: #ddd;
 }
 
-/* ===================================================
-     Product Details Accordion
-     =================================================== */
+/* Accordion for Product Details */
 .product-details-accordion {
   width: 100%;
   margin-top: 1rem;
 }
 
 .product-details-accordion summary {
-  background: var(--primary);
-  color: var(--text-light);
+  background: var(--color-primary);
+  color: var(--color-text);
   padding: 0.75rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-speed) ease;
   list-style: none;
+}
+
+.product-details-accordion summary:hover {
+  background: var(--color-accent);
 }
 
 .product-details-accordion summary::-webkit-details-marker {
   display: none;
-}
-
-.product-details-accordion summary:hover {
-  background: var(--accent);
 }
 
 .product-details-content {
@@ -371,8 +456,8 @@ a {
 }
 
 /* ===================================================
-     Product Gallery & Carousel
-     =================================================== */
+   Product Gallery & Carousel
+=================================================== */
 .product-gallery {
   margin: 1rem 0;
 }
@@ -381,15 +466,19 @@ a {
   width: 100%;
   max-height: 300px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   cursor: pointer;
+  transition: transform var(--transition-speed) ease;
+}
+
+.gallery-main-image:hover {
+  transform: scale(1.02);
 }
 
 .gallery-thumbnails {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  flex-wrap: nowrap;
   overflow-x: auto;
 }
 
@@ -400,25 +489,28 @@ a {
   border-radius: 4px;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: border 0.2s ease;
+  transition: border var(--transition-speed) ease;
 }
 
 .gallery-thumbnails img:hover {
-  border-color: var(--accent);
+  border-color: var(--color-accent);
 }
 
 .gallery-modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.8);
   z-index: 2000;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+
+/* NEW: Display modal with a fade-in animation when active */
+.gallery-modal.active {
+  display: flex;
+  animation: modalFadeIn 0.5s ease-out;
 }
 
 .gallery-modal-content {
@@ -427,7 +519,7 @@ a {
   width: 100%;
   background: #181818;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   text-align: center;
 }
 
@@ -442,7 +534,7 @@ a {
   width: 100%;
   max-height: 500px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 .carousel-prev,
@@ -450,13 +542,19 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--primary);
+  background: var(--color-primary);
   border: none;
-  color: var(--text-light);
+  color: var(--color-text);
   font-size: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 4px;
+  transition: background var(--transition-speed) ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: var(--color-accent);
 }
 
 .carousel-prev {
@@ -468,8 +566,8 @@ a {
 }
 
 /* ===================================================
-     Expertise Section
-     =================================================== */
+   Expertise Section
+=================================================== */
 .expertise {
   padding: 4rem 2rem;
   background: #111;
@@ -479,12 +577,14 @@ a {
 .expertise h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  animation: fadeInUp 1s ease both;
 }
 
 .expertise h3 {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  color: var(--accent);
+  color: var(--color-accent);
+  animation: fadeInUp 1.2s ease both;
 }
 
 .expertise .features {
@@ -498,7 +598,12 @@ a {
   flex: 1 1 250px;
   background: rgba(255, 255, 255, 0.1);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed) ease;
+}
+
+.expertise .feature:hover {
+  transform: translateY(-3px);
 }
 
 .expertise .feature h4 {
@@ -511,8 +616,8 @@ a {
 }
 
 /* ===================================================
-     About Us Section
-     =================================================== */
+   About Us Section
+=================================================== */
 .about-us {
   padding: 4rem 2rem;
   background: #181818;
@@ -528,7 +633,12 @@ a {
 
 .about-us .about-image img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed) ease;
+}
+
+.about-us .about-image img:hover {
+  transform: scale(1.02);
 }
 
 .about-us .about-content {
@@ -539,16 +649,18 @@ a {
 .about-us .about-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1s ease both;
 }
 
 .about-us .about-content p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  animation: fadeInUp 1.2s ease both;
 }
 
 /* ===================================================
-     Gallery Section
-     =================================================== */
+   Gallery Section
+=================================================== */
 .gallery {
   padding: 4rem 2rem;
   background: #111;
@@ -558,6 +670,7 @@ a {
 .gallery h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  animation: fadeInUp 1s ease both;
 }
 
 .gallery .slider {
@@ -570,13 +683,18 @@ a {
 
 .gallery .slider img {
   width: 200px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   scroll-snap-align: center;
+  transition: transform var(--transition-speed) ease;
+}
+
+.gallery .slider img:hover {
+  transform: scale(1.05);
 }
 
 /* ===================================================
-     FAQ Section
-     =================================================== */
+   FAQ Section
+=================================================== */
 .faq {
   padding: 4rem 2rem;
   background: #181818;
@@ -586,6 +704,7 @@ a {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  animation: fadeInUp 1s ease both;
 }
 
 .faq .accordion {
@@ -596,7 +715,7 @@ a {
 .faq .accordion-item {
   background: rgba(255, 255, 255, 0.1);
   margin-bottom: 1rem;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
@@ -607,20 +726,28 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background var(--transition-speed) ease;
+}
+
+.faq .accordion-header:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .faq .accordion-body {
   padding: 1rem;
   display: none;
   font-size: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* When active, reveal and slide down the accordion content */
 .faq .accordion-item.active .accordion-body {
   display: block;
+  animation: slideDown 0.3s ease-out;
 }
 
 .faq .accordion-header .arrow {
-  transition: transform var(--transition-speed);
+  transition: transform var(--transition-speed) ease;
 }
 
 .faq .accordion-item.active .accordion-header .arrow {
@@ -628,8 +755,8 @@ a {
 }
 
 /* ===================================================
-     Contacts Section
-     =================================================== */
+   Contacts Section
+=================================================== */
 .contacts {
   padding: 4rem 2rem;
   background: #111;
@@ -664,12 +791,12 @@ a {
   width: 100%;
   height: 300px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 
 /* ===================================================
-     Footer
-     =================================================== */
+   Footer
+=================================================== */
 .footer {
   padding: 2rem;
   background: #181818;
@@ -685,7 +812,7 @@ a {
 }
 
 .footer a {
-  color: var(--text-light);
+  color: var(--color-text);
   font-size: 1rem;
 }
 
@@ -698,29 +825,15 @@ a {
 }
 
 /* ===================================================
-     Responsive Adjustments
-     =================================================== */
+   Responsive Adjustments
+=================================================== */
 @media (max-width: 768px) {
   .navbar {
     padding: 0 1rem;
   }
-
   .hamburger {
     display: block;
   }
-
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
   .navbar .menu {
     position: fixed;
     top: var(--navbar-height);
@@ -731,95 +844,75 @@ a {
     width: 100%;
     text-align: center;
     padding: 2rem;
-    transition: all var(--transition-speed);
+    transition: right var(--transition-speed) ease;
     gap: 2rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
       inset 0 0 15px rgba(255, 255, 255, 0.1);
   }
-
   .navbar .menu.active {
     right: 0;
   }
-
   .navbar .menu a {
     display: block;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1),
-      inset -2px -2px 5px rgba(0, 0, 0, 0.1);
   }
-
   .hero-content h1 {
     font-size: 2.5rem;
   }
-
   .hero-content h2,
   .hero-content p {
     font-size: 1rem;
   }
-
   .product-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     padding: 0 0.5rem;
   }
-
   .product-category {
     padding: 1rem;
     margin-bottom: 1.5rem;
   }
-
   .product-card {
     padding: 0.75rem;
     min-height: auto;
   }
-
   .product-card img {
     height: 150px;
   }
-
   .card-text h3 {
     font-size: 1.1rem;
   }
-
   .card-text p {
     font-size: 0.9rem;
   }
-
   .gallery-modal-content {
     max-width: 95%;
     padding: 0.75rem;
   }
-
   .carousel-prev,
   .carousel-next {
     font-size: 1.5rem;
     padding: 0.25rem 0.5rem;
   }
-
   .about-us {
     flex-direction: column;
   }
-
   .expertise .features {
     gap: 1rem;
   }
-
   .expertise .feature {
     flex: 1 1 100%;
   }
-
   .gallery .slider {
     gap: 1rem;
   }
-
   .gallery .slider img {
     width: 150px;
   }
-
   .contacts .contact-item {
     flex-direction: column;
   }
@@ -829,29 +922,58 @@ a {
   .navbar .brand a {
     font-size: 1.25rem;
   }
-
   .btn-call a {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
-
   .navbar .menu a {
     font-size: 1rem;
   }
-
   .hero {
     padding: 1.5rem;
   }
-
   .hero h1 {
     font-size: 1.75rem;
   }
-
   .hero h2 {
     font-size: 1.1rem;
   }
-
   .pc-content {
     padding: 1rem;
+  }
+}
+
+/* ===================================================
+   Hamburger Animation
+=================================================== */
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+  margin: 5px 0;
+  transition: transform var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
+  transform-origin: center; /* Ensures rotation occurs around the center */
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===================================================
+   Responsive Adjustments (show hamburger on small screens)
+=================================================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
 }
