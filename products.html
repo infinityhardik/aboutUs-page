@@ -12,7 +12,7 @@
   <meta name="description"
     content="Mahadev Traders is your trusted Plywood, Block-Board & Flush-Door wholesaler in Rajkot, Gujarat, offering premium products with over 30 years’ experience. We are the authorized dealer of Marlex Plywood, Zevik, Simson, Greytone, Limelite & Limelite Pro, and a leading timber merchant. Through our proprietary order management system at Vaives.com, we deliver top-quality plywood, flush doors, and block boards at competitive prices across India. Discover the best Plywood Price, Flush Door Price, and Block Board Price today!" />
   <meta name="keywords"
-    content="Plywood Rajkot, Flush Door Gujarat, Block Board Wholesaler, Marlex Plywood, Zevik, Simson, Greytone, Limelite, Limelite Pro, Mahadev, Traders, Plywood, Block-Board, Flush-Door, Door, Wholesaler, Best, Rajkot, Laminate, Wood, Quality, Best, Vaives, Price, plywood price rajkot, flush door price rajkot, block board price rajkot, marlex plywood dealer rajkot, zevik plywood dealer, simson plywood price, greytone plywood dealer, limelite plywood price, wholesale plywood rajkot, best plywood dealer rajkot, cheap plywood price gujarat, plywood wholesaler rajkot, timber merchant rajkot, flush door wholesale gujarat, block board dealer rajkot">
+    content="Plywood Rajkot, Flush Door Gujarat, Block Board Wholesaler, Marlex Plywood, Zevik, Simson, Greytone, Limelite, Limelite Pro, Mahadev, Traders, Plywood, Block-Board, Flush-Door, Door, Wholesaler, Best, Rajkot, Laminate, Wood, Quality, Best, Vaives, Price, plywood price rajkot, flush door price rajkot, block board price rajkot, marlex plywood dealer rajkot, zevik plywood dealer, simson plywood price, greytone plywood dealer, limelite plywood price, wholesale plywood rajkot, best plywood dealer rajkot, cheap plywood price gujarat, plywood wholesaler rajkot, timber merchant rajkot, flush door wholesale gujarat, block board dealer rajkot" />
   <meta name="robots" content="index, follow">
   <meta name="author" content="Mahadev Traders Plywood Block-Board & Flush-Door Wholesaler - Vaives.com">
 
@@ -24,7 +24,7 @@
   <meta property="og:image" content="https://about.vaives.com/assets/favicon.webp">
   <meta property="og:url" content="https://about.vaives.com" />
 
-  <!-- Schema.org Markup -->
+  <!-- Schema.org Markup for the WholesaleStore -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -77,7 +77,7 @@
         "Limelite"
       ]
     }
-    </script>
+  </script>
 
   <!-- Preconnect & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -175,7 +175,7 @@
     </div>
   </div>
 
-  <!-- JavaScript: Load JSON Data and Build Products, plus Modal Carousel -->
+  <!-- JavaScript: Load JSON Data and Build Products, plus Modal Carousel and Product Structured Data -->
   <script>
     // Global variables for modal carousel
     let currentGalleryImages = [];
@@ -227,11 +227,14 @@
       return `${product.thickness} ${product.brand} ${product.type} (${product.grade}) [ ${product.face} ${product.core} ] = ${product.priceCategory}`;
     }
 
-    // Fetch the JSON data and build product cards
+    // Fetch the JSON data, build product cards, and also build Product structured data
     fetch('productDetails.json')
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById('products-container');
+        // Array to hold Product JSON‑LD objects
+        let productStructuredData = [];
+
         data.categories.forEach(category => {
           const categorySection = document.createElement('div');
           categorySection.classList.add('product-category');
@@ -360,11 +363,44 @@
             cardFooter.appendChild(details);
             card.appendChild(cardFooter);
             grid.appendChild(card);
+
+            // Build Product structured data for this product.
+            // (Ensure each product has a valid price value for rich results.
+            // Here we assume that if product.price is not provided, a default "0.00" is used.)
+            productStructuredData.push({
+              "@type": "Product",
+              "name": product.title,
+              "image": product.images,
+              "description": product.description,
+              "sku": product.sku || "",
+              "brand": {
+                "@type": "Brand",
+                "name": product.brand
+              },
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "INR",
+                "price": product.price ? product.price.toString() : "0.00",
+                "availability": "https://schema.org/InStock",
+                "url": window.location.href
+              }
+            });
           });
 
           categorySection.appendChild(grid);
           container.appendChild(categorySection);
         });
+
+        // Inject the Product structured data into the <head> as a JSON‑LD script
+        if (productStructuredData.length > 0) {
+          const scriptTag = document.createElement('script');
+          scriptTag.type = 'application/ld+json';
+          scriptTag.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": productStructuredData
+          });
+          document.head.appendChild(scriptTag);
+        }
       })
       .catch(error => console.error('Error loading products JSON:', error));
   </script>
