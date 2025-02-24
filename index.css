@@ -179,7 +179,6 @@ h6 {
     #fbbc05,
     #34a853
   );
-  /* Combined background gradient animation with a new wave clip animation */
   animation: gradientShift var(--gradient-duration) ease infinite,
     waveClip 5s ease-in-out infinite;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
@@ -198,7 +197,6 @@ h6 {
   z-index: 1;
 }
 
-/* Added a pulsing shadow effect to hero content */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -262,7 +260,6 @@ h6 {
   }
 }
 
-/* NEW: Wave clip animation for hero section */
 @keyframes waveClip {
   0% {
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
@@ -275,7 +272,6 @@ h6 {
   }
 }
 
-/* NEW: Dynamic pulsing shadow animation */
 @keyframes dynamicShadow {
   0% {
     box-shadow: var(--shadow-light);
@@ -288,7 +284,6 @@ h6 {
   }
 }
 
-/* NEW: Modal fade-in animation */
 @keyframes modalFadeIn {
   from {
     opacity: 0;
@@ -300,7 +295,6 @@ h6 {
   }
 }
 
-/* NEW: Slide-down animation for accordion content */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -507,7 +501,6 @@ h6 {
   padding: 1rem;
 }
 
-/* NEW: Display modal with a fade-in animation when active */
 .gallery-modal.active {
   display: flex;
   animation: modalFadeIn 0.5s ease-out;
@@ -629,17 +622,24 @@ h6 {
 
 .about-us .about-image {
   flex: 1 1 300px;
+  text-align: center;
+  margin: 1rem;
 }
 
 .about-us .about-image img {
-  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
   border-radius: var(--border-radius);
-  transition: transform var(--transition-speed) ease;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .about-us .about-image img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
 
 .about-us .about-content {
   flex: 2 1 400px;
@@ -740,7 +740,6 @@ h6 {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* When active, reveal and slide down the accordion content */
 .faq .accordion-item.active .accordion-body {
   display: block;
   animation: slideDown 0.3s ease-out;
@@ -954,7 +953,7 @@ h6 {
   margin: 5px 0;
   transition: transform var(--transition-speed) ease,
     opacity var(--transition-speed) ease;
-  transform-origin: center; /* Ensures rotation occurs around the center */
+  transform-origin: center;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -969,11 +968,17 @@ h6 {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ===================================================
-   Responsive Adjustments (show hamburger on small screens)
-=================================================== */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+  }
+}
+
+/* Accessibility: Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
