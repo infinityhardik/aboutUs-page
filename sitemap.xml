@@ -14,15 +14,7 @@
     <loc>https://about.vaives.com/products.html</loc>
     <lastmod>2025-02-08</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Services Page -->
-  <url>
-    <loc>https://vaives.com/</loc>
-    <lastmod>2025-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
 
 </urlset>
