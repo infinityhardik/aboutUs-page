@@ -257,17 +257,15 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; letter-spacing: 0.5px; }
 
 /* ---------- About Us Section ---------- */
 .about-us { padding: 4rem 2rem; background: #181818; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; }
-.about-us .about-image { flex: 1 1 300px; text-align: center; margin: 1rem; }
+.about-us .about-image { flex: 2 1 300px; text-align: center; }
 .about-us .about-image img {
   max-width: 400px;
-  display: block;
-  margin: 0 auto;
   border-radius: var(--border-radius);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .about-us .about-image img:hover { transform: scale(1.05); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
-.about-us .about-content { flex: 2 1 400px; text-align: left; }
+.about-us .about-content { flex: 2 1 400px; text-align: justify; }
 .about-us .about-content h2 { font-size: 2rem; margin-bottom: 1rem; animation: fadeInUp 1s ease both; }
 .about-us .about-content p { font-size: 1rem; margin-bottom: 1rem; animation: fadeInUp 1.2s ease both; }
 
