@@ -10,15 +10,115 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.webp" />
   <link rel="canonical" href="https://about.vaives.com" />
 
-  <!-- Preload CSS for performance -->
+  <!-- Inline Critical CSS -->
+  <style>
+    /* Navbar Critical Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 1000;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar.transparent {
+      background: transparent;
+    }
+
+    .navbar.solid {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar .brand a {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Hero Critical Styles */
+    .hero {
+      position: relative;
+      height: 100vh;
+      padding-top: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a73e8, #d93025, #fbbc05, #34a853);
+      animation: gradientShift 12s ease infinite, waveClip 5s ease-in-out infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+      transition: clip-path 0.3s ease;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: dynamicShadow 3s ease-in-out infinite;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease both;
+    }
+
+    .hero-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1.2s ease both;
+    }
+
+    .hero-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1.4s ease both;
+    }
+
+    /* Base Styles */
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <!-- Load Non-Critical CSS Asynchronously -->
   <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript>
     <link rel="stylesheet" href="index.css" />
   </noscript>
 
+  <!-- Preload Favicon -->
+  <link rel="preload" href="assets/favicon.webp" as="image" />
+
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Mahadev Traders Plywood Block-Board &amp; Flush-Door Wholesaler. Mahadev Traders is the Leading wholesaler of Plywood, Block Boards, and Flush Doors in Rajkot, Gujarat. Authorized dealer of Marlex, Zevik, Simson, Greytone, Limelite, and Limelite Pro. Leading Timber Merchant and Plywood, Flush-Door and Block-Board Supplier with over 30 years of experience in Rajkot. Providing best quality products at competitive prices. Mahadev Traders Plywood, Block-Board & Flush-Door Wholesaler, Rajkot is the undisputed Best Quality Wholesaler in Rajkot, Gujarat supplying all over India through Vaives.com. Vaives.com is our proprietary technology for Order Management pertaining to Plywood, Block-Board and Flush-Door Wholesale in Rajkot, Gujarat. We provide best Plywood Price, Flush Door Price, Block Board Price in Rajkot." />
+    content="Mahadev Traders Plywood Block-Board & Flush-Door Wholesaler. Mahadev Traders is the Leading wholesaler of Plywood, Block Boards, and Flush Doors in Rajkot, Gujarat. Authorized dealer of Marlex, Zevik, Simson, Greytone, Limelite, and Limelite Pro. Leading Timber Merchant and Plywood, Flush-Door and Block-Board Supplier with over 30 years of experience in Rajkot. Providing best quality products at competitive prices. Mahadev Traders Plywood, Block-Board & Flush-Door Wholesaler, Rajkot is the undisputed Best Quality Wholesaler in Rajkot, Gujarat supplying all over India through Vaives.com. Vaives.com is our proprietary technology for Order Management pertaining to Plywood, Block-Board and Flush-Door Wholesale in Rajkot, Gujarat. We provide best Plywood Price, Flush Door Price, Block Board Price in Rajkot." />
   <meta name="keywords"
     content="Plywood Rajkot, Flush Door Gujarat, Block Board Wholesaler, Marlex Plywood, Zevik, Simson, Greytone, Limelite, Limelite Pro, Mahadev, Traders, Plywood, Block-Board, Flush-Door, Door, Wholesaler, Best, Rajkot, Laminate, Wood, Quality, Best, Vaives, Price, plywood price rajkot, flush door price rajkot, block board price rajkot, marlex plywood dealer rajkot, zevik plywood dealer, simson plywood price, greytone plywood dealer, limelite plywood price, wholesale plywood rajkot, best plywood dealer rajkot, cheap plywood price gujarat, plywood wholesaler rajkot, timber merchant rajkot, flush door wholesale gujarat, block board dealer rajkot" />
   <meta name="robots" content="index, follow" />
@@ -59,14 +159,7 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "09:00",
         "closes": "19:30"
       },
@@ -77,13 +170,7 @@
         "closes": "12:00"
       }
     ],
-    "brand": [
-      "Marlex",
-      "Zevik",
-      "Simson",
-      "Greytone",
-      "Limelite"
-    ],
+    "brand": ["Marlex", "Zevik", "Simson", "Greytone", "Limelite"],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -215,7 +302,7 @@
         <div class="accordion-item">
           <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
             <span><strong>Why Choose Us?</strong></span>
-            <span class="arrow" aria-hidden="true">&#9660;</span>
+            <span class="arrow" aria-hidden="true">▼</span>
           </div>
           <div class="accordion-body">
             <p>With over 30 years of expertise, we're setting high bar for quality and service in Rajkot. Visit and
@@ -225,18 +312,17 @@
         <div class="accordion-item">
           <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
             <span><strong>What Do We Offer?</strong></span>
-            <span class="arrow" aria-hidden="true">&#9660;</span>
+            <span class="arrow" aria-hidden="true">▼</span>
           </div>
           <div class="accordion-body">
             <p>From Plywood, Block-Boards and Flush-Doors to Laminates, we've got your wooden dreams covered with a
-              touch
-              of class and a dash of durability!</p>
+              touch of class and a dash of durability!</p>
           </div>
         </div>
         <div class="accordion-item">
           <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
             <span><strong>Why Trust Us?</strong></span>
-            <span class="arrow" aria-hidden="true">&#9660;</span>
+            <span class="arrow" aria-hidden="true">▼</span>
           </div>
           <div class="accordion-body">
             <p>We're not just the pioneers; we're the trendsetters in wholesale and retail, making your satisfaction our
@@ -246,7 +332,7 @@
         <div class="accordion-item">
           <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
             <span><strong>Where to Find Us?</strong></span>
-            <span class="arrow" aria-hidden="true">&#9660;</span>
+            <span class="arrow" aria-hidden="true">▼</span>
           </div>
           <div class="accordion-body">
             <p>Located on the prestigious Gondal Road, we proudly stand as one of the oldest and most trusted firms in
@@ -256,12 +342,11 @@
         <div class="accordion-item">
           <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
             <span><strong>What Sets Us Apart?</strong></span>
-            <span class="arrow" aria-hidden="true">&#9660;</span>
+            <span class="arrow" aria-hidden="true">▼</span>
           </div>
           <div class="accordion-body">
             <p>In a market full of uncertainties, we guarantee top-notch quality at unbeatable prices, ensuring smiles
-              on
-              our customers' faces!</p>
+              on our customers' faces!</p>
           </div>
         </div>
       </div>

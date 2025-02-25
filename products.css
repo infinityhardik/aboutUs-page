@@ -1,0 +1,738 @@
+/* ===================================================
+   Products CSS: Styles for products.html
+=================================================== */
+
+/* ---------- Global Reset & Variables ---------- */
+:root {
+  /* Colors */
+  --color-primary: #1a73e8;
+  --color-accent: #d93025;
+  --color-bg-dark: #0a0a0a;
+  --color-text: #ffffff;
+
+  /* Layout & Sizing */
+  --navbar-height: 70px;
+  --border-radius: 8px;
+
+  /* Timing */
+  --transition-speed: 0.3s;
+  --gradient-duration: 12s;
+
+  /* Shadows */
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --shadow-heavy: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--color-bg-dark);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---------- Basic Elements ---------- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================================
+   Navbar
+=================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
+  transition: background var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.navbar.transparent {
+  background: transparent;
+}
+
+.navbar.solid {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), var(--shadow-heavy);
+}
+
+.navbar .brand a {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .menu a {
+  position: relative;
+  font-size: 1rem;
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background var(--transition-speed) ease;
+}
+
+.navbar .menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar .menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition-speed) ease,
+    left var(--transition-speed) ease;
+  transform: translateX(-50%);
+}
+
+.navbar .menu a:hover::after {
+  width: 80%;
+}
+
+.navbar .menu a.active-menu-item {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar .btn-call a {
+  background: linear-gradient(145deg, #2f9e4f, #28a745);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  color: var(--color-text);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+.navbar .btn-call a:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.15);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed) ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+  margin: 5px 0;
+  transition: transform var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
+}
+
+/* ===================================================
+   Hero Section
+=================================================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  padding-top: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent),
+    #fbbc05,
+    #34a853
+  );
+  animation: gradientShift var(--gradient-duration) ease infinite,
+    waveClip 5s ease-in-out infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  transition: clip-path var(--transition-speed) ease;
+}
+
+.hero:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+  animation: dynamicShadow 3s ease-in-out infinite;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease both;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.2s ease both;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1.4s ease both;
+}
+
+/* ---------------------------------------------------
+   Animations
+--------------------------------------------------- */
+@keyframes gradientShift {
+  0%,
+  100% {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-accent),
+      #fbbc05,
+      #34a853
+    );
+  }
+  50% {
+    background: linear-gradient(
+      135deg,
+      var(--color-accent),
+      #fbbc05,
+      #34a853,
+      var(--color-primary)
+    );
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes waveClip {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  }
+}
+
+@keyframes dynamicShadow {
+  0% {
+    box-shadow: var(--shadow-light);
+  }
+  50% {
+    box-shadow: var(--shadow-heavy);
+  }
+  100% {
+    box-shadow: var(--shadow-light);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================================
+   Product Categories & Grid
+=================================================== */
+.product-categories {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent),
+    #fbbc05,
+    #34a853
+  );
+  animation: gradientShift var(--gradient-duration) ease infinite;
+  position: relative;
+}
+
+.product-categories::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.pc-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.product-categories h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease both;
+}
+
+.product-category {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-speed) ease;
+}
+
+.product-category:hover {
+  transform: translateY(-3px);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* ===================================================
+   Product Card & Details Accordion
+=================================================== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card-text h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Accordion for Product Details */
+.product-details-accordion {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.product-details-accordion summary {
+  background: var(--color-primary);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--transition-speed) ease;
+  list-style: none;
+}
+
+.product-details-accordion summary:hover {
+  background: var(--color-accent);
+}
+
+.product-details-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-details-content {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.product-details-content p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* ===================================================
+   Product Gallery & Carousel
+=================================================== */
+.product-gallery {
+  margin: 1rem 0;
+}
+
+.gallery-main-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease;
+}
+
+.gallery-main-image:hover {
+  transform: scale(1.02);
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  overflow-x: auto;
+}
+
+.gallery-thumbnails img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border var(--transition-speed) ease;
+}
+
+.gallery-thumbnails img:hover {
+  border-color: var(--color-accent);
+}
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.gallery-modal.active {
+  display: flex;
+  animation: modalFadeIn 0.5s ease-out;
+}
+
+.gallery-modal-content {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  background: #181818;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-primary);
+  border: none;
+  color: var(--color-text);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background var(--transition-speed) ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: var(--color-accent);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* ===================================================
+   Footer
+=================================================== */
+.footer {
+  padding: 2rem;
+  background: #181818;
+  text-align: center;
+}
+
+.footer .footer-menu,
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.footer .social-icons a {
+  font-size: 1.5rem;
+}
+
+.footer p {
+  font-size: 0.875rem;
+}
+
+/* ===================================================
+   Responsive Adjustments
+=================================================== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar .menu {
+    position: fixed;
+    top: var(--navbar-height);
+    right: -100%;
+    flex-direction: column;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    transition: right var(--transition-speed) ease;
+    gap: 2rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+  .navbar .menu.active {
+    right: 0;
+  }
+  .navbar .menu a {
+    display: block;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content h2,
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  .product-category {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .product-card {
+    padding: 0.75rem;
+    min-height: auto;
+  }
+  .product-card img {
+    height: 150px;
+  }
+  .card-text h3 {
+    font-size: 1.1rem;
+  }
+  .card-text p {
+    font-size: 0.9rem;
+  }
+  .gallery-modal-content {
+    max-width: 95%;
+    padding: 0.75rem;
+  }
+  .carousel-prev,
+  .carousel-next {
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .brand a {
+    font-size: 1.25rem;
+  }
+  .btn-call a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .navbar .menu a {
+    font-size: 1rem;
+  }
+  .hero {
+    padding: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+  .pc-content {
+    padding: 1rem;
+  }
+}
+
+/* ===================================================
+   Hamburger Animation
+=================================================== */
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+  margin: 5px 0;
+  transition: transform var(--transition-speed) ease,
+    opacity var(--transition-speed) ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Accessibility: Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
