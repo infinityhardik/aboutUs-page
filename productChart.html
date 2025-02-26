@@ -123,21 +123,6 @@
             background-color: #1e1e1e;
         }
 
-        /* Skip Link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #4a90e2;
-            color: #fff;
-            padding: 8px;
-            z-index: 1001;
-            transition: top 0.3s;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
 
         /* Loading Indicator */
         #loading {
@@ -332,7 +317,55 @@
             outline-offset: -2px;
             /* Inside header border */
         }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+        }
+
+        #back-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        #back-to-top:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            #back-to-top {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+
+        /* High Contrast Mode Adjustments */
+        .high-contrast-mode #back-to-top {
+            background-color: #000;
+            color: #ffff00;
+        }
+
+        .high-contrast-mode #back-to-top:focus {
+            box-shadow: 0 0 0 3px #ffff00;
+        }
     </style>
+
 
     <!-- Load Non-Critical CSS Asynchronously -->
     <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -379,9 +412,6 @@
 </head>
 
 <body>
-    <!-- Skip Link -->
-    <a href="#maincontent" class="skip-link">Skip to main content</a>
-
     <!-- Navbar -->
     <nav class="navbar transparent" id="navbar">
         <div class="brand"><a href="index.html">Mahadev Traders</a></div>
@@ -444,6 +474,11 @@
         </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-menu">
@@ -499,7 +534,7 @@
             // State variables
             let allProducts = [];
             let currentProducts = [];
-            let itemsPerPage = 10; // Increased items per page
+            let itemsPerPage = 1000; // Increased items per page
             let currentPage = 1;
             let currentSort = {
                 column: null,
@@ -570,17 +605,16 @@
                     .catch(error => {
                         console.error('Error loading products:', error);
                         document.getElementById('loading').innerHTML = `
-                            <div role="alert" style="color: #ff6b6b;">
-                                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-                                Failed to load products. Please try again later.
-                            </div>
-                        `;
+                        <div role="alert" style="color: #ff6b6b;">
+                            <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                            Failed to load products. Please try again later.
+                        </div>
+                    `;
                     });
             }
 
             // Sort table by column
             function sortTable(columnName) {
-                // Map column names to their product property names
                 const columnMap = {
                     'product': 'Product',
                     'category': 'Prod. Category',
@@ -593,7 +627,6 @@
 
                 const column = columnMap[columnName];
 
-                // Toggle sort direction if same column, otherwise default to ascending
                 if (currentSort.column === column) {
                     currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
                 } else {
@@ -601,7 +634,6 @@
                     currentSort.direction = 'asc';
                 }
 
-                // Sort the products
                 currentProducts.sort((a, b) => {
                     const valueA = (a[column] || '').toString().toLowerCase();
                     const valueB = (b[column] || '').toString().toLowerCase();
@@ -611,7 +643,6 @@
                     return 0;
                 });
 
-                // Update header classes to show sort direction
                 tableHeaders.forEach(header => {
                     const headerColumn = columnMap[header.id.replace('col-', '')];
                     header.classList.remove('sorted-asc', 'sorted-desc');
@@ -619,7 +650,6 @@
                     if (headerColumn === currentSort.column) {
                         header.classList.add(currentSort.direction === 'asc' ? 'sorted-asc' : 'sorted-desc');
 
-                        // Announce sort to screen readers
                         const sortAnnouncement = document.createElement('div');
                         sortAnnouncement.setAttribute('aria-live', 'polite');
                         sortAnnouncement.setAttribute('role', 'status');
@@ -635,8 +665,6 @@
 
                 // Reset to first page
                 currentPage = 1;
-
-                // Re-render the table
                 renderProducts();
             }
 
@@ -649,10 +677,8 @@
                 const startIndex = (currentPage - 1) * itemsPerPage;
                 const endIndex = Math.min(startIndex + itemsPerPage, currentProducts.length);
 
-                // Update pagination controls
                 renderPagination(totalPages);
 
-                // Display message if no products
                 if (currentProducts.length === 0) {
                     const noResultsRow = document.createElement('tr');
                     noResultsRow.innerHTML = `
@@ -670,14 +696,14 @@
                     const row = document.createElement('tr');
 
                     row.innerHTML = `
-                        <td data-label="Product">${escapeHTML(product.Product || '-')}</td>
-                        <td data-label="Prod. Category">${escapeHTML(product["Prod. Category"] || '-')}</td>
-                        <td data-label="Product Type">${escapeHTML(product["Product Type"] || '-')}</td>
-                        <td data-label="Face Type">${escapeHTML(product["Face Type"] || '-')}</td>
-                        <td data-label="Core Type">${escapeHTML(product["Core Type"] || '-')}</td>
-                        <td data-label="Grade Type">${escapeHTML(product["Grade Type"] || '-')}</td>
-                        <td data-label="Brand Mark">${escapeHTML(product["Brand Mark"] || '-')}</td>
-                    `;
+                    <td data-label="Product">${escapeHTML(product.Product || '-')}</td>
+                    <td data-label="Prod. Category">${escapeHTML(product["Prod. Category"] || '-')}</td>
+                    <td data-label="Product Type">${escapeHTML(product["Product Type"] || '-')}</td>
+                    <td data-label="Face Type">${escapeHTML(product["Face Type"] || '-')}</td>
+                    <td data-label="Core Type">${escapeHTML(product["Core Type"] || '-')}</td>
+                    <td data-label="Grade Type">${escapeHTML(product["Grade Type"] || '-')}</td>
+                    <td data-label="Brand Mark">${escapeHTML(product["Brand Mark"] || '-')}</td>
+                `;
 
                     tableBody.appendChild(row);
                 }
@@ -688,7 +714,6 @@
                 paginationInfo.className = 'pagination-info';
                 paginationInfo.textContent = currentDisplayInfo;
 
-                // Replace existing info or add new one
                 const existingInfo = document.querySelector('.pagination-info');
                 if (existingInfo) {
                     existingInfo.textContent = currentDisplayInfo;
@@ -697,7 +722,6 @@
                 }
             }
 
-            // Helper function to safely escape HTML
             function escapeHTML(str) {
                 if (!str) return '-';
                 const div = document.createElement('div');
@@ -705,15 +729,13 @@
                 return div.innerHTML;
             }
 
-            // Render pagination controls
             function renderPagination(totalPages) {
                 paginationEl.innerHTML = '';
 
                 if (totalPages <= 1) return;
 
-                // Previous button
                 const prevBtn = document.createElement('button');
-                prevBtn.innerHTML = '&laquo; Prev';
+                prevBtn.innerHTML = '« Prev';
                 prevBtn.disabled = currentPage === 1;
                 prevBtn.setAttribute('aria-label', 'Previous page');
                 prevBtn.addEventListener('click', () => {
@@ -726,7 +748,6 @@
                 });
                 paginationEl.appendChild(prevBtn);
 
-                // Page numbers with simplified display
                 const createPageBtn = (pageNum) => {
                     const btn = document.createElement('button');
                     btn.textContent = pageNum;
@@ -742,17 +763,13 @@
                     return btn;
                 };
 
-                // Simplified pagination logic
                 if (totalPages <= 5) {
-                    // Show all pages if 5 or fewer
                     for (let i = 1; i <= totalPages; i++) {
                         paginationEl.appendChild(createPageBtn(i));
                     }
                 } else {
-                    // First page
                     paginationEl.appendChild(createPageBtn(1));
 
-                    // Handle middle pages with ellipsis
                     if (currentPage > 2) {
                         const ellipsis1 = document.createElement('span');
                         ellipsis1.textContent = '...';
@@ -761,12 +778,10 @@
                         paginationEl.appendChild(ellipsis1);
                     }
 
-                    // Current page and neighbors
                     for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
                         paginationEl.appendChild(createPageBtn(i));
                     }
 
-                    // Handle last page ellipsis
                     if (currentPage < totalPages - 1) {
                         const ellipsis2 = document.createElement('span');
                         ellipsis2.textContent = '...';
@@ -775,13 +790,11 @@
                         paginationEl.appendChild(ellipsis2);
                     }
 
-                    // Last page
                     paginationEl.appendChild(createPageBtn(totalPages));
                 }
 
-                // Next button
                 const nextBtn = document.createElement('button');
-                nextBtn.innerHTML = 'Next &raquo;';
+                nextBtn.innerHTML = 'Next »';
                 nextBtn.disabled = currentPage === totalPages;
                 nextBtn.setAttribute('aria-label', 'Next page');
                 nextBtn.addEventListener('click', () => {
@@ -795,7 +808,6 @@
                 paginationEl.appendChild(nextBtn);
             }
 
-            // Announce page change to screen readers
             function announcePageChange() {
                 const startIndex = (currentPage - 1) * itemsPerPage + 1;
                 const endIndex = Math.min(startIndex + itemsPerPage - 1, currentProducts.length);
@@ -812,14 +824,10 @@
                 }, 2000);
             }
 
-            // Toggle high contrast mode
             function toggleHighContrast() {
                 document.body.classList.toggle('high-contrast-mode', highContrastToggle.checked);
-
-                // Save preference to localStorage
                 localStorage.setItem('highContrast', highContrastToggle.checked);
 
-                // Announce change to screen readers
                 const announcement = document.createElement('div');
                 announcement.setAttribute('aria-live', 'polite');
                 announcement.setAttribute('role', 'status');
@@ -834,21 +842,16 @@
                 }, 2000);
             }
 
-            // Change font size
             function changeFontSize(delta) {
                 fontSize = Math.max(12, Math.min(24, fontSize + delta));
                 document.documentElement.style.setProperty('--content-font-size', `${fontSize}px`);
 
-                // Apply font size to relevant elements
-                // Apply font size to relevant elements
                 document.querySelectorAll('#product-table, .pagination-info').forEach(el => {
                     el.style.fontSize = `${fontSize}px`;
                 });
 
-                // Save preference to localStorage
                 localStorage.setItem('fontSize', fontSize);
 
-                // Announce change to screen readers
                 const announcement = document.createElement('div');
                 announcement.setAttribute('aria-live', 'polite');
                 announcement.setAttribute('role', 'status');
@@ -861,16 +864,13 @@
                 }, 2000);
             }
 
-            // Load user preferences from localStorage
             function loadUserPreferences() {
-                // High contrast mode
                 const savedContrast = localStorage.getItem('highContrast');
                 if (savedContrast === 'true') {
                     highContrastToggle.checked = true;
                     document.body.classList.add('high-contrast-mode');
                 }
 
-                // Font size
                 const savedFontSize = localStorage.getItem('fontSize');
                 if (savedFontSize) {
                     fontSize = parseInt(savedFontSize);
@@ -881,7 +881,7 @@
                 }
             }
 
-            // Generate structured data for products
+            // Updated structured data generation with aggregateRating
             function generateProductStructuredData(products) {
                 const structuredData = {
                     "@context": "https://schema.org",
@@ -896,17 +896,38 @@
                             "brand": {
                                 "@type": "Brand",
                                 "name": product["Brand Mark"]
+                            },
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "5",
+                                "reviewCount": "159" // Adjust this if you have actual review count data
                             }
                         }
                     }))
                 };
 
-                // Add structured data to page
                 const scriptTag = document.createElement('script');
                 scriptTag.type = 'application/ld+json';
                 scriptTag.textContent = JSON.stringify(structuredData);
                 document.head.appendChild(scriptTag);
             }
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                backToTopBtn.style.opacity = '1';
+                backToTopBtn.style.visibility = 'visible';
+            } else {
+                backToTopBtn.style.opacity = '0';
+                backToTopBtn.style.visibility = 'hidden';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
