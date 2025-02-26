@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Product Chart - Mahadev Traders Plywood, Block-Board & Flush-Door Wholesaler</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.webp" />
+    <link rel="canonical" href="https://about.vaives.com/productChart.html" />
+
+    <!-- Inline Critical CSS -->
+    <style>
+        /* Navbar Critical Styles from index.html */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            z-index: 1000;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar.transparent {
+            background: transparent;
+        }
+
+        .navbar.solid {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar .brand a {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Base Styles */
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Critical Product Chart Styles */
+        .product-chart {
+            padding: 4rem 2rem;
+            background: #111;
+            margin: auto;
+        }
+
+        .product-chart h3 {
+            text-align: center;
+            margin: 2rem;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        #product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 0.95rem;
+        }
+
+        #product-table th {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #333;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #product-table th:hover {
+            background-color: #252525;
+        }
+
+        #product-table th.sorted-asc::after {
+            content: "↑";
+            position: absolute;
+            right: 8px;
+            color: #4a90e2;
+        }
+
+        #product-table th.sorted-desc::after {
+            content: "↓";
+            position: absolute;
+            right: 8px;
+            color: #4a90e2;
+        }
+
+        #product-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #333;
+        }
+
+        #product-table tbody tr:hover {
+            background-color: #1e1e1e;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #4a90e2;
+            color: #fff;
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Loading Indicator */
+        #loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #4a90e2;
+            animation: spin 1s infinite linear;
+            margin-right: 0.5rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 0.5rem;
+        }
+
+        .pagination button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background-color: #252525;
+        }
+
+        .pagination button.active {
+            background-color: #4a90e2;
+            border-color: #4a90e2;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-info {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Accessibility */
+        .accessibility-tools {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .high-contrast-toggle,
+        .font-size-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .font-size-control button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .font-size-control button:hover {
+            background-color: #252525;
+        }
+
+        /* High Contrast Mode */
+        .high-contrast-mode {
+            background: #000;
+            color: #fff;
+        }
+
+        .high-contrast-mode #product-table th {
+            background-color: #000;
+            color: #ffff00;
+            border-bottom: 2px solid #fff;
+        }
+
+        .high-contrast-mode #product-table td {
+            border-bottom: 1px solid #fff;
+        }
+
+        .high-contrast-mode #product-table tbody tr:hover {
+            background-color: #222;
+        }
+
+        .high-contrast-mode .pagination button {
+            background-color: #000;
+            border: 1px solid #fff;
+        }
+
+        .high-contrast-mode .pagination button.active {
+            background-color: #0066ff;
+            color: #fff;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .table-container {
+                overflow-x: auto;
+                /* Enables horizontal scrolling */
+                -webkit-overflow-scrolling: touch;
+                /* Smooth scrolling on iOS */
+                /* Remove the pan-x restriction so vertical swipes work as well */
+                touch-action: auto;
+                padding-bottom: 1rem;
+                /* Space for scrollbar visibility */
+            }
+
+            #product-table {
+                min-width: 800px;
+                /* Ensures the table is wide enough to force horizontal scrolling */
+                display: table;
+            }
+
+            #product-table th,
+            #product-table td {
+                white-space: nowrap;
+                /* Keeps content on one line */
+                padding: 0.75rem 1rem;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                /* Comment out or remove the max-width to allow content to fit in one line */
+                /* max-width: 150px; */
+            }
+
+            /* Optional: Visual hint for scrollability */
+            .table-container::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 30px;
+                background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+                pointer-events: none;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .pagination button:focus {
+            outline: 2px solid #4a90e2;
+            /* Blue outline on focus */
+            outline-offset: 2px;
+            /* Space outside button */
+        }
+
+        #product-table th:focus {
+            outline: 2px solid #4a90e2;
+            /* Blue outline on focus */
+            outline-offset: -2px;
+            /* Inside header border */
+        }
+    </style>
+
+    <!-- Load Non-Critical CSS Asynchronously -->
+    <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet" href="index.css" />
+    </noscript>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore Mahadev Traders' comprehensive product chart featuring plywood, block-boards, and flush-doors in Rajkot, Gujarat. Compare specifications for products like B/B 25 mm 6 x 3 Block-Board, Gurjan face, Pinewood core, and leading brands." />
+    <meta name="keywords"
+        content="product chart, plywood specifications, block-board details, flush-door catalog, Mahadev Traders, Rajkot, Gujarat, B/B 25 mm 6 x 3, block-board wholesale, Gurjan plywood, Pinewood core, Simson brand, plywood prices Rajkot, block-board supplier" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mahadev Traders Plywood Block-Board & Flush-Door Wholesaler - Vaives.com" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Product Chart - Mahadev Traders Plywood, Block-Board & Flush-Door Wholesaler" />
+    <meta property="og:description"
+        content="Complete product specifications chart of plywood, block-boards, and flush-doors from Mahadev Traders in Rajkot." />
+    <meta property="og:image" content="https://about.vaives.com/assets/favicon.webp" />
+    <meta property="og:url" content="https://about.vaives.com/productChart.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Structured Data for Products -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Table",
+            "about": "Plywood and Wood Products Specifications",
+            "name": "Mahadev Traders Product Chart",
+            "description": "Complete specifications of plywood, block-boards, and flush-doors available from Mahadev Traders in Rajkot, Gujarat."
+        }
+    </script>
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Skip Link -->
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar -->
+    <nav class="navbar transparent" id="navbar">
+        <div class="brand"><a href="index.html">Mahadev Traders</a></div>
+        <div class="menu" id="menu">
+            <a href="#" class="active-menu-item">Products</a>
+            <a href="index.html#about-us">About</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="btn-call"><a href="tel:+916355360702">Call Us</a></div>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="maincontent">
+        <section class="product-chart">
+            <h3>Product Specifications Chart</h3>
+
+            <div class="accessibility-tools">
+                <div class="high-contrast-toggle">
+                    <label for="high-contrast">High Contrast</label>
+                    <input type="checkbox" id="high-contrast" aria-label="Toggle high contrast mode">
+                </div>
+                <div class="font-size-control">
+                    <span>Text Size:</span>
+                    <button id="decrease-font" aria-label="Decrease font size">A-</button>
+                    <button id="increase-font" aria-label="Increase font size">A+</button>
+                </div>
+            </div>
+
+            <div id="loading" aria-live="polite">
+                <div class="loading-spinner" aria-hidden="true"></div>
+                <span>Loading products...</span>
+            </div>
+
+            <div class="table-container">
+                <table id="product-table" style="display: none;" aria-label="Product Specifications Chart">
+                    <thead>
+                        <tr>
+                            <th scope="col" id="col-product" tabindex="0">Product</th>
+                            <th scope="col" id="col-category" tabindex="0">Prod. Category</th>
+                            <th scope="col" id="col-type" tabindex="0">Product Type</th>
+                            <th scope="col" id="col-face" tabindex="0">Face Type</th>
+                            <th scope="col" id="col-core" tabindex="0">Core Type</th>
+                            <th scope="col" id="col-grade" tabindex="0">Grade Type</th>
+                            <th scope="col" id="col-brand" tabindex="0">Brand Mark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination" aria-label="Pagination" id="pagination" style="display: none;">
+                <!-- Pagination controls populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-menu">
+            <a href="index.html#about-us">About</a>
+            <a href="products.html">Products</a>
+            <a href="https://vaives.com" target="_blank">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
+                aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/mt_plywood/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/916355360702" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:mahadevtraders@hotmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.google.com/maps/@22.2601548,70.7992952,17.25z/data=!5m1!1e1" target="_blank"
+                aria-label="Map">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <!-- Additional Links -->
+            <a href="https://jsdl.in/RSL-BKP1739185523" target="_blank" aria-label="JustDial">
+                <i class="fas fa-address-book"></i>
+            </a>
+            <a href="https://www.indiamart.com/mahadevtraders-96118699/" target="_blank" aria-label="IndiaMart">
+                <i class="fas fa-industry"></i>
+            </a>
+        </div>
+
+        <address itemscope itemtype="http://schema.org/Organization">
+            <span itemprop="name">Mahadev Traders Plywood Block-Board &amp; Flush-Door Wholesaler</span>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Nr. S.T. Workshop, Gondal Road</span>,
+                <span itemprop="addressLocality">Rajkot</span>,
+                <span itemprop="postalCode">360004</span>,
+                <span itemprop="addressRegion">Gujarat</span>
+            </div>
+        </address>
+        <br>
+        <p>© 2025. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="navbar.js"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            // State variables
+            let allProducts = [];
+            let currentProducts = [];
+            let itemsPerPage = 10; // Increased items per page
+            let currentPage = 1;
+            let currentSort = {
+                column: null,
+                direction: 'asc'
+            };
+
+            // Accessibility settings
+            let fontSize = 18; // Default font size in px
+
+            // DOM references
+            const tableBody = document.querySelector('#product-table tbody');
+            const paginationEl = document.getElementById('pagination');
+            const highContrastToggle = document.getElementById('high-contrast');
+            const decreaseFontBtn = document.getElementById('decrease-font');
+            const increaseFontBtn = document.getElementById('increase-font');
+            const tableHeaders = document.querySelectorAll('#product-table th');
+
+            // Initialize
+            fetchProducts();
+            loadUserPreferences();
+
+            // Event listeners
+            highContrastToggle.addEventListener('change', toggleHighContrast);
+            decreaseFontBtn.addEventListener('click', () => changeFontSize(-1));
+            increaseFontBtn.addEventListener('click', () => changeFontSize(1));
+
+            // Setup sortable headers
+            tableHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const columnId = header.id.replace('col-', '');
+                    sortTable(columnId);
+                });
+
+                // Keyboard support for sorting
+                header.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const columnId = header.id.replace('col-', '');
+                        sortTable(columnId);
+                    }
+                });
+            });
+
+            // Fetch products
+            function fetchProducts() {
+                fetch('products.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        allProducts = data.productDirectory;
+                        currentProducts = [...allProducts];
+
+                        // Render products
+                        renderProducts();
+
+                        // Hide loading, show table
+                        document.getElementById('loading').style.display = 'none';
+                        document.getElementById('product-table').style.display = 'table';
+                        document.getElementById('pagination').style.display = 'flex';
+
+                        // Add table data to page metadata for SEO
+                        generateProductStructuredData(allProducts);
+                    })
+                    .catch(error => {
+                        console.error('Error loading products:', error);
+                        document.getElementById('loading').innerHTML = `
+                            <div role="alert" style="color: #ff6b6b;">
+                                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                                Failed to load products. Please try again later.
+                            </div>
+                        `;
+                    });
+            }
+
+            // Sort table by column
+            function sortTable(columnName) {
+                // Map column names to their product property names
+                const columnMap = {
+                    'product': 'Product',
+                    'category': 'Prod. Category',
+                    'type': 'Product Type',
+                    'face': 'Face Type',
+                    'core': 'Core Type',
+                    'grade': 'Grade Type',
+                    'brand': 'Brand Mark'
+                };
+
+                const column = columnMap[columnName];
+
+                // Toggle sort direction if same column, otherwise default to ascending
+                if (currentSort.column === column) {
+                    currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSort.column = column;
+                    currentSort.direction = 'asc';
+                }
+
+                // Sort the products
+                currentProducts.sort((a, b) => {
+                    const valueA = (a[column] || '').toString().toLowerCase();
+                    const valueB = (b[column] || '').toString().toLowerCase();
+
+                    if (valueA < valueB) return currentSort.direction === 'asc' ? -1 : 1;
+                    if (valueA > valueB) return currentSort.direction === 'asc' ? 1 : -1;
+                    return 0;
+                });
+
+                // Update header classes to show sort direction
+                tableHeaders.forEach(header => {
+                    const headerColumn = columnMap[header.id.replace('col-', '')];
+                    header.classList.remove('sorted-asc', 'sorted-desc');
+
+                    if (headerColumn === currentSort.column) {
+                        header.classList.add(currentSort.direction === 'asc' ? 'sorted-asc' : 'sorted-desc');
+
+                        // Announce sort to screen readers
+                        const sortAnnouncement = document.createElement('div');
+                        sortAnnouncement.setAttribute('aria-live', 'polite');
+                        sortAnnouncement.setAttribute('role', 'status');
+                        sortAnnouncement.classList.add('sr-only');
+                        sortAnnouncement.textContent = `Table sorted by ${headerColumn} in ${currentSort.direction === 'asc' ? 'ascending' : 'descending'} order.`;
+                        document.body.appendChild(sortAnnouncement);
+
+                        setTimeout(() => {
+                            document.body.removeChild(sortAnnouncement);
+                        }, 2000);
+                    }
+                });
+
+                // Reset to first page
+                currentPage = 1;
+
+                // Re-render the table
+                renderProducts();
+            }
+
+            // Render products with pagination
+            function renderProducts() {
+                tableBody.innerHTML = '';
+
+                // Calculate pagination
+                const totalPages = Math.ceil(currentProducts.length / itemsPerPage);
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = Math.min(startIndex + itemsPerPage, currentProducts.length);
+
+                // Update pagination controls
+                renderPagination(totalPages);
+
+                // Display message if no products
+                if (currentProducts.length === 0) {
+                    const noResultsRow = document.createElement('tr');
+                    noResultsRow.innerHTML = `
+                        <td colspan="7" style="text-align: center; padding: 2rem;">
+                            No products found in database.
+                        </td>
+                    `;
+                    tableBody.appendChild(noResultsRow);
+                    return;
+                }
+
+                // Create table rows for current page
+                for (let i = startIndex; i < endIndex; i++) {
+                    const product = currentProducts[i];
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td data-label="Product">${escapeHTML(product.Product || '-')}</td>
+                        <td data-label="Prod. Category">${escapeHTML(product["Prod. Category"] || '-')}</td>
+                        <td data-label="Product Type">${escapeHTML(product["Product Type"] || '-')}</td>
+                        <td data-label="Face Type">${escapeHTML(product["Face Type"] || '-')}</td>
+                        <td data-label="Core Type">${escapeHTML(product["Core Type"] || '-')}</td>
+                        <td data-label="Grade Type">${escapeHTML(product["Grade Type"] || '-')}</td>
+                        <td data-label="Brand Mark">${escapeHTML(product["Brand Mark"] || '-')}</td>
+                    `;
+
+                    tableBody.appendChild(row);
+                }
+
+                // Update table's aria-live region
+                const currentDisplayInfo = `Showing ${startIndex + 1} to ${endIndex} of ${currentProducts.length} products`;
+                const paginationInfo = document.createElement('div');
+                paginationInfo.className = 'pagination-info';
+                paginationInfo.textContent = currentDisplayInfo;
+
+                // Replace existing info or add new one
+                const existingInfo = document.querySelector('.pagination-info');
+                if (existingInfo) {
+                    existingInfo.textContent = currentDisplayInfo;
+                } else {
+                    paginationEl.parentNode.insertBefore(paginationInfo, paginationEl);
+                }
+            }
+
+            // Helper function to safely escape HTML
+            function escapeHTML(str) {
+                if (!str) return '-';
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            // Render pagination controls
+            function renderPagination(totalPages) {
+                paginationEl.innerHTML = '';
+
+                if (totalPages <= 1) return;
+
+                // Previous button
+                const prevBtn = document.createElement('button');
+                prevBtn.innerHTML = '&laquo; Prev';
+                prevBtn.disabled = currentPage === 1;
+                prevBtn.setAttribute('aria-label', 'Previous page');
+                prevBtn.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderProducts();
+                        document.querySelector('.table-container').scrollIntoView({ behavior: 'smooth' });
+                        announcePageChange();
+                    }
+                });
+                paginationEl.appendChild(prevBtn);
+
+                // Page numbers with simplified display
+                const createPageBtn = (pageNum) => {
+                    const btn = document.createElement('button');
+                    btn.textContent = pageNum;
+                    btn.classList.toggle('active', pageNum === currentPage);
+                    btn.setAttribute('aria-label', `Page ${pageNum}`);
+                    btn.setAttribute('aria-current', pageNum === currentPage ? 'page' : 'false');
+                    btn.addEventListener('click', () => {
+                        currentPage = pageNum;
+                        renderProducts();
+                        document.querySelector('.table-container').scrollIntoView({ behavior: 'smooth' });
+                        announcePageChange();
+                    });
+                    return btn;
+                };
+
+                // Simplified pagination logic
+                if (totalPages <= 5) {
+                    // Show all pages if 5 or fewer
+                    for (let i = 1; i <= totalPages; i++) {
+                        paginationEl.appendChild(createPageBtn(i));
+                    }
+                } else {
+                    // First page
+                    paginationEl.appendChild(createPageBtn(1));
+
+                    // Handle middle pages with ellipsis
+                    if (currentPage > 2) {
+                        const ellipsis1 = document.createElement('span');
+                        ellipsis1.textContent = '...';
+                        ellipsis1.className = 'ellipsis';
+                        ellipsis1.setAttribute('aria-hidden', 'true');
+                        paginationEl.appendChild(ellipsis1);
+                    }
+
+                    // Current page and neighbors
+                    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+                        paginationEl.appendChild(createPageBtn(i));
+                    }
+
+                    // Handle last page ellipsis
+                    if (currentPage < totalPages - 1) {
+                        const ellipsis2 = document.createElement('span');
+                        ellipsis2.textContent = '...';
+                        ellipsis2.className = 'ellipsis';
+                        ellipsis2.setAttribute('aria-hidden', 'true');
+                        paginationEl.appendChild(ellipsis2);
+                    }
+
+                    // Last page
+                    paginationEl.appendChild(createPageBtn(totalPages));
+                }
+
+                // Next button
+                const nextBtn = document.createElement('button');
+                nextBtn.innerHTML = 'Next &raquo;';
+                nextBtn.disabled = currentPage === totalPages;
+                nextBtn.setAttribute('aria-label', 'Next page');
+                nextBtn.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderProducts();
+                        document.querySelector('.table-container').scrollIntoView({ behavior: 'smooth' });
+                        announcePageChange();
+                    }
+                });
+                paginationEl.appendChild(nextBtn);
+            }
+
+            // Announce page change to screen readers
+            function announcePageChange() {
+                const startIndex = (currentPage - 1) * itemsPerPage + 1;
+                const endIndex = Math.min(startIndex + itemsPerPage - 1, currentProducts.length);
+
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.setAttribute('role', 'status');
+                announcement.classList.add('sr-only');
+                announcement.textContent = `Page ${currentPage}. Showing products ${startIndex} to ${endIndex} of ${currentProducts.length}.`;
+                document.body.appendChild(announcement);
+
+                setTimeout(() => {
+                    document.body.removeChild(announcement);
+                }, 2000);
+            }
+
+            // Toggle high contrast mode
+            function toggleHighContrast() {
+                document.body.classList.toggle('high-contrast-mode', highContrastToggle.checked);
+
+                // Save preference to localStorage
+                localStorage.setItem('highContrast', highContrastToggle.checked);
+
+                // Announce change to screen readers
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.setAttribute('role', 'status');
+                announcement.classList.add('sr-only');
+                announcement.textContent = highContrastToggle.checked ?
+                    'High contrast mode enabled.' :
+                    'High contrast mode disabled.';
+                document.body.appendChild(announcement);
+
+                setTimeout(() => {
+                    document.body.removeChild(announcement);
+                }, 2000);
+            }
+
+            // Change font size
+            function changeFontSize(delta) {
+                fontSize = Math.max(12, Math.min(24, fontSize + delta));
+                document.documentElement.style.setProperty('--content-font-size', `${fontSize}px`);
+
+                // Apply font size to relevant elements
+                // Apply font size to relevant elements
+                document.querySelectorAll('#product-table, .pagination-info').forEach(el => {
+                    el.style.fontSize = `${fontSize}px`;
+                });
+
+                // Save preference to localStorage
+                localStorage.setItem('fontSize', fontSize);
+
+                // Announce change to screen readers
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.setAttribute('role', 'status');
+                announcement.classList.add('sr-only');
+                announcement.textContent = `Font size changed to ${fontSize} pixels.`;
+                document.body.appendChild(announcement);
+
+                setTimeout(() => {
+                    document.body.removeChild(announcement);
+                }, 2000);
+            }
+
+            // Load user preferences from localStorage
+            function loadUserPreferences() {
+                // High contrast mode
+                const savedContrast = localStorage.getItem('highContrast');
+                if (savedContrast === 'true') {
+                    highContrastToggle.checked = true;
+                    document.body.classList.add('high-contrast-mode');
+                }
+
+                // Font size
+                const savedFontSize = localStorage.getItem('fontSize');
+                if (savedFontSize) {
+                    fontSize = parseInt(savedFontSize);
+                    document.documentElement.style.setProperty('--content-font-size', `${fontSize}px`);
+                    document.querySelectorAll('#product-table, .pagination-info').forEach(el => {
+                        el.style.fontSize = `${fontSize}px`;
+                    });
+                }
+            }
+
+            // Generate structured data for products
+            function generateProductStructuredData(products) {
+                const structuredData = {
+                    "@context": "https://schema.org",
+                    "@type": "ItemList",
+                    "itemListElement": products.slice(0, 10).map((product, index) => ({
+                        "@type": "ListItem",
+                        "position": index + 1,
+                        "item": {
+                            "@type": "Product",
+                            "name": product.Product,
+                            "description": `${product["Prod. Category"]} - ${product["Product Type"]} - ${product["Face Type"]} - ${product["Core Type"]}`,
+                            "brand": {
+                                "@type": "Brand",
+                                "name": product["Brand Mark"]
+                            }
+                        }
+                    }))
+                };
+
+                // Add structured data to page
+                const scriptTag = document.createElement('script');
+                scriptTag.type = 'application/ld+json';
+                scriptTag.textContent = JSON.stringify(structuredData);
+                document.head.appendChild(scriptTag);
+            }
+        });
+    </script>
+</body>
+
+</html>

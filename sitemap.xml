@@ -25,4 +25,12 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Chart Page -->
+  <url>
+    <loc>https://about.vaives.com/productChart.html</loc>
+    <lastmod>2025-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
 </urlset>

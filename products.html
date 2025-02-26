@@ -82,13 +82,16 @@
   <!-- Preconnect & Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap"
+      rel="stylesheet" />
   </noscript>
 
   <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
 
   <!-- Inline Critical CSS for Hero Section -->
   <style>
@@ -101,21 +104,21 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(
-        135deg,
-        #1a73e8,
-        #d93025,
-        #fbbc05,
-        #34a853
-      );
+      background: linear-gradient(135deg,
+          #1a73e8,
+          #d93025,
+          #fbbc05,
+          #34a853);
       animation: gradientShift 12s ease infinite,
         waveClip 5s ease-in-out infinite;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
       transition: clip-path 0.3s ease;
     }
+
     .hero:hover {
       clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%);
     }
+
     .hero::after {
       content: "";
       position: absolute;
@@ -123,6 +126,7 @@
       background: rgba(0, 0, 0, 0.45);
       z-index: 1;
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -131,69 +135,80 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       animation: dynamicShadow 3s ease-in-out infinite;
     }
+
     .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
       animation: fadeInUp 1s ease both;
     }
+
     .hero-content h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       animation: fadeInUp 1.2s ease both;
     }
+
     .hero-content p {
       font-size: 1.25rem;
       margin-bottom: 2rem;
       animation: fadeInUp 1.4s ease both;
     }
+
     @keyframes gradientShift {
-      0%, 100% {
-        background: linear-gradient(
-          135deg,
-          #1a73e8,
-          #d93025,
-          #fbbc05,
-          #34a853
-        );
+
+      0%,
+      100% {
+        background: linear-gradient(135deg,
+            #1a73e8,
+            #d93025,
+            #fbbc05,
+            #34a853);
       }
+
       50% {
-        background: linear-gradient(
-          135deg,
-          #d93025,
-          #fbbc05,
-          #34a853,
-          #1a73e8
-        );
+        background: linear-gradient(135deg,
+            #d93025,
+            #fbbc05,
+            #34a853,
+            #1a73e8);
       }
     }
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     @keyframes waveClip {
       0% {
         clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
       }
+
       50% {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%);
       }
+
       100% {
         clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
       }
     }
+
     @keyframes dynamicShadow {
       0% {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
+
       50% {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
+
       100% {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
@@ -203,6 +218,7 @@
   <!-- Non-Critical CSS (Loaded Asynchronously) -->
   <link rel="stylesheet" href="products.css" media="print" onload="this.media='all'">
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar transparent" id="navbar">
@@ -239,10 +255,10 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-menu">
-      <a href="#about-us">About</a>
-      <a href="products.html">Products</a>
+      <a href="index.html#about-us">About</a>
       <a href="https://vaives.com" target="_blank">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="productChart.html">Chart</a>
+      <a href="index.html#contact">Contact</a>
     </div>
     <div class="social-icons">
       <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
@@ -288,9 +304,10 @@
   <div id="galleryModal" class="gallery-modal">
     <div class="gallery-modal-content">
       <div class="carousel-container">
-        <button class="carousel-prev"><</button>
-        <img id="modal-carousel-image" src="" alt="" class="carousel-image">
-        <button class="carousel-next">></button>
+        <button class="carousel-prev">
+          << /button>
+            <img id="modal-carousel-image" src="" alt="" class="carousel-image">
+            <button class="carousel-next">></button>
       </div>
     </div>
   </div>
@@ -533,4 +550,5 @@
   </script>
   <script defer src="navbar.js"></script>
 </body>
+
 </html>
