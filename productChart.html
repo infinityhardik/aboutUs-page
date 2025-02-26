@@ -886,7 +886,7 @@
                 const structuredData = {
                     "@context": "https://schema.org",
                     "@type": "ItemList",
-                    "itemListElement": products.slice(0, 10).map((product, index) => ({
+                    "itemListElement": products.map((product, index) => ({
                         "@type": "ListItem",
                         "position": index + 1,
                         "item": {
@@ -900,7 +900,7 @@
                             "aggregateRating": {
                                 "@type": "AggregateRating",
                                 "ratingValue": "5",
-                                "reviewCount": "159" // Adjust this if you have actual review count data
+                                "reviewCount": "159"
                             }
                         }
                     }))
