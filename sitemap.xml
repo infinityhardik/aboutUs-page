@@ -17,14 +17,6 @@
     <priority>1.0</priority>
   </url>
 
-    <!-- Index Page -->
-  <url>
-    <loc>https://about.vaives.com/index.html</loc>
-    <lastmod>2025-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
   <!-- Chart Page -->
   <url>
     <loc>https://about.vaives.com/productChart.html</loc>
