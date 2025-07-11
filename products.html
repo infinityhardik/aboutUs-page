@@ -526,7 +526,46 @@
                 "priceCurrency": "INR",
                 "price": product.price ? product.price.toString() : "0.00",
                 "availability": "https://schema.org/InStock",
-                "url": window.location.href
+                "url": window.location.href,
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "IN"
+                  },
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 1,
+                      "maxValue": 2,
+                      "unitCode": "d"
+                    },
+                    "transitTime": {
+                      "@type": "QuantitativeValue",
+                      "minValue": 1,
+                      "maxValue": 5,
+                      "unitCode": "d"
+                    }
+                  }
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "IN",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  "returnMethod": "https://schema.org/ReturnByMail",
+                  "returnFees": "https://schema.org/FreeReturn",
+                  "returnShippingFeesAmount": {
+                    "@type": "MonetaryAmount",
+                    "currency": "INR",
+                    "value": "0"
+                  },
+                  "returnWindow": {
+                    "@type": "QuantitativeValue",
+                    "value": 30,
+                    "unitCode": "d"
+                  }
+                }
               }
             });
           });
