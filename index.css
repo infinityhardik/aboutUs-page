@@ -73,44 +73,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; letter-spacing: 0.5px; }
   height: 3px;
   background: var(--color-text);
   margin: 5px 0;
-  transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
-}
-
-/* ---------- Hero Section (Non-Critical Styles) ---------- */
-.hero:hover { clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%); }
-
-/* ---------- Animations ---------- */
-@keyframes gradientShift {
-  0%, 100% { background: linear-gradient(135deg, var(--color-primary), var(--color-accent), #fbbc05, #34a853); }
-  50% { background: linear-gradient(135deg, var(--color-accent), #fbbc05, #34a853, var(--color-primary)); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes waveClip {
-  0% { clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); }
-  50% { clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 95%, 0 90%); }
-  100% { clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); }
-}
-@keyframes dynamicShadow {
-  0% { box-shadow: var(--shadow-light); }
-  50% { box-shadow: var(--shadow-heavy); }
-  100% { box-shadow: var(--shadow-light); }
-}
-@keyframes modalFadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------- Product Categories & Grid ---------- */
-.product-categories {
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent), #fbbc05, #34a853);
   animation: gradientShift var(--gradient-duration) ease infinite;
   position: relative;
 }
