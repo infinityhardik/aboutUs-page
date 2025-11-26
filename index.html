@@ -4,452 +4,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Plywood, Block-Board &amp; Flush Door Wholesaler in Gujarat, India | Mahadev Traders</title>
+  <title>Mahadev Traders | Premium Plywood & Furniture Solutions</title>
   <link rel="icon" type="image/x-icon" href="assets/favicon.webp" />
   <link rel="canonical" href="https://about.vaives.com" />
 
-  <!-- Inline Critical CSS -->
-  <style>
-    /* Navbar Critical Styles */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-    }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-    .navbar.transparent {
-      background: transparent;
-    }
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    .navbar.solid {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1), 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar .brand a {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Hero Critical Styles */
-    .hero {
-      position: relative;
-      height: 100vh;
-      padding-top: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, #1a73e8, #d93025, #fbbc05, #34a853);
-      animation: gradientShift 12s ease infinite, waveClip 5s ease-in-out infinite;
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-      transition: clip-path 0.3s ease;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      animation: dynamicShadow 3s ease-in-out infinite;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      animation: fadeInUp 1s ease both;
-    }
-
-    .hero-content h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      animation: fadeInUp 1.2s ease both;
-    }
-
-    .hero-content h3 {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      animation: fadeInUp 1.4s ease both;
-    }
-
-    /* Base Styles */
-    body {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
-      line-height: 1.6;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-
-  <!-- Load Non-Critical CSS Asynchronously -->
-  <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link rel="stylesheet" href="index.css" />
-  </noscript>
-
-  <!-- Preload Favicon -->
-  <link rel="preload" href="assets/favicon.webp" as="image" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css" />
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Leading Wholesaler of Plywood, Block-Boards & Flush Doors in Gujarat, India. Based in Rajkot. Authorized Dealer of Marlex, Zevik, Simson. Best Prices Guaranteed. Call Now!" />
-  <meta name="keywords"
-    content="Plywood Gujarat, Flush Door India, Block Board Wholesaler, Plywood Supplier Gujarat, Best Plywood India, Marlex Plywood, Zevik, Simson, Greytone, Limelite, Mahadev Traders, Rajkot, Plywood Manufacturer, Wholesale Plywood, Furniture Material Gujarat" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Mahadev Traders Plywood Block-Board & Flush-Door Wholesaler - Vaives.com" />
-
-  <!-- Open Graph Tags -->
-  <meta property="og:title"
-    content="Best Plywood, Block-Board & Flush Door Wholesaler in Gujarat, India | Mahadev Traders" />
-  <meta property="og:description"
-    content="Discover high-quality plywood, block boards, and flush doors from top brands in Gujarat, India. Best Wholesale Prices." />
-  <meta property="og:image" content="https://about.vaives.com/assets/favicon.webp" />
-  <meta property="og:url" content="https://about.vaives.com" />
-
-  <!-- Schema.org Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WholesaleStore",
-    "name": "Mahadev Traders: Plywood, Block Board & Flush Door Wholesaler",
-    "image": "assets/favicon.webp",
-    "description": "Leading wholesaler of high-quality plywood, block boards, and flush doors for furniture manufacturing in Gujarat, India. Based in Rajkot with best prices. Authorized dealer of premium brands.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Nr. S.T. Workshop, Gondal Road",
-      "addressLocality": "Rajkot",
-      "postalCode": "360004",
-      "addressRegion": "Gujarat",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "22.259443",
-      "longitude": "70.7997218"
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Gujarat"
-    },
-    "url": "https://about.vaives.com",
-    "telephone": "+916355360702",
-    "priceRange": "₹₹",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "19:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "09:00",
-        "closes": "12:00"
-      }
-    ],
-    "brand": ["Marlex", "Zevik", "Simson", "Greytone", "Limelite"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "42"
-    }
-  }
-  </script>
-
-  <!-- Preconnect & Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome for Social Icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+    content="Leading Wholesaler of Plywood, Block-Boards & Flush Doors in Gujarat, India. Authorized Dealer of Marlex, Zevik, Simson." />
 </head>
 
 <body>
-  <!-- Skip to content link for accessibility -->
-  <a href="#maincontent" class="skip-link"
-    style="position: absolute; top: -40px; left: 0; background: #000; color: #fff; padding: 8px; z-index: 100;">Skip to
-    main content</a>
-
   <!-- Navbar -->
-  <nav class="navbar transparent" id="navbar">
-    <div class="brand"><a href="#">Mahadev Traders</a></div>
+  <nav class="navbar" id="navbar">
+    <div class="brand">
+      <a href="#">Mahadev Traders</a>
+    </div>
     <div class="menu" id="menu">
       <a href="products.html">Products</a>
-      <a href="#about-us">About</a>
-      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#brands">Brands</a>
       <a href="#contact">Contact</a>
+      <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <div class="btn-call">
-      <a href="tel:+916355360702">Call Us</a>
-    </div>
-    <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation"
-      aria-expanded="false">
+    <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main id="maincontent">
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <h1><strong>Best Prices on Plywood, Block Boards &amp; Flush Doors in Gujarat, India</strong></h1>
-        <h2>Premium Quality Wholesale Plywood Supplier in Gujarat</h2>
-        <h3>Authorized dealer of Marlex, Zevik, Simson, Greytone &amp; Limelite.</h3>
-        <br>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Defining Excellence in <span class="text-gradient">Wood & Design</span></h1>
+      <p>The leading wholesaler of premium Plywood, Block-Boards & Flush Doors in Gujarat for over 30 years.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3>30+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3>5k+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-item">
+          <h3>10+</h3>
+          <p>Premium Brands</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Expertise Section -->
-    <section class="expertise" id="features">
-      <h2 class="fade-in-up"><strong>Expertise</strong></h2>
-      <h3 class="fade-in-up">Unleashing 30 Years of Mastery in Plywood, Block-Board and Flush-Door relating to Furniture
-        Industry</h3>
-      <div class="features">
-        <div class="feature fade-in-up">
-          <h4><strong>Quality</strong></h4>
-          <p>Uncompromising standards for top-notch products</p>
+  <!-- Expertise Section -->
+  <section class="section-padding expertise" id="expertise">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our Expertise</h2>
+        <p>Unleashing mastery in the furniture industry with uncompromising standards.</p>
+      </div>
+      <div class="bento-grid">
+        <div class="bento-card reveal">
+          <i class="fas fa-gem bento-icon"></i>
+          <h3>Premium Quality</h3>
+          <p>We maintain uncompromising standards to ensure every product meets the highest benchmarks of durability and
+            finish.</p>
         </div>
-        <div class="feature fade-in-up">
-          <h4><strong>Variety</strong></h4>
-          <p>Diverse range of Affordable and Premium Plywood, Block-Board, &amp; Flush-Doors</p>
+        <div class="bento-card reveal">
+          <i class="fas fa-layer-group bento-icon"></i>
+          <h3>Vast Variety</h3>
+          <p>From affordable essentials to luxury finishes, our diverse range covers Plywood, Block-Boards, and
+            Flush-Doors.</p>
         </div>
-        <div class="feature fade-in-up">
-          <h4><strong>Innovation</strong></h4>
-          <p>Pioneering new trends in technology</p>
+        <div class="bento-card reveal">
+          <i class="fas fa-lightbulb bento-icon"></i>
+          <h3>Innovation</h3>
+          <p>Pioneering new trends and leveraging technology like Vaives.com for seamless order management.</p>
         </div>
-        <div class="feature fade-in-up">
-          <h4><strong>Reliability</strong></h4>
-          <p>Trusted by generations for premium and quality solutions at an affordable price</p>
+        <div class="bento-card reveal">
+          <i class="fas fa-handshake bento-icon"></i>
+          <h3>Reliability</h3>
+          <p>Trusted by generations for delivering quality solutions at competitive prices in an uncertain market.</p>
         </div>
-        <div class="feature fade-in-up">
-          <h4><strong>Commitment</strong></h4>
-          <p>Dedicated to customer satisfaction and excellence</p>
+        <div class="bento-card reveal">
+          <i class="fas fa-heart bento-icon"></i>
+          <h3>Passion</h3>
+          <p>Fueling our craft with a genuine love for customer satisfaction and excellence in service.</p>
         </div>
-        <div class="feature fade-in-up">
-          <h4><strong>Passion</strong></h4>
-          <p>Fueling our craft with a love for Customer Satisfaction</p>
+        <div class="bento-card reveal">
+          <i class="fas fa-users bento-icon"></i>
+          <h3>Commitment</h3>
+          <p>Dedicated to building long-term relationships through transparency and integrity.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Us / Our Legacy Section -->
-    <section class="about-us" id="about-us">
-      <div class="about-image fade-in-up">
-        <img src="assets/favicon.webp" alt="Mahadev Traders Legacy" width="300" height="300" />
+  <!-- About Us Section -->
+  <section class="section-padding about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="assets/favicon.webp" alt="Mahadev Traders Legacy" />
+        </div>
+        <div class="about-content reveal">
+          <h2>Our <span class="text-gradient">Legacy</span></h2>
+          <p>Embark on a journey with Mahadev Traders, the trailblazers of Rajkot's Furniture industry. With a rich
+            history spanning over three decades, we stand as the epitome of quality and innovation.</p>
+          <p>We blend tradition with modernity to deliver products that exceed expectations. As pioneers of
+            Plywood/Timber Wholesale on Gondal Road, we proudly belong to the elite group of oldest firms in Rajkot.</p>
+          <p>Our proprietary technology, <a href="https://vaives.com"><strong>Vaives.com</strong></a>, streamlines our
+            Order Management System, ensuring
+            we stay ahead in an ever-evolving market.</p>
+          <a href="#contact" class="btn-primary">Get in Touch</a>
+        </div>
       </div>
-      <div class="about-content fade-in-up">
-        <h2><strong>Our Legacy</strong></h2>
-        <p>Embark on a journey with Mahadev Traders, the trailblazers of Rajkot's Furniture industry.</p>
-        <p>With a rich history spanning over three decades, we stand as the epitome of quality and innovation.</p>
-        <p>At Mahadev Traders, we blend tradition with modernity to deliver products that exceed expectations. We are
-          the Pioneers of Plywood/Timber Wholesale and Retail on Gondal Road and that is the reason why We Proudly
-          Belong to the Elite Group of Oldest Firms in Rajkot. We Believe in Providing Best Quality at Competitive
-          Prices in order to Provide Maximum Satisfaction to Our Valuable Customers in an Uncertain Market. You are 100%
-          assured that we provide the Best Plywood Price in Rajkot. We do provide Best Flush-Door Price in Rajkot and we
-          also provide Best Block-Board Price in Rajkot.</p>
-        <p>Vaives.com is our proprietary technology for Order Management System @ Mahadev Traders Plywood, Block-Board
-          and Flush-Door Wholesaler, Rajkot. We constantly thrive to innovate our Products pertaining to Plywood,
-          Block-Board and Flush-Door while leveraging technology at scale and mass distribution for the ever evolving
-          new generations across landscapes.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-      <h2 class="fade-in-up">Our Brands</h2>
-      <div class="slider fade-in-up">
-        <img src="assets/images/marlex-1200x764.webp" alt="Marlex Logo" width="200" height="150" loading="lazy" />
-        <img src="assets/images/zevik-1200x762.webp" alt="Zevik Plywood Logo" width="200" height="150" loading="lazy" />
-        <img src="assets/images/simson-1200x681.webp" alt="Simson Plywood Logo" width="200" height="150"
-          loading="lazy" />
-        <img src="assets/images/limelite-1200x515.webp" alt="Limelite Plywood Logo" width="200" height="150"
-          loading="lazy" />
-        <img src="assets/images/greytone-1200x510.webp" alt="Greytone Plywood Logo" width="200" height="150"
-          loading="lazy" />
+  <!-- Brands Section -->
+  <section class="section-padding brands-section" id="brands">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Authorized Dealers</h2>
+        <p>Proud partners with the industry's leading brands.</p>
       </div>
-    </section>
+      <div class="brands-slider">
+        <!-- Duplicate items for infinite scroll effect -->
+        <img src="assets/images/marlex-1200x764.webp" class="brand-item" alt="Marlex" />
+        <img src="assets/images/zevik-1200x762.webp" class="brand-item" alt="Zevik" />
+        <img src="assets/images/simson-1200x681.webp" class="brand-item" alt="Simson" />
+        <img src="assets/images/limelite-1200x515.webp" class="brand-item" alt="Limelite" />
+        <img src="assets/images/greytone-1200x510.webp" class="brand-item" alt="Greytone" />
+        <!-- Repeat -->
+        <img src="assets/images/marlex-1200x764.webp" class="brand-item" alt="Marlex" />
+        <img src="assets/images/zevik-1200x762.webp" class="brand-item" alt="Zevik" />
+        <img src="assets/images/simson-1200x681.webp" class="brand-item" alt="Simson" />
+        <img src="assets/images/limelite-1200x515.webp" class="brand-item" alt="Limelite" />
+        <img src="assets/images/greytone-1200x510.webp" class="brand-item" alt="Greytone" />
+      </div>
+    </div>
+  </section>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-      <h2 class="fade-in-up"><strong>FAQ</strong></h2>
-      <div class="accordion fade-in-up">
+  <!-- FAQ Section -->
+  <section class="section-padding faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="accordion reveal">
         <div class="accordion-item">
-          <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-            <span><strong>Why Choose Us?</strong></span>
-            <span class="arrow" aria-hidden="true">▼</span>
+          <div class="accordion-header">
+            Why Choose Us?
+            <span class="arrow"><i class="fas fa-chevron-down"></i></span>
           </div>
           <div class="accordion-body">
-            <p>With over 30 years of expertise, we're setting high bar for quality and service in Rajkot. Visit and
-              Experience our range of offerings.</p>
+            <p>With over 30 years of expertise, we're setting a high bar for quality and service in Rajkot. We offer a
+              diverse range of premium products at competitive wholesale prices.</p>
           </div>
         </div>
         <div class="accordion-item">
-          <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-            <span><strong>What Do We Offer?</strong></span>
-            <span class="arrow" aria-hidden="true">▼</span>
+          <div class="accordion-header">
+            What Do We Offer?
+            <span class="arrow"><i class="fas fa-chevron-down"></i></span>
           </div>
           <div class="accordion-body">
-            <p>From Plywood, Block-Boards and Flush-Doors to Laminates, we've got your wooden dreams covered with a
-              touch of class and a dash of durability!</p>
+            <p>We specialize in Plywood, Block-Boards, Flush-Doors, and Laminates. We are authorized dealers for brands
+              like Marlex, Zevik, Simson, and more.</p>
           </div>
         </div>
         <div class="accordion-item">
-          <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-            <span><strong>Why Trust Us?</strong></span>
-            <span class="arrow" aria-hidden="true">▼</span>
+          <div class="accordion-header">
+            Where are you located?
+            <span class="arrow"><i class="fas fa-chevron-down"></i></span>
           </div>
           <div class="accordion-body">
-            <p>We're not just the pioneers; we're the trendsetters in wholesale and retail, making your satisfaction our
-              top priority!</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-            <span><strong>Where to Find Us?</strong></span>
-            <span class="arrow" aria-hidden="true">▼</span>
-          </div>
-          <div class="accordion-body">
-            <p>Located on the prestigious Gondal Road, we proudly stand as one of the oldest and most trusted firms in
-              Rajkot!</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-            <span><strong>What Sets Us Apart?</strong></span>
-            <span class="arrow" aria-hidden="true">▼</span>
-          </div>
-          <div class="accordion-body">
-            <p>In a market full of uncertainties, we guarantee top-notch quality at unbeatable prices, ensuring smiles
-              on our customers' faces!</p>
+            <p>We are located on the prestigious Gondal Road in Rajkot, Gujarat. We have both an office and a warehouse
+              facility in the area.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contacts Section -->
-    <section class="contacts" id="contact">
-      <!-- Office Contact -->
-      <div class="contact-item fade-in-up">
-        <div class="contact-info">
-          <h2><strong>Reach Us @ Office</strong></h2>
-          <p>
-            Phone: +91-6355-360-702<br /><br />
-            Email: mahadevtraders@hotmail.com<br /><br />
-            Address: Nr. S.T. Workshop, Gondal Road, Rajkot - 360004<br /><br />
-            Working Hours:<br />
-            Mon - Sat: 9am - 7:30pm<br />
-            Sun: 9am - 12:00pm
-          </p>
-        </div>
-        <div class="contact-map">
-          <iframe title="Map of Mahadev Traders Office"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d274.4459182051871!2d70.79972177807375!3d22.259443041625953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca62d2502869%3A0xa6b8e085d78a67eb!2sMahadev%20Traders%20Plywood%20Block-Board%20%26%20Flush-Door%20Wholesaler!5e0!3m2!1sen!2sin!4v1739025371860!5m2!1sen!2sin"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+  <!-- Contact Section -->
+  <section class="section-padding contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for the best deals in town.</p>
       </div>
-      <!-- Warehouse Contact -->
-      <div class="contact-item fade-in-up">
-        <div class="contact-info">
-          <h2><strong>Reach Us @ Warehouse</strong></h2>
-          <p>
-            Phone: +91-6355-360-702<br /><br />
-            Email: mahadevtraders@hotmail.com<br /><br />
-            Address: Nr. Poojara Mobile, Samrat Industrial Area, Gondal Road, Rajkot - 360004<br /><br />
-            Working Hours:<br />
-            Mon - Sat: 9am - 7:30pm<br />
-            Sun: 9am - 12:00pm
-          </p>
-        </div>
-        <div class="contact-map">
-          <iframe title="Map of Mahadev Traders Warehouse"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.4400329380423!2d70.79570067614446!3d22.261315279714633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cba63c1e68a5%3A0xbfb2353835b71a5!2sMahadev%20Traders%20Plywood%2C%20Block-Board%20%26%20Flush-Door%20Warehouse!5e0!3m2!1sen!2sin!4v1739025290321!5m2!1sen!2sin"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-menu">
-        <a href="products.html">Products</a>
-        <a href="https://vaives.com" target="_blank">Services</a>
-        <a href="productChart.html">Chart</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-          aria-label="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/mt_plywood/" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://wa.me/916355360702" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="mailto:mahadevtraders@hotmail.com" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.google.com/maps/@22.2601548,70.7992952,17.25z/data=!5m1!1e1" target="_blank"
-          aria-label="Map">
+      <div class="contact-grid reveal">
+        <div class="contact-card">
           <i class="fas fa-map-marker-alt"></i>
-        </a>
-        <!-- Additional Links -->
-        <a href="https://jsdl.in/RSL-BKP1739185523" target="_blank" aria-label="JustDial">
-          <i class="fas fa-address-book"></i>
-        </a>
-        <a href="https://www.indiamart.com/mahadevtraders-96118699/" target="_blank" aria-label="IndiaMart">
-          <i class="fas fa-industry"></i>
-        </a>
-      </div>
-
-      <address itemscope itemtype="http://schema.org/Organization">
-        <span itemprop="name">Mahadev Traders Plywood Block-Board &amp; Flush-Door Wholesaler</span>
-        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span itemprop="streetAddress">Nr. S.T. Workshop, Gondal Road</span>,
-          <span itemprop="addressLocality">Rajkot</span>,
-          <span itemprop="postalCode">360004</span>,
-          <span itemprop="addressRegion">Gujarat</span>
+          <h3>Office</h3>
+          <p>Nr. S.T. Workshop, Gondal Road</p>
+          <p>Rajkot - 360004</p>
+          <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank">View on Map</a>
         </div>
-      </address>
-      <br>
-      <p>© 2025. All Rights Reserved.</p>
-    </footer>
-  </main>
+        <div class="contact-card">
+          <i class="fas fa-warehouse"></i>
+          <h3>Warehouse</h3>
+          <p>Nr. Poojara Mobile, Samrat Industrial Area, Gondal Road</p>
+          <p>Rajkot - 360004</p>
+          <a href="https://maps.app.goo.gl/t4qJLHvuQD53iZB68"
+            target="_blank">View on Map</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Phone</h3>
+          <p>Mon-Sat: 9am - 7:30pm</p>
+          <p>Sun: 9am - 11:45pm</p>
+          <a href="tel:+916355360702">+91 6355 360 702</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>Drop us a line anytime</p>
+          <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Deferred JavaScript for performance -->
-  <script defer src="navbar.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mahadev Traders</h4>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+            Your trusted partner for premium quality plywood and furniture solutions in Gujarat.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/mt_plywood/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" title="IndiaMART"><i
+                class="fas fa-store"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F"
+              target="_blank" title="Justdial"><i class="fas fa-address-book"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mahadev Traders. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="navbar.js"></script>
 </body>
 
 </html>
