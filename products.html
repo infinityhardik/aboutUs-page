@@ -56,15 +56,77 @@
     </div>
   </section>
 
-  <!-- Products Section -->
+  <!-- Products Section with Filters -->
   <section class="product-categories" id="product-categories">
     <div class="pc-content">
+      <!-- Filter & Search Bar -->
+      <div class="product-filters">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input 
+            type="text" 
+            id="productSearch" 
+            placeholder="Search products by name, brand, or grade..." 
+            class="search-input"
+          />
+        </div>
+        
+        <div class="filter-buttons" id="filterButtonsContainer">
+          <button class="filter-btn active" data-filter="all">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            All Products
+          </button>
+          <button class="filter-btn" data-filter="Plywood">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <g>
+                <rect x="2" y="4" width="8" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="14" y="4" width="8" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="2" y="18" width="8" height="3" fill="currentColor"/>
+                <rect x="14" y="18" width="8" height="3" fill="currentColor"/>
+              </g>
+            </svg>
+            Plywood
+          </button>
+          <button class="filter-btn" data-filter="Block-Board">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <g>
+                <rect x="3" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="13" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="3" y="13" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="13" y="13" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+              </g>
+            </svg>
+            Block-Board
+          </button>
+          <button class="filter-btn" data-filter="Flush-Door">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <g>
+                <rect x="4" y="2" width="16" height="20" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+              </g>
+            </svg>
+            Flush Door
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Container -->
       <div id="products-container">
         <!-- Products will be loaded here via JS -->
         <div style="text-align: center; color: var(--color-text-muted);">
           <i class="fas fa-circle-notch fa-spin fa-2x"></i>
           <p style="margin-top: 1rem;">Loading products...</p>
         </div>
+      </div>
+
+      <!-- No Results Message -->
+        <div id="no-results" class="no-results" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
+        <i class="fas fa-search"></i>
+        <p>No products found matching your search.</p>
+        <button id="clearFiltersBtn" class="btn-primary">Clear Filters</button>
+        <div id="sr-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
       </div>
     </div>
   </section>
@@ -118,10 +180,14 @@
   <!-- Scripts -->
   <script src="navbar.js"></script>
   <script>
-    // Global variables for modal carousel
+    // Global variables
+    let allProducts = [];
+    let currentFilter = 'all';
+    let searchTerm = '';
     let currentGalleryImages = [];
     let currentGalleryIndex = 0;
 
+    // Update modal image
     function updateModalImage() {
       const modalImg = document.getElementById('modal-carousel-image');
       if (currentGalleryImages.length > 0) {
@@ -129,6 +195,7 @@
       }
     }
 
+    // Open gallery modal
     function openGalleryModal(images, initialIndex = 0) {
       currentGalleryImages = images;
       currentGalleryIndex = initialIndex;
@@ -136,7 +203,7 @@
       document.getElementById('galleryModal').style.display = 'flex';
     }
 
-    // Close modal
+    // Close modal on click outside
     window.addEventListener('click', (e) => {
       const modal = document.getElementById('galleryModal');
       if (e.target === modal) {
@@ -144,6 +211,7 @@
       }
     });
 
+    // Close modal on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === "Escape") {
         document.getElementById('galleryModal').style.display = 'none';
@@ -155,134 +223,337 @@
       currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
       updateModalImage();
     });
+    
     document.querySelector('.carousel-next').addEventListener('click', () => {
       currentGalleryIndex = (currentGalleryIndex + 1) % currentGalleryImages.length;
       updateModalImage();
     });
 
+    // Build alt text
     function buildAltText(product) {
       return `${product.thickness} ${product.brand} ${product.type} (${product.grade})`;
     }
 
-    // Load Products
+    // Filter products
+    function filterProducts(filter) {
+      currentFilter = filter;
+      updateFilterButtons();
+      displayProducts();
+    }
+
+    // Update filter button states
+    function updateFilterButtons() {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === currentFilter) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    // Search products
+    function searchProducts(term) {
+      searchTerm = term.toLowerCase();
+      displayProducts();
+    }
+
+    // Clear filters & search (named function)
+    function clearFilters() {
+      const input = document.getElementById('productSearch');
+      if (input) input.value = '';
+      // clear search state and reset filter
+      searchProducts('');
+      filterProducts('all');
+      const noResults = document.getElementById('no-results');
+      if (noResults) noResults.classList.remove('show');
+    }
+
+    // Get filtered products
+    function getFilteredProducts() {
+      let filtered = allProducts;
+
+      // Apply category filter
+      if (currentFilter !== 'all') {
+        filtered = filtered.filter(product => product.type === currentFilter);
+      }
+
+      // Apply search filter
+      if (searchTerm) {
+        filtered = filtered.filter(product => 
+          product.title.toLowerCase().includes(searchTerm) ||
+          product.brand.toLowerCase().includes(searchTerm) ||
+          product.type.toLowerCase().includes(searchTerm) ||
+          product.grade.toLowerCase().includes(searchTerm)
+        );
+      }
+
+      return filtered;
+    }
+
+    // Display products
+    function displayProducts() {
+      const container = document.getElementById('products-container');
+      const noResults = document.getElementById('no-results');
+      const filtered = getFilteredProducts();
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        // Show "no results" ONLY when a search term exists (user explicitly searched)
+        // Per request, do NOT show the message for empty filter results when no search term.
+        if (searchTerm) {
+          noResults.classList.add('show');
+          noResults.setAttribute('aria-hidden', 'false');
+          // Update screen-reader live region
+          const sr = document.getElementById('sr-live');
+          if (sr) sr.textContent = 'No products found matching your search.';
+        } else {
+          noResults.classList.remove('show');
+          noResults.setAttribute('aria-hidden', 'true');
+          const sr = document.getElementById('sr-live');
+          if (sr) sr.textContent = '';
+        }
+        return;
+      }
+
+      noResults.classList.remove('show');
+      container.innerHTML = '';
+
+      // Group by category
+      const grouped = {};
+      filtered.forEach(product => {
+        if (!grouped[product.type]) {
+          grouped[product.type] = [];
+        }
+        grouped[product.type].push(product);
+      });
+
+      // Display each category
+      Object.keys(grouped).forEach((category, categoryIndex) => {
+        const categorySection = document.createElement('div');
+        categorySection.classList.add('product-category');
+        categorySection.style.animationDelay = `${categoryIndex * 0.1}s`;
+
+        const header = document.createElement('h3');
+        header.textContent = category;
+        categorySection.appendChild(header);
+
+        const grid = document.createElement('div');
+        grid.classList.add('product-grid');
+
+        grouped[category].forEach((product, productIndex) => {
+          const card = createProductCard(product);
+          card.style.animationDelay = `${productIndex * 0.05}s`;
+          grid.appendChild(card);
+        });
+
+        categorySection.appendChild(grid);
+        container.appendChild(categorySection);
+      });
+    }
+
+    // Create product card
+    function createProductCard(product) {
+      const card = document.createElement('div');
+      card.classList.add('product-card');
+
+      // Image with hover effect
+      const imgWrapper = document.createElement('div');
+      imgWrapper.classList.add('product-image-wrapper');
+      
+      const img = document.createElement('img');
+      img.src = product.images[0];
+      img.alt = buildAltText(product);
+      img.loading = "lazy";
+      imgWrapper.appendChild(img);
+
+      // Product badge
+      const badge = document.createElement('div');
+      badge.classList.add('product-badge');
+      badge.textContent = product.priceCategory.split(' ')[0];
+      imgWrapper.appendChild(badge);
+
+      card.appendChild(imgWrapper);
+
+      // Card content
+      const content = document.createElement('div');
+      content.classList.add('product-content');
+
+      // Brand label
+      const brandLabel = document.createElement('span');
+      brandLabel.classList.add('brand-label');
+      brandLabel.textContent = product.brand;
+      content.appendChild(brandLabel);
+
+      // Title
+      const title = document.createElement('h3');
+      title.classList.add('product-title');
+      title.textContent = product.title;
+      content.appendChild(title);
+
+      // Grade info
+      const grade = document.createElement('p');
+      grade.classList.add('product-grade');
+      grade.textContent = product.grade;
+      content.appendChild(grade);
+
+      // Quick specs
+      const specs = document.createElement('div');
+      specs.classList.add('quick-specs');
+      specs.innerHTML = `
+        <div class="spec-item">
+          <span class="spec-label">Thickness</span>
+          <span class="spec-value">${product.thickness}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Core</span>
+          <span class="spec-value">${product.core}</span>
+        </div>
+      `;
+      content.appendChild(specs);
+
+      // Action buttons
+      const actions = document.createElement('div');
+      actions.classList.add('product-actions');
+      
+      const viewBtn = document.createElement('button');
+      viewBtn.classList.add('action-btn', 'view-btn');
+      viewBtn.innerHTML = '<i class="fas fa-images"></i> View Gallery';
+      viewBtn.addEventListener('click', () => openGalleryModal(product.images, 0));
+      actions.appendChild(viewBtn);
+
+      const detailsBtn = document.createElement('button');
+      detailsBtn.classList.add('action-btn', 'details-btn');
+      detailsBtn.innerHTML = '<i class="fas fa-info-circle"></i> Details';
+      detailsBtn.addEventListener('click', () => showProductDetails(product));
+      actions.appendChild(detailsBtn);
+
+      content.appendChild(actions);
+      card.appendChild(content);
+
+      return card;
+    }
+
+    // Show product details modal
+    function showProductDetails(product) {
+      const modal = document.createElement('div');
+      modal.classList.add('details-modal');
+      modal.innerHTML = `
+        <div class="details-modal-content">
+          <button class="close-btn" onclick="this.closest('.details-modal').remove()">
+            <i class="fas fa-times"></i>
+          </button>
+          
+          <div class="details-header">
+            <img src="${product.images[0]}" alt="${buildAltText(product)}" class="details-image">
+            <div class="details-info">
+              <span class="brand-badge">${product.brand}</span>
+              <h2>${product.title}</h2>
+              <p class="details-price">${product.priceCategory}</p>
+            </div>
+          </div>
+
+          <div class="details-specs">
+            <h3>Product Specifications</h3>
+            <div class="specs-grid">
+              <div class="spec-row">
+                <label>Type:</label>
+                <value>${product.type}</value>
+              </div>
+              <div class="spec-row">
+                <label>Grade:</label>
+                <value>${product.grade}</value>
+              </div>
+              <div class="spec-row">
+                <label>Brand:</label>
+                <value>${product.brand}</value>
+              </div>
+              <div class="spec-row">
+                <label>Core:</label>
+                <value>${product.core}</value>
+              </div>
+              <div class="spec-row">
+                <label>Face:</label>
+                <value>${product.face}</value>
+              </div>
+              <div class="spec-row">
+                <label>Thickness:</label>
+                <value>${product.thickness}</value>
+              </div>
+            </div>
+          </div>
+
+          ${product.images.length > 1 ? `
+            <div class="details-gallery">
+              <h3>Product Gallery</h3>
+              <div class="gallery-grid">
+                ${product.images.map((img, idx) => `
+                  <img src="${img}" alt="Image ${idx + 1}" class="gallery-thumb" onclick="openGalleryModal('${JSON.stringify(product.images).replace(/"/g, '&quot;')}', ${idx})">
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="details-actions">
+            <button class="action-btn primary" onclick="location.href='tel:+916355360702'">
+              <i class="fas fa-phone"></i> Call for Quote
+            </button>
+            <button class="action-btn secondary" onclick="location.href='https://wa.me/916355360702'">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.remove();
+      });
+    }
+
+    // Load products
     fetch('productDetails.json')
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById('products-container');
-        container.innerHTML = ''; // Clear loading spinner
-
+        // Flatten all products from all categories
         data.categories.forEach(category => {
-          const categorySection = document.createElement('div');
-          categorySection.classList.add('product-category');
-
-          const header = document.createElement('h3');
-          header.textContent = category.name;
-          categorySection.appendChild(header);
-
-          const grid = document.createElement('div');
-          grid.classList.add('product-grid');
-
           category.products.forEach(product => {
-            const card = document.createElement('div');
-            card.classList.add('product-card');
-
-            // Image
-            const img = document.createElement('img');
-            img.src = product.images[0];
-            img.alt = buildAltText(product);
-            img.loading = "lazy";
-            card.appendChild(img);
-
-            // Footer
-            const cardFooter = document.createElement('div');
-            cardFooter.classList.add('card-footer');
-
-            const cardText = document.createElement('div');
-            cardText.classList.add('card-text');
-
-            const titleElem = document.createElement('h3');
-            titleElem.textContent = product.title;
-            cardText.appendChild(titleElem);
-
-            const descElem = document.createElement('p');
-            descElem.textContent = product.description;
-            cardText.appendChild(descElem);
-
-            cardFooter.appendChild(cardText);
-
-            // Details
-            const details = document.createElement('details');
-            details.classList.add('product-details-accordion');
-
-            const summary = document.createElement('summary');
-            summary.textContent = 'View Details';
-            details.appendChild(summary);
-
-            const detailsContent = document.createElement('div');
-            detailsContent.classList.add('product-details-content');
-
-            // Gallery in details
-            if (product.images && product.images.length > 0) {
-              const galleryDiv = document.createElement('div');
-              galleryDiv.classList.add('product-gallery');
-
-              const mainGalleryImage = document.createElement('img');
-              mainGalleryImage.classList.add('gallery-main-image');
-              mainGalleryImage.src = product.images[0];
-              mainGalleryImage.dataset.index = 0;
-              mainGalleryImage.addEventListener('click', () => {
-                openGalleryModal(product.images, 0);
-              });
-              galleryDiv.appendChild(mainGalleryImage);
-
-              if (product.images.length > 1) {
-                const thumbnailsDiv = document.createElement('div');
-                thumbnailsDiv.classList.add('gallery-thumbnails');
-                product.images.forEach((imgSrc, index) => {
-                  const thumbnailImg = document.createElement('img');
-                  thumbnailImg.src = imgSrc;
-                  thumbnailImg.addEventListener('click', () => {
-                    mainGalleryImage.src = imgSrc;
-                    mainGalleryImage.dataset.index = index;
-                  });
-                  thumbnailsDiv.appendChild(thumbnailImg);
-                });
-                galleryDiv.appendChild(thumbnailsDiv);
-              }
-              detailsContent.appendChild(galleryDiv);
-            }
-
-            // Specs
-            const specs = [
-              { label: 'Type', value: product.type },
-              { label: 'Grade', value: product.grade },
-              { label: 'Brand', value: product.brand },
-              { label: 'Core', value: product.core },
-              { label: 'Face', value: product.face },
-              { label: 'Thickness', value: product.thickness },
-              { label: 'Price', value: product.priceCategory }
-            ];
-
-            specs.forEach(spec => {
-              if (spec.value) {
-                const p = document.createElement('p');
-                p.innerHTML = `<strong>${spec.label}:</strong> ${spec.value}`;
-                detailsContent.appendChild(p);
-              }
-            });
-
-            details.appendChild(detailsContent);
-            cardFooter.appendChild(details);
-            card.appendChild(cardFooter);
-            grid.appendChild(card);
+            // Don't overwrite product.type - use the type from the product itself
+            // The product already has the correct type field (Plywood, Flush-Door, Block-Board)
+            allProducts.push(product);
           });
-
-          categorySection.appendChild(grid);
-          container.appendChild(categorySection);
         });
+
+        displayProducts();
+
+        // Add event listeners for filter buttons with event delegation
+        const filterContainer = document.getElementById('filterButtonsContainer');
+        if (filterContainer) {
+          filterContainer.addEventListener('click', (e) => {
+            const btn = e.target.closest('.filter-btn');
+            if (btn) {
+              const filter = btn.dataset.filter;
+              console.log('Filter clicked:', filter);
+              filterProducts(filter);
+            }
+          });
+        }
+
+        // Add event listener for search input
+        const searchInput = document.getElementById('productSearch');
+        if (searchInput) {
+          searchInput.addEventListener('input', (e) => {
+            console.log('Search input:', e.target.value);
+            searchProducts(e.target.value);
+          });
+        }
+        // Attach clear filters button
+        const clearBtn = document.getElementById('clearFiltersBtn');
+        if (clearBtn) {
+          clearBtn.addEventListener('click', clearFilters);
+        }
       })
       .catch(error => {
-        console.error('Error:', error);
+        console.error('Error loading products:', error);
         document.getElementById('products-container').innerHTML = '<p style="text-align:center; color: #ef4444;">Failed to load products.</p>';
       });
   </script>
