@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://about.vaives.com/sitemap.xml
+Sitemap: https://mahadev-traders.com/sitemap.xml
