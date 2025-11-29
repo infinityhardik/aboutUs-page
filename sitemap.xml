@@ -21,8 +21,133 @@
   <!-- Chart Page -->
   <url>
     <loc>https://mahadev-traders.com/productChart.html</loc>
-    <lastmod>2025-11-28</lastmod>
+    <lastmod>2025-11-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.9</priority>
   </url>
+
+  <!-- Services Main Page -->
+  <url>
+    <loc>https://mahadev-traders.com/services/</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
+
+  <!-- SILO 1: PLYWOOD PAGES -->
+  <url>
+    <loc>https://mahadev-traders.com/services/plywood-wholesaler-rajkot.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/marine-plywood-710-grade-rajkot.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/commercial-plywood-mr-grade.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/gurjan-plywood-dealer.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/shuttering-plywood-construction.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/flexible-plywood-supplier.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SILO 2: FLUSH DOORS PAGES -->
+  <url>
+    <loc>https://mahadev-traders.com/services/flush-doors-manufacturer-supplier.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/waterproof-flush-doors-bwp.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/laminated-flush-doors-designs.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/pine-wood-flush-doors.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/waterproof-bathroom-doors.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SILO 3: BLOCK BOARDS PAGES -->
+  <url>
+    <loc>https://mahadev-traders.com/services/block-board-dealer-rajkot.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/pine-wood-block-board.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/poplar-block-board.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/bwp-waterproof-block-board.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SILO 4: LAMINATES & HARDWARE PAGES -->
+  <url>
+    <loc>https://mahadev-traders.com/services/decorative-laminates-sheets.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/sunmica-dealers-rajkot.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/services/liner-laminates-inner.html</loc>
+    <lastmod>2025-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>

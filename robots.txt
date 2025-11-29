@@ -1,4 +1,26 @@
 User-agent: *
-Disallow: 
+Allow: /
+Allow: /services/
+Allow: /services/*.html
+Allow: /products.html
+Allow: /productChart.html
+Allow: /index.html
 
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /*?*.
+Disallow: /*.pdf$
+
+# Service sitemap
 Sitemap: https://mahadev-traders.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# User-agent specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
