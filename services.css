@@ -820,6 +820,7 @@
     font-size: 0.85rem;
     padding: 1rem 1.5rem;
     gap: 0.5rem;
+    min-height: 50px;
   }
 
   .breadcrumb span {
@@ -887,7 +888,7 @@
   .service-hero {
     padding: 2rem 1rem;
     min-height: auto;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
   }
 
   .service-hero h1 {
@@ -918,9 +919,12 @@
 
   .breadcrumb {
     font-size: 0.8rem;
-    padding: 0.8rem 1rem;
-    gap: 0.3rem;
+    padding: 1rem 1rem;
+    gap: 0.5rem;
     top: calc(var(--navbar-height) - 10px);
+    min-height: 60px;
+    flex-wrap: wrap;
+    align-content: center;
   }
 
   .breadcrumb span {
