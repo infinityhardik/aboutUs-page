@@ -63,14 +63,10 @@
       <div class="product-filters">
         <div class="search-box">
           <i class="fas fa-search"></i>
-          <input 
-            type="text" 
-            id="productSearch" 
-            placeholder="Search products by name, brand, or grade..." 
-            class="search-input"
-          />
+          <input type="text" id="productSearch" placeholder="Search products by name, brand, or grade..."
+            class="search-input" />
         </div>
-        
+
         <div class="filter-buttons" id="filterButtonsContainer">
           <button class="filter-btn active" data-filter="all">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -81,10 +77,10 @@
           <button class="filter-btn" data-filter="Plywood">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
               <g>
-                <rect x="2" y="4" width="8" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="14" y="4" width="8" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="2" y="18" width="8" height="3" fill="currentColor"/>
-                <rect x="14" y="18" width="8" height="3" fill="currentColor"/>
+                <rect x="2" y="4" width="8" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                <rect x="14" y="4" width="8" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                <rect x="2" y="18" width="8" height="3" fill="currentColor" />
+                <rect x="14" y="18" width="8" height="3" fill="currentColor" />
               </g>
             </svg>
             Plywood
@@ -92,10 +88,10 @@
           <button class="filter-btn" data-filter="Block-Board">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
               <g>
-                <rect x="3" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="13" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="3" y="13" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                <rect x="13" y="13" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="3" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2" />
+                <rect x="13" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2" />
+                <rect x="3" y="13" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2" />
+                <rect x="13" y="13" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2" />
               </g>
             </svg>
             Block-Board
@@ -103,8 +99,8 @@
           <button class="filter-btn" data-filter="Flush-Door">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
               <g>
-                <rect x="4" y="2" width="16" height="20" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
-                <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+                <rect x="4" y="2" width="16" height="20" rx="1" fill="none" stroke="currentColor" stroke-width="2" />
+                <circle cx="16" cy="12" r="1.5" fill="currentColor" />
               </g>
             </svg>
             Flush Door
@@ -122,7 +118,7 @@
       </div>
 
       <!-- No Results Message -->
-        <div id="no-results" class="no-results" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
+      <div id="no-results" class="no-results" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
         <i class="fas fa-search"></i>
         <p>No products found matching your search.</p>
         <button id="clearFiltersBtn" class="btn-primary">Clear Filters</button>
@@ -162,12 +158,20 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"><i
-                class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/mt_plywood/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <div class="footer-col">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
+                aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/mt_plywood/" target="_blank" aria-label="Follow us on Instagram"><i
+                  class="fab fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
+                  class="fab fa-whatsapp" aria-hidden="true"></i></a>
+              <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
+                aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+              <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
+                  class="fas fa-address-book" aria-hidden="true"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -223,7 +227,7 @@
       currentGalleryIndex = (currentGalleryIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
       updateModalImage();
     });
-    
+
     document.querySelector('.carousel-next').addEventListener('click', () => {
       currentGalleryIndex = (currentGalleryIndex + 1) % currentGalleryImages.length;
       updateModalImage();
@@ -279,7 +283,7 @@
 
       // Apply search filter
       if (searchTerm) {
-        filtered = filtered.filter(product => 
+        filtered = filtered.filter(product =>
           product.title.toLowerCase().includes(searchTerm) ||
           product.brand.toLowerCase().includes(searchTerm) ||
           product.type.toLowerCase().includes(searchTerm) ||
@@ -359,7 +363,7 @@
       // Image with hover effect
       const imgWrapper = document.createElement('div');
       imgWrapper.classList.add('product-image-wrapper');
-      
+
       const img = document.createElement('img');
       img.src = product.images[0];
       img.alt = buildAltText(product);
@@ -414,7 +418,7 @@
       // Action buttons
       const actions = document.createElement('div');
       actions.classList.add('product-actions');
-      
+
       const viewBtn = document.createElement('button');
       viewBtn.classList.add('action-btn', 'view-btn');
       viewBtn.innerHTML = '<i class="fas fa-images"></i> View Gallery';
@@ -504,7 +508,7 @@
         </div>
       `;
       document.body.appendChild(modal);
-      
+
       modal.addEventListener('click', (e) => {
         if (e.target === modal) modal.remove();
       });
