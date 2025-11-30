@@ -469,6 +469,14 @@ h6 {
   font-size: 1.1rem;
 }
 
+.about-content a {
+  display: inline-block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
+
 /* ---------- Gallery / Brands ---------- */
 .brands-section {
   background: var(--color-bg-dark);
@@ -541,10 +549,13 @@ h6 {
 
 .accordion-body p {
   padding-bottom: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .accordion-item.active .accordion-body {
-  max-height: 200px; /* Adjust as needed */
+  max-height: 500px;
 }
 
 .accordion-item.active .accordion-header .arrow {
@@ -699,6 +710,23 @@ h6 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  .accordion-item.active .accordion-body {
+    max-height: 600px;
+  }
+
+  .accordion-body p {
+    font-size: 0.95rem;
+    padding-bottom: 1rem;
+  }
+
+  .about-content a {
+    display: block;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    word-break: break-word;
+  }
+
   .navbar .menu {
     position: fixed;
     top: 0;
