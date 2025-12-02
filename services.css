@@ -20,10 +20,17 @@
 .service-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #000;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+[data-theme='dark'] .service-hero h1 {
   background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
 }
 
 .service-hero p {
@@ -627,10 +634,15 @@
 
 /* ---------- Footer Styling (Matching index.css) ---------- */
 .footer {
-  background: #000;
+  background: #f9fafb;
   padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-top: 4rem;
+}
+
+[data-theme='dark'] .footer {
+  background: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-content {
@@ -658,16 +670,26 @@
 .footer-col h4 {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
-  color: #fff;
+  color: #1f2937;
   font-weight: 700;
+}
+
+[data-theme='dark'] .footer-column h4,
+[data-theme='dark'] .footer-col h4 {
+  color: #fff;
 }
 
 .footer-column p,
 .footer-col p {
-  color: #d1d5db;
+  color: #404040;
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0.8rem;
+}
+
+[data-theme='dark'] .footer-column p,
+[data-theme='dark'] .footer-col p {
+  color: #d1d5db;
 }
 
 .footer-column ul,
@@ -690,8 +712,15 @@
 .footer-column ul li a,
 .footer-col ul li a,
 .footer-links a {
-  color: #d1d5db;
+  color: #404040;
   transition: color var(--transition-fast);
+}
+
+[data-theme='dark'] .footer-column ul li a,
+[data-theme='dark'] .footer-col ul li a,
+[data-theme='dark'] .footer-links a {
+  color: #d1d5db;
+}
   text-decoration: none;
 }
 
@@ -723,14 +752,19 @@
 .social-links a {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   transition: all var(--transition-fast);
-  color: #d1d5db;
+  color: #6b7280;
   text-decoration: none;
+}
+
+[data-theme='dark'] .social-links a {
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
 }
 
 .social-links a:hover {
@@ -746,9 +780,14 @@
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: #404040;
+  font-size: 0.9rem;
+}
+
+[data-theme='dark'] .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: #d1d5db;
-  font-size: 0.9rem;
 }
 
 .footer-bottom a {
