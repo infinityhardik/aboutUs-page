@@ -21,11 +21,38 @@
     <link rel="stylesheet" href="index.css" />
 
     <style>
+        /* CSS Variables for Theme Support */
+        :root {
+            --color-primary: #3b82f6;
+            --color-bg: #ffffff;
+            --color-text: #000000;
+            --color-bg-dark: #f5f5f5;
+            --color-bg-surface: #ffffff;
+            --color-text-main: #000000;
+            --color-text-muted: #666666;
+            --border-radius: 8px;
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme='dark'] {
+            --color-primary: #60a5fa;
+            --color-bg: #050505;
+            --color-text: #f3f4f6;
+            --color-bg-dark: #1a1a1a;
+            --color-bg-surface: #1f2937;
+            --color-text-main: #f3f4f6;
+            --color-text-muted: #d1d5db;
+            --border-radius: 8px;
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
         /* Page Specific Styles */
         .chart-section {
             padding: 6rem 0;
-            background: var(--color-bg-dark);
+            background: var(--color-bg);
+            color: var(--color-text);
             min-height: 80vh;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .toolbar {
@@ -38,7 +65,11 @@
             background: var(--color-bg-surface);
             padding: 1rem;
             border-radius: var(--border-radius);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+        }
+
+        [data-theme='dark'] .toolbar {
+            border-color: rgba(59, 130, 246, 0.25);
         }
 
         .controls {
@@ -48,9 +79,9 @@
         }
 
         .btn-control {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--color-primary);
+            border: 1px solid rgba(59, 130, 246, 0.3);
             padding: 0.5rem 1rem;
             border-radius: 6px;
             cursor: pointer;
@@ -60,7 +91,19 @@
 
         .btn-control:hover {
             background: var(--color-primary);
+            color: white;
             border-color: var(--color-primary);
+        }
+
+        [data-theme='dark'] .btn-control {
+            background: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+
+        [data-theme='dark'] .btn-control:hover {
+            background: #60a5fa;
+            color: #050505;
         }
 
         .table-container {
@@ -68,8 +111,12 @@
             overflow-x: auto;
             background: var(--color-bg-surface);
             border-radius: var(--border-radius);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.15);
             box-shadow: var(--shadow-md);
+        }
+
+        [data-theme='dark'] .table-container {
+            border-color: rgba(59, 130, 246, 0.25);
         }
 
         table {
@@ -80,31 +127,47 @@
         }
 
         th {
-            background: #1a1a1a;
-            color: var(--color-primary);
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
             padding: 1rem;
             text-align: left;
             font-weight: 600;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
             cursor: pointer;
             user-select: none;
             position: sticky;
             top: 0;
         }
 
+        [data-theme='dark'] th {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: #f3f4f6;
+            border-bottom-color: rgba(59, 130, 246, 0.5);
+        }
+
         th:hover {
-            background: #252525;
+            opacity: 0.9;
         }
 
         td {
             padding: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--color-text-muted);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+            color: var(--color-text-main);
+        }
+
+        [data-theme='dark'] td {
+            border-bottom-color: rgba(59, 130, 246, 0.25);
+            color: #e5e7eb;
         }
 
         tr:hover td {
-            background: rgba(255, 255, 255, 0.02);
-            color: #fff;
+            background: rgba(59, 130, 246, 0.05);
+            color: var(--color-text-main);
+        }
+
+        [data-theme='dark'] tr:hover td {
+            background: rgba(59, 130, 246, 0.08);
+            color: #f3f4f6;
         }
 
         .pagination {
@@ -116,8 +179,8 @@
 
         .pagination button {
             background: var(--color-bg-surface);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--color-text-muted);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--color-text-main);
             width: 40px;
             height: 40px;
             border-radius: 6px;
@@ -128,8 +191,19 @@
         .pagination button:hover,
         .pagination button.active {
             background: var(--color-primary);
-            color: #fff;
+            color: white;
             border-color: var(--color-primary);
+        }
+
+        [data-theme='dark'] .pagination button {
+            border-color: rgba(59, 130, 246, 0.25);
+        }
+
+        [data-theme='dark'] .pagination button:hover,
+        [data-theme='dark'] .pagination button.active {
+            background: #60a5fa;
+            color: #050505;
+            border-color: #60a5fa;
         }
 
         .pagination button:disabled {
@@ -149,9 +223,27 @@
         body.high-contrast th {
             color: #000;
             background: #ffff00;
+            border-bottom-color: #000;
         }
 
         body.high-contrast td {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        body.high-contrast tr:hover td {
+            background: #ffff00;
+            color: #000;
+        }
+
+        body.high-contrast .btn-control {
+            background: #ffff00;
+            color: #000;
+            border-color: #ffff00;
+        }
+
+        body.high-contrast .btn-control:hover {
+            background: #fff;
             border-color: #fff;
         }
     </style>
@@ -169,10 +261,12 @@
         </div>
         <div class="menu" id="menu">
             <a href="products.html">Products</a>
+            <a href="services/">Services</a>
             <a href="index.html#about">About</a>
             <a href="index.html#expertise">Expertise</a>
-            <a href="productChart.html" class="active">Chart</a>
+            <a href="index.html#brands">Brands</a>
             <a href="index.html#contact">Contact</a>
+            <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
             <a href="tel:+916355360702" class="btn-primary">Call Now</a>
         </div>
         <div class="hamburger" id="hamburger">
@@ -196,8 +290,7 @@
         <div class="container">
             <div class="toolbar">
                 <div class="controls">
-                    <button class="btn-control" id="toggle-contrast"><i class="fas fa-adjust"></i> High
-                        Contrast</button>
+                    <button class="btn-control" id="toggle-contrast"><i class="fas fa-adjust"></i> High Contrast</button>
                     <button class="btn-control" id="font-inc"><i class="fas fa-plus"></i> A+</button>
                     <button class="btn-control" id="font-dec"><i class="fas fa-minus"></i> A-</button>
                 </div>
@@ -401,6 +494,8 @@
             }
         });
     </script>
+    <script src="theme.js"></script>
+    <script src="navbar.js"></script>
 </body>
 
 </html>
