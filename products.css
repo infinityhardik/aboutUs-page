@@ -1910,3 +1910,56 @@ table td:first-child {
     content: "Call";
   }
 }
+
+/* ---------- SEO Intro Section ---------- */
+.seo-intro {
+  background: var(--color-bg-surface);
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+[data-theme='dark'] .seo-intro {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.seo-intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.seo-intro p {
+  max-width: 800px;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+[data-theme='dark'] .seo-intro p {
+  color: var(--color-text-muted);
+}
+
+.seo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.seo-list li {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.seo-list li:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
