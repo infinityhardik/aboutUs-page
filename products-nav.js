@@ -18,20 +18,3 @@ document.querySelectorAll('.category-tab').forEach(button => {
     }
   });
 });
-
-// Hamburger menu toggle
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
-
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll('.menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
-  });
-});

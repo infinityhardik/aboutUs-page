@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Allow: /services/
 Allow: /services/*.html
-Allow: /products.html
 Allow: /productChart.html
 Allow: /index.html
 
