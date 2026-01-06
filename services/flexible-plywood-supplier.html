@@ -195,15 +195,16 @@
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/"><i class="fas fa-home"></i> Home</a>
     <span>/</span>
     <a href="/services/">Services</a>
     <span>/</span>
     <span>Flexible Plywood</span>
-  </div>
+  </nav>
 
   <!-- Hero Section -->
+  <main>
   <section class="service-hero">
     <h1>Bendable <span style="color: #3b82f6;">Flexible Plywood</span> for Curved Furniture</h1>
     <p>Innovative flexible plywood solution for modern curved designs, architectural installations, and creative
@@ -487,6 +488,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
     <!-- Footer -->
   <footer class="footer">
@@ -536,9 +539,9 @@
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
-  <script src="../navbar.js"></script>
-  <script src="../services-nav.js"></script>
+  <script src="../theme.js" defer></script>
+  <script src="../navbar.js" defer></script>
+  <script src="../services-nav.js" defer></script>
   <script>
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {

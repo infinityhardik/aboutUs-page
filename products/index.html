@@ -216,13 +216,14 @@
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/"><i class="fas fa-home"></i> Home</a>
     <span>/</span>
     <span>Products</span>
-  </div>
+  </nav>
 
   <!-- Hero Section -->
+  <main>
   <section class="product-hero">
     <h1>Our <span style="color: #3b82f6;">Premium Product Range</span></h1>
     <p>Complete selection of high-quality plywood, block boards, flush doors, and laminates. 30+ years of excellence
@@ -566,11 +567,13 @@
     <div class="gallery-modal-content">
       <div class="carousel-container">
         <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-        <img id="modal-carousel-image" src="" alt="" class="carousel-image">
+        <img loading="lazy" decoding="async" id="modal-carousel-image" src="" alt="" class="carousel-image">
         <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </div>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -620,8 +623,8 @@
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
-  <script src="../products-nav.js"></script>
+  <script src="../theme.js" defer></script>
+  <script src="../products-nav.js" defer></script>
   <script>
     // Global variables
     let allProducts = [];
@@ -845,7 +848,7 @@
         <div class="details-modal-content">
           <button class="close-btn" onclick="this.closest('.details-modal').remove()"><i class="fas fa-times"></i></button>
           <div class="details-header">
-            <img src="../${product.images[0]}" alt="${buildAltText(product)}" class="details-image">
+            <img loading="lazy" decoding="async" src="../${product.images[0]}" alt="${buildAltText(product)}" class="details-image">
             <div class="details-info">
               <span class="brand-badge">${product.brand}</span>
               <h2>${product.title}</h2>

@@ -212,15 +212,16 @@
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/"><i class="fas fa-home"></i> Home</a>
     <span>/</span>
     <a href="/services/">Services</a>
     <span>/</span>
     <span>Laminated Flush Doors</span>
-  </div>
+  </nav>
 
   <!-- Hero Section -->
+  <main>
   <section class="service-hero">
     <h1>Decorative <span style="color: #3b82f6;">Laminated Flush Doors</span></h1>
     <p>Modern, stylish laminated flush doors that enhance your bedroom and living space aesthetics.</p>
@@ -507,6 +508,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
     <!-- Footer -->
   <footer class="footer">
@@ -556,9 +559,9 @@
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
-  <script src="../navbar.js"></script>
-  <script src="../services-nav.js"></script>
+  <script src="../theme.js" defer></script>
+  <script src="../navbar.js" defer></script>
+  <script src="../services-nav.js" defer></script>
   <script>
     // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(button => {

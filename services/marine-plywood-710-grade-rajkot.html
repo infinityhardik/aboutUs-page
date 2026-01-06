@@ -217,15 +217,16 @@
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/"><i class="fas fa-home"></i> Home</a>
     <span>/</span>
     <a href="/services/">Services</a>
     <span>/</span>
     <span>Marine Plywood 710</span>
-  </div>
+  </nav>
 
   <!-- Hero Section -->
+  <main>
   <section class="service-hero">
     <h1>Waterproof <span style="color: #3b82f6;">Marine Grade Plywood (710)</span></h1>
     <p>Premium quality 710-grade waterproof plywood ideal for furniture, doors, kitchen, and wet applications.</p>
@@ -511,6 +512,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
     <!-- Footer -->
   <footer class="footer">
@@ -560,9 +563,9 @@
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
-  <script src="../navbar.js"></script>
-  <script src="../services-nav.js"></script>
+  <script src="../theme.js" defer></script>
+  <script src="../navbar.js" defer></script>
+  <script src="../services-nav.js" defer></script>
   <script>
     // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(button => {

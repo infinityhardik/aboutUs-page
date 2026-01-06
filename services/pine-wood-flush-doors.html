@@ -212,15 +212,16 @@
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/"><i class="fas fa-home"></i> Home</a>
     <span>/</span>
     <a href="/services/">Services</a>
     <span>/</span>
     <span>Pine Wood Flush Doors</span>
-  </div>
+  </nav>
 
   <!-- Hero Section -->
+  <main>
   <section class="service-hero">
     <h1>High-Density <span style="color: #3b82f6;">Pine Wood Flush Doors</span></h1>
     <p>Strong and durable flush doors with solid pine wood frames for residential and commercial projects.</p>
@@ -509,6 +510,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
     <!-- Footer -->
   <footer class="footer">
@@ -558,9 +561,9 @@
     </div>
   </footer>
 
-  <script src="../theme.js"></script>
-  <script src="../navbar.js"></script>
-  <script src="../services-nav.js"></script>
+  <script src="../theme.js" defer></script>
+  <script src="../navbar.js" defer></script>
+  <script src="../services-nav.js" defer></script>
   <script>
     // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(button => {
