@@ -135,6 +135,7 @@ h6 {
   padding: 0 2rem;
   z-index: 1000;
   transition: all var(--transition-normal);
+  background: var(--color-bg-surface);
 }
 
 .navbar.scrolled {
@@ -276,7 +277,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: var(--navbar-height);
+  padding-top: calc(var(--navbar-height) + 1rem);
   overflow: hidden;
   background: radial-gradient(circle at 50% 50%, #f9fafb 0%, #ffffff 100%);
 }
@@ -933,6 +934,39 @@ h6 {
 }
 
 /* ---------- Responsive: Tablet ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    padding: 0 1rem;
+    flex-direction: row;
+  }
+  .navbar .menu {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .hero {
+    min-height: 80vh;
+    padding-top: calc(60px + 1rem);
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    padding: 1rem 1rem;
+    gap: 0.5rem;
+    min-height: 50px;
+    top: 60px;
+    flex-wrap: wrap;
+    align-content: center;
+    background: var(--color-bg-surface);
+    z-index: 999;
+  }
+}
 @media (max-width: 1024px) {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1129,6 +1163,39 @@ h6 {
 }
 
 /* ---------- Responsive: Small Mobile ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    height: 50px;
+    padding: 0 0.5rem;
+    flex-direction: row;
+  }
+  .navbar .menu {
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .hero {
+    min-height: 70vh;
+    padding-top: calc(50px + 0.5rem);
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .breadcrumb {
+    font-size: 0.8rem;
+    padding: 0.8rem 0.5rem;
+    gap: 0.3rem;
+    min-height: 40px;
+    top: 50px;
+    flex-wrap: wrap;
+    align-content: center;
+    background: var(--color-bg-surface);
+    z-index: 999;
+  }
+}
 @media (max-width: 480px) {
   .hero {
     min-height: 70vh;
