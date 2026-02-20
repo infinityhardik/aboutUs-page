@@ -318,6 +318,22 @@
   color: var(--color-primary);
 }
 
+/* ---------- Responsive: Tablet ---------- */
+@media (max-width: 1024px) {
+  .product-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .footer .container {
+    padding: 0 1.25rem;
+  }
+}
+
 /* ---------- Responsive Design ---------- */
 @media (max-width: 768px) {
   .product-hero h1 {
@@ -1962,4 +1978,619 @@ table td:first-child {
   background: var(--color-primary);
   color: #fff;
   transform: translateY(-2px);
+}
+
+/* ==============================================
+   NEW MDF PRODUCT PAGE COMPONENTS
+   (specs-table, features-grid, whatsapp-cta,
+    quick-links, cta-section, applications-list)
+   These classes are used by individual product
+   pages: turbo-plus, exterior-grade, super-hd-wr
+================================================ */
+
+/* ---------- Specs Section ---------- */
+.specs-section {
+  margin: 3rem 0;
+}
+
+.specs-section h3 {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Specs Table ---------- */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.specs-table thead {
+  background: linear-gradient(135deg, var(--color-primary), #2563eb);
+  color: #fff;
+}
+
+.specs-table th {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.specs-table tbody tr {
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  transition: background 0.2s ease;
+}
+
+.specs-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table tbody tr:nth-child(even) {
+  background: rgba(59, 130, 246, 0.04);
+}
+
+.specs-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.specs-table td {
+  padding: 0.9rem 1.25rem;
+  color: var(--color-text-main);
+  vertical-align: middle;
+}
+
+/* ---------- Features Grid ---------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), #2563eb);
+  transition: width 0.3s ease;
+}
+
+.feature-card:hover::before {
+  width: 100%;
+}
+
+.feature-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.feature-card h4 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ---------- Applications List (inline grid inside product pages) ---------- */
+.applications-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.applications-list li {
+  padding: 0.5rem 0.75rem;
+  background: var(--color-bg);
+  border-radius: 6px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+}
+
+/* ---------- WhatsApp CTA Section ---------- */
+.whatsapp-cta-section {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08), rgba(37, 211, 102, 0.03));
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.whatsapp-cta-section h3 {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.whatsapp-cta-section p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+  color: #fff;
+}
+
+.whatsapp-btn i {
+  font-size: 1.3rem;
+}
+
+/* ---------- Related Products Section ---------- */
+.related-products {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+
+.related-products h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.quick-link {
+  padding: 0.9rem 1rem;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.quick-link:hover {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+  color: var(--color-primary);
+}
+
+.quick-link i {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* ---------- CTA Section ---------- */
+.cta-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(37, 99, 235, 0.04) 100%);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.cta-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text);
+}
+
+.cta-section p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.cta-btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+}
+
+.cta-btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.55);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.cta-btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.cta-btn-secondary:hover {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+.cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ---------- Footer (product pages) ---------- */
+.footer {
+  overflow: hidden; /* prevent columns from overflowing viewport */
+}
+
+/* ---------- Footer Grid (product pages) ---------- */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* ==============================================
+   MOBILE RESPONSIVE — NEW MDF PAGE COMPONENTS
+   Breakpoints: 768px (tablet) and 480px (phone)
+================================================ */
+
+@media (max-width: 768px) {
+
+  /* Specs table: allow horizontal scroll instead of squishing */
+  .specs-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .specs-table {
+    font-size: 0.9rem;
+    min-width: 380px; /* keeps columns readable, enables scroll */
+  }
+
+  .specs-table th,
+  .specs-table td {
+    padding: 0.75rem 0.9rem;
+  }
+
+  /* Features: 2-col on tablet */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Quick links: 2-col on tablet */
+  .quick-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Applications inline grid */
+  .applications-list,
+  ul[style*="grid-template-columns: repeat(auto-fit, minmax(200px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* WhatsApp CTA */
+  .whatsapp-cta-section {
+    padding: 1.5rem;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.5rem;
+  }
+
+  /* CTA section */
+  .cta-section {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cta-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+  }
+
+  /* Related products */
+  .related-products {
+    padding: 1.5rem;
+  }
+
+  /* Footer grid */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Reduce container padding inside footer to prevent overflow */
+  .footer .container {
+    padding: 0 1rem;
+  }
+
+  /* Product hero (reinforce existing rules) */
+  .product-hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .product-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .product-hero p {
+    font-size: 1rem;
+  }
+
+  .product-hero .location-badge {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    text-align: center;
+  }
+
+  .product-content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Hero */
+  .product-hero {
+    padding: 2rem 1rem;
+    min-height: auto;
+    margin-top: 2.5rem;
+  }
+
+  .product-hero h1 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .product-hero p {
+    font-size: 0.92rem;
+    margin-bottom: 1rem;
+  }
+
+  .product-hero .location-badge {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.85rem;
+    word-break: break-word;
+  }
+
+  .product-content {
+    padding: 1.5rem 0.85rem;
+  }
+
+  .product-intro {
+    padding: 1.25rem;
+  }
+
+  .product-intro h2 {
+    font-size: 1.15rem;
+  }
+
+  .product-intro p {
+    font-size: 0.95rem;
+  }
+
+  /* Specs: single column scroll */
+  .specs-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .specs-table {
+    font-size: 0.82rem;
+    min-width: 320px;
+  }
+
+  .specs-table th,
+  .specs-table td {
+    padding: 0.6rem 0.7rem;
+  }
+
+  /* Features: single column */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .feature-card h4 {
+    font-size: 1rem;
+  }
+
+  /* Applications: single column */
+  .applications-list,
+  ul[style*="grid-template-columns: repeat(auto-fit, minmax(200px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* WhatsApp CTA */
+  .whatsapp-cta-section {
+    padding: 1.25rem;
+  }
+
+  .whatsapp-cta-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .whatsapp-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.25rem;
+  }
+
+  /* Related products */
+  .related-products {
+    padding: 1.25rem;
+  }
+
+  .quick-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-link {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* CTA section */
+  .cta-section {
+    padding: 1.25rem;
+    border-width: 1px;
+  }
+
+  .cta-section h3 {
+    font-size: 1.15rem;
+  }
+
+  .cta-section p {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    font-size: 0.92rem;
+    padding: 0.8rem 1.25rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Tighten container padding inside footer on phones */
+  .footer .container {
+    padding: 0 0.85rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+  }
+
+  .footer-col p,
+  .footer-col ul li,
+  .footer-links a {
+    font-size: 0.88rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.78rem;
+    padding: 1rem 0.85rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.78rem;
+    padding: 0.8rem 1rem;
+    gap: 0.3rem;
+  }
 }

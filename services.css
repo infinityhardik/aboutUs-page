@@ -720,7 +720,6 @@
 [data-theme='dark'] .footer-col ul li a,
 [data-theme='dark'] .footer-links a {
   color: #d1d5db;
-}
   text-decoration: none;
 }
 
@@ -907,6 +906,15 @@
     padding: 0 1.5rem;
   }
 
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .footer .container {
+    padding: 0 1.25rem;
+  }
+
   .footer-column h4 {
     font-size: 1rem;
   }
@@ -976,7 +984,17 @@
     padding: 0 1rem;
   }
 
-  .footer-column {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer .container {
+    padding: 0 1rem;
+  }
+
+  .footer-column,
+  .footer-col {
     text-align: center;
   }
 
@@ -991,8 +1009,6 @@
 
   .footer-bottom {
     padding: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
     font-size: 0.75rem;
   }
 
