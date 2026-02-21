@@ -324,14 +324,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .footer .container {
-    padding: 0 1.25rem;
-  }
 }
 
 /* ---------- Responsive Design ---------- */
@@ -922,111 +914,6 @@ table td:first-child {
   border: none;
 }
 
-/* ---------- Footer Styling (Matching Services) ---------- */
-.footer {
-  background: #f9fafb;
-  padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  margin-top: 4rem;
-}
-
-[data-theme='dark'] .footer {
-  background: #000;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  margin-bottom: 3rem;
-}
-
-.footer-column h4 {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #1f2937;
-  font-weight: 700;
-}
-
-[data-theme='dark'] .footer-column h4 {
-  color: #fff;
-}
-
-.footer-column p {
-  color: #404040;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
-}
-
-[data-theme='dark'] .footer-column p {
-  color: #d1d5db;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 0.8rem;
-}
-
-.footer-column ul li a {
-  color: #404040;
-  transition: color 0.2s ease;
-  text-decoration: none;
-}
-
-[data-theme='dark'] .footer-column ul li a {
-  color: #d1d5db;
-}
-
-.footer-column ul li a:hover {
-  color: var(--color-primary);
-  padding-left: 5px;
-}
-
-.footer-column a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-column a:hover {
-  color: var(--color-accent);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  color: #404040;
-  font-size: 0.9rem;
-}
-
-[data-theme='dark'] .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: #d1d5db;
-}
-
-.footer-bottom a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-bottom a:hover {
-  color: var(--color-accent);
-}
 
 /* ---------- CTA Section Styling ---------- */
 .cta-section {
