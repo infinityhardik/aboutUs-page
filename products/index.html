@@ -122,9 +122,11 @@
   <!-- Main CSS - Deferred for non-blocking load -->
   <link rel="stylesheet" href="../index.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="../products.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="../common-search.css" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../products.css" />
+    <link rel="stylesheet" href="../common-search.css" />
   </noscript>
 
   <!-- SEO Meta Tags -->
@@ -274,18 +276,16 @@
         </div>
 
         <!-- Relocated & Resized Search Bar -->
-        <div class="product-filters"
-          style="margin: 2rem auto; max-width: 500px; padding: 1rem; background: var(--color-bg-surface); border-radius: 50px; border: 2px solid rgba(59, 130, 246, 0.3); box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
-          <div class="search-box" style="border: none; background: transparent; padding: 0;">
-            <i class="fas fa-search" style="font-size: 1.2rem; color: var(--color-primary);"></i>
-            <input type="text" id="productSearch" placeholder="Search products..." class="search-input"
-              style="font-size: 1rem; padding: 0.4rem 0.8rem;" />
+        <div class="product-filters">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="productSearch" placeholder="Search products..." class="search-input" />
           </div>
         </div>
 
-        <div id="no-results" style="display: none; text-align: center; margin: 2rem 0;">
-          <i class="fas fa-search fa-3x" style="color: var(--color-text-muted); margin-bottom: 1rem;"></i>
-          <p style="font-size: 1.2rem; color: var(--color-text-muted);">No products found matching your search.</p>
+        <div id="no-results" class="no-results">
+          <i class="fas fa-search fa-3x"></i>
+          <p>No products found matching your search.</p>
         </div>
       </div>
 
