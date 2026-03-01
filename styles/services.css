@@ -1,13 +1,14 @@
 /* ===================================================
    Services CSS: Professional SEO Landing Pages
-=================================================== */
+   =================================================== */
+@import 'theme.css';
 
 /* ---------- Service Page Hero Section ---------- */
 .service-hero {
   background: linear-gradient(135deg, var(--color-bg-surface) 0%, rgba(59, 130, 246, 0.1) 100%);
   padding: 4rem 2rem;
   text-align: center;
-  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+  border-bottom: 2px solid var(--color-border-glow);
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -20,13 +21,13 @@
 .service-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #000;
+  color: var(--color-text-main);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 [data-theme='dark'] .service-hero h1 {
-  background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #fff 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -43,9 +44,9 @@
 .service-hero .location-badge {
   display: inline-block;
   background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.5);
+  border: 1px solid var(--color-border-glow);
   padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  border-radius: var(--border-radius-pill);
   font-size: 0.95rem;
   color: var(--color-primary);
   margin-top: 1rem;
@@ -60,8 +61,8 @@
 
 .service-intro {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
   margin-bottom: 3rem;
   line-height: 1.8;
@@ -77,10 +78,6 @@
   color: var(--color-text-main);
   margin-bottom: 1rem;
   font-size: 1.05rem;
-}
-
-.service-intro p:last-child {
-  margin-bottom: 0;
 }
 
 /* ---------- Specs Table ---------- */
@@ -109,9 +106,9 @@
 .specs-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--color-bg-surface);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: var(--border-radius);
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   margin-bottom: 2rem;
@@ -130,16 +127,12 @@
 }
 
 .specs-table tbody tr {
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  border-bottom: 1px solid var(--color-border);
   transition: background var(--transition-fast);
 }
 
 .specs-table tbody tr:hover {
   background: rgba(59, 130, 246, 0.05);
-}
-
-.specs-table tbody tr:last-child {
-  border-bottom: none;
 }
 
 .specs-table td {
@@ -163,8 +156,8 @@
 
 .feature-card {
   background: var(--color-bg-surface);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
   transition: all var(--transition-normal);
   position: relative;
@@ -223,24 +216,13 @@
 /* ---------- CTA Section ---------- */
 .cta-section {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
-  border: 2px solid rgba(59, 130, 246, 0.3);
-  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   padding: 2.5rem;
   text-align: center;
   margin: 3rem 0;
   position: relative;
   overflow: hidden;
-}
-
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .cta-section h3 {
@@ -258,31 +240,8 @@
   z-index: 1;
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-}
-
-.cta-btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  border: none;
-  font-family: inherit;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .cta-btn-primary {
-  background: #2563eb;
+  background: var(--color-primary-dark);
   color: white;
 }
 
@@ -304,12 +263,6 @@
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
-.cta-phone {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 /* ---------- Service Cards Grid (Index Page) ---------- */
 .service-cards-grid {
   display: grid;
@@ -320,8 +273,8 @@
 
 .service-card {
   background: var(--color-bg-surface);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
   transition: all var(--transition-normal);
   position: relative;
@@ -332,26 +285,11 @@
   flex-direction: column;
 }
 
-.service-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
-  transition: left var(--transition-normal);
-}
-
 .service-card:hover {
   border-color: var(--color-primary);
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
   transform: translateY(-8px);
   background: rgba(59, 130, 246, 0.03);
-}
-
-.service-card:hover::after {
-  left: 0;
 }
 
 .service-card-icon {
@@ -381,16 +319,6 @@
   line-height: 1.6;
 }
 
-.service-card .arrow {
-  color: var(--color-primary);
-  transition: transform var(--transition-fast);
-  margin-top: auto;
-}
-
-.service-card:hover .arrow {
-  transform: translateX(4px);
-}
-
 /* ---------- Silos Navigation ---------- */
 .silos-nav {
   display: flex;
@@ -403,8 +331,8 @@
 .silo-tab {
   padding: 0.8rem 1.5rem;
   background: var(--color-bg-surface);
-  border: 2px solid rgba(59, 130, 246, 0.3);
-  border-radius: 50px;
+  border: 2px solid var(--color-border-glow);
+  border-radius: var(--border-radius-pill);
   color: var(--color-text-muted);
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -420,11 +348,35 @@
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .service-hero {
+    margin-top: 2rem;
+    padding-top: 2.5rem;
+  }
+
+  .service-hero h1 {
+    font-size: 2rem;
+  }
+
+  .service-hero p {
+    font-size: 1rem;
+  }
+
+  .service-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Quick Links Section ---------- */
 .quick-links {
   background: var(--color-bg-surface);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
   margin: 3rem 0;
 }
@@ -443,8 +395,8 @@
 .quick-link {
   padding: 1rem;
   background: rgba(59, 130, 246, 0.05);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
   color: var(--color-primary);
   transition: all var(--transition-fast);
   display: flex;
@@ -458,15 +410,11 @@
   transform: translateX(4px);
 }
 
-.quick-link i {
-  flex-shrink: 0;
-}
-
 /* ---------- Why Choose Us Section ---------- */
 .why-choose-us {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(239, 68, 68, 0.02) 100%);
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   padding: 2.5rem;
   margin: 3rem 0;
 }
@@ -534,8 +482,8 @@
 
 .faq-item {
   background: var(--color-bg-surface);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
   overflow: hidden;
 }
 
@@ -589,125 +537,4 @@
   padding: 1.5rem;
   color: var(--color-text-main);
   line-height: 1.7;
-}
-
-
-
-
-/* ---------- Responsive Design ---------- */
-@media (max-width: 768px) {
-  .service-hero {
-    margin-top: 2rem;
-    padding-top: 2.5rem;
-  }
-
-  .service-hero h1 {
-    font-size: 2rem;
-  }
-
-  .service-hero p {
-    font-size: 1rem;
-  }
-
-  .specs-table {
-    font-size: 0.9rem;
-  }
-
-  .specs-table th,
-  .specs-table td {
-    padding: 0.8rem;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
-
-  .cta-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .service-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .silos-nav {
-    gap: 0.5rem;
-  }
-
-  .silo-tab {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-hero {
-    padding: 3rem 1rem 2rem;
-    min-height: auto;
-    margin-top: 2rem;
-  }
-
-  .service-hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .service-content {
-    padding: 2rem 1rem;
-  }
-
-  .specs-section h3,
-  .why-choose-us h3,
-  .faq-section h3 {
-    font-size: 1.3rem;
-  }
-
-  .service-intro {
-    padding: 1.5rem;
-  }
-
-  .cta-section {
-    padding: 1.5rem;
-  }
-
-  .quick-links-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-card {
-    padding: 1.5rem;
-  }
-
-  .feature-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .cta-section {
-    border-width: 1px;
-  }
-
-  .service-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .why-list {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .specs-table {
-    font-size: 0.85rem;
-  }
-
-  .specs-table th,
-  .specs-table td {
-    padding: 0.6rem;
-  }
 }

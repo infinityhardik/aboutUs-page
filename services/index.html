@@ -20,6 +20,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/theme.css" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
@@ -32,16 +33,16 @@
   <style>
     :root {
       --color-primary: #3b82f6;
-      --color-bg: #ffffff;
-      --color-text: #000000;
-      --navbar-height: 4rem;
+      --color-bg: var(--color-bg-base);
+      --color-text: var(--color-text-main);
+      --navbar-height: var(--navbar-height);
       --container-width: 1200px
     }
 
     [data-theme='dark'] {
-      --color-bg: #050505;
-      --color-text: #f3f4f6;
-      --color-bg-surface: #1f2937
+      --color-bg: var(--color-bg-base);
+      --color-text: var(--color-text-main);
+      --color-bg-surface: var(--color-bg-surface)
     }
 
     * {
@@ -166,7 +167,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Mahadev Traders",
-    "description": "Premium Plywood, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat, serving Ahmedabad & Saurashtra.",
+    "description": "Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat, serving Ahmedabad & Saurashtra.",
     "image": "https://mahadev-traders.com/assets/favicon.webp",
     "url": "https://mahadev-traders.com",
     "telephone": "+916355360702",
@@ -487,18 +488,15 @@
         </div>
       </div>
       <!-- CTA Section -->
-      <div class="cta-section">
-        <h3>Start Your Project with Mahadev Traders</h3>
-        <p>Professional support, wholesale pricing, and 30+ years of trusted expertise</p>
-        <div class="cta-buttons">
-          <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
-            <i class="fas fa-phone"></i>
-            <span class="cta-phone">Call +91 6355 360702</span>
-          </a>
-          <a href="mailto:mahadevtraders@hotmail.com" class="cta-btn cta-btn-secondary">
-            <i class="fas fa-envelope"></i>
-            <span>Email for Quote</span>
-          </a>
+      <div
+        style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 10px; color: white;">
+        <h3 style="margin-bottom: 1rem;">Start Your Project with Mahadev Traders</h3>
+        <p style="margin-bottom: 1.5rem;">Professional support, wholesale pricing, and 30+ years of trusted expertise
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:+916355360702" class="btn-primary"
+            style="background: white; color: #2563eb; font-weight: 600;">Call Now</a>
+          <a href="mailto:mahadevtraders@hotmail.com" class="btn-primary">Email Us</a>
         </div>
       </div>
     </section>
@@ -512,7 +510,7 @@
         <div class="footer-col">
           <h4>Mahadev Traders</h4>
           <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, block-boards, and flush doors in Rajkot, Ahmedabad &
+            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
             Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
           </p>
         </div>
@@ -547,8 +545,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, Block-Board & Flush Door Wholesaler in
-          Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
       </div>
     </div>
   </footer>

@@ -1,12 +1,14 @@
 /* ===================================================
    Products CSS: Premium Product Page Styling
-=================================================== */
+   =================================================== */
+@import 'theme.css';
+
 /* ---------- Product Page Hero Section ---------- */
 .product-hero {
   background: linear-gradient(135deg, var(--color-bg-surface) 0%, rgba(59, 130, 246, 0.1) 100%);
   padding: 4rem 2rem;
   text-align: center;
-  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+  border-bottom: 2px solid var(--color-border-glow);
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -19,13 +21,13 @@
 .product-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #000;
+  color: var(--color-text-main);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 [data-theme='dark'] .product-hero h1 {
-  background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #fff 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -42,9 +44,9 @@
 .product-hero .location-badge {
   display: inline-block;
   background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.5);
+  border: 1px solid var(--color-border-glow);
   padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  border-radius: var(--border-radius-pill);
   font-size: 0.95rem;
   color: var(--color-primary);
   margin-top: 1rem;
@@ -52,15 +54,15 @@
 
 /* ---------- Product Content Section ---------- */
 .product-content {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
 .product-intro {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
   margin-bottom: 3rem;
   line-height: 1.8;
@@ -78,10 +80,6 @@
   font-size: 1.05rem;
 }
 
-.product-intro p:last-child {
-  margin-bottom: 0;
-}
-
 /* ---------- Category Navigation Tabs ---------- */
 .category-nav {
   display: flex;
@@ -93,14 +91,14 @@
 
 .category-tab {
   background: var(--color-bg-surface);
-  color: var(--color-text);
-  border: 2px solid rgba(59, 130, 246, 0.3);
+  color: var(--color-text-main);
+  border: 2px solid var(--color-border-glow);
   padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+  border-radius: var(--border-radius-pill);
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -114,14 +112,10 @@
 }
 
 .category-tab.active {
-  background: linear-gradient(135deg, var(--color-primary), #2563eb);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: white;
   border-color: var(--color-primary);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-}
-
-.category-tab i {
-  font-size: 1.1rem;
+  box-shadow: var(--shadow-glow);
 }
 
 /* ---------- Product Cards Grid ---------- */
@@ -134,34 +128,18 @@
 
 .product-card {
   background: var(--color-bg-surface);
-  border: 2px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
   text-decoration: none;
-  color: var(--color-text);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--color-text-main);
+  transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
   cursor: pointer;
-}
-
-.product-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-  transition: left 0.5s ease;
-  pointer-events: none;
-}
-
-.product-card:hover::before {
-  left: 100%;
 }
 
 .product-card:hover {
@@ -175,7 +153,7 @@
   font-size: 2.5rem;
   color: var(--color-primary);
   margin: 0 auto 1rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-normal);
   display: block;
   text-align: center;
 }
@@ -364,164 +342,54 @@
 
 
 /* ---------- Table Styling (Accessibility) ---------- */
-table {
+table, .specs-table {
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  background: var(--color-bg);
-  border-radius: 8px;
+  background: var(--color-bg-base);
+  border-radius: var(--border-radius-sm);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
-table thead {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+table thead, .specs-table thead {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
 }
 
-[data-theme='dark'] table thead {
-  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-  color: #f3f4f6;
-}
-
-table th {
+table th, .specs-table th {
   padding: 1rem;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid var(--color-border-glow);
   text-align: left;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
 }
 
-[data-theme='dark'] table th {
-  border-color: rgba(59, 130, 246, 0.5);
-  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-  color: #f3f4f6;
+table tbody tr, .specs-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color var(--transition-fast);
 }
 
-table tbody tr {
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
-  transition: background-color 0.3s ease;
-}
-
-table tbody tr:nth-child(odd) {
+table tbody tr:nth-child(odd), .specs-table tbody tr:nth-child(odd) {
   background: rgba(59, 130, 246, 0.03);
 }
 
-[data-theme='dark'] table tbody tr:nth-child(odd) {
+table tbody tr:hover, .specs-table tbody tr:hover {
   background: rgba(59, 130, 246, 0.08);
 }
 
-table tbody tr:hover {
-  background: rgba(59, 130, 246, 0.08);
-}
-
-[data-theme='dark'] table tbody tr:hover {
-  background: rgba(59, 130, 246, 0.15);
-}
-
-table td {
+table td, .specs-table td {
   padding: 1rem;
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  border: 1px solid var(--color-border);
   color: var(--color-text-main);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-[data-theme='dark'] table td {
-  border-color: rgba(59, 130, 246, 0.25);
-  color: #e5e7eb;
-}
-
-table td:first-child {
+table td:first-child, .specs-table td:first-child {
   font-weight: 600;
   color: var(--color-primary);
-}
-
-[data-theme='dark'] table td:first-child {
-  color: #60a5fa;
-}
-
-/* ---------- Specs Table Class (Alias for Table Styles) ---------- */
-.specs-table {
-  width: 100%;
-  margin: 2rem 0;
-  border-collapse: collapse;
-  background: var(--color-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.specs-table thead {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  color: white;
-}
-
-[data-theme='dark'] .specs-table thead {
-  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-  color: #f3f4f6;
-}
-
-.specs-table th {
-  padding: 1rem !important;
-  border: 1px solid rgba(59, 130, 246, 0.3) !important;
-  text-align: left !important;
-  font-weight: 600 !important;
-  font-size: 0.95rem !important;
-  letter-spacing: 0.5px !important;
-  background: inherit !important;
-  color: inherit !important;
-}
-
-[data-theme='dark'] .specs-table th {
-  border-color: rgba(59, 130, 246, 0.5) !important;
-  color: #f3f4f6 !important;
-}
-
-.specs-table tbody tr {
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
-  transition: background-color 0.3s ease;
-}
-
-.specs-table tbody tr:nth-child(odd) {
-  background: rgba(59, 130, 246, 0.03) !important;
-}
-
-[data-theme='dark'] .specs-table tbody tr:nth-child(odd) {
-  background: rgba(59, 130, 246, 0.08) !important;
-}
-
-.specs-table tbody tr:hover {
-  background: rgba(59, 130, 246, 0.08) !important;
-}
-
-[data-theme='dark'] .specs-table tbody tr:hover {
-  background: rgba(59, 130, 246, 0.15) !important;
-}
-
-.specs-table td {
-  padding: 1rem !important;
-  border: 1px solid rgba(59, 130, 246, 0.15) !important;
-  color: var(--color-text-main) !important;
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
-  background: inherit !important;
-  text-align: left !important;
-}
-
-[data-theme='dark'] .specs-table td {
-  border-color: rgba(59, 130, 246, 0.25) !important;
-  color: #e5e7eb !important;
-}
-
-.specs-table td:first-child {
-  font-weight: 600 !important;
-  color: var(--color-primary) !important;
-}
-
-[data-theme='dark'] .specs-table td:first-child {
-  color: #60a5fa !important;
 }
 
 /* ---------- Icon Visibility (All Themes) ---------- */

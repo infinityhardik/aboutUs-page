@@ -1,0 +1,76 @@
+/* ===================================================
+   Global Design Tokens - Unified Project Theme
+   =================================================== */
+
+:root {
+  /* Brand Colors - Refined */
+  --color-primary: #3b82f6;        /* Modern Blue */
+  --color-primary-dark: #2563eb;   /* Deep Blue */
+  --color-accent: #ef4444;         /* Vibrant Red */
+  --color-highlight: #eab308;      /* Gold/Yellow */
+  
+  /* Text Colors (Light Mode Default) */
+  --color-text-main: #1f2937;
+  --color-text-muted: #4b5563;
+  --color-text-on-dark: #f3f4f6;
+  
+  /* Surface Colors (Light Mode Default) */
+  --color-bg-base: #ffffff;
+  --color-bg-surface: #f3f4f6;
+  --color-bg-surface-2: #e5e7eb;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-glow: rgba(59, 130, 246, 0.3);
+
+  /* Compatibility Aliases (for inlined critical CSS) */
+  --color-bg: var(--color-bg-base);
+  --color-text: var(--color-text-main);
+
+  /* Layout & Spacing */
+  --navbar-height: 80px;
+  --navbar-mobile-height: 64px;
+  --navbar-small-mobile-height: 50px;
+  --container-width: 1200px;
+  --section-padding: 6rem;
+  --section-padding-mobile: 4rem;
+  
+  /* Border Radius & Effects */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-pill: 50px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --color-text-main: #f3f4f6;
+  --color-text-muted: #9ca3af;
+  
+  --color-bg-base: #050505;
+  --color-bg-surface: #121212;
+  --color-bg-surface-2: #1e1e1e;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-glow: rgba(59, 130, 246, 0.2);
+}
+
+/* Typography (Standardized) */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}

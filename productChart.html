@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+  <link rel="stylesheet" href="styles/theme.css" />
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -24,8 +25,8 @@
         /* CSS Variables for Theme Support */
         :root {
             --color-primary: #3b82f6;
-            --color-bg: #ffffff;
-            --color-text: #000000;
+            --color-bg: var(--color-bg-base);
+            --color-text: var(--color-text-main);
             --color-bg-dark: #f5f5f5;
             --color-bg-surface: #ffffff;
             --color-text-main: #000000;
@@ -35,16 +36,10 @@
         }
 
         [data-theme='dark'] {
-            --color-primary: #60a5fa;
-            --color-bg: #050505;
-            --color-text: #f3f4f6;
-            --color-bg-dark: #1a1a1a;
-            --color-bg-surface: #1f2937;
-            --color-text-main: #f3f4f6;
-            --color-text-muted: #d1d5db;
-            --border-radius: 8px;
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
+      --color-bg: var(--color-bg-base);
+      --color-text: var(--color-text-main);
+      --color-bg-surface: var(--color-bg-surface)
+    }
 
         /* Page Specific Styles */
         .chart-section {
@@ -330,7 +325,7 @@
                 <div class="footer-col">
                     <h4>Mahadev Traders</h4>
                     <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-                        Your trusted partner for premium quality plywood, block-boards, and flush doors in Rajkot,
+                        Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot,
                         Ahmedabad & Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
                     </p>
                 </div>
@@ -503,3 +498,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

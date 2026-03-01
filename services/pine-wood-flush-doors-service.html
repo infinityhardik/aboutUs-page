@@ -20,6 +20,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/theme.css" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
@@ -33,16 +34,16 @@
   <style>
     :root {
       --color-primary: #3b82f6;
-      --color-bg: #ffffff;
-      --color-text: #000000;
-      --navbar-height: 4rem;
+      --color-bg: var(--color-bg-base);
+      --color-text: var(--color-text-main);
+      --navbar-height: var(--navbar-height);
       --container-width: 1200px
     }
 
     [data-theme='dark'] {
-      --color-bg: #050505;
-      --color-text: #f3f4f6;
-      --color-bg-surface: #1f2937
+      --color-bg: var(--color-bg-base);
+      --color-text: var(--color-text-main);
+      --color-bg-surface: var(--color-bg-surface)
     }
 
     * {
@@ -511,7 +512,7 @@
         <div class="footer-col">
           <h4>Mahadev Traders</h4>
           <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, block-boards, and flush doors in Rajkot, Ahmedabad &
+            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
             Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
           </p>
         </div>
@@ -546,8 +547,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, Block-Board & Flush Door Wholesaler in
-          Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
       </div>
     </div>
   </footer>
@@ -570,4 +570,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
 
