@@ -1,5 +1,6 @@
-/* Critical CSS - Inline for First Paint Optimization */
 @import 'theme.css';
+/* Critical CSS - Inline for First Paint Optimization */
+
 
 * {
   margin: 0;

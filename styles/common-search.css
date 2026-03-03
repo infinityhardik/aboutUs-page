@@ -1,5 +1,6 @@
-/* ---------- Shared Search Styles ---------- */
 @import 'theme.css';
+/* ---------- Shared Search Styles ---------- */
+
 
 .product-filters {
   display: flex;
