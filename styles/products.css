@@ -844,13 +844,9 @@ table td:first-child, .specs-table td:first-child {
 }
 
 @media (max-width: 480px) {
-  .cta-phone {
-    display: none;
-  }
   
-  .cta-btn::after {
-    content: "Call";
-  }
+  
+  
 }
 
 /* ---------- SEO Intro Section ---------- */
