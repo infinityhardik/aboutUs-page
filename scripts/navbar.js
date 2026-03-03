@@ -8,32 +8,63 @@
       // Breadcrumb visibility on scroll
       const breadcrumb = document.querySelector('.breadcrumb');
       let lastScrollY = window.scrollY;
+      let ticking = false;
+
+      // Sync breadcrumb top to actual navbar height so it never gets covered
+      const syncBreadcrumbTop = () => {
+        if (breadcrumb) {
+          breadcrumb.style.top = navbar.offsetHeight + 'px';
+        }
+      };
+
+      // Ensure sync on all navbar dimensions changes (e.g., class toggles, viewport resizes)
+      if (typeof ResizeObserver !== 'undefined') {
+        const resizeObserver = new ResizeObserver(() => {
+          syncBreadcrumbTop();
+        });
+        resizeObserver.observe(navbar);
+      } else {
+        // Fallback for older browsers
+        syncBreadcrumbTop();
+        window.addEventListener('resize', syncBreadcrumbTop, { passive: true });
+      }
 
       const handleScroll = () => {
-        const currentScrollY = window.scrollY;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const currentScrollY = Math.max(0, window.scrollY);
 
-        // Navbar Scrolled Effect
-        if (currentScrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
+            // Navbar Scrolled Effect
+            if (currentScrollY > 50) {
+              navbar.classList.add('scrolled');
+            } else {
+              navbar.classList.remove('scrolled');
+            }
+
+            // Breadcrumb Dynamic Visibility (Hide on scroll down, show on scroll up)
+            if (breadcrumb) {
+              const delta = currentScrollY - lastScrollY;
+              const threshold = 80; // Minimum scroll position before hiding
+              const minDelta = 5;   // Ignore jitter smaller than 5px (iOS momentum scroll)
+
+              if (currentScrollY <= threshold) {
+                // Always show near the top
+                breadcrumb.classList.remove('breadcrumb-hidden');
+              } else if (delta > minDelta) {
+                // Scrolling down with enough movement — hide
+                breadcrumb.classList.add('breadcrumb-hidden');
+              } else if (delta < -minDelta) {
+                // Scrolling up with enough movement — show
+                breadcrumb.classList.remove('breadcrumb-hidden');
+              }
+              // If |delta| <= minDelta, do nothing (ignore jitter)
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+          });
+          ticking = true;
         }
-
-        // Breadcrumb Dynamic Visibility (Hide on scroll down, show on scroll up)
-        if (breadcrumb) {
-          // Lower threshold (50px) for mobile responsiveness
-          const threshold = 50;
-
-          if (currentScrollY > lastScrollY && currentScrollY > threshold) {
-            // Scrolling down - Hide
-            breadcrumb.classList.add('breadcrumb-hidden');
-          } else {
-            // Scrolling up or at the top - Show
-            breadcrumb.classList.remove('breadcrumb-hidden');
-          }
-        }
-
-        lastScrollY = Math.max(0, currentScrollY);
       };
 
       window.addEventListener('scroll', handleScroll, { passive: true });

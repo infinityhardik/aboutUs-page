@@ -6,7 +6,7 @@
 /* ---------- Product Page Hero Section ---------- */
 .product-hero {
   background: linear-gradient(135deg, var(--color-bg-surface) 0%, rgba(59, 130, 246, 0.1) 100%);
-  padding: 4rem 2rem;
+  padding: calc(var(--navbar-height) + 2rem) 2rem 4rem;
   text-align: center;
   border-bottom: 2px solid var(--color-border-glow);
   min-height: 300px;
@@ -14,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   scroll-margin-top: 150px;
 }
 
@@ -271,10 +270,6 @@
     font-size: 2rem;
   }
 
-  .product-hero {
-    padding-top: 2.5rem;
-  }
-
   .product-hero p {
     font-size: 1rem;
   }
@@ -306,7 +301,7 @@
 
 @media (max-width: 480px) {
   .product-hero {
-    padding: 3rem 1rem 2rem;
+    padding: calc(var(--navbar-small-mobile-height) + 1.5rem) 1rem 2rem;
     min-height: auto;
   }
 
