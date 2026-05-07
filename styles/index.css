@@ -93,90 +93,99 @@ img {
 }
 
 .navbar.scrolled {
-  background: rgba(var(--color-bg-surface-rgb, 243, 244, 246), 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
-  /* Shrink navbar on desktop when scrolled; mobile heights stay unchanged via media queries */
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--glass-border);
   height: 70px;
+  box-shadow: var(--shadow-md);
 }
 
 [data-theme='dark'] .navbar.scrolled {
-  background: rgba(5, 5, 5, 0.8);
+  background: var(--glass-bg);
 }
 
 .navbar .brand a {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   color: var(--color-text-main);
+  background: linear-gradient(135deg, var(--color-text-main), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar .menu {
   display: flex;
-  gap: 2rem;
+  gap: 2.25rem;
   align-items: center;
 }
 
 .navbar .menu a {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text-muted);
   position: relative;
+  transition: color var(--transition-normal);
 }
 
 .navbar .menu a:hover,
 .navbar .menu a.active {
-  color: var(--color-text-main);
+  color: var(--color-primary);
 }
 
 .navbar .menu a::after {
   content: "";
   position: absolute;
   bottom: -4px;
-  left: 0;
+  left: 50%;
   width: 0;
   height: 2px;
   background: var(--color-primary);
-  transition: width var(--transition-fast);
+  transition: all var(--transition-normal);
+  transform: translateX(-50%);
 }
 
-.navbar .menu a:hover::after {
+.navbar .menu a:hover::after,
+.navbar .menu a.active::after {
   width: 100%;
 }
 
 /* Theme Toggle Button */
 .theme-toggle {
-  background: transparent;
-  border: 2px solid var(--color-border-glow);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
   color: var(--color-primary);
-  padding: 0.75rem 1rem;
-  border-radius: 50%;
+  padding: 0.5rem;
+  border-radius: 12px;
   width: 40px;
   height: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  transition: all var(--transition-fast);
+  font-size: 1.1rem;
+  transition: all var(--transition-normal);
   margin: 0 0.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .theme-toggle:hover {
-  background: rgba(59, 130, 246, 0.1);
-  border-color: var(--color-primary);
-  transform: scale(1.1);
+  background: var(--color-bg-surface-2);
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: var(--shadow-md);
 }
 
 .navbar .btn-primary {
-  background: var(--color-primary-dark);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #ffffff !important;
-  padding: 0.75rem 1.8rem;
+  padding: 0.8rem 2rem;
   border-radius: var(--border-radius-pill);
   font-weight: 700;
   font-size: 0.95rem;
-  transition: all var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  transition: all var(--transition-normal);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -187,9 +196,7 @@ img {
 
 .navbar .btn-primary:hover {
   transform: translateY(-2px);
-  background: #1d4ed8;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
-  color: #ffffff !important;
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
 }
 
 .hamburger {
@@ -709,19 +716,30 @@ img {
   margin-bottom: 1rem;
 }
 
-.contact-card p,
-.contact-card a {
+.contact-card p {
   color: #333333;
-  display: block;
   margin-bottom: 0.5rem;
 }
 
-[data-theme='dark'] .contact-card p,
-[data-theme='dark'] .contact-card a {
-  color: #d1d5db;
+.contact-card a {
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
 }
 
 .contact-card a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .contact-card p {
+  color: #d1d5db;
+}
+
+[data-theme='dark'] .contact-card a {
   color: var(--color-primary);
 }
 

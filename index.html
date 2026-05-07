@@ -11,6 +11,35 @@
   <link rel="canonical" href="https://mahadev-traders.com/" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Global Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mahadev Traders",
+    "url": "https://mahadev-traders.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://mahadev-traders.com/products/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://mahadev-traders.com/"
+      }
+    ]
+  }
+  </script>
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -594,6 +623,7 @@
         <div class="contact-card">
           <i class="fas fa-envelope" aria-hidden="true"></i>
           <h3>Email</h3>
+          <p>Sales & General Inquiries</p>
           <p>Drop us a line anytime</p>
           <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
         </div>
@@ -794,12 +824,6 @@
               }
             }
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "120",
-            "bestRating": "5",
-            "worstRating": "1"
           },
           "review": {
             "@type": "Review",
@@ -3300,13 +3324,6 @@
     "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
     "author": { "@type": "Person", "name": "Ajit Bhai" },
     "reviewBody": "Zevik doors are excellent. Very sturdy and high bond strength."
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "51",
-    "bestRating": "5",
-    "worstRating": "1"
   }
 }
   </script>
@@ -3391,13 +3408,6 @@
     "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
     "author": { "@type": "Person", "name": "Samir Vyas" },
     "reviewBody": "Highly durable and doesn't warp. Marlex doors are worth the premium."
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "62",
-    "bestRating": "5",
-    "worstRating": "1"
   }
 }
   </script>
