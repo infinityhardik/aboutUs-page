@@ -18,6 +18,7 @@
   --color-bg-base: #ffffff;
   --color-bg-surface: #f3f4f6;
   --color-bg-surface-2: #e5e7eb;
+  --color-bg-dark: #0f172a;
   --color-border: rgba(0, 0, 0, 0.1);
   --color-border-glow: rgba(59, 130, 246, 0.3);
 
@@ -38,6 +39,7 @@
   --border-radius-md: 12px;
   --border-radius-lg: 16px;
   --border-radius-pill: 50px;
+  --border-radius: var(--border-radius-md);
   
   /* Glassmorphism & Effects */
   --glass-bg: rgba(255, 255, 255, 0.7);
@@ -65,6 +67,7 @@
   --color-bg-base: #030712;       /* Deeper midnight black */
   --color-bg-surface: #111827;    /* Rich dark blue-gray */
   --color-bg-surface-2: #1f2937;
+  --color-bg-dark: #030712;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-glow: rgba(59, 130, 246, 0.25);
   
