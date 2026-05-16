@@ -750,6 +750,10 @@ table td:first-child, .specs-table td:first-child {
     width: 100%;
     justify-content: center;
   }
+
+  .cta-section > .cta-btn + .cta-btn {
+    margin-top: 1rem;
+  }
   
   .cta-phone {
     display: inline;
