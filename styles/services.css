@@ -5,7 +5,7 @@
 
 
 /* ---------- Service Page Hero Section ---------- */
-.service-hero {
+.service-hero, .product-hero {
   background: linear-gradient(135deg, var(--color-bg-surface) 0%, rgba(59, 130, 246, 0.1) 100%);
   padding: calc(var(--navbar-height) + 2rem) 2rem 4rem;
   text-align: center;
@@ -18,7 +18,7 @@
   scroll-margin-top: 150px;
 }
 
-.service-hero h1 {
+.service-hero h1, .product-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--color-text-main);
@@ -26,7 +26,7 @@
   letter-spacing: -0.02em;
 }
 
-[data-theme='dark'] .service-hero h1 {
+[data-theme='dark'] .service-hero h1, [data-theme='dark'] .product-hero h1 {
   background: linear-gradient(135deg, #fff 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -34,14 +34,14 @@
   color: transparent;
 }
 
-.service-hero p {
+.service-hero p, .product-hero p {
   font-size: 1.2rem;
   color: var(--color-text-muted);
   max-width: 600px;
   margin: 0 auto 1.5rem;
 }
 
-.service-hero .location-badge {
+.service-hero .location-badge, .product-hero .location-badge {
   display: inline-block;
   background: rgba(59, 130, 246, 0.2);
   border: 1px solid var(--color-border-glow);
@@ -53,13 +53,13 @@
 }
 
 /* ---------- Service Content Grid ---------- */
-.service-content {
+.service-content, .product-content {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
-.service-intro {
+.service-intro, .product-intro {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
   border: 1px solid var(--color-border-glow);
   border-radius: var(--border-radius-md);
@@ -68,13 +68,13 @@
   line-height: 1.8;
 }
 
-.service-intro h2 {
+.service-intro h2, .product-intro h2 {
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
-.service-intro p {
+.service-intro p, .product-intro p {
   color: var(--color-text-main);
   margin-bottom: 1rem;
   font-size: 1.05rem;
@@ -626,4 +626,92 @@
   color: var(--color-text-main);
   line-height: 1.7;
   overflow-wrap: anywhere;
+}
+
+
+/* ---------- WhatsApp CTA Section ---------- */
+.whatsapp-cta-section {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(18, 140, 126, 0.05) 100%);
+  border: 2px solid rgba(37, 211, 102, 0.3);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(37, 211, 102, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.whatsapp-cta-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #25D366;
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp-cta-section p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #1ebe5d, #0f7a6d);
+}
+
+.whatsapp-btn i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-cta-section {
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+  }
+  .whatsapp-cta-section h3 {
+    font-size: 1.5rem;
+  }
+  .whatsapp-cta-section p {
+    font-size: 1rem;
+  }
+  .whatsapp-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }

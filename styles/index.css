@@ -1351,6 +1351,32 @@ img {
     padding: 4rem 0;
   }
 
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .area-item {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .brands-section {
+    padding: 4rem 0;
+  }
+
   .brands-slider {
     gap: 1rem;
     padding: 2rem 0;
@@ -1363,3 +1389,143 @@ img {
   }
 }
 
+/* ---------- Why Choose Us Section ---------- */
+.why-choose-us {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(239, 68, 68, 0.02) 100%);
+  border: 1px solid var(--color-border-glow);
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem;
+  margin: 3rem 0;
+}
+
+.why-choose-us h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.why-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.why-item-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.why-item-content h4 {
+  margin-bottom: 0.4rem;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+}
+
+.why-item-content p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+/* ---------- WhatsApp CTA Section ---------- */
+.whatsapp-cta-section {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(18, 140, 126, 0.05) 100%);
+  border: 2px solid rgba(37, 211, 102, 0.3);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(37, 211, 102, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.whatsapp-cta-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #25D366;
+  position: relative;
+  z-index: 1;
+}
+
+.whatsapp-cta-section p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #1ebe5d, #0f7a6d);
+}
+
+.whatsapp-btn i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-cta-section {
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+  }
+  .whatsapp-cta-section h3 {
+    font-size: 1.5rem;
+  }
+  .whatsapp-cta-section p {
+    font-size: 1rem;
+  }
+  .whatsapp-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}

@@ -13,6 +13,18 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://mahadev-traders.com/products.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://mahadev-traders.com/productChart.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://mahadev-traders.com/services/</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -211,8 +223,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/decorative-laminates-sheets-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/decorative-laminates-sheets.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -223,8 +235,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/flush-doors-manufacturer-supplier-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/flush-doors-manufacturer-supplier.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -247,8 +259,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/liner-laminates-inner-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/liner-laminates-inner.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -277,14 +289,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/pine-wood-block-board-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/pine-wood-block-board.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/pine-wood-flush-doors-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/pine-wood-flush-doors.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -295,8 +307,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/poplar-block-board-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/poplar-block-board.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -313,8 +325,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mahadev-traders.com/services/waterproof-bathroom-doors-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://mahadev-traders.com/services/waterproof-bathroom-doors.html</loc>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
