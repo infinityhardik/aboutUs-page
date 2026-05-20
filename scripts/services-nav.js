@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
       silo: 'Plywood',
       parent: 'plywood-wholesaler-rajkot.html'
     },
-    'flush-doors-manufacturer-supplier.html': {
+    'flush-doors-manufacturer-supplier-service.html': {
       name: 'Flush Doors',
       silo: 'Flush Doors',
       parent: '../services/'
@@ -53,34 +53,34 @@ document.addEventListener('DOMContentLoaded', function() {
     'waterproof-flush-doors-bwp.html': {
       name: 'Waterproof Doors',
       silo: 'Flush Doors',
-      parent: 'flush-doors-manufacturer-supplier.html'
+      parent: 'flush-doors-manufacturer-supplier-service.html'
     },
     'laminated-flush-doors-designs.html': {
       name: 'Laminated Doors',
       silo: 'Flush Doors',
-      parent: 'flush-doors-manufacturer-supplier.html'
+      parent: 'flush-doors-manufacturer-supplier-service.html'
     },
-    'pine-wood-flush-doors.html': {
+    'pine-wood-flush-doors-service.html': {
       name: 'Pine Wood Doors',
       silo: 'Flush Doors',
-      parent: 'flush-doors-manufacturer-supplier.html'
+      parent: 'flush-doors-manufacturer-supplier-service.html'
     },
-    'waterproof-bathroom-doors.html': {
+    'waterproof-bathroom-doors-service.html': {
       name: 'Bathroom Doors',
       silo: 'Flush Doors',
-      parent: 'flush-doors-manufacturer-supplier.html'
+      parent: 'flush-doors-manufacturer-supplier-service.html'
     },
     'block-board-dealer-rajkot.html': {
       name: 'Block Board Dealer',
       silo: 'Block Boards',
       parent: '../services/'
     },
-    'pine-wood-block-board.html': {
+    'pine-wood-block-board-service.html': {
       name: 'Pine Wood Block Board',
       silo: 'Block Boards',
       parent: 'block-board-dealer-rajkot.html'
     },
-    'poplar-block-board.html': {
+    'poplar-block-board-service.html': {
       name: 'Poplar Block Board',
       silo: 'Block Boards',
       parent: 'block-board-dealer-rajkot.html'
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
       silo: 'Block Boards',
       parent: 'block-board-dealer-rajkot.html'
     },
-    'decorative-laminates-sheets.html': {
+    'decorative-laminates-sheets-service.html': {
       name: 'Decorative Laminates',
       silo: 'Laminates',
       parent: '../services/'
@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', function() {
     'sunmica-dealers-rajkot.html': {
       name: 'Sunmica Dealers',
       silo: 'Laminates',
-      parent: 'decorative-laminates-sheets.html'
+      parent: 'decorative-laminates-sheets-service.html'
     },
-    'liner-laminates-inner.html': {
+    'liner-laminates-inner-service.html': {
       name: 'Liner Laminates',
       silo: 'Laminates',
-      parent: 'decorative-laminates-sheets.html'
+      parent: 'decorative-laminates-sheets-service.html'
     }
   };
 
@@ -267,18 +267,18 @@ function getCurrentServiceInfo() {
     'gurjan-plywood-dealer.html': 'Gurjan Plywood',
     'shuttering-plywood-construction.html': 'Shuttering Plywood',
     'flexible-plywood-supplier.html': 'Flexible Plywood',
-    'flush-doors-manufacturer-supplier.html': 'Flush Doors',
+    'flush-doors-manufacturer-supplier-service.html': 'Flush Doors',
     'waterproof-flush-doors-bwp.html': 'Waterproof Doors',
     'laminated-flush-doors-designs.html': 'Laminated Doors',
-    'pine-wood-flush-doors.html': 'Pine Wood Doors',
-    'waterproof-bathroom-doors.html': 'Bathroom Doors',
+    'pine-wood-flush-doors-service.html': 'Pine Wood Doors',
+    'waterproof-bathroom-doors-service.html': 'Bathroom Doors',
     'block-board-dealer-rajkot.html': 'Block Board',
-    'pine-wood-block-board.html': 'Pine Wood Block Board',
-    'poplar-block-board.html': 'Poplar Block Board',
+    'pine-wood-block-board-service.html': 'Pine Wood Block Board',
+    'poplar-block-board-service.html': 'Poplar Block Board',
     'bwp-waterproof-block-board.html': 'Waterproof Block Board',
-    'decorative-laminates-sheets.html': 'Decorative Laminates',
+    'decorative-laminates-sheets-service.html': 'Decorative Laminates',
     'sunmica-dealers-rajkot.html': 'Sunmica',
-    'liner-laminates-inner.html': 'Liner Laminates'
+    'liner-laminates-inner-service.html': 'Liner Laminates'
   };
   
   return servicePages[currentFile] || null;
