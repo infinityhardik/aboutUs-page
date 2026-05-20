@@ -1,28 +1,35 @@
 /* ===================================================
-   Global Design Tokens - Unified Project Theme
+   Global Design Tokens - Unified Premium Project Theme
    =================================================== */
 
 :root {
-  /* Brand Colors - Refined */
-  --color-primary: #3b82f6;        /* Modern Blue */
-  --color-primary-dark: #2563eb;   /* Deep Blue */
-  --color-accent: #ef4444;         /* Vibrant Red */
-  --color-highlight: #eab308;      /* Gold/Yellow */
+  /* Brand Colors - Teak & Gold Design System */
+  --color-primary-rgb: 197, 143, 89;      /* Teak Gold Brand Color */
+  --color-primary: rgb(var(--color-primary-rgb));
+  
+  --color-primary-dark-rgb: 140, 88, 43;   /* Deep Teak Mahogany */
+  --color-primary-dark: rgb(var(--color-primary-dark-rgb));
+  
+  --color-accent-rgb: 212, 175, 55;       /* Champagne Gold Architectural Highlight */
+  --color-accent: rgb(var(--color-accent-rgb));
+  
+  --color-highlight-rgb: 43, 92, 67;       /* Sustainable Forest Green */
+  --color-highlight: rgb(var(--color-highlight-rgb));
   
   /* Text Colors (Light Mode Default) */
-  --color-text-main: #1f2937;
-  --color-text-muted: #4b5563;
-  --color-text-on-dark: #f3f4f6;
+  --color-text-main: #1f2a38;
+  --color-text-muted: #5e6675;
+  --color-text-on-dark: #fbfbfb;
   
   /* Surface Colors (Light Mode Default) */
-  --color-bg-base: #ffffff;
-  --color-bg-surface: #f3f4f6;
-  --color-bg-surface-2: #e5e7eb;
-  --color-bg-dark: #0f172a;
-  --color-border: rgba(0, 0, 0, 0.1);
-  --color-border-glow: rgba(59, 130, 246, 0.3);
+  --color-bg-base: #fafaf8;                /* Warm Alabaster Cream */
+  --color-bg-surface: #f4f3ef;             /* Soft Oak / Warm Sand */
+  --color-bg-surface-2: #eae9e3;           /* Slightly darker oak for contrast */
+  --color-bg-dark: #161513;                /* Obsidian Dark Espresso */
+  --color-border: rgba(140, 88, 43, 0.12); /* Soft timber tinted borders */
+  --color-border-glow: rgba(197, 143, 89, 0.25);
 
-  /* Compatibility Aliases (for inlined critical CSS) */
+  /* Compatibility Aliases (for standard critical CSS bindings) */
   --color-bg: var(--color-bg-base);
   --color-text: var(--color-text-main);
 
@@ -42,37 +49,37 @@
   --border-radius: var(--border-radius-md);
   
   /* Glassmorphism & Effects */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-blur: 12px;
+  --glass-bg: rgba(250, 250, 248, 0.75);
+  --glass-border: rgba(197, 143, 89, 0.08);
+  --glass-blur: 16px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
-  --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(140, 88, 43, 0.05);
+  --shadow-md: 0 4px 12px rgba(140, 88, 43, 0.06), 0 2px 4px rgba(140, 88, 43, 0.04);
+  --shadow-lg: 0 10px 25px rgba(140, 88, 43, 0.08), 0 4px 6px rgba(140, 88, 43, 0.04);
+  --shadow-glow: 0 0 20px rgba(197, 143, 89, 0.25);
+  --shadow-premium: 0 20px 40px rgba(140, 88, 43, 0.12);
   
   /* Transitions */
   --transition-fast: 0.15s ease;
-  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Dark Theme */
 [data-theme='dark'] {
-  --color-text-main: #f9fafb;
-  --color-text-muted: #9ca3af;
+  --color-text-main: #fcfcfc;
+  --color-text-muted: #a3a29e;
   
-  --color-bg-base: #030712;       /* Deeper midnight black */
-  --color-bg-surface: #111827;    /* Rich dark blue-gray */
-  --color-bg-surface-2: #1f2937;
-  --color-bg-dark: #030712;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-glow: rgba(59, 130, 246, 0.25);
+  --color-bg-base: #11100e;       /* Warm Obsidian Black */
+  --color-bg-surface: #1a1816;    /* Dark Ebony Panels */
+  --color-bg-surface-2: #24221f;  /* Warm charcoal */
+  --color-bg-dark: #11100e;
+  --color-border: rgba(197, 143, 89, 0.12);
+  --color-border-glow: rgba(212, 175, 55, 0.2);
   
-  --glass-bg: rgba(17, 24, 39, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(26, 24, 22, 0.75);
+  --glass-border: rgba(197, 143, 89, 0.08);
 }
 
 /* Typography (Standardized) */

@@ -62,14 +62,14 @@ body {
   font-size: 0.95rem;
   border: none;
   cursor: pointer;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+  box-shadow: 0 4px 15px rgba(var(--color-primary-dark-rgb), 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: #1e40af;
-  box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+  background: var(--color-primary);
+  box-shadow: 0 6px 20px rgba(var(--color-primary-rgb), 0.45);
 }
 
 .theme-toggle {
@@ -97,7 +97,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--color-bg-base) 0%, rgba(59, 130, 246, 0.05) 100%);
+  background: linear-gradient(135deg, var(--color-bg-base) 0%, rgba(var(--color-primary-rgb), 0.06) 100%);
 }
 
 .hero h1 {
