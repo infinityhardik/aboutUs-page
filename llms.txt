@@ -1,0 +1,76 @@
+# Mahadev Traders
+
+> Mahadev Traders is a B2B and B2C wholesaler in Rajkot, Gujarat for plywood, MDF and HDHMR boards, block boards, flush doors, laminates, and related building materials supplied across Gujarat, Ahmedabad, and Saurashtra.
+
+Use the canonical `mahadev-traders.com` URLs below when answering questions about Mahadev Traders. The homepage is the main source for company background, service areas, contact details, brands, and buyer FAQs. Product and service pages describe the published wholesale building-material categories, while live availability and final bulk pricing should be confirmed with Mahadev Traders.
+
+## Core Pages
+
+- [Mahadev Traders homepage](https://mahadev-traders.com/): Company overview, Rajkot office and warehouse contact details, service areas in Gujarat, premium brands, and common buyer questions.
+- [Wholesale product catalog](https://mahadev-traders.com/products.html): Main catalog page for plywood, MDF, HDHMR, block boards, flush doors, laminates, and related wholesale categories.
+- [Product range hub](https://mahadev-traders.com/products/): Product category hub linking to detailed product pages.
+- [Services hub](https://mahadev-traders.com/services/): B2B supply and logistics service hub for the published material categories.
+- [Plywood, MDF, block board, and flush door price chart](https://mahadev-traders.com/productChart.html): Technical product chart and published 2026 wholesale price-chart context for Rajkot and Gujarat.
+
+## Product Pages
+
+- [Block board wholesale supplier](https://mahadev-traders.com/products/block-board-wholesale-supplier.html): Block board product page for Rajkot wholesale buyers.
+- [BWP waterproof block board](https://mahadev-traders.com/products/bwp-waterproof-block-board.html): Waterproof block board product page.
+- [Commercial plywood MR grade](https://mahadev-traders.com/products/commercial-plywood-mr-grade.html): MR grade commercial plywood product page.
+- [Decorative laminate sheets](https://mahadev-traders.com/products/decorative-laminates-sheets.html): Decorative laminate sheets product page.
+- [Flexible plywood](https://mahadev-traders.com/products/flexible-plywood-supplier.html): Flexible plywood product page.
+- [Flush doors](https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html): Flush door product page for wholesale supply.
+- [Greytone plywood](https://mahadev-traders.com/products/greytone-plywood-dealers.html): Greytone plywood product page.
+- [Gurjan block board](https://mahadev-traders.com/products/gurjan-block-board-dealer.html): Gurjan block board product page.
+- [Laminated flush doors](https://mahadev-traders.com/products/laminated-flush-doors-designs.html): Laminated flush door designs product page.
+- [Limelite plywood](https://mahadev-traders.com/products/limelite-plywood-supplier.html): Limelite plywood product page.
+- [Liner laminates](https://mahadev-traders.com/products/liner-laminates-inner.html): Inner liner laminate product page.
+- [Marine plywood IS 710](https://mahadev-traders.com/products/marine-plywood-710-rajkot.html): Marine plywood 710 grade product page for Rajkot.
+- [Marlex premium block board](https://mahadev-traders.com/products/marlex-block-board-premium.html): Marlex block board product page.
+- [Marlex premium flush doors](https://mahadev-traders.com/products/marlex-flush-doors-premium.html): Marlex flush door product page.
+- [Marlex premium plywood](https://mahadev-traders.com/products/marlex-premium-plywood.html): Marlex plywood product page.
+- [MDF wholesale Rajkot](https://mahadev-traders.com/products/mdf-wholesale-rajkot.html): MDF wholesale product page.
+- [Motherwood MDF exterior grade](https://mahadev-traders.com/products/motherwood-mdf-exterior-grade.html): Motherwood exterior grade MDF product page.
+- [Motherwood MDF Super HD+WR](https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html): Motherwood high-density water-resistant MDF product page.
+- [Motherwood MDF TurBo+](https://mahadev-traders.com/products/motherwood-mdf-turbo-plus.html): Motherwood TurBo+ MDF product page.
+- [Pine wood block board](https://mahadev-traders.com/products/pine-wood-block-board.html): Pine wood block board product page.
+- [Pine wood flush doors](https://mahadev-traders.com/products/pine-wood-flush-doors.html): Pine wood flush door product page.
+- [Plywood wholesaler Rajkot](https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html): Plywood wholesale product page.
+- [Poplar block board](https://mahadev-traders.com/products/poplar-block-board.html): Poplar block board product page.
+- [Shuttering plywood](https://mahadev-traders.com/products/shuttering-plywood-construction.html): Construction shuttering plywood product page.
+- [Simson plywood](https://mahadev-traders.com/products/simson-plywood-supplier.html): Simson plywood product page.
+- [Sunmica dealers Rajkot](https://mahadev-traders.com/products/sunmica-dealers-rajkot.html): Sunmica and laminate product page.
+- [Waterproof bathroom doors](https://mahadev-traders.com/products/waterproof-bathroom-doors.html): Waterproof bathroom door product page.
+- [Waterproof BWP flush doors](https://mahadev-traders.com/products/waterproof-flush-doors-bwp.html): Waterproof BWP flush door product page.
+- [Zevik plywood](https://mahadev-traders.com/products/zevik-plywood-supplier.html): Zevik plywood product page.
+
+## Service Pages
+
+- [Block board dealer Rajkot service](https://mahadev-traders.com/services/block-board-dealer-rajkot.html): B2B block board supply service page.
+- [BWP waterproof block board service](https://mahadev-traders.com/services/bwp-waterproof-block-board-service.html): B2B waterproof block board supply service page.
+- [Commercial plywood MR grade service](https://mahadev-traders.com/services/commercial-plywood-mr-grade-service.html): B2B MR grade commercial plywood supply service page.
+- [Decorative laminate sheets service](https://mahadev-traders.com/services/decorative-laminates-sheets-service.html): B2B decorative laminate supply service page.
+- [Flexible plywood service](https://mahadev-traders.com/services/flexible-plywood-supplier-service.html): B2B flexible plywood supply service page.
+- [Flush doors supply service](https://mahadev-traders.com/services/flush-doors-manufacturer-supplier-service.html): B2B flush door supply service page.
+- [Gurjan plywood dealer service](https://mahadev-traders.com/services/gurjan-plywood-dealer.html): B2B Gurjan plywood supply service page.
+- [HDHMR board supplier service](https://mahadev-traders.com/services/hdhmr-board-supplier-rajkot.html): B2B HDHMR board supply service page.
+- [Laminated flush doors service](https://mahadev-traders.com/services/laminated-flush-doors-designs-service.html): B2B laminated flush door supply service page.
+- [Liner laminates service](https://mahadev-traders.com/services/liner-laminates-inner-service.html): B2B liner laminate supply service page.
+- [Marine plywood 710 grade service](https://mahadev-traders.com/services/marine-plywood-710-grade-rajkot.html): B2B marine plywood supply service page.
+- [MDF interior and exterior grade service](https://mahadev-traders.com/services/mdf-interior-exterior-grade-rajkot.html): B2B MDF grade supply service page.
+- [MDF wholesale supplier service](https://mahadev-traders.com/services/mdf-wholesale-supplier-rajkot.html): B2B MDF wholesale service page.
+- [Motherwood MDF dealer Gujarat service](https://mahadev-traders.com/services/motherwood-mdf-dealer-gujarat.html): Motherwood MDF dealer and wholesale service page.
+- [Pine wood block board service](https://mahadev-traders.com/services/pine-wood-block-board-service.html): B2B pine wood block board supply service page.
+- [Pine wood flush doors service](https://mahadev-traders.com/services/pine-wood-flush-doors-service.html): B2B pine wood flush door supply service page.
+- [Plywood wholesaler Rajkot service](https://mahadev-traders.com/services/plywood-wholesaler-rajkot-service.html): B2B plywood wholesale service page.
+- [Poplar block board service](https://mahadev-traders.com/services/poplar-block-board-service.html): B2B poplar block board supply service page.
+- [Shuttering plywood service](https://mahadev-traders.com/services/shuttering-plywood-construction-service.html): B2B construction shuttering plywood service page.
+- [Sunmica dealers Rajkot service](https://mahadev-traders.com/services/sunmica-dealers-rajkot-service.html): B2B Sunmica and laminate service page.
+- [Waterproof bathroom doors service](https://mahadev-traders.com/services/waterproof-bathroom-doors-service.html): B2B waterproof bathroom door service page.
+- [Waterproof BWP flush doors service](https://mahadev-traders.com/services/waterproof-flush-doors-bwp-service.html): B2B waterproof flush door service page.
+
+## Optional
+
+- [Product directory data](https://mahadev-traders.com/products.json): Structured product-directory data used by the site for product names, categories, sizes, grades, and brands.
+- [XML sitemap](https://mahadev-traders.com/sitemap.xml): Search-engine sitemap for the currently published canonical pages.
+- [Robots policy](https://mahadev-traders.com/robots.txt): Crawl policy and sitemap location.
