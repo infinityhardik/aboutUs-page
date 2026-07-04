@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Service page metadata for breadcrumbs
   const servicePages = {
-    'plywood-wholesaler-rajkot.html': {
+    'plywood-wholesaler-rajkot-service.html': {
       name: 'Plywood Wholesaler',
       silo: 'Plywood',
       parent: '../services/'
@@ -23,39 +23,39 @@ document.addEventListener('DOMContentLoaded', function() {
     'marine-plywood-710-grade-rajkot.html': {
       name: 'Marine Plywood 710',
       silo: 'Plywood',
-      parent: 'plywood-wholesaler-rajkot.html'
+      parent: 'plywood-wholesaler-rajkot-service.html'
     },
-    'commercial-plywood-mr-grade.html': {
+    'commercial-plywood-mr-grade-service.html': {
       name: 'Commercial Plywood',
       silo: 'Plywood',
-      parent: 'plywood-wholesaler-rajkot.html'
+      parent: 'plywood-wholesaler-rajkot-service.html'
     },
     'gurjan-plywood-dealer.html': {
       name: 'Gurjan Plywood',
       silo: 'Plywood',
-      parent: 'plywood-wholesaler-rajkot.html'
+      parent: 'plywood-wholesaler-rajkot-service.html'
     },
-    'shuttering-plywood-construction.html': {
+    'shuttering-plywood-construction-service.html': {
       name: 'Shuttering Plywood',
       silo: 'Plywood',
-      parent: 'plywood-wholesaler-rajkot.html'
+      parent: 'plywood-wholesaler-rajkot-service.html'
     },
-    'flexible-plywood-supplier.html': {
+    'flexible-plywood-supplier-service.html': {
       name: 'Flexible Plywood',
       silo: 'Plywood',
-      parent: 'plywood-wholesaler-rajkot.html'
+      parent: 'plywood-wholesaler-rajkot-service.html'
     },
     'flush-doors-manufacturer-supplier-service.html': {
       name: 'Flush Doors',
       silo: 'Flush Doors',
       parent: '../services/'
     },
-    'waterproof-flush-doors-bwp.html': {
+    'waterproof-flush-doors-bwp-service.html': {
       name: 'Waterproof Doors',
       silo: 'Flush Doors',
       parent: 'flush-doors-manufacturer-supplier-service.html'
     },
-    'laminated-flush-doors-designs.html': {
+    'laminated-flush-doors-designs-service.html': {
       name: 'Laminated Doors',
       silo: 'Flush Doors',
       parent: 'flush-doors-manufacturer-supplier-service.html'
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
       silo: 'Block Boards',
       parent: 'block-board-dealer-rajkot.html'
     },
-    'bwp-waterproof-block-board.html': {
+    'bwp-waterproof-block-board-service.html': {
       name: 'BWP Waterproof Block Board',
       silo: 'Block Boards',
       parent: 'block-board-dealer-rajkot.html'
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
       silo: 'Laminates',
       parent: '../services/'
     },
-    'sunmica-dealers-rajkot.html': {
+    'sunmica-dealers-rajkot-service.html': {
       name: 'Sunmica Dealers',
       silo: 'Laminates',
       parent: 'decorative-laminates-sheets-service.html'
@@ -261,23 +261,23 @@ document.addEventListener('DOMContentLoaded', function() {
 function getCurrentServiceInfo() {
   const currentFile = window.location.pathname.split('/').pop() || 'index.html';
   const servicePages = {
-    'plywood-wholesaler-rajkot.html': 'Plywood',
+    'plywood-wholesaler-rajkot-service.html': 'Plywood',
     'marine-plywood-710-grade-rajkot.html': 'Marine Plywood',
-    'commercial-plywood-mr-grade.html': 'Commercial Plywood',
+    'commercial-plywood-mr-grade-service.html': 'Commercial Plywood',
     'gurjan-plywood-dealer.html': 'Gurjan Plywood',
-    'shuttering-plywood-construction.html': 'Shuttering Plywood',
-    'flexible-plywood-supplier.html': 'Flexible Plywood',
+    'shuttering-plywood-construction-service.html': 'Shuttering Plywood',
+    'flexible-plywood-supplier-service.html': 'Flexible Plywood',
     'flush-doors-manufacturer-supplier-service.html': 'Flush Doors',
-    'waterproof-flush-doors-bwp.html': 'Waterproof Doors',
-    'laminated-flush-doors-designs.html': 'Laminated Doors',
+    'waterproof-flush-doors-bwp-service.html': 'Waterproof Doors',
+    'laminated-flush-doors-designs-service.html': 'Laminated Doors',
     'pine-wood-flush-doors-service.html': 'Pine Wood Doors',
     'waterproof-bathroom-doors-service.html': 'Bathroom Doors',
     'block-board-dealer-rajkot.html': 'Block Board',
     'pine-wood-block-board-service.html': 'Pine Wood Block Board',
     'poplar-block-board-service.html': 'Poplar Block Board',
-    'bwp-waterproof-block-board.html': 'Waterproof Block Board',
+    'bwp-waterproof-block-board-service.html': 'Waterproof Block Board',
     'decorative-laminates-sheets-service.html': 'Decorative Laminates',
-    'sunmica-dealers-rajkot.html': 'Sunmica',
+    'sunmica-dealers-rajkot-service.html': 'Sunmica',
     'liner-laminates-inner-service.html': 'Liner Laminates'
   };
   
