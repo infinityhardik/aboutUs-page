@@ -154,28 +154,46 @@
     }
 
     .hero {
-      min-height: 80vh;
+      min-height: 92vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 2rem;
-      background: linear-gradient(135deg, var(--color-bg) 0%, rgba(197, 143, 89, .05) 100%)
+      padding: calc(var(--navbar-height) + 1rem) 2rem 2rem;
+      background: linear-gradient(135deg, var(--color-bg) 0%, rgba(197, 143, 89, .07) 100%)
+    }
+
+    .hero-content {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center
     }
 
     .hero h1 {
-      font-size: 4rem;
+      font-size: clamp(2.45rem, 4.8vw, 4.1rem);
       font-weight: 800;
-      margin-bottom: 1rem;
-      line-height: 1.2
+      margin-bottom: 1.25rem;
+      line-height: 1.02
     }
 
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 600px;
-      margin: 0 auto 2rem;
+    .hero-lead {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      max-width: 680px;
+      margin: 0 0 1.75rem;
       color: var(--color-text)
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 1rem;
+      padding: .45rem .75rem;
+      border-radius: 50px;
+      background: rgba(197, 143, 89, .09);
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase
     }
 
     .section-padding {
@@ -206,8 +224,17 @@
         right: 0
       }
 
+      .hero {
+        min-height: auto;
+        padding: calc(var(--navbar-mobile-height) + 1.25rem) 1rem 3rem
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr
+      }
+
       .hero h1 {
-        font-size: 2.5rem
+        font-size: 2.55rem
       }
 
       .btn-primary {
@@ -272,24 +299,51 @@
   <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>Wholesale Plywood, MDF, Block-Board & Flush Doors in <span class="text-gradient">Rajkot & Gujarat</span></h1>
-      <p>The leading wholesaler of premium plywood, mdf, hdhmr, block-boards & flush doors in Rajkot, Ahmedabad,
-        Saurashtra, and
-        Gujarat. Authorized dealer of Marllex, Zevik, Simson, Greytone, Limelite, Limelite Pro and Motherwood.</p>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">30+</div>
-          <p>Years Experience</p>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Rajkot's trusted wholesale supply house</p>
+        <h1>Wholesale Plywood, Block-Boards, Flush Doors & <span class="text-gradient">MDF in Gujarat</span></h1>
+        <p class="hero-lead">Source certified plywood, MDF, block-boards, and branded flush doors from Mahadev Traders -
+          serving Rajkot, Ahmedabad, Saurashtra, and Gujarat for homes, interiors, furniture, and commercial projects.</p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a href="/products.html" class="btn-primary hero-cta">View Products</a>
+          <a href="tel:+916355360702" class="btn-outline hero-cta">Call for Quote</a>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">5k+</div>
-          <p>Happy Clients</p>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <p>Premium Brands</p>
+        <div class="hero-stats" aria-label="Company highlights">
+          <div class="stat-item">
+            <div class="stat-number">30+</div>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5k+</div>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <p>Premium Brands</p>
+          </div>
         </div>
       </div>
+      <div class="hero-showcase" aria-label="Product categories and premium brands">
+        <div class="hero-panel hero-panel-main">
+          <span class="panel-label">Wholesale Range</span>
+          <strong>Plywood / MDF / HDHMR / Block-Board / Flush Doors</strong>
+          <small>Bulk-ready supply for furniture, interiors, kitchens, doors, and construction.</small>
+        </div>
+        <div class="hero-panel hero-panel-brands">
+          <span>Marllex</span>
+          <span>Zevik</span>
+          <span>Simson</span>
+          <span>Greytone</span>
+          <span>Limelite</span>
+          <span>Motherwood</span>
+        </div>
+        <div class="hero-panel hero-panel-metric">
+          <span class="panel-label">Coverage</span>
+          <strong>Rajkot to Gujarat</strong>
+          <small>Fast coordination for dealers, contractors, carpenters, and interior firms.</small>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Expertise Section -->

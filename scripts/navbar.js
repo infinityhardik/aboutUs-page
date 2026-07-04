@@ -5,6 +5,11 @@
     // Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     if (navbar) {
+      if (navbar.dataset.navbarInitialized === 'true') {
+        return;
+      }
+      navbar.dataset.navbarInitialized = 'true';
+
       // Breadcrumb visibility on scroll
       const breadcrumb = document.querySelector('.breadcrumb');
       let lastScrollY = window.scrollY;
@@ -73,6 +78,14 @@
       const hamburger = document.getElementById('hamburger');
       const menu = document.getElementById('menu');
       if (hamburger && menu) {
+        if (!hamburger.hasAttribute('tabindex') && hamburger.tagName !== 'BUTTON') {
+          hamburger.setAttribute('tabindex', '0');
+        }
+        if (!hamburger.hasAttribute('role') && hamburger.tagName !== 'BUTTON') {
+          hamburger.setAttribute('role', 'button');
+        }
+        hamburger.setAttribute('aria-controls', menu.id || 'menu');
+
         const closeMenu = () => {
           hamburger.classList.remove('active');
           hamburger.setAttribute('aria-expanded', 'false');
@@ -92,12 +105,20 @@
         };
 
         hamburger.addEventListener('click', toggleMenu, { passive: false });
+        hamburger.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            toggleMenu(e);
+          }
+        });
 
         document.querySelectorAll('.menu a').forEach(link => {
           link.addEventListener('click', () => {
             closeMenu();
           });
         });
+
+        window.addEventListener('pagehide', closeMenu);
+        window.addEventListener('pageshow', closeMenu);
 
         // Close on outside click
         document.addEventListener('click', (e) => {

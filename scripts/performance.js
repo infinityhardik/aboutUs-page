@@ -37,20 +37,6 @@ if (document.fonts && document.fonts.ready) {
   });
 }
 
-// Remove render-blocking scripts that aren't needed immediately
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize navbar only after DOM is ready
-  const hamburger = document.querySelector('.hamburger');
-  const menu = document.querySelector('.navbar .menu');
-
-  if (hamburger && menu) {
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
-  }
-});
-
 // Preload critical resources
 function preloadCriticalResources() {
   const criticalImages = document.querySelectorAll('img:not([loading="lazy"])');
