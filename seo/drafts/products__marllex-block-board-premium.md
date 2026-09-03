@@ -2,14 +2,14 @@
 
 - **URL:** https://mahadev-traders.com/products/marllex-block-board-premium.html
 - **Title:** Marllex Premium Block Board Rajkot | 25 &amp; 30mm
-- **Current length:** 369 words
-- **Trade fields present:** grade, thickness options, standard sheet sizes, core material, typical applications
-- **Trade fields missing:** IS certification, price band, MOQ, delivery coverage
+- **Current length:** 496 words
+- **Trade fields present:** grade, thickness options, standard sheet sizes, core material, typical applications, price policy, MOQ, delivery coverage
+- **Trade fields missing:** IS certification
 - **Status:** needs depth
 
 ## Ready to publish
 
-Every fact below is already published on this site. Nothing here is invented, so this can go live as-is.
+Every fact below is already published on this site. Nothing here is invented.
 
 ### Marllex Block Board in the Rajkot Range
 
@@ -19,10 +19,15 @@ Block board is preferred over plywood for tall shutters and long unsupported pan
 
 ## Blocked on facts
 
-Answer these and the section above can be extended. **Do not publish this file's TODO lines to the site.**
+Answer these and the section above can be extended. **Do not publish these TODO lines to the site.**
 
 - `TODO(seo)`: Core species for Marllex block board - poplar, pine, hardwood or Gurjan face?
 - `TODO(seo)`: Does the BWP block board carry IS 1659 certification?
-- `TODO(seo)`: Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- `TODO(seo)`: Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- `TODO(seo)`: Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- `TODO(seo)`: Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
+
+## Answered 2026-09-03
+
+- **Minimum order quantity: 1.** No minimum on any product. Now stated on all 37 pages.
+- **Pricing: not published**, quoted per enquiry by call or WhatsApp. Now explained on all 37 pages.
+  In structured data this is represented by omitting `price` entirely rather than setting it to `0`,
+  because a price of 0 in schema.org means the product is free.

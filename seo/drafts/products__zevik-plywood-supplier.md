@@ -2,14 +2,14 @@
 
 - **URL:** https://mahadev-traders.com/products/zevik-plywood-supplier.html
 - **Title:** Zevik Plywood Dealer Rajkot | MR, BWP &amp; IS 710
-- **Current length:** 439 words
-- **Trade fields present:** grade, core material, IS certification, typical applications, delivery coverage
-- **Trade fields missing:** thickness options, standard sheet sizes, price band, MOQ
+- **Current length:** 566 words
+- **Trade fields present:** grade, core material, IS certification, typical applications, price policy, MOQ, delivery coverage
+- **Trade fields missing:** thickness options, standard sheet sizes
 - **Status:** needs depth
 
 ## Ready to publish
 
-Every fact below is already published on this site. Nothing here is invented, so this can go live as-is.
+Every fact below is already published on this site. Nothing here is invented.
 
 ### Zevik Plywood in the Rajkot Range
 
@@ -19,10 +19,15 @@ Grade is the decision that matters here, not brand. MR is bonded for dry interio
 
 ## Blocked on facts
 
-Answer these and the section above can be extended. **Do not publish this file's TODO lines to the site.**
+Answer these and the section above can be extended. **Do not publish these TODO lines to the site.**
 
 - `TODO(seo)`: Zevik thickness range and sheet sizes stocked in Rajkot. The page names MR, BWP and IS 710 grades but lists no thicknesses at all, which is the main reason it stays thin.
 - `TODO(seo)`: Is Zevik's IS 710 line third-party certified, and can the IS licence number be quoted?
-- `TODO(seo)`: Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- `TODO(seo)`: Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- `TODO(seo)`: Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- `TODO(seo)`: Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
+
+## Answered 2026-09-03
+
+- **Minimum order quantity: 1.** No minimum on any product. Now stated on all 37 pages.
+- **Pricing: not published**, quoted per enquiry by call or WhatsApp. Now explained on all 37 pages.
+  In structured data this is represented by omitting `price` entirely rather than setting it to `0`,
+  because a price of 0 in schema.org means the product is free.

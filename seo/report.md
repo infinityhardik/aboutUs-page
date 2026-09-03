@@ -15,6 +15,9 @@ Google Search Console export of the same date reporting 24 pages not indexed.
 | Broken internal links | 0 | **0** |
 | Orphan pages | 0 | **0** |
 | Pages emitting fake review markup | 1 | **0** |
+| Product blocks with placeholder prices | 12 | **0** |
+| Pages stating minimum order quantity | 3 | **37** |
+| Pages explaining how pricing works | 6 | **37** |
 | Tag-unbalanced pages | 20 | **0** |
 
 ## What the diagnosis got wrong
@@ -151,7 +154,7 @@ Run in this environment against the working tree:
 
 | Check | Result |
 |---|---|
-| Internal links resolving | 1351 |
+| Internal links resolving | 1352 |
 | Internal links into a redirect | **0** |
 | Broken internal links | **0** |
 | Redirect chains (a destination that is also a source) | **0** |
@@ -262,265 +265,205 @@ Pages still under 900 words, in `seo/drafts/` with publishable draft prose ready
 
 ## Open questions — every `TODO(seo)`, grouped by page
 
-136 questions across 37 pages. Nothing in this list was guessed at on the
-live site; each is a fact I could not verify. Answer any subset and I will publish the
-corresponding draft.
+**71 questions across 37 pages**, down from 136. Nothing here was guessed at on the live
+site; each is a fact I could not verify.
 
-Two gaps are systemic rather than per-page, and worth answering once:
+### Answered 2026-09-03, and now published
 
-- **Price band is absent from 31 of 37 pages**, and `productChart.html` — titled "Price
-  Chart" — deliberately carries no prices at all. A buyer searching for plywood prices in
-  Rajkot lands on a specification table. Indicative bands would serve that intent.
-- **MOQ is absent from 34 of 37 pages.** Two pages say only "for orders above a minimum
-  quantity" without naming it.
+- **Minimum order quantity is 1.** No minimum on any product — a single sheet or door is a
+  normal order. This is a genuine differentiator for a wholesaler and it now appears on all
+  37 pages, closing the largest content gap in the audit (it was stated on 3).
+- **Prices are not published**; rates are quoted per enquiry by call or WhatsApp because they
+  move with brand, thickness, grade, batch, quantity and delivery destination. All 37 pages
+  now say so and explain why, rather than leaving price-intent visitors with nothing.
 
-### `index.html`
+On the instruction to set price to "0 or undefined", I used **undefined**: `price: 0` in
+schema.org means the product is *free*, and Google would be entitled to render "₹0" in a
+rich result. Omitting the field is the correct way to express "contact for rates".
+
+### Still open
+
+#### `index.html`
 
 - Founding year: the schema said 1995 while ~20 pages say 'since 1996'. I set foundingDate to 1996 to match the visible text. Confirm which is correct.
 - Confirm the geo coordinates 22.3039, 70.7839 point at the Gondal Road premises - they were already published but I could not verify them from this environment.
 - Confirm opening hours. The published schema carries Mon-Sat 09:00-19:30 plus a second block; the page text also shows '9am - 11:45pm' somewhere, which looks wrong.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
 
-### `productChart.html`
+#### `productChart.html`
 
 - This page is a specification chart with no prices, but it is titled 'Price Chart'. Either add indicative price bands or retitle it - the mismatch is a bounce risk for anyone searching for prices.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
 
-### `products/block-board-wholesale-supplier.html`
+#### `products/block-board-wholesale-supplier.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/bwp-waterproof-block-board.html`
+#### `products/bwp-waterproof-block-board.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/commercial-plywood-mr-grade.html`
+#### `products/commercial-plywood-mr-grade.html`
 
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/decorative-laminates-sheets.html`
+#### `products/decorative-laminates-sheets.html`
 
 - Standard laminate sheet size(s) stocked - the page gives thicknesses from 0.8mm to 1.5mm but no sheet dimensions.
 - Which laminate brands are stocked, and are digital catalogues available to link?
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/flexible-plywood-supplier.html`
+#### `products/flexible-plywood-supplier.html`
 
 - Standard sheet size for flexible plywood, and the minimum bend radius per thickness. The page claims a 5cm-10cm bend radius 'depending on thickness' without saying which thickness gives which.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/flush-doors-manufacturer-supplier.html`
+#### `products/flush-doors-manufacturer-supplier.html`
 
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/greytone-plywood-dealers.html`
+#### `products/greytone-plywood-dealers.html`
 
 - Which bonding grades is Greytone stocked in - MR, BWR, BWP? The page names no grade, the only product page in the plywood range with that gap.
 - Any IS certification for the Greytone line.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/gurjan-block-board-dealer.html`
+#### `products/gurjan-block-board-dealer.html`
 
 - Is the Gurjan a full Gurjan face, a Gurjan core, or both? Buyers ask this specifically and the page does not answer it.
 - IS certification for the Gurjan block board line.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/gurjan-plywood-dealer.html`
+#### `products/gurjan-plywood-dealer.html`
 
 - Same question for Gurjan plywood: full Gurjan face and core, or Gurjan face on another core?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/hdhmr-board-supplier-rajkot.html`
+#### `products/hdhmr-board-supplier-rajkot.html`
 
 - Confirm the >850 kg/m3 density claim already on this page, and whether HDHMR stock carries IS 12406 or another standard.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/index.html`
+#### `products/index.html`
 
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/laminated-flush-doors-designs.html`
+#### `products/laminated-flush-doors-designs.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/limelite-plywood-supplier.html`
+#### `products/limelite-plywood-supplier.html`
 
 - Limelite thickness range and sheet sizes stocked in Rajkot. The page currently lists none.
 - Which IS specification does the Limelite BWP line carry - IS 710, or BWR to IS 303?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/liner-laminates-inner.html`
+#### `products/liner-laminates-inner.html`
 
 - Core/backing material for the liner sheets, and whether an IS specification applies.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/marine-plywood-710-rajkot.html`
+#### `products/marine-plywood-710-rajkot.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/marllex-block-board-premium.html`
+#### `products/marllex-block-board-premium.html`
 
 - Core species for Marllex block board - poplar, pine, hardwood or Gurjan face?
 - Does the BWP block board carry IS 1659 certification?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/marllex-flush-doors-premium.html`
+#### `products/marllex-flush-doors-premium.html`
 
 - Standard door sizes stocked (heights and widths), not just thicknesses.
 - Is the core solid or hollow, and which timber?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/marllex-premium-plywood.html`
+#### `products/marllex-premium-plywood.html`
 
 - Confirm the Marllex IS 710 licence number, if the brand publishes one.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/mdf-interior-exterior-grade-rajkot.html`
+#### `products/mdf-interior-exterior-grade-rajkot.html`
 
 - Standard sheet sizes and the thickness range for each of the interior and exterior grades.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/mdf-wholesale-rajkot.html`
+#### `products/mdf-wholesale-rajkot.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/motherwood-mdf-exterior-grade.html`
+#### `products/motherwood-mdf-exterior-grade.html`
 
 - Does Motherwood Exterior Grade carry IS 12406 certification like the rest of the range, and is there a separate exterior-grade standard it meets?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/motherwood-mdf-rajkot.html`
+#### `products/motherwood-mdf-rajkot.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/motherwood-mdf-super-hd-wr.html`
+#### `products/motherwood-mdf-super-hd-wr.html`
 
 - Confirm the Super HD+WR density figure. The HDHMR page states >850 kg/m3; is that the right number for this grade?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/motherwood-mdf-turbo-plus.html`
+#### `products/motherwood-mdf-turbo-plus.html`
 
 - Confirm the TurBo+ density figure. The Motherwood brand page states >1050 kg/m3 for TurBo+; safe to publish on this page too?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/pine-wood-block-board.html`
+#### `products/pine-wood-block-board.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/pine-wood-flush-doors.html`
+#### `products/pine-wood-flush-doors.html`
 
 - Standard door sizes stocked, and whether the pine core is solid or a batten frame.
 - Confirm whether these doors are made to IS 2202 like the other flush door lines.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/plywood-wholesaler-rajkot.html`
+#### `products/plywood-wholesaler-rajkot.html`
 
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/poplar-block-board.html`
+#### `products/poplar-block-board.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/shuttering-plywood-construction.html`
+#### `products/shuttering-plywood-construction.html`
 
 - Which bonding grade and IS specification the shuttering plywood carries (IS 4990 is the usual formwork standard) - the page names no grade.
 - Typical repeat-cycle count the stocked film-faced boards achieve, if the manufacturer states one.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/simson-plywood-supplier.html`
+#### `products/simson-plywood-supplier.html`
 
 - Standard sheet sizes for Simson plywood (the page lists thicknesses but no sheet dimensions).
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/sunmica-dealers-rajkot.html`
+#### `products/sunmica-dealers-rajkot.html`
 
 - Which grades or IS specification apply to the laminate range (the page names none).
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/waterproof-bathroom-doors.html`
+#### `products/waterproof-bathroom-doors.html`
 
 - The page mentions a 10mm thickness alongside 30-35mm - is the 10mm a PVC or WPC door rather than a BWP flush door? If both types are stocked they should be distinguished on the page.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/waterproof-flush-doors-bwp.html`
+#### `products/waterproof-flush-doors-bwp.html`
 
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `products/zevik-plywood-supplier.html`
+#### `products/zevik-plywood-supplier.html`
 
 - Zevik thickness range and sheet sizes stocked in Rajkot. The page names MR, BWP and IS 710 grades but lists no thicknesses at all, which is the main reason it stays thin.
 - Is Zevik's IS 710 line third-party certified, and can the IS licence number be quoted?
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately.
+- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-### `services/index.html`
+#### `services/index.html`
 
 - Delivery radius and the cities where you deliver without a freight charge.
 - Whether 'Monday to Saturday' and the 09:00-19:30 hours in the schema are correct for the supply desk.
 - Any documentation you can actually issue for tenders (moisture-content certificates, IS grade declarations, dealership letters) - I described these generically and want to be accurate.
-- Price band for this product in 2026 (a range per sheet or per door is enough, e.g. "Rs X-Y per 8x4 sheet at 19mm"). Every product page currently has no price information at all and productChart.html deliberately carries none.
-- Minimum order quantity for a wholesale rate on this item - sheets, doors, or rupee value.
-
 ## What I must do myself
 
 None of the following can be done from the repository. In rough priority order:
@@ -537,9 +480,10 @@ None of the following can be done from the repository. In rough priority order:
    indexed" (13 URLs), "Discovered – currently not indexed" (10), and "Duplicate, Google
    chose different canonical than user" (1). The last should clear immediately, since
    the URL Google rejected no longer exists and 301s to the canonical it already chose.
-5. **Answer the `TODO(seo)` questions above**, starting with price band and MOQ. This is
-   the highest-value item for the pages that remain thin — the merge fixed length, but
-   only real trade specifics fix value.
+5. **Answer the remaining `TODO(seo)` questions above.** MOQ and pricing are done. What is
+   left is mostly per-product specification (sheet sizes, IS certification, core species on
+   the brand pages) plus delivery terms. The brand stub pages stay thin until someone
+   supplies the thicknesses and grades they are stocked in.
 6. **Create or optimise the Google Business Profile** for the Gondal Road location. Use
    the NAP in `seo/schema/business.json` verbatim so it matches the `LocalBusiness`
    markup: name, `+91 6355 360702`, `Nr. S.T. Workshop, Gondal Road, Rajkot 360004`,
@@ -550,7 +494,7 @@ None of the following can be done from the repository. In rough priority order:
    name, phone or address across those listings weakens the local signal that the
    `LocalBusiness` markup is trying to establish.
 
-### One thing you should know about
+### Two things you should know about
 
 The homepage was publishing `"ratingValue": "4.8"` with `"reviewCount": "120"`, plus
 review bodies attributed to a *"Satisfied Customer"* reading *"Excellent quality
@@ -559,6 +503,19 @@ review markup is a manual-action risk, so it has been removed, and `seo/build-sc
 now strips those properties on every run so they cannot return through a hand edit. If
 you want star ratings in search results, collect real reviews on the Google Business
 Profile.
+
+The same page also carried **placeholder prices presented as real ones**: four different
+products all priced at exactly `"1500"` with `priceValidUntil: 2099-12-31`, an aggregate
+range of `1200`–`3500`, and elsewhere `lowPrice: "1"` with `highPrice: "999999"` and
+`price: "1"`. Google can surface these as actual prices, and a buyer quoted something
+different has been misled. The markup also claimed **free delivery** (`shippingRate` of
+`0` INR) while the site copy says transport is arranged "at competitive freight rates".
+All of it has been removed and added to the generator's banned list.
+
+Eight of these blocks carried a `data-seo-fix` attribute and were being skipped by an
+earlier version of my own generator, which matched only bare `<script type=...>` tags.
+That is fixed; the generator now scans every JSON-LD block regardless of attributes, and
+a full re-scan of all 129 blocks confirms none of the banned properties remain.
 
 ### Two things to confirm
 

@@ -2,42 +2,45 @@
 
 One draft per surviving page. `seo/report.md` collects every `TODO(seo)` question.
 
+MOQ and pricing were answered on 2026-09-03 and are now published sitewide; the remaining
+questions are per-product specifications and delivery terms.
+
 | Page | Words | Missing fields | Questions | Publishable draft |
 |---|---:|---:|---:|:---:|
-| `products/marllex-block-board-premium.html` | 369 | 4 | 5 | yes |
-| `products/zevik-plywood-supplier.html` | 439 | 4 | 5 | yes |
-| `products/simson-plywood-supplier.html` | 440 | 4 | 4 | yes |
-| `products/marllex-premium-plywood.html` | 448 | 2 | 4 | yes |
-| `products/limelite-plywood-supplier.html` | 455 | 6 | 5 | yes |
-| `products/greytone-plywood-dealers.html` | 471 | 4 | 5 | yes |
-| `products/marllex-flush-doors-premium.html` | 471 | 3 | 5 | yes |
-| `services/index.html` | 635 | 5 | 5 | — |
-| `products/motherwood-mdf-turbo-plus.html` | 661 | 4 | 4 | yes |
-| `products/motherwood-mdf-super-hd-wr.html` | 678 | 4 | 4 | yes |
-| `products/motherwood-mdf-exterior-grade.html` | 700 | 4 | 4 | yes |
-| `productChart.html` | 710 | 3 | 3 | — |
-| `products/bwp-waterproof-block-board.html` | 939 | 3 | 3 | — |
-| `products/mdf-interior-exterior-grade-rajkot.html` | 963 | 4 | 4 | — |
-| `products/pine-wood-block-board.html` | 1016 | 2 | 3 | — |
-| `products/waterproof-bathroom-doors.html` | 1023 | 3 | 4 | — |
-| `products/pine-wood-flush-doors.html` | 1026 | 4 | 5 | — |
-| `products/gurjan-plywood-dealer.html` | 1043 | 3 | 4 | — |
-| `products/flexible-plywood-supplier.html` | 1080 | 4 | 4 | — |
-| `products/hdhmr-board-supplier-rajkot.html` | 1116 | 4 | 4 | — |
-| `products/gurjan-block-board-dealer.html` | 1169 | 3 | 5 | — |
-| `products/mdf-wholesale-rajkot.html` | 1270 | 4 | 3 | — |
-| `products/index.html` | 1310 | 1 | 2 | — |
-| `products/commercial-plywood-mr-grade.html` | 1345 | 1 | 2 | — |
-| `products/poplar-block-board.html` | 1351 | 2 | 3 | — |
-| `products/laminated-flush-doors-designs.html` | 1363 | 3 | 3 | — |
-| `index.html` | 1364 | 2 | 5 | — |
-| `products/liner-laminates-inner.html` | 1379 | 5 | 4 | — |
-| `products/motherwood-mdf-rajkot.html` | 1398 | 2 | 3 | — |
-| `products/shuttering-plywood-construction.html` | 1403 | 4 | 5 | — |
-| `products/waterproof-flush-doors-bwp.html` | 1467 | 3 | 3 | — |
-| `products/decorative-laminates-sheets.html` | 1486 | 5 | 4 | — |
-| `products/sunmica-dealers-rajkot.html` | 1489 | 4 | 3 | — |
-| `products/block-board-wholesale-supplier.html` | 1547 | 2 | 3 | — |
-| `products/marine-plywood-710-rajkot.html` | 1722 | 1 | 2 | — |
-| `products/flush-doors-manufacturer-supplier.html` | 1807 | 1 | 1 | — |
-| `products/plywood-wholesaler-rajkot.html` | 1987 | 0 | 1 | — |
+| `products/marllex-block-board-premium.html` | 496 | 1 | 3 | yes |
+| `products/zevik-plywood-supplier.html` | 566 | 2 | 3 | yes |
+| `products/simson-plywood-supplier.html` | 567 | 2 | 2 | yes |
+| `products/marllex-premium-plywood.html` | 575 | 0 | 2 | yes |
+| `products/limelite-plywood-supplier.html` | 582 | 4 | 3 | yes |
+| `products/greytone-plywood-dealers.html` | 598 | 2 | 3 | yes |
+| `products/marllex-flush-doors-premium.html` | 598 | 1 | 3 | yes |
+| `services/index.html` | 739 | 3 | 3 | — |
+| `products/motherwood-mdf-turbo-plus.html` | 788 | 2 | 2 | yes |
+| `products/motherwood-mdf-super-hd-wr.html` | 805 | 2 | 2 | yes |
+| `products/motherwood-mdf-exterior-grade.html` | 827 | 2 | 2 | yes |
+| `productChart.html` | 942 | 1 | 1 | — |
+| `products/bwp-waterproof-block-board.html` | 1066 | 0 | 1 | — |
+| `products/mdf-interior-exterior-grade-rajkot.html` | 1090 | 2 | 2 | — |
+| `products/pine-wood-block-board.html` | 1143 | 0 | 1 | — |
+| `products/waterproof-bathroom-doors.html` | 1150 | 1 | 2 | — |
+| `products/pine-wood-flush-doors.html` | 1152 | 2 | 3 | — |
+| `products/gurjan-plywood-dealer.html` | 1170 | 1 | 2 | — |
+| `products/flexible-plywood-supplier.html` | 1207 | 2 | 2 | — |
+| `products/hdhmr-board-supplier-rajkot.html` | 1243 | 2 | 2 | — |
+| `products/gurjan-block-board-dealer.html` | 1296 | 1 | 3 | — |
+| `index.html` | 1381 | 0 | 3 | — |
+| `products/mdf-wholesale-rajkot.html` | 1397 | 2 | 1 | — |
+| `products/index.html` | 1439 | 0 | 1 | — |
+| `products/commercial-plywood-mr-grade.html` | 1472 | 0 | 1 | — |
+| `products/poplar-block-board.html` | 1478 | 0 | 1 | — |
+| `products/laminated-flush-doors-designs.html` | 1490 | 1 | 1 | — |
+| `products/liner-laminates-inner.html` | 1506 | 2 | 2 | — |
+| `products/motherwood-mdf-rajkot.html` | 1525 | 0 | 1 | — |
+| `products/shuttering-plywood-construction.html` | 1530 | 2 | 3 | — |
+| `products/waterproof-flush-doors-bwp.html` | 1594 | 1 | 1 | — |
+| `products/decorative-laminates-sheets.html` | 1613 | 3 | 3 | — |
+| `products/sunmica-dealers-rajkot.html` | 1616 | 3 | 2 | — |
+| `products/block-board-wholesale-supplier.html` | 1674 | 0 | 1 | — |
+| `products/marine-plywood-710-rajkot.html` | 1849 | 0 | 1 | — |
+| `products/flush-doors-manufacturer-supplier.html` | 1934 | 1 | 1 | — |
+| `products/plywood-wholesaler-rajkot.html` | 2118 | 0 | 1 | — |
