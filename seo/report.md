@@ -151,7 +151,7 @@ Run in this environment against the working tree:
 
 | Check | Result |
 |---|---|
-| Internal links resolving | 1350 |
+| Internal links resolving | 1351 |
 | Internal links into a redirect | **0** |
 | Broken internal links | **0** |
 | Redirect chains (a destination that is also a source) | **0** |
