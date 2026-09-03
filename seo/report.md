@@ -192,34 +192,35 @@ policy denies outbound access to `mahadev-traders.com` — the agent proxy answe
 CONNECT — so I could not reach the live site at any point, before or after the change. I
 am not reporting this step as done on the strength of the config file.
 
-After the deploy completes, run this from an unrestricted machine. It checks every
-retired URL returns 301 to the right place, and that each survivor answers 200 rather
-than another redirect:
+After the deploy completes, run the committed script from any machine with normal network
+access. It needs only bash and curl:
 
 ```bash
-# every retired URL -> 301 with the right Location
-python3 - <<'EOF' > /tmp/urls.txt
-import yaml
-for r in yaml.safe_load(open('render.yaml'))['services'][0]['routes']:
-    print(r['source'], r['destination'])
-EOF
-
-while read -r src dst; do
-  out=$(curl -sI -o /dev/null -w '%{http_code} %{redirect_url}' "https://mahadev-traders.com$src")
-  code=${out%% *}; loc=${out#* }
-  case "$code:$loc" in
-    301:*"$dst") echo "OK    301 $src -> $dst" ;;
-    *) echo "FAIL  $code $src -> $loc (expected 301 -> $dst)" ;;
-  esac
-done < /tmp/urls.txt
-
-# every survivor -> 200, not a further redirect
-python3 -c "import re;print('\n'.join(re.findall(r'<loc>([^<]+)',open('sitemap.xml').read())))" \
-| while read -r u; do
-    code=$(curl -sI -o /dev/null -w '%{http_code}' "$u")
-    [ "$code" = 200 ] && echo "OK    200 $u" || echo "FAIL  $code $u"
-  done
+bash seo/verify-redirects.sh
 ```
+
+It reads the 36 routes straight out of `render.yaml` and the 37 URLs out of `sitemap.xml`,
+so it cannot drift from the config. It checks every retired URL returns 301 to its intended
+destination, and every surviving URL returns 200 rather than a further redirect. Exit code
+is 0 only if everything passes. To point it elsewhere:
+
+```bash
+BASE=https://staging.example.com bash seo/verify-redirects.sh
+```
+
+The script's logic has been tested end to end against a local file server, which performs no
+redirects: it correctly reported all 36 retired URLs as FAIL 404 with the right diagnostic,
+and all 37 survivors as OK 200, exiting 1. On the real deploy the first section should flip
+to 36 × `OK 301`. What has *not* been exercised is the live 301 path itself, because this
+environment cannot reach the domain.
+
+Each failure prints what to check:
+
+| Result | Meaning |
+|---|---|
+| `FAIL 200` on a retired URL | the `.html` file is still being served — confirm it was deleted in the deployed commit |
+| `FAIL 404` on a retired URL | no rule matched — confirm the source is in `render.yaml` on the deployed commit |
+| `FAIL 301` on a survivor | a survivor is itself redirecting, which is a chain |
 
 Paste the output here and I will fold it into this section. If any retired URL returns
 200 instead of 301, its `.html` file is still being served — check it was actually
@@ -270,6 +271,12 @@ Pages still under 900 words, in `seo/drafts/` with publishable draft prose ready
 answered; what remains is per-product specification.
 
 ### Answered 2026-09-03, and now published on all 37 pages
+
+**Founding year is 1995.** The schema was right and the visible copy was wrong: 28
+occurrences of "since 1996" across 14 files have been corrected to 1995, and
+`business.json` carries `foundingDate: 1995` as the single source. The "30+ years" and
+"over 30 years" claims on 51 lines remain accurate — 1995 to 2026 is 31 years.
+
 
 - **Minimum order quantity is 1.** No minimum on any product — a single sheet or door is a
   normal order, so a buyer can test a grade against their own work before committing to bulk.
@@ -451,10 +458,8 @@ earlier version of my own generator, which matched only bare `<script type=...>`
 That is fixed; the generator now scans every JSON-LD block regardless of attributes, and
 a full re-scan of all 129 blocks confirms none of the banned properties remain.
 
-### Three things to confirm
+### Two things to confirm
 
-- **Founding year.** The schema said `1995`; roughly 20 pages say "since 1996". I set
-  `foundingDate` to 1996 to match the visible text. Tell me which is right.
 - **Published delivery times.** The `shippingDetails` markup claims 0–1 day handling and 1–3
   day transit within Gujarat. That was already published and looks plausible against the
   "24–48 hour delivery" claim on the Motherwood page, but you said timing varies by region and
