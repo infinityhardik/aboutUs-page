@@ -120,6 +120,12 @@ services:
         source: /services/liner-laminates-inner.html
         destination: /products/liner-laminates-inner.html
       - type: redirect
+        source: /services/pine-wood-block-board.html
+        destination: /products/pine-wood-block-board.html
+      - type: redirect
+        source: /services/pine-wood-flush-doors.html
+        destination: /products/pine-wood-flush-doors.html
+      - type: redirect
         source: /services/plywood-wholesaler-rajkot.html
         destination: /products/plywood-wholesaler-rajkot.html
       - type: redirect
@@ -137,3 +143,15 @@ services:
       - type: redirect
         source: /services/waterproof-flush-doors-bwp.html
         destination: /products/waterproof-flush-doors-bwp.html
+
+      # Spelling correction: the three Marlex pages were renamed to Marllex in 49725ed.
+      # The misspelled URLs were left without rules and are still live and self-canonical.
+      - type: redirect
+        source: /products/marlex-block-board-premium.html
+        destination: /products/marllex-block-board-premium.html
+      - type: redirect
+        source: /products/marlex-flush-doors-premium.html
+        destination: /products/marllex-flush-doors-premium.html
+      - type: redirect
+        source: /products/marlex-premium-plywood.html
+        destination: /products/marllex-premium-plywood.html

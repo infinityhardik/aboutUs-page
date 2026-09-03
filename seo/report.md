@@ -81,7 +81,9 @@ prose up to the new brand hub and leaving grade-specific copy on each child.
 
 ## Redirect map
 
-36 routes in `render.yaml`, all `type: redirect` (301), all one hop.
+41 routes in `render.yaml`, all `type: redirect` (301), all one hop. The last five were
+added on 2026-09-03 after live verification found them missing — see *Rule coverage gap*
+below.
 
 ### Service mirrors retired into their product survivor (18)
 
@@ -128,10 +130,12 @@ prose up to the new brand hub and leaving grade-specific copy on each child.
 
 ### Legacy URLs recovered from the dead `_redirects` file (13)
 
-`_redirects` used Netlify/Cloudflare syntax. **Render does not read that file**, so all 13
-of these URLs have been returning 404 rather than redirecting, discarding whatever
-signals they held. Their rules are ported here pointing straight at the final survivor,
-not at the `-service.html` page they originally targeted, so none of them chains.
+`_redirects` used Netlify/Cloudflare syntax. **Render does not read that file**, so none of
+these URLs has been redirecting. This was originally written up as "returning 404";
+live verification on 2026-09-03 showed otherwise, and the truth is worse — every one of
+them returns **200 with the full old page**, self-canonical and `index, follow`. See
+*Live HTTP status* below. Their rules are ported here pointing straight at the final
+survivor, not at the `-service.html` page they originally targeted, so none of them chains.
 
 | From | To |
 |---|---|
@@ -151,7 +155,10 @@ not at the `-service.html` page they originally targeted, so none of them chains
 
 ## Verification
 
-Run in this environment against the working tree:
+Run in this environment against the working tree. **These are repo-level checks only.**
+Every one of them passed while the live site was serving 41 stale duplicates — a clean
+working tree says nothing about what the host is actually publishing. See
+*Live HTTP status* below, which is the check that matters.
 
 | Check | Result |
 |---|---|
@@ -185,52 +192,109 @@ JSON-LD types across the 37 pages:
 are on the homepage only, which also carries the contact section. Regenerate with
 `python3 seo/build-schema.py`; `--check` exits non-zero if any page is stale.
 
-## Not verified: live HTTP status
+## Live HTTP status — verified 2026-09-03
 
-**The `curl -I` checks in the Render procedure were not run.** This environment's network
-policy denies outbound access to `mahadev-traders.com` — the agent proxy answers 403 to
-CONNECT — so I could not reach the live site at any point, before or after the change. I
-am not reporting this step as done on the strength of the config file.
+The earlier version of this section said these checks could not be run, because the
+sandbox that produced the consolidation could not reach `mahadev-traders.com`. They have
+now been run against the live site.
 
-After the deploy completes, run the committed script from any machine with normal network
-access. It needs only bash and curl:
+**The consolidation is deployed but completely inert.**
+
+| Check | Expected | Actual |
+|---|---|---|
+| Retired URLs returning 301 | 41 | **0** |
+| Retired URLs returning 200 with the full old page | 0 | **41** |
+| Surviving URLs returning 200 | 37 | 37 ✓ |
+
+Every one of the 41 retired pages is live, serves its original pre-consolidation content,
+carries a **self-referencing canonical** to its own retired URL, and is marked
+`robots: index, follow`. Not one of them points at its survivor. This is precisely the
+duplicate-content situation the consolidation was meant to remove, still fully intact.
+
+### Root cause: the origin never dropped the deleted files
+
+The deployed commit is current — `/seo/verify-redirects.sh`, added in the most recent
+commit, is served, and the homepage carries the corrected "since 1995" copy. But:
+
+- every file **present** in the deployed commit is served with `last-modified:
+  Thu, 03 Sep 2026 17:27:37 UTC`, the deploy timestamp — all of them, without exception
+- every **retired** file is served with an *older* timestamp: `Mon, 24 Aug 2026 11:09:02
+  UTC` or `Sat, 21 Feb 2026 16:15:26 UTC`
+- `/services/poplar-block-board.html` was deleted from git on **2026-05-20** and is still
+  served today, from a **February** copy — three and a half months and many deploys later
+- these responses carry Render's `rndr-id` header with `cf-cache-status: MISS` or
+  `EXPIRED`, so they were served by the Render origin on that request — this is not a
+  stale copy sitting in the Cloudflare edge cache
+- a URL that never existed correctly returns 404, so the origin is not blanket-serving
+  a fallback
+
+So the origin is publishing the union of every deploy rather than the current commit's
+tree. `render.yaml`'s own header comment states the consequence: Render serves an
+existing file in preference to a redirect rule for the same path. While those files
+remain, **all 41 rules are shadowed and can never fire**, no matter how correct they are.
+
+### The fix, in order
+
+1. **Clear the build cache and redeploy.** Render dashboard → the `mahadev-traders`
+   static site → *Manual Deploy* → **Clear build cache & deploy**. An ordinary deploy has
+   demonstrably not purged these files; this is the step that republishes the tree from
+   scratch. Then re-run `bash seo/verify-redirects.sh`.
+2. **If the retired URLs then return 404 instead of 301**, the files are gone but the
+   blueprint is not being applied — which happens when the service was created by hand in
+   the dashboard rather than from `render.yaml`. Either attach the repo as a Blueprint, or
+   enter the 41 rules under the service's *Redirects/Rewrites* settings.
+3. **If any retired URL 301s somewhere unexpected**, a dashboard-configured rule is
+   winning. Render preserves dashboard rules that are not in the blueprint, and this repo
+   had no `render.yaml` before the consolidation, so any pre-existing rule there is
+   invisible to this repo.
+4. Only once section 1 reports 41 × `OK 301` should the Search Console work below start.
+
+### Rule coverage gap, fixed 2026-09-03
+
+Verification also turned up **five deleted pages with no redirect rule at all**, all five
+live and self-canonical like the other 36:
+
+| From | To | Why it was missed |
+|---|---|---|
+| `/products/marlex-block-board-premium.html` | `/products/marllex-block-board-premium.html` | renamed in `49725ed`, old spelling left unruled |
+| `/products/marlex-flush-doors-premium.html` | `/products/marllex-flush-doors-premium.html` | same rename |
+| `/products/marlex-premium-plywood.html` | `/products/marllex-premium-plywood.html` | same rename |
+| `/services/pine-wood-block-board.html` | `/products/pine-wood-block-board.html` | missed when the legacy `_redirects` URLs were ported |
+| `/services/pine-wood-flush-doors.html` | `/products/pine-wood-flush-doors.html` | missed when the legacy `_redirects` URLs were ported |
+
+These are now in `render.yaml`, taking it from 36 routes to **41**. `seo/verify-redirects.sh`
+has gained a third section that derives this list from git history, so a page deleted in
+future without a rule fails the run instead of going unnoticed.
+
+## Verifying
+
+Run the committed script from any machine with normal network access. It needs bash and
+curl; the coverage section additionally uses git.
 
 ```bash
 bash seo/verify-redirects.sh
 ```
 
-It reads the 36 routes straight out of `render.yaml` and the 37 URLs out of `sitemap.xml`,
-so it cannot drift from the config. It checks every retired URL returns 301 to its intended
-destination, and every surviving URL returns 200 rather than a further redirect. Exit code
-is 0 only if everything passes. To point it elsewhere:
+It reads the 41 routes straight out of `render.yaml` and the 37 URLs out of `sitemap.xml`,
+so it cannot drift from the config. Exit code is 0 only if everything passes. To point it
+elsewhere, or to bypass the CDN edge cache:
 
 ```bash
 BASE=https://staging.example.com bash seo/verify-redirects.sh
+CB=1 bash seo/verify-redirects.sh
 ```
 
-The script's logic has been tested end to end against a local file server, which performs no
-redirects: it correctly reported all 36 retired URLs as FAIL 404 with the right diagnostic,
-and all 37 survivors as OK 200, exiting 1. On the real deploy the first section should flip
-to 36 × `OK 301`. What has *not* been exercised is the live 301 path itself, because this
-environment cannot reach the domain.
-
-Each failure prints what to check:
+Each failure prints what to check. The `FAIL 200` diagnostic now distinguishes the two
+causes, which need opposite fixes:
 
 | Result | Meaning |
 |---|---|
-| `FAIL 200` on a retired URL | the `.html` file is still being served — confirm it was deleted in the deployed commit |
-| `FAIL 404` on a retired URL | no rule matched — confirm the source is in `render.yaml` on the deployed commit |
+| `FAIL 200`, file present in the working tree | the page was not actually retired — delete it from the repo |
+| `FAIL 200`, file absent from the working tree | the host is serving a leftover from an earlier deploy — fix at the host, clear cache and redeploy |
+| `FAIL 404` on a retired URL | no file and no rule matched — the blueprint is probably not applied |
+| `FAIL 301` to the wrong place | a conflicting dashboard rule is winning |
 | `FAIL 301` on a survivor | a survivor is itself redirecting, which is a chain |
-
-Paste the output here and I will fold it into this section. If any retired URL returns
-200 instead of 301, its `.html` file is still being served — check it was actually
-deleted in the deployed commit. If any returns 404, its route is missing from
-`render.yaml`.
-
-One thing to check in the Render dashboard before deploying: Render preserves
-dashboard-added redirect rules that are not in the blueprint, and this repo never had a
-`render.yaml`, so any rule currently configured there is invisible to this repo and could
-conflict with the routes added here. I could not inspect the dashboard.
+| Section 3 `FAIL` | a page was deleted from git without a redirect rule |
 
 ## Content depth
 
@@ -300,7 +364,6 @@ Two of these needed care in the markup, not just the copy:
 
 #### `index.html`
 
-- Founding year: the schema said 1995 while ~20 pages say 'since 1996'. I set foundingDate to 1996 to match the visible text. Confirm which is correct.
 - Confirm the geo coordinates 22.3039, 70.7839 point at the Gondal Road premises - they were already published but I could not verify them from this environment.
 - Confirm opening hours. The published schema carries Mon-Sat 09:00-19:30 plus a second block; the page text also shows '9am - 11:45pm' somewhere, which looks wrong.
 
@@ -409,9 +472,12 @@ Two of these needed care in the markup, not just the copy:
 
 None of the following can be done from the repository. In rough priority order:
 
-1. **Deploy and verify the redirects.** Run the `curl` block above and confirm 36 × 301
-   and 37 × 200. Until this passes, treat the consolidation as unproven — and check the
-   Render dashboard for pre-existing redirect rules first.
+1. **Purge the stale files at the Render origin.** This is now the single blocking item:
+   the consolidation is deployed but inert, because Render is still serving 41 deleted
+   pages that shadow every redirect rule. See *Live HTTP status* below for the evidence
+   and the fix. Nothing else in this list matters until this is done — re-submitting the
+   sitemap or requesting indexing while 41 self-canonical duplicates are live just feeds
+   Google the duplicates again.
 2. **Resubmit the sitemap in Search Console.** `https://mahadev-traders.com/sitemap.xml`,
    now 37 URLs instead of 56. Removing 19 dead entries is itself a crawl-budget win.
 3. **URL Inspection → Request Indexing** on each surviving page, prioritising the ones
