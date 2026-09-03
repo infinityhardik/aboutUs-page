@@ -4,4 +4,9 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
 
+# Build and verification tooling, not site content. Kept in the repository for
+# maintenance but of no use to a search engine, and not linked from any page.
+Disallow: /seo/
+Disallow: /render.yaml
+
 Sitemap: https://mahadev-traders.com/sitemap.xml

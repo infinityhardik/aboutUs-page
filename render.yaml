@@ -11,6 +11,17 @@
 # removes.
 #
 # Every destination below is a final surviving URL, so no rule chains into another.
+#
+# KNOWN ISSUE, verified live on 2026-09-03: none of these rules is firing. The origin
+# is still serving 41 pages that were deleted from this repo months ago, each with its
+# own timestamp from the deploy that last published it, and an existing file always
+# wins over a redirect rule. Deleting the file from the repo is therefore not enough on
+# its own. To fix: Render dashboard -> this static site -> Manual Deploy -> "Clear build
+# cache & deploy", then run `bash seo/verify-redirects.sh` and expect 41 x OK 301.
+# If the retired URLs return 404 rather than 301 after that purge, the files are gone
+# but this blueprint is not being applied - that happens when the service was created
+# by hand in the dashboard instead of from render.yaml. Attach the repo as a Blueprint,
+# or enter these rules under the service's Redirects/Rewrites settings.
 services:
   - type: web
     runtime: static
@@ -120,6 +131,12 @@ services:
         source: /services/liner-laminates-inner.html
         destination: /products/liner-laminates-inner.html
       - type: redirect
+        source: /services/pine-wood-block-board.html
+        destination: /products/pine-wood-block-board.html
+      - type: redirect
+        source: /services/pine-wood-flush-doors.html
+        destination: /products/pine-wood-flush-doors.html
+      - type: redirect
         source: /services/plywood-wholesaler-rajkot.html
         destination: /products/plywood-wholesaler-rajkot.html
       - type: redirect
@@ -137,3 +154,15 @@ services:
       - type: redirect
         source: /services/waterproof-flush-doors-bwp.html
         destination: /products/waterproof-flush-doors-bwp.html
+
+      # Spelling correction: the three Marlex pages were renamed to Marllex in 49725ed.
+      # The misspelled URLs were left without rules and are still live and self-canonical.
+      - type: redirect
+        source: /products/marlex-block-board-premium.html
+        destination: /products/marllex-block-board-premium.html
+      - type: redirect
+        source: /products/marlex-flush-doors-premium.html
+        destination: /products/marllex-flush-doors-premium.html
+      - type: redirect
+        source: /products/marlex-premium-plywood.html
+        destination: /products/marllex-premium-plywood.html

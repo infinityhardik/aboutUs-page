@@ -114,6 +114,7 @@ def biz(short=False):
         "image": b["image"], "telephone": b["telephone"], "email": b["email"],
         "priceRange": b["priceRange"], "foundingDate": b["foundingDate"],
         "address": b["address"], "geo": b["geo"],
+        "hasMap": b["hasMap"], "currenciesAccepted": b["currenciesAccepted"],
         "openingHoursSpecification": b["openingHoursSpecification"],
         "areaServed": [{"@type": "City", "name": a} for a in b["areaServed"]],
         "sameAs": b["sameAs"],

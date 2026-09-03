@@ -20,6 +20,8 @@
     "latitude": "22.3039",
     "longitude": "70.7839"
   },
+  "hasMap": "https://maps.app.goo.gl/iGgzod36cLGykRej9",
+  "currenciesAccepted": "INR",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -38,7 +40,7 @@
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Sunday",
       "opens": "09:00",
-      "closes": "11:45"
+      "closes": "12:00"
     }
   ],
   "areaServed": [
