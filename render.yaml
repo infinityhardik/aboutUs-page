@@ -1,0 +1,139 @@
+# Render blueprint for mahadev-traders.com
+#
+# Render serves an existing file in preference to any redirect rule for the same
+# path, so a retired page's .html file MUST be deleted from the repo for its rule
+# below to take effect. File deletion and rule addition belong in one commit.
+#
+# type: redirect issues a 301 Moved Permanently, which passes ranking signals to
+# the destination. type: rewrite is deliberately not used anywhere here: it would
+# serve the survivor's content at the old URL without changing it, leaving two
+# live URLs with identical content and recreating the duplication this consolidation
+# removes.
+#
+# Every destination below is a final surviving URL, so no rule chains into another.
+services:
+  - type: web
+    runtime: static
+    name: mahadev-traders
+    staticPublishPath: ./
+    routes:
+
+      # Service mirrors retired into their surviving /products/ page.
+      - type: redirect
+        source: /services/block-board-dealer-rajkot.html
+        destination: /products/block-board-wholesale-supplier.html
+      - type: redirect
+        source: /services/bwp-waterproof-block-board-service.html
+        destination: /products/bwp-waterproof-block-board.html
+      - type: redirect
+        source: /services/commercial-plywood-mr-grade-service.html
+        destination: /products/commercial-plywood-mr-grade.html
+      - type: redirect
+        source: /services/decorative-laminates-sheets-service.html
+        destination: /products/decorative-laminates-sheets.html
+      - type: redirect
+        source: /services/flexible-plywood-supplier-service.html
+        destination: /products/flexible-plywood-supplier.html
+      - type: redirect
+        source: /services/flush-doors-manufacturer-supplier-service.html
+        destination: /products/flush-doors-manufacturer-supplier.html
+      - type: redirect
+        source: /services/laminated-flush-doors-designs-service.html
+        destination: /products/laminated-flush-doors-designs.html
+      - type: redirect
+        source: /services/liner-laminates-inner-service.html
+        destination: /products/liner-laminates-inner.html
+      - type: redirect
+        source: /services/marine-plywood-710-grade-rajkot.html
+        destination: /products/marine-plywood-710-rajkot.html
+      - type: redirect
+        source: /services/mdf-wholesale-supplier-rajkot.html
+        destination: /products/mdf-wholesale-rajkot.html
+      - type: redirect
+        source: /services/pine-wood-block-board-service.html
+        destination: /products/pine-wood-block-board.html
+      - type: redirect
+        source: /services/pine-wood-flush-doors-service.html
+        destination: /products/pine-wood-flush-doors.html
+      - type: redirect
+        source: /services/plywood-wholesaler-rajkot-service.html
+        destination: /products/plywood-wholesaler-rajkot.html
+      - type: redirect
+        source: /services/poplar-block-board-service.html
+        destination: /products/poplar-block-board.html
+      - type: redirect
+        source: /services/shuttering-plywood-construction-service.html
+        destination: /products/shuttering-plywood-construction.html
+      - type: redirect
+        source: /services/sunmica-dealers-rajkot-service.html
+        destination: /products/sunmica-dealers-rajkot.html
+      - type: redirect
+        source: /services/waterproof-bathroom-doors-service.html
+        destination: /products/waterproof-bathroom-doors.html
+      - type: redirect
+        source: /services/waterproof-flush-doors-bwp-service.html
+        destination: /products/waterproof-flush-doors-bwp.html
+
+      # Physical products moved out of /services/ into /products/.
+      - type: redirect
+        source: /services/gurjan-plywood-dealer.html
+        destination: /products/gurjan-plywood-dealer.html
+      - type: redirect
+        source: /services/hdhmr-board-supplier-rajkot.html
+        destination: /products/hdhmr-board-supplier-rajkot.html
+      - type: redirect
+        source: /services/mdf-interior-exterior-grade-rajkot.html
+        destination: /products/mdf-interior-exterior-grade-rajkot.html
+
+      # Motherwood pages merged into the single brand hub.
+      - type: redirect
+        source: /services/motherwood-mdf-dealer-gujarat.html
+        destination: /products/motherwood-mdf-rajkot.html
+
+      # The one genuine duplicate: /products.html and /products/ served the same catalogue.
+      - type: redirect
+        source: /products.html
+        destination: /products/
+
+      # Legacy URLs from the removed Netlify-format _redirects file. Render never honoured
+      # that file, so these have been returning 404 and losing their accumulated signals.
+      # Collapsed straight to the final survivor so there is exactly one hop, no chains.
+      - type: redirect
+        source: /services/bwp-waterproof-block-board.html
+        destination: /products/bwp-waterproof-block-board.html
+      - type: redirect
+        source: /services/commercial-plywood-mr-grade.html
+        destination: /products/commercial-plywood-mr-grade.html
+      - type: redirect
+        source: /services/decorative-laminates-sheets.html
+        destination: /products/decorative-laminates-sheets.html
+      - type: redirect
+        source: /services/flexible-plywood-supplier.html
+        destination: /products/flexible-plywood-supplier.html
+      - type: redirect
+        source: /services/flush-doors-manufacturer-supplier.html
+        destination: /products/flush-doors-manufacturer-supplier.html
+      - type: redirect
+        source: /services/laminated-flush-doors-designs.html
+        destination: /products/laminated-flush-doors-designs.html
+      - type: redirect
+        source: /services/liner-laminates-inner.html
+        destination: /products/liner-laminates-inner.html
+      - type: redirect
+        source: /services/plywood-wholesaler-rajkot.html
+        destination: /products/plywood-wholesaler-rajkot.html
+      - type: redirect
+        source: /services/poplar-block-board.html
+        destination: /products/poplar-block-board.html
+      - type: redirect
+        source: /services/shuttering-plywood-construction.html
+        destination: /products/shuttering-plywood-construction.html
+      - type: redirect
+        source: /services/sunmica-dealers-rajkot.html
+        destination: /products/sunmica-dealers-rajkot.html
+      - type: redirect
+        source: /services/waterproof-bathroom-doors.html
+        destination: /products/waterproof-bathroom-doors.html
+      - type: redirect
+        source: /services/waterproof-flush-doors-bwp.html
+        destination: /products/waterproof-flush-doors-bwp.html
