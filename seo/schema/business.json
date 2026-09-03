@@ -1,0 +1,70 @@
+{
+  "name": "Mahadev Traders",
+  "legalName": "Mahadev Traders",
+  "url": "https://mahadev-traders.com/",
+  "telephone": "+916355360702",
+  "email": "mahadevtraders@hotmail.com",
+  "image": "https://mahadev-traders.com/assets/favicon.webp",
+  "priceRange": "₹₹",
+  "foundingDate": "1996",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+    "addressLocality": "Rajkot",
+    "addressRegion": "Gujarat",
+    "postalCode": "360004",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "22.3039",
+    "longitude": "70.7839"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:00",
+      "closes": "11:45"
+    }
+  ],
+  "areaServed": [
+    "Rajkot",
+    "Ahmedabad",
+    "Saurashtra",
+    "Morbi",
+    "Gondal",
+    "Vadodara",
+    "Surat",
+    "Jamnagar",
+    "Dwarka",
+    "Botad",
+    "Jasdan",
+    "Mahuva",
+    "Amreli",
+    "Junagadh",
+    "Porbandar",
+    "Gujarat"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/",
+    "https://www.instagram.com/mahadev_traders_rajkot/",
+    "https://www.indiamart.com/mahadev-traders-rajkot/",
+    "https://jsdl.in/DT-50F5ACN1S8F",
+    "https://maps.app.goo.gl/iGgzod36cLGykRej9"
+  ],
+  "description": "Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat, serving Ahmedabad & Saurashtra."
+}
