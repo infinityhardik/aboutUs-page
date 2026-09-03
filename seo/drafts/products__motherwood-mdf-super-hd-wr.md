@@ -2,8 +2,8 @@
 
 - **URL:** https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html
 - **Title:** Motherwood Super HD+WR MDF | HDHMR, 3-25mm Rajkot
-- **Current length:** 805 words
-- **Trade fields present:** grade, thickness options, standard sheet sizes, typical applications, price policy, MOQ, delivery coverage
+- **Current length:** 872 words
+- **Trade fields present:** grade, thickness options, standard sheet sizes, typical applications, price policy, MOQ, delivery policy
 - **Trade fields missing:** core material, IS certification
 - **Status:** needs depth
 
@@ -24,11 +24,13 @@ Water resistance is not the same as waterproof. Every cut edge needs sealing bef
 Answer these and the section above can be extended. **Do not publish these TODO lines to the site.**
 
 - `TODO(seo)`: Confirm the Super HD+WR density figure. The HDHMR page states >850 kg/m3; is that the right number for this grade?
-- `TODO(seo)`: Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
-## Answered 2026-09-03
+## Answered 2026-09-03, now published sitewide
 
-- **Minimum order quantity: 1.** No minimum on any product. Now stated on all 37 pages.
-- **Pricing: not published**, quoted per enquiry by call or WhatsApp. Now explained on all 37 pages.
-  In structured data this is represented by omitting `price` entirely rather than setting it to `0`,
-  because a price of 0 in schema.org means the product is free.
+- **Minimum order quantity: 1.** No minimum on any product.
+- **Pricing: not published**, quoted per enquiry. In structured data this is expressed by
+  omitting `price` rather than setting it to `0`, because 0 means *free* in schema.org.
+- **Delivery: across Gujarat**, freight charged per order and varying by region, service
+  availability and timing, with free delivery on select orders. `shippingRate` is left out
+  of the markup rather than set to 0, because a conditional benefit cannot be published as
+  a definite zero rate.

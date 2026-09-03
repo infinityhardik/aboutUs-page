@@ -18,6 +18,7 @@ Google Search Console export of the same date reporting 24 pages not indexed.
 | Product blocks with placeholder prices | 12 | **0** |
 | Pages stating minimum order quantity | 3 | **37** |
 | Pages explaining how pricing works | 6 | **37** |
+| Pages stating the freight/delivery policy | 0 | **37** |
 | Tag-unbalanced pages | 20 | **0** |
 
 ## What the diagnosis got wrong
@@ -265,21 +266,28 @@ Pages still under 900 words, in `seo/drafts/` with publishable draft prose ready
 
 ## Open questions — every `TODO(seo)`, grouped by page
 
-**71 questions across 37 pages**, down from 136. Nothing here was guessed at on the live
-site; each is a fact I could not verify.
+**36 questions across 24 pages**, down from 136. All three systemic questions are
+answered; what remains is per-product specification.
 
-### Answered 2026-09-03, and now published
+### Answered 2026-09-03, and now published on all 37 pages
 
 - **Minimum order quantity is 1.** No minimum on any product — a single sheet or door is a
-  normal order. This is a genuine differentiator for a wholesaler and it now appears on all
-  37 pages, closing the largest content gap in the audit (it was stated on 3).
+  normal order, so a buyer can test a grade against their own work before committing to bulk.
+  This was stated on 3 pages before; it is a real differentiator for a wholesaler.
 - **Prices are not published**; rates are quoted per enquiry by call or WhatsApp because they
-  move with brand, thickness, grade, batch, quantity and delivery destination. All 37 pages
-  now say so and explain why, rather than leaving price-intent visitors with nothing.
+  move with brand, thickness, grade, batch, quantity and destination. Stated on 6 pages before.
+- **Delivery is across Gujarat**, freight charged per order and varying by region, service
+  availability and timing, with free delivery on select orders. Stated on 0 pages before.
 
-On the instruction to set price to "0 or undefined", I used **undefined**: `price: 0` in
-schema.org means the product is *free*, and Google would be entitled to render "₹0" in a
-rich result. Omitting the field is the correct way to express "contact for rates".
+Two of these needed care in the markup, not just the copy:
+
+- On "set price to 0 or undefined" I used **undefined**. `price: 0` in schema.org means the
+  product is *free*, and Google would be entitled to render "₹0" in a rich result. Omitting
+  the field is the correct way to express "contact for rates".
+- Free delivery is **conditional** ("select orders"), so `shippingRate` stays out of the
+  markup rather than being set to 0. A conditional benefit cannot honestly be published as a
+  definite zero rate. `shippingDestination` (Gujarat) and `deliveryTime` are kept, because
+  those are accurate — though see the confirmation list below regarding delivery times.
 
 ### Still open
 
@@ -293,175 +301,101 @@ rich result. Omitting the field is the correct way to express "contact for rates
 
 - This page is a specification chart with no prices, but it is titled 'Price Chart'. Either add indicative price bands or retitle it - the mismatch is a bounce risk for anyone searching for prices.
 
-#### `products/block-board-wholesale-supplier.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/bwp-waterproof-block-board.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/commercial-plywood-mr-grade.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
 #### `products/decorative-laminates-sheets.html`
 
 - Standard laminate sheet size(s) stocked - the page gives thicknesses from 0.8mm to 1.5mm but no sheet dimensions.
 - Which laminate brands are stocked, and are digital catalogues available to link?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/flexible-plywood-supplier.html`
 
 - Standard sheet size for flexible plywood, and the minimum bend radius per thickness. The page claims a 5cm-10cm bend radius 'depending on thickness' without saying which thickness gives which.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/flush-doors-manufacturer-supplier.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/greytone-plywood-dealers.html`
 
 - Which bonding grades is Greytone stocked in - MR, BWR, BWP? The page names no grade, the only product page in the plywood range with that gap.
 - Any IS certification for the Greytone line.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/gurjan-block-board-dealer.html`
 
 - Is the Gurjan a full Gurjan face, a Gurjan core, or both? Buyers ask this specifically and the page does not answer it.
 - IS certification for the Gurjan block board line.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/gurjan-plywood-dealer.html`
 
 - Same question for Gurjan plywood: full Gurjan face and core, or Gurjan face on another core?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/hdhmr-board-supplier-rajkot.html`
 
 - Confirm the >850 kg/m3 density claim already on this page, and whether HDHMR stock carries IS 12406 or another standard.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/index.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/laminated-flush-doors-designs.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/limelite-plywood-supplier.html`
 
 - Limelite thickness range and sheet sizes stocked in Rajkot. The page currently lists none.
 - Which IS specification does the Limelite BWP line carry - IS 710, or BWR to IS 303?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/liner-laminates-inner.html`
 
 - Core/backing material for the liner sheets, and whether an IS specification applies.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/marine-plywood-710-rajkot.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/marllex-block-board-premium.html`
 
 - Core species for Marllex block board - poplar, pine, hardwood or Gurjan face?
 - Does the BWP block board carry IS 1659 certification?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/marllex-flush-doors-premium.html`
 
 - Standard door sizes stocked (heights and widths), not just thicknesses.
 - Is the core solid or hollow, and which timber?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/marllex-premium-plywood.html`
 
 - Confirm the Marllex IS 710 licence number, if the brand publishes one.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/mdf-interior-exterior-grade-rajkot.html`
 
 - Standard sheet sizes and the thickness range for each of the interior and exterior grades.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/mdf-wholesale-rajkot.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/motherwood-mdf-exterior-grade.html`
 
 - Does Motherwood Exterior Grade carry IS 12406 certification like the rest of the range, and is there a separate exterior-grade standard it meets?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/motherwood-mdf-rajkot.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/motherwood-mdf-super-hd-wr.html`
 
 - Confirm the Super HD+WR density figure. The HDHMR page states >850 kg/m3; is that the right number for this grade?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/motherwood-mdf-turbo-plus.html`
 
 - Confirm the TurBo+ density figure. The Motherwood brand page states >1050 kg/m3 for TurBo+; safe to publish on this page too?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/pine-wood-block-board.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/pine-wood-flush-doors.html`
 
 - Standard door sizes stocked, and whether the pine core is solid or a batten frame.
 - Confirm whether these doors are made to IS 2202 like the other flush door lines.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/plywood-wholesaler-rajkot.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/poplar-block-board.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/shuttering-plywood-construction.html`
 
 - Which bonding grade and IS specification the shuttering plywood carries (IS 4990 is the usual formwork standard) - the page names no grade.
 - Typical repeat-cycle count the stocked film-faced boards achieve, if the manufacturer states one.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/simson-plywood-supplier.html`
 
 - Standard sheet sizes for Simson plywood (the page lists thicknesses but no sheet dimensions).
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/sunmica-dealers-rajkot.html`
 
 - Which grades or IS specification apply to the laminate range (the page names none).
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/waterproof-bathroom-doors.html`
 
 - The page mentions a 10mm thickness alongside 30-35mm - is the 10mm a PVC or WPC door rather than a BWP flush door? If both types are stocked they should be distinguished on the page.
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
-
-#### `products/waterproof-flush-doors-bwp.html`
-
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `products/zevik-plywood-supplier.html`
 
 - Zevik thickness range and sheet sizes stocked in Rajkot. The page names MR, BWP and IS 710 grades but lists no thicknesses at all, which is the main reason it stays thin.
 - Is Zevik's IS 710 line third-party certified, and can the IS licence number be quoted?
-- Delivery coverage and cost for this item: which cities are included, what counts as a full load, and whether freight is charged separately. (Related: the Product markup previously claimed free shipping, which contradicted the site copy about freight rates, so the claim was removed.)
 
 #### `services/index.html`
 
-- Delivery radius and the cities where you deliver without a freight charge.
 - Whether 'Monday to Saturday' and the 09:00-19:30 hours in the schema are correct for the supply desk.
 - Any documentation you can actually issue for tenders (moisture-content certificates, IS grade declarations, dealership letters) - I described these generically and want to be accurate.
 ## What I must do myself
@@ -517,10 +451,14 @@ earlier version of my own generator, which matched only bare `<script type=...>`
 That is fixed; the generator now scans every JSON-LD block regardless of attributes, and
 a full re-scan of all 129 blocks confirms none of the banned properties remain.
 
-### Two things to confirm
+### Three things to confirm
 
 - **Founding year.** The schema said `1995`; roughly 20 pages say "since 1996". I set
   `foundingDate` to 1996 to match the visible text. Tell me which is right.
+- **Published delivery times.** The `shippingDetails` markup claims 0–1 day handling and 1–3
+  day transit within Gujarat. That was already published and looks plausible against the
+  "24–48 hour delivery" claim on the Motherwood page, but you said timing varies by region and
+  service availability, so confirm the range holds or give me a better one.
 - **Motherwood "Boilo" grade.** The brand page lists a fourth variant, Boilo, that has
   no page. If you stock it, it should have one under the Motherwood hub.
 
