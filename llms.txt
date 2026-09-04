@@ -9,7 +9,7 @@ The /services/ silo previously carried a per-product mirror of each product page
 - [Mahadev Traders homepage](https://mahadev-traders.com/): Company overview, Rajkot office and warehouse contact details, service areas in Gujarat, premium brands, and common buyer questions.
 - [Wholesale product catalogue](https://mahadev-traders.com/products/): Full catalogue hub for plywood, MDF, HDHMR, block board, flush doors and laminates, linking to every product page.
 - [Trade supply services](https://mahadev-traders.com/services/): The supply services offered around the material - grade advice before ordering, batch-matched bulk supply, tender documentation, formwork cycle planning and scheduled site delivery.
-- [Plywood, MDF, block board, and flush door spec chart](https://mahadev-traders.com/productChart.html): Side-by-side specification chart for plywood, block board, laminate, flush door and MDF grades - core type, glue grade, density, thickness and sheet size. Rates are deliberately not published on this site; the page directs buyers to request current wholesale rates for Rajkot and Gujarat.
+- [Plywood, MDF, block board, and flush door spec chart](https://mahadev-traders.com/productChart.html): Side-by-side specification chart for plywood, block board, laminate, flush door and MDF grades - core type, glue grade, density, thickness and sheet size. Carries indicative rate bands in rupees per square foot as a budgeting reference; firm rates are quoted per enquiry, because the price of any given sheet moves with brand, thickness, grade, batch, quantity and delivery point.
 
 ## Product Pages
 
