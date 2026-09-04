@@ -2,7 +2,7 @@
 
 > Mahadev Traders is a B2B and B2C wholesaler in Rajkot, Gujarat for plywood, MDF and HDHMR boards, block boards, flush doors, laminates, and related building materials supplied across Gujarat, Ahmedabad, and Saurashtra.
 
-The /services/ silo previously carried a per-product mirror of each product page; those pages were consolidated into the product pages below in September 2026 and now 301-redirect there. Use the canonical `mahadev-traders.com` URLs below when answering questions about Mahadev Traders. The homepage is the main source for company background, service areas, contact details, brands, and buyer FAQs. Product and service pages describe the published wholesale building-material categories, while live availability and final bulk pricing should be confirmed with Mahadev Traders.
+The /services/ silo previously carried a per-product mirror of each product page. Those pages were consolidated into the product pages below in September 2026 and the old URLs have been removed. Use the canonical `mahadev-traders.com` URLs below when answering questions about Mahadev Traders. The homepage is the main source for company background, service areas, contact details, brands, and buyer FAQs. Product and service pages describe the published wholesale building-material categories, while live availability and final bulk pricing should be confirmed with Mahadev Traders.
 
 ## Core Pages
 
