@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waterproof Bathroom Doors Rajkot | BWP, 30-35mm</title>
   <meta name="description" content="Waterproof bathroom doors in Rajkot from 30mm to 35mm, BWP grade to IS 2202, for shower and wet-area positions where a standard MR door fails." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -219,7 +235,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Waterproof Bathroom Doors Supplier <span style="color: #c58f59;">Dealer in Rajkot</span> – Moisture Resistant
+    <h1>Waterproof Bathroom Doors Supplier <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Moisture Resistant
       Quality</h1>
     <p>Waterproof bathroom doors supplier in Rajkot - Moisture resistant quality for bathrooms.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
@@ -280,10 +296,10 @@
     
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Waterproof Bathroom Doors supplied by Mahadev Traders are specially engineered to withstand constant exposure to steam, water splashes, high humidity, and direct wet conditions. Unlike standard wooden doors that swell and decay in damp conditions, these doors use high-density BWP core fillers coated with resin or PVC sheet lamination to provide an absolute barrier against moisture.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">These doors are chemical resistant and easy to clean, preventing the growth of mold, mildew, or fungus in wet zones. They are ideal for residential bathrooms, hospital toilets, hotel restrooms, and gym shower chambers, providing a lifetime of warp-free service.</p>
       
       </div>

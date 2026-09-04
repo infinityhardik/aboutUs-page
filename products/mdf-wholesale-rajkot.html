@@ -3,6 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
+    <script>
+        /* Resolve the theme before first paint so the page never flashes the wrong one.
+           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+           preference, otherwise dark. */
+        (function () {
+          try {
+            var t = localStorage.getItem('theme-preference');
+            if (t !== 'light' && t !== 'dark') {
+              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+          } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        })();
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MDF &amp; HDHMR Wholesale Rajkot | 3mm to 25mm</title>
     <meta name="description" content="MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally." />
@@ -83,7 +99,7 @@
         }
 
         .navbar .menu a:hover {
-            color: var(--color-primary)
+            color: var(--color-primary-text)
         }
 
         .btn-primary {
@@ -297,7 +313,7 @@
 
     <main>
         <section class="product-hero">
-            <h1>MDF Wholesale in <span style="color: #c58f59;">Rajkot &amp; Gujarat</span> — #1 HDHMR Board Supplier
+            <h1>MDF Wholesale in <span style="color: var(--color-primary-text);">Rajkot &amp; Gujarat</span> — #1 HDHMR Board Supplier
             </h1>
             <p>Mahadev Traders is the leading wholesale supplier of MDF and HDHMR boards in Rajkot, Saurashtra, and
                 Gujarat. Authorized dealer of Motherwood MDF — Super HD+WR, Exterior Grade &amp; TurBo+.</p>
@@ -309,7 +325,7 @@
                 <h2>🏆 Gujarat's Premier MDF &amp; HDHMR Wholesale Supplier</h2>
                 <div
                     style="margin:1.5rem 0;padding:1rem 1.5rem;background:linear-gradient(135deg,rgba(197, 143, 89,0.08),rgba(140, 88, 43,0.04));border-radius:10px;border-left:4px solid #c58f59">
-                    <strong style="color:#c58f59">MDF Quality Hierarchy (Low → High):</strong><br />
+                    <strong style="color: var(--color-primary-text)">MDF Quality Hierarchy (Low → High):</strong><br />
                     <span style="font-size:0.95rem">Interior Grade &nbsp;→&nbsp; Exterior Grade &nbsp;→&nbsp; Super
                         HD+WR / HDHMR &nbsp;→&nbsp; <strong>TurBo+ / Boilo (BEST)</strong></span>
                 </div>
@@ -456,7 +472,7 @@
             <!-- Why MDF Section -->
             <div
                 style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(197, 143, 89, 0.08), rgba(140, 88, 43, 0.04)); border-radius: 12px; border-left: 4px solid var(--color-primary);">
-                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">🔍 Why MDF / HDHMR is the Future of
+                <h3 style="color: var(--color-primary-text); margin-bottom: 1rem;">🔍 Why MDF / HDHMR is the Future of
                     Furniture in Gujarat</h3>
                 <p style="margin-bottom: 1rem;">MDF (Medium Density Fibreboard) has rapidly become the preferred
                     material for modern furniture manufacturing across Gujarat. Its smooth, grain-free surface makes it
@@ -474,7 +490,7 @@
 
             <!-- MDF Brands Section -->
             <div style="margin-top: 3rem;">
-                <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">🏷️ MDF Brands We Stock</h3>
+                <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">🏷️ MDF Brands We Stock</h3>
                 <div
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
                     <div
@@ -636,9 +652,9 @@
             <div class="product-intro" style="margin-top: 3rem;">
                 <h3>💡 Maintenance Tips for MDF &amp; HDHMR Furniture</h3>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-info-circle" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Edge Banding:</strong> Always ensure all exposed edges are properly sealed with PVC edge-banding or paint to prevent moisture ingress.</span></li>
-                    <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-info-circle" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Screw Holes:</strong> Pre-drilling is recommended for MDF to prevent the core from splitting, especially near the edges.</span></li>
-                    <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-info-circle" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Cleaning:</strong> Use a slightly damp cloth for cleaning. Avoid soaking the board in water even if it is HDHMR grade.</span></li>
+                    <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-info-circle" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Edge Banding:</strong> Always ensure all exposed edges are properly sealed with PVC edge-banding or paint to prevent moisture ingress.</span></li>
+                    <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-info-circle" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Screw Holes:</strong> Pre-drilling is recommended for MDF to prevent the core from splitting, especially near the edges.</span></li>
+                    <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-info-circle" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Cleaning:</strong> Use a slightly damp cloth for cleaning. Avoid soaking the board in water even if it is HDHMR grade.</span></li>
                 </ul>
             </div>
 

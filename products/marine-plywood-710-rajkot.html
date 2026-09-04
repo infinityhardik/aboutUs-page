@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IS 710 Marine Plywood Rajkot | BWP Grade Sheets</title>
   <meta name="description" content="IS 710 marine plywood in Rajkot: BWP phenolic bonding for kitchens, bathrooms and wet areas. Grade checks and bulk rates for Gujarat contractors." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -430,11 +446,11 @@
     <div class="product-intro">
       <h3>🏗️ Where to Use Marine Plywood in Your Gujarat Project</h3>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Kitchen cabinets</strong> &mdash; Below-counter carcass (19mm), wall unit carcass (12&ndash;16mm), shutters (12mm). Always BWP for any area near the sink or hob.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Bathroom vanities</strong> &mdash; Wash basin cabinets, mirror units, and storage racks. Use 12&ndash;19mm BWP only.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Balcony and terrace furniture</strong> &mdash; Outdoor seating, planters, and storage. Marine plywood handles Gujarat's monsoon rains.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Ground-floor interiors</strong> &mdash; In areas prone to flooding or rising damp (common in parts of Rajkot and Ahmedabad during monsoon).</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Commercial kitchens &amp; hospitals</strong> &mdash; High-humidity commercial spaces where hygiene and durability are critical.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Kitchen cabinets</strong> &mdash; Below-counter carcass (19mm), wall unit carcass (12&ndash;16mm), shutters (12mm). Always BWP for any area near the sink or hob.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Bathroom vanities</strong> &mdash; Wash basin cabinets, mirror units, and storage racks. Use 12&ndash;19mm BWP only.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Balcony and terrace furniture</strong> &mdash; Outdoor seating, planters, and storage. Marine plywood handles Gujarat's monsoon rains.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Ground-floor interiors</strong> &mdash; In areas prone to flooding or rising damp (common in parts of Rajkot and Ahmedabad during monsoon).</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Commercial kitchens &amp; hospitals</strong> &mdash; High-humidity commercial spaces where hygiene and durability are critical.</span></li>
       </ul>
       <p>For dry interior areas like bedrooms and drawing rooms, <a href="/products/commercial-plywood-mr-grade.html">commercial MR-grade plywood</a> offers excellent value at a lower price point.</p>
     </div>

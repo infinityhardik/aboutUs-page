@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shuttering Plywood Rajkot | Densified, 12-21mm</title>
   <meta name="description" content="Densified film-faced shuttering plywood in Rajkot, 12mm to 21mm in 8x4 sheets. Board weight and film grade matched to your pour count." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -225,7 +241,7 @@
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Densified Shuttering Plywood <span style="color: #c58f59;">Supplier in Rajkot</span></h1>
+    <h1>Densified Shuttering Plywood <span style="color: var(--color-primary-text);">Supplier in Rajkot</span></h1>
     <p>Mahadev Traders provides heavy-duty, film-faced shuttering plywood for high-rise construction and large-scale infrastructure projects across Gujarat. Engineered for maximum repetitions, superior concrete finish, and zero warping under pressure.</p>
     <div class="location-badge"><i class="fas fa-building"></i> High Repetition | Densified Core | Mirror Finish Concrete</div>
   </section>
@@ -309,9 +325,9 @@
       <h3>🔍 Buyer's Guide: 30kg vs. 38kg Shuttering Plywood</h3>
       <p>Choosing the right weight is crucial for your project's economics:</p>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-info-circle" style="color: var(--color-primary); margin-right: 10px;"></i><strong>30kg/32kg Sheets:</strong> Ideal for low-rise residential buildings or small slabs where only 5-8 repetitions are needed.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-info-circle" style="color: var(--color-primary); margin-right: 10px;"></i><strong>34kg/36kg Sheets:</strong> The standard choice for commercial projects, offering 10-15 repetitions.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-info-circle" style="color: var(--color-primary); margin-right: 10px;"></i><strong>38kg/42kg Sheets:</strong> Ultra-densified for high-rise towers and bridges, capable of 20-30 repetitions.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-info-circle" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>30kg/32kg Sheets:</strong> Ideal for low-rise residential buildings or small slabs where only 5-8 repetitions are needed.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-info-circle" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>34kg/36kg Sheets:</strong> The standard choice for commercial projects, offering 10-15 repetitions.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-info-circle" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>38kg/42kg Sheets:</strong> Ultra-densified for high-rise towers and bridges, capable of 20-30 repetitions.</li>
         <li style="padding: 0.5rem 0;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i><strong>Maintenance Tip:</strong> Always clean the surface and apply shuttering oil after each use to extend the life of the plywood.</li>
       </ul>
     </div>

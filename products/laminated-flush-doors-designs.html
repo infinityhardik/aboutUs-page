@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laminated Flush Doors Rajkot | 30-38mm, BWP Core</title>
   <meta name="description" content="Pre-laminated flush doors in Rajkot from 30mm to 38mm on BWP cores, with 0.8mm to 1.25mm laminate faces. Design selection and bulk supply for projects." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -225,7 +241,7 @@
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Modern Laminated Flush Doors <span style="color: #c58f59;">Supplier in Rajkot</span></h1>
+    <h1>Modern Laminated Flush Doors <span style="color: var(--color-primary-text);">Supplier in Rajkot</span></h1>
     <p>Mahadev Traders offers an exclusive collection of ready-to-install laminated flush doors. Combining the strength of solid-core flush doors with the beauty of premium laminates. No painting or polishing required &mdash; just install and enjoy.</p>
     <div class="location-badge"><i class="fas fa-door-open"></i> 500+ Designs | Ready Stock | Custom Sizes Available</div>
   </section>

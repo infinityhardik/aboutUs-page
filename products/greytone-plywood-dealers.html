@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Greytone Plywood Dealer Rajkot | 6 to 18mm MR</title>
   <meta name="description" content="Greytone plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets, supplied wholesale to carpenters and furniture workshops across Saurashtra." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -218,7 +234,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Greytone Plywood <span style="color: #c58f59;">Dealer in Rajkot</span> – Superior Quality Sheets</h1>
+    <h1>Greytone Plywood <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Superior Quality Sheets</h1>
     <p>Greytone plywood dealer in Rajkot - Superior quality sheets for premium furniture projects.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
   </section>
@@ -278,10 +294,10 @@
     
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Greytone Plywood is a premium brand of calibrated commercial plywood known for its high density, outstanding core strength, and structural integrity. Made from selected hardwood veneers and bonded with high-quality resins under high temperature and pressure, it features minimal core gaps and excellent resistance to structural warping or twisting over time.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">It is highly recommended for residential and commercial furniture including wardrobes, beds, display racks, and panels. Our Greytone calibrated plywood is available in 6x3, 6x4, 7x3, 7x4 and 8x4 sheets in thicknesses of 6mm, 9mm, 12mm and 18mm. The wood is seasoned under vacuum pressure treatment to ensure moisture content is kept strictly between 8% and 12%.</p>
     </div>
 

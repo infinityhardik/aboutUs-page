@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plywood Wholesaler in Rajkot | MR, BWP &amp; IS 710</title>
   <meta name="description" content="Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -218,7 +234,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>No.1 Plywood Wholesaler &amp; <span style="color: #c58f59;">Dealer in Rajkot, Gujarat</span></h1>
+    <h1>No.1 Plywood Wholesaler &amp; <span style="color: var(--color-primary-text);">Dealer in Rajkot, Gujarat</span></h1>
     <p>Mahadev Traders has been Gujarat's most trusted plywood wholesaler since 1995. We supply marine, commercial, shuttering, and furniture-grade plywood from authorised brands at unbeatable wholesale rates across Rajkot, Ahmedabad, Saurashtra, and all of Gujarat.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> 30+ Years Trusted | Rajkot, Ahmedabad &amp; All Gujarat</div>
   </section>
@@ -377,11 +393,11 @@
       <h3>📖 Plywood Buying Guide &mdash; What Every Buyer Should Know</h3>
       <p>Choosing the wrong plywood can lead to warping, swelling, or premature failure. Here is what we recommend based on our 30+ years of experience:</p>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Always check the ISI mark</strong> &mdash; Genuine marine plywood carries the IS:710 stamp and commercial plywood carries IS:303. Ask your dealer to show the certification.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Match thickness to application</strong> &mdash; 19mm for carcass work, 12mm for shutters and partitions, 6mm for back panels and liners. Using 19mm everywhere wastes money; using 6mm for shelves causes sagging.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Consider the face veneer</strong> &mdash; Gurjan face plywood gives a smoother finish ideal for laminate pasting. Poplar and eucalyptus faces are more budget-friendly for concealed areas.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Buy from authorised dealers only</strong> &mdash; Counterfeit plywood is a serious issue in Gujarat. At Mahadev Traders, every sheet is sourced directly from the manufacturer with full traceability.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Bulk orders save significantly</strong> &mdash; If you are a contractor or manufacturer, our wholesale rates on 50+ sheets are substantially lower than retail. Call us for a custom quotation.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Always check the ISI mark</strong> &mdash; Genuine marine plywood carries the IS:710 stamp and commercial plywood carries IS:303. Ask your dealer to show the certification.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Match thickness to application</strong> &mdash; 19mm for carcass work, 12mm for shutters and partitions, 6mm for back panels and liners. Using 19mm everywhere wastes money; using 6mm for shelves causes sagging.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Consider the face veneer</strong> &mdash; Gurjan face plywood gives a smoother finish ideal for laminate pasting. Poplar and eucalyptus faces are more budget-friendly for concealed areas.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Buy from authorised dealers only</strong> &mdash; Counterfeit plywood is a serious issue in Gujarat. At Mahadev Traders, every sheet is sourced directly from the manufacturer with full traceability.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Bulk orders save significantly</strong> &mdash; If you are a contractor or manufacturer, our wholesale rates on 50+ sheets are substantially lower than retail. Call us for a custom quotation.</span></li>
       </ul>
     </div>
 

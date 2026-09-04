@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trade Supply Services, Rajkot | Mahadev Traders</title>
   <meta name="description" content="Grade advice before ordering, batch-matched bulk supply, tender documents and scheduled site delivery for trade buyers in Rajkot and Saurashtra." />
@@ -89,7 +105,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -202,7 +218,7 @@
   <!-- Hero Section -->
   <main>
     <section class="service-hero">
-      <h1>Trade Supply Services <span style="color: #c58f59;">for Rajkot &amp; Saurashtra</span></h1>
+      <h1>Trade Supply Services <span style="color: var(--color-primary-text);">for Rajkot &amp; Saurashtra</span></h1>
       <p>What we do beyond selling sheets: grade advice before you order, batch-matched bulk supply, tender
         documentation, and scheduled delivery to sites and factories across Gujarat.</p>
       <div class="location-badge"><i class="fas fa-truck-fast"></i> Wholesale Only | Rajkot &middot; Saurashtra &middot; Gujarat</div>

@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Block Board Wholesaler in Rajkot | 19, 25 &amp; 30mm</title>
   <meta name="description" content="Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering." />
@@ -91,7 +107,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -238,7 +254,7 @@
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Block Board <span style="color: #c58f59;">Wholesaler &amp; Supplier in Rajkot &amp; Gujarat</span></h1>
+    <h1>Block Board <span style="color: var(--color-primary-text);">Wholesaler &amp; Supplier in Rajkot &amp; Gujarat</span></h1>
     <p>Mahadev Traders supplies premium block boards in Gurjan, pine, poplar, and BWP waterproof grades from Marllex, Simson, and Zevik at genuine wholesale rates. Trusted by Gujarat's furniture manufacturers and contractors since 1995.</p>
     <div class="location-badge"><i class="fas fa-boxes"></i> 30+ Years Trusted | Authorised Dealer of Marllex, Simson &amp; Zevik</div>
   </section>
@@ -345,11 +361,11 @@
     <div class="product-intro">
       <h3>🏗️ Where Gujarat's Professionals Use Block Boards</h3>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Wardrobe shutters &amp; doors</strong> &mdash; 19mm or 25mm block board provides the rigidity needed for large wardrobe doors that won't warp over time.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Conference &amp; dining tables</strong> &mdash; Block board's resistance to sagging makes it ideal for long table tops that plywood cannot support.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Room partitions &amp; office dividers</strong> &mdash; Large flat panels maintain perfect straightness even in full-height installations.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Bookshelves &amp; display units</strong> &mdash; Long shelving spans remain flat even under heavy load, unlike plywood which may bow.</span></li>
-        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Kitchen cabinets (BWP grade)</strong> &mdash; <a href="/products/bwp-waterproof-block-board.html">BWP block boards</a> for carcass where rigidity and water resistance are both required.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Wardrobe shutters &amp; doors</strong> &mdash; 19mm or 25mm block board provides the rigidity needed for large wardrobe doors that won't warp over time.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Conference &amp; dining tables</strong> &mdash; Block board's resistance to sagging makes it ideal for long table tops that plywood cannot support.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Room partitions &amp; office dividers</strong> &mdash; Large flat panels maintain perfect straightness even in full-height installations.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Bookshelves &amp; display units</strong> &mdash; Long shelving spans remain flat even under heavy load, unlike plywood which may bow.</span></li>
+        <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Kitchen cabinets (BWP grade)</strong> &mdash; <a href="/products/bwp-waterproof-block-board.html">BWP block boards</a> for carcass where rigidity and water resistance are both required.</span></li>
       </ul>
     </div>
 

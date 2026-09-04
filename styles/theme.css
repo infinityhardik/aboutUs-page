@@ -29,6 +29,20 @@
   --color-border: rgba(140, 88, 43, 0.12); /* Soft timber tinted borders */
   --color-border-glow: rgba(197, 143, 89, 0.25);
 
+  /* Accessible text colours.
+     The brand gold #c58f59 only reaches ~2.5:1 on the cream surfaces, so it must
+     never be used for text. --color-primary stays for fills, borders and icons;
+     --color-primary-text is the readable equivalent for each theme. */
+  --color-primary-text: #8c582b;        /* 4.87:1 on the lightest surface */
+  --color-primary-on-dark: #d3a06d;     /* brand text on a dark panel, either theme */
+  --color-on-primary: #ffffff;          /* text on a filled primary button */
+  --color-whatsapp: #0e7a5f;            /* white text = 5.29:1 */
+  --color-whatsapp-strong: #075E54;
+  --color-whatsapp-text: #0b6b45;       /* on the pale mint panel = 5.83:1 */
+  --gradient-primary: linear-gradient(135deg, #8c582b, #6b4620);
+  --color-primary-fill: #8c582b;        /* solid brand fill, white text = 5.92:1 */
+  --color-on-primary-fill: #ffffff;
+
   /* Compatibility Aliases (for standard critical CSS bindings) */
   --color-bg: var(--color-bg-base);
   --color-text: var(--color-text-main);
@@ -66,7 +80,10 @@
   --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Dark Theme */
+/* Dark Theme.
+   Applied three ways so every state resolves: an explicit choice via data-theme,
+   the OS preference when no choice has been made, and the data-theme='light'
+   escape hatch so an explicit light choice always beats a dark OS setting. */
 [data-theme='dark'] {
   --color-text-main: #fcfcfc;
   --color-text-muted: #a3a29e;
@@ -80,6 +97,33 @@
   
   --glass-bg: rgba(26, 24, 22, 0.75);
   --glass-border: rgba(197, 143, 89, 0.08);
+  --color-primary-text: #d3a06d;        /* 6.67:1 on the darkest surface */
+  --color-primary-on-dark: #d3a06d;
+  --color-on-primary: #161513;          /* dark ink reads better on gold than white */
+  --gradient-primary: linear-gradient(135deg, #d3a06d, #b8783c);
+  --color-whatsapp-text: #3ddc84;       /* on dark surfaces = 9.92:1 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+  --color-text-main: #fcfcfc;
+  --color-text-muted: #a3a29e;
+  
+  --color-bg-base: #11100e;       /* Warm Obsidian Black */
+  --color-bg-surface: #1a1816;    /* Dark Ebony Panels */
+  --color-bg-surface-2: #24221f;  /* Warm charcoal */
+  --color-bg-dark: #11100e;
+  --color-border: rgba(197, 143, 89, 0.12);
+  --color-border-glow: rgba(212, 175, 55, 0.2);
+  
+  --glass-bg: rgba(26, 24, 22, 0.75);
+  --glass-border: rgba(197, 143, 89, 0.08);
+  --color-primary-text: #d3a06d;        /* 6.67:1 on the darkest surface */
+  --color-primary-on-dark: #d3a06d;
+  --color-on-primary: #161513;          /* dark ink reads better on gold than white */
+  --gradient-primary: linear-gradient(135deg, #d3a06d, #b8783c);
+  --color-whatsapp-text: #3ddc84;       /* on dark surfaces = 9.92:1 */
+  }
 }
 
 /* Typography (Standardized) */

@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marllex Premium Plywood Rajkot | MR &amp; BWP, 6-18mm</title>
   <meta name="description" content="Marllex premium plywood in Rajkot in MR and 100% BWP grades, 6 to 18mm in 6x3 to 8x4 sheets. Branded stock with wholesale rates for Gujarat trade buyers." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -219,7 +235,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Marllex Premium Plywood <span style="color: #c58f59;">Dealer in Rajkot</span> – Branded Quality Assurance
+    <h1>Marllex Premium Plywood <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Branded Quality Assurance
     </h1>
     <p>Marllex premium plywood dealer in Rajkot - Branded quality assurance from trusted manufacturer.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
@@ -280,10 +296,10 @@
     
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Marllex Premium Plywood represents the pinnacle of strength and longevity in the wood industry. Utilizing alternate layers of hand-selected Gurjan and hardwood core veneers, Marllex is bonded with 100% phenol formaldehyde resin. This heavy-duty construction makes it highly resilient and capable of bearing extreme loads without structural sagging or cracking.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">It undergoes rigorous multi-stage calibration to achieve a perfectly uniform thickness across the sheet, crucial for high-end modular furniture. The plywood is chemically treated with Glue Line Poisoning (GLP) technology, offering absolute protection against termites, borers, and dry rot.</p>
       
       </div>

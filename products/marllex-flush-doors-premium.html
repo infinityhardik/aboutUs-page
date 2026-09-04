@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marllex Premium Flush Doors Rajkot | 25-35mm</title>
   <meta name="description" content="Marllex flush doors in Rajkot at 25, 30 and 35mm in MR and 100% BWP grades, heights 72 to 96in. Wholesale rates for builders and contractors." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -218,7 +234,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Marllex Premium Flush Doors <span style="color: #c58f59;">Dealer in Rajkot</span> – Branded Quality</h1>
+    <h1>Marllex Premium Flush Doors <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Branded Quality</h1>
     <p>Marllex premium flush doors dealer in Rajkot - Branded quality from trusted manufacturer.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
   </section>
@@ -278,10 +294,10 @@
     
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Marllex Premium Flush Doors are constructed using a high-density, solid pine wood core and framed with hardwood side-lippings. Every single door is manufactured in compliance with IS:2202 specifications. They are bonded using BWP (Boiling Water Proof) phenol formaldehyde synthetic resin under extreme heat and pressure, creating an inseparable bond that is highly resistant to warping, twisting, or bending.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">The doors feature lock-area reinforcement blocks on both sides, ensuring secure and easy installation of handles, mortise locks, and hinges. Their solid-core structure provides outstanding acoustic insulation (sound dampening) and excellent thermal efficiency for residential and commercial rooms.</p>
       
       </div>

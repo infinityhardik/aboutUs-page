@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BWP Waterproof Block Board Rajkot | IS 1659</title>
   <meta name="description" content="BWP boiling-water-proof block board in Rajkot at 25mm and 30mm, IS 1659 grade, phenol bonded for modular kitchens and bathroom vanity carcasses." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -220,7 +236,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>BWP Waterproof Block Board <span style="color: #c58f59;">Dealer in Rajkot</span> – Boiling Water Proof Grade
+    <h1>BWP Waterproof Block Board <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Boiling Water Proof Grade
     </h1>
     <p>100% moisture-proof block board for wet areas. Perfect for bathrooms, kitchens, and humid environments.</p>
     <div class="location-badge"><i class="fas fa-droplet"></i> 100% Waterproof | BWP Certified</div>

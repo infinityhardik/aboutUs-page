@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Decorative Laminate Sheets Rajkot | 0.8 to 1.5mm</title>
   <meta name="description" content="Decorative laminates in Rajkot from 0.8mm to 1.5mm across matte, gloss and textured finishes. Catalogue selection and bulk supply for interior projects." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -221,7 +237,7 @@
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Decorative Laminate Sheets <span style="color: #c58f59;">Dealer in Rajkot &amp; Gujarat</span></h1>
+    <h1>Decorative Laminate Sheets <span style="color: var(--color-primary-text);">Dealer in Rajkot &amp; Gujarat</span></h1>
     <p>Mahadev Traders brings you the world's finest decorative laminates. Explore 2000+ luxury designs from brands like Merino, Royal Touch, and Sunmica. Transform your furniture into a masterpiece with our premium designer collection.</p>
     <div class="location-badge"><i class="fas fa-magic"></i> 2000+ Luxury Designs | Authorised Dealer for Top Brands</div>
   </section>
@@ -311,10 +327,10 @@
       <h3>🔍 Designer's Guide: Choosing the Right Texture for Each Room</h3>
       <p>Room-specific texture selection can dramatically change the vibe of your home:</p>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-couch" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Living Room:</strong> Use <strong>Wood-grain or Marble</strong> textures for TV units. Glossy laminates on highlight walls can make the room appear larger and brighter.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-bed" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Master Bedroom:</strong> Soft <strong>Fabric or Suede</strong> finishes create a warm, cozy atmosphere. Pair with <a href="/products/block-board-wholesale-supplier.html">quality block board</a> for heavy wardrobe shutters.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-utensils" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Kitchen:</strong> Stick to <strong>High Gloss or Anti-Fingerprint Matte</strong> for ease of cleaning. Avoid deep textures where oil and dust can accumulate.</li>
-        <li style="padding: 0.5rem 0;"><i class="fas fa-briefcase" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Office:</strong> <strong>Solid colors in Suede finish</strong> provide a professional, glare-free look that is easy on the eyes during long working hours.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-couch" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Living Room:</strong> Use <strong>Wood-grain or Marble</strong> textures for TV units. Glossy laminates on highlight walls can make the room appear larger and brighter.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-bed" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Master Bedroom:</strong> Soft <strong>Fabric or Suede</strong> finishes create a warm, cozy atmosphere. Pair with <a href="/products/block-board-wholesale-supplier.html">quality block board</a> for heavy wardrobe shutters.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-utensils" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Kitchen:</strong> Stick to <strong>High Gloss or Anti-Fingerprint Matte</strong> for ease of cleaning. Avoid deep textures where oil and dust can accumulate.</li>
+        <li style="padding: 0.5rem 0;"><i class="fas fa-briefcase" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Office:</strong> <strong>Solid colors in Suede finish</strong> provide a professional, glare-free look that is easy on the eyes during long working hours.</li>
       </ul>
     </div>
 

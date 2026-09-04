@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flush Door Supplier Rajkot | IS 2202, 25-45mm</title>
   <meta name="description" content="Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -216,7 +232,7 @@
     <span>Flush Doors Manufacturer Supplier</span>
   </nav>  <main>
   <section class="product-hero">
-    <h1>Flush Door Dealer &amp; <span style="color: #c58f59;">Supplier in Rajkot &amp; Gujarat</span></h1>
+    <h1>Flush Door Dealer &amp; <span style="color: var(--color-primary-text);">Supplier in Rajkot &amp; Gujarat</span></h1>
     <p>Mahadev Traders has supplied premium flush doors to Gujarat's builders, contractors, and homeowners since 1995. We stock BWP waterproof, laminated, pine wood, and bathroom flush doors from Marllex, Simson, and Zevik at genuine wholesale rates.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> 30+ Years Trusted | Authorised Dealer of Marllex, Simson &amp; Zevik Doors</div>
   </section>
@@ -331,10 +347,10 @@
     <div class="product-intro">
       <h3>📖 Flush Door Buying Guide &mdash; Avoid Costly Mistakes</h3>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Never use MR doors in bathrooms</strong> &mdash; This is the most common mistake. MR-grade doors swell within 6&ndash;12 months in bathroom humidity. Always insist on BWP grade.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Check the frame quality</strong> &mdash; A flush door is only as good as its frame. Pine wood frames offer excellent strength and screw-holding capacity. Avoid hollow-core doors for exterior use.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Match thickness to purpose</strong> &mdash; 25mm for internal rooms, 30mm for main entrances, 32&ndash;35mm for heavy commercial use and main gates.</span></li>
-        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary); margin-top: 4px;"></i><span><strong>Plan for hardware</strong> &mdash; Ensure hinges, locks, and handles are compatible with your door thickness. We can advise on the right hardware pairing.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Never use MR doors in bathrooms</strong> &mdash; This is the most common mistake. MR-grade doors swell within 6&ndash;12 months in bathroom humidity. Always insist on BWP grade.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Check the frame quality</strong> &mdash; A flush door is only as good as its frame. Pine wood frames offer excellent strength and screw-holding capacity. Avoid hollow-core doors for exterior use.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Match thickness to purpose</strong> &mdash; 25mm for internal rooms, 30mm for main entrances, 32&ndash;35mm for heavy commercial use and main gates.</span></li>
+        <li style="padding: 0.6rem 0; display: flex; gap: 0.8rem; align-items: flex-start;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Plan for hardware</strong> &mdash; Ensure hinges, locks, and handles are compatible with your door thickness. We can advise on the right hardware pairing.</span></li>
       </ul>
     </div>
 

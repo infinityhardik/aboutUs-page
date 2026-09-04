@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BWP Waterproof Flush Door Supplier Rajkot | Wet-Area Doors</title>
   <meta name="description" content="BWP waterproof flush doors in Rajkot for bathrooms, utility rooms and wet areas. Phenol-bonded cores with edge sealing guidance before installation." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -420,9 +436,9 @@
       <h3>🔍 When to Choose BWP Grade over MR Grade?</h3>
       <p>While MR grade doors are suitable for bedrooms, BWP is a must-have for the following applications:</p>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Bathrooms:</strong> Constant exposure to steam and direct water splashes makes BWP the only viable long-term choice.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Main Doors:</strong> If your entrance door is exposed to rain or direct sunlight, a BWP flush door with a decorative laminate is highly recommended.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Terrace/Balcony:</strong> Exterior doors facing the elements need the boiling-water-proof protection of IS:2202 standards.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Bathrooms:</strong> Constant exposure to steam and direct water splashes makes BWP the only viable long-term choice.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Main Doors:</strong> If your entrance door is exposed to rain or direct sunlight, a BWP flush door with a decorative laminate is highly recommended.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Terrace/Balcony:</strong> Exterior doors facing the elements need the boiling-water-proof protection of IS:2202 standards.</li>
         <li style="padding: 0.5rem 0;"><i class="fas fa-lightbulb" style="color: #f59e0b; margin-right: 10px;"></i><strong>Pro Tip:</strong> For complete peace of mind, pair your BWP door with <a href="/products/marine-plywood-710-rajkot.html">710 Marine Plywood</a> frames.</li>
       </ul>
     </div>

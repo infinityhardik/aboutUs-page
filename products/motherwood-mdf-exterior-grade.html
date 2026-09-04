@@ -3,6 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
+    <script>
+        /* Resolve the theme before first paint so the page never flashes the wrong one.
+           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+           preference, otherwise dark. */
+        (function () {
+          try {
+            var t = localStorage.getItem('theme-preference');
+            if (t !== 'light' && t !== 'dark') {
+              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+          } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        })();
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motherwood Exterior Grade MDF | Wholesale Rajkot</title>
     <meta name="description" content="Motherwood Exterior Grade MDF in Rajkot from 3mm to 17mm in 8x4 sheets, for covered semi-outdoor panels, humid interiors and shop fit-outs." />
@@ -80,7 +96,7 @@
         }
 
         .navbar .menu a:hover {
-            color: var(--color-primary)
+            color: var(--color-primary-text)
         }
 
         .btn-primary {
@@ -221,7 +237,7 @@
 
     <main>
         <section class="product-hero">
-            <h1>Motherwood Exterior Grade MDF — <span style="color:#c58f59;">2nd Tier Outdoor MDF</span> — Wholesale
+            <h1>Motherwood Exterior Grade MDF — <span style="color: var(--color-primary-text);">2nd Tier Outdoor MDF</span> — Wholesale
                 Rajkot</h1>
             <p>Exterior Grade MDF — the 2nd tier in the MDF quality hierarchy, better than Interior Grade. Passes the
                 Boilo (boiling water resistance) test. Suitable for outdoor &amp; semi-outdoor applications. Available
@@ -339,7 +355,7 @@
 
             <div
                 style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(197, 143, 89,0.08),rgba(140, 88, 43,0.04));border-radius:12px;border-left:4px solid var(--color-primary)">
-                <h3 style="color:var(--color-primary);margin-bottom:1rem">🏡 Ideal Applications for Exterior Grade MDF
+                <h3 style="color: var(--color-primary-text);margin-bottom:1rem">🏡 Ideal Applications for Exterior Grade MDF
                 </h3>
                 <ul
                     style="list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem">

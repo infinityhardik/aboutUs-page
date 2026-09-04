@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pine Wood Flush Doors Rajkot | 25, 30 &amp; 35mm</title>
   <meta name="description" content="Pine-core flush doors in Rajkot at 25, 30 and 35mm, heights 72 to 96in and widths 24 to 48in. Good screw holding for standard door hardware." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -218,7 +234,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Pine Wood Flush Doors <span style="color: #c58f59;">Dealer in Rajkot</span> – Premium Wood Quality</h1>
+    <h1>Pine Wood Flush Doors <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Premium Wood Quality</h1>
     <p>Pine wood flush doors dealer in Rajkot - Premium wood quality for durable doors.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
   </section>
@@ -278,10 +294,10 @@
     
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Our solid Pine Wood Flush Doors are manufactured using 100% chemically treated and kiln-dried New Zealand and local pine wood filler strips. Every door has a solid, gap-free core that is cross-banded with high-quality hardwood veneers to provide exceptional structural strength and resistance to changing seasonal humidity in Gujarat.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">These doors are lightweight yet incredibly sturdy, making them easy to install and reducing the load on hinges. They present a perfectly flat, clean surface that is highly receptive to laminates, wood veneers, or direct painting, ideal for modern B2B office partitions and home entryways.</p>
       
       </div>

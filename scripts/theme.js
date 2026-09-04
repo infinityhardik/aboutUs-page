@@ -8,11 +8,44 @@ class ThemeManager {
   }
 
   init() {
-    // Set dark theme as default by checking for saved preference
-    const savedTheme = localStorage.getItem(this.THEME_KEY);
-    const preferredTheme = savedTheme || this.DARK_THEME;
-    this.setTheme(preferredTheme);
+    // An explicit saved choice wins; otherwise follow the OS, defaulting to dark.
+    // The inline script in <head> already applied this before first paint, so this
+    // only re-confirms it and wires up the toggle.
+    this.setTheme(this.resolveInitialTheme());
     this.attachToggleListener();
+    this.watchSystemPreference();
+  }
+
+  resolveInitialTheme() {
+    let saved = null;
+    try { saved = localStorage.getItem(this.THEME_KEY); } catch (e) { /* storage blocked */ }
+    if (saved === this.LIGHT_THEME || saved === this.DARK_THEME) return saved;
+    return this.prefersLight() ? this.LIGHT_THEME : this.DARK_THEME;
+  }
+
+  prefersLight() {
+    return typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-color-scheme: light)').matches;
+  }
+
+  // Follow the OS while the visitor has not chosen a theme themselves.
+  watchSystemPreference() {
+    if (typeof window.matchMedia !== 'function') return;
+    const mq = window.matchMedia('(prefers-color-scheme: light)');
+    const onChange = (e) => {
+      let saved = null;
+      try { saved = localStorage.getItem(this.THEME_KEY); } catch (err) { /* storage blocked */ }
+      if (saved === this.LIGHT_THEME || saved === this.DARK_THEME) return;
+      this.applyTheme(e.matches ? this.LIGHT_THEME : this.DARK_THEME);
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
+
+  // Apply without persisting, so following the OS does not count as a choice.
+  applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    this.updateToggleButton(theme);
   }
 
   setTheme(theme) {
@@ -24,8 +57,8 @@ class ThemeManager {
     // Apply theme to HTML element
     document.documentElement.setAttribute('data-theme', theme);
 
-    // Save preference to localStorage
-    localStorage.setItem(this.THEME_KEY, theme);
+    // Save preference to localStorage (may throw in private mode)
+    try { localStorage.setItem(this.THEME_KEY, theme); } catch (e) { /* storage blocked */ }
 
     // Update toggle button state if it exists
     this.updateToggleButton(theme);

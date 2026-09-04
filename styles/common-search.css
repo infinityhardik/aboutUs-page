@@ -36,7 +36,7 @@
 }
 
 .search-box i {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   font-size: 1.2rem;
   flex-shrink: 0;
   opacity: 0.8;
@@ -62,7 +62,7 @@
 /* Highlight style */
 mark {
   background: rgba(var(--color-primary-rgb), 0.25);
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   padding: 0 2px;
   border-radius: 2px;
   font-weight: inherit;

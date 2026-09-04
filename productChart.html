@@ -3,6 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
+    <script>
+        /* Resolve the theme before first paint so the page never flashes the wrong one.
+           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+           preference, otherwise dark. */
+        (function () {
+          try {
+            var t = localStorage.getItem('theme-preference');
+            if (t !== 'light' && t !== 'dark') {
+              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+          } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        })();
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Plywood &amp; MDF Rates Rajkot 2026 | Spec &amp; Quote Chart</title>
     <meta name="description" content="Compare plywood, block board, laminate, flush door and MDF grades in one table, then get current 2026 wholesale rates by WhatsApp. No minimum order." />

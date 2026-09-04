@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Commercial MR Plywood Rajkot | IS 303, 4-19mm</title>
   <meta name="description" content="MR grade commercial plywood to IS 303 in Rajkot, 4mm to 19mm in 8x4, 8x3 and 7x4 sheets. For dry interior furniture; see IS 710 for wet areas." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -225,7 +241,7 @@
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Commercial Plywood <span style="color: #c58f59;">MR Grade Wholesaler in Rajkot &amp; Gujarat</span></h1>
+    <h1>Commercial Plywood <span style="color: var(--color-primary-text);">MR Grade Wholesaler in Rajkot &amp; Gujarat</span></h1>
     <p>Mahadev Traders supplies premium IS:303 MR Grade (Moisture Resistant) commercial plywood from trusted brands like Marllex, Zevik, and Simson. Durable, versatile, and affordable solutions for all your interior furniture needs.</p>
     <div class="location-badge"><i class="fas fa-boxes"></i> Wholesale Rates | Ready Stock: 4mm to 19mm</div>
   </section>
@@ -311,7 +327,7 @@
       <ul style="list-style: none; padding: 0;">
         <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><strong>Use MR Grade (Commercial):</strong> For dry areas like bedrooms, living rooms, and study rooms. It is more economical and offers excellent durability for these spaces.</li>
         <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-times" style="color: #ef4444; margin-right: 10px;"></i><strong>Don't Use MR Grade:</strong> In kitchens, bathrooms, or balconies. Constant water exposure will cause MR plywood to swell over time.</li>
-        <li style="padding: 0.5rem 0;"><i class="fas fa-long-arrow-alt-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Recommendation:</strong> Use <a href="/products/marine-plywood-710-rajkot.html">IS:710 Marine Plywood</a> for kitchen carcasses and MR grade for everything else to optimize your project budget.</li>
+        <li style="padding: 0.5rem 0;"><i class="fas fa-long-arrow-alt-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Recommendation:</strong> Use <a href="/products/marine-plywood-710-rajkot.html">IS:710 Marine Plywood</a> for kitchen carcasses and MR grade for everything else to optimize your project budget.</li>
       </ul>
     </div>
 

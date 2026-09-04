@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zevik Plywood Dealer Rajkot | MR Grade 6-18mm</title>
   <meta name="description" content="Zevik plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets, supplied wholesale to furniture makers and contractors across Gujarat." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -218,7 +234,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Zevik Plywood Supplier <span style="color: #c58f59;">Dealer in Rajkot</span> – Premium Quality Assurance</h1>
+    <h1>Zevik Plywood Supplier <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Premium Quality Assurance</h1>
     <p>Zevik plywood supplier in Rajkot - Premium quality assurance for demanding projects.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
   </section>
@@ -278,10 +294,10 @@
     
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Zevik Plywood is a premium-grade calibrated plywood brand that is highly regarded by interior designers and architects in Gujarat for its superior finish and absolute reliability. Manufactured with computer-controlled temperature and hot-press calibration, Zevik ensures 100% thickness uniformity, meaning no uneven bumps or valleys on your finished furniture.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Bonded with premium BWP grade synthetic resins and treated with anti-termite chemicals, Zevik plywood is ideal for luxury kitchen cabinets, B2B office desks, designer beds, and wall cladding panels. It offers superb dimensional stability and minimal swelling when exposed to humidity.</p>
       
       </div>

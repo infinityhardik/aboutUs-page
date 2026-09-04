@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunmica Dealer in Rajkot | 0.6 to 1.5mm Laminates</title>
   <meta name="description" content="Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -225,7 +241,7 @@
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Sunmica &amp; Decorative Laminate <span style="color: #c58f59;">Dealer in Rajkot &amp; Gujarat</span></h1>
+    <h1>Sunmica &amp; Decorative Laminate <span style="color: var(--color-primary-text);">Dealer in Rajkot &amp; Gujarat</span></h1>
     <p>Mahadev Traders is the authorised dealer for premium Sunmica and branded decorative laminates in Rajkot. Explore 1000+ designs in matte, glossy, and textured finishes for luxury interiors.</p>
     <div class="location-badge"><i class="fas fa-gem"></i> Authorised Dealer | 1000+ Designs in Stock</div>
   </section>
@@ -315,10 +331,10 @@
       <h3>🔍 Buying Guide: Choosing the Right Laminate for Your Project</h3>
       <p>Not all laminates are the same. Depending on where you plan to use them, the choice of thickness and finish varies:</p>
       <ul style="list-style: none; padding: 0;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>For Kitchens:</strong> Always choose 1.0mm thick laminates. Anti-fingerprint matte or acrylic-finish glossy laminates are best as they are easy to clean from oil splashes.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>For Wardrobes:</strong> 1.0mm decorative laminate on the outside and 0.8mm <a href="/products/liner-laminates-inner.html">liner laminate</a> on the inside ensures a professional finish and prevents moisture absorption from the back.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>For Main Doors:</strong> Use 1.25mm or 1.5mm thick textured laminates or UV-resistant exterior grade laminates to handle high traffic and light exposure.</li>
-        <li style="padding: 0.5rem 0;"><i class="fas fa-arrow-right" style="color: var(--color-primary); margin-right: 10px;"></i><strong>Adhesive Tip:</strong> For a bubble-free finish on <a href="/products/plywood-wholesaler-rajkot.html">quality plywood</a>, always use branded heat-resistant adhesives and ensure proper pressing.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>For Kitchens:</strong> Always choose 1.0mm thick laminates. Anti-fingerprint matte or acrylic-finish glossy laminates are best as they are easy to clean from oil splashes.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>For Wardrobes:</strong> 1.0mm decorative laminate on the outside and 0.8mm <a href="/products/liner-laminates-inner.html">liner laminate</a> on the inside ensures a professional finish and prevents moisture absorption from the back.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-border);"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>For Main Doors:</strong> Use 1.25mm or 1.5mm thick textured laminates or UV-resistant exterior grade laminates to handle high traffic and light exposure.</li>
+        <li style="padding: 0.5rem 0;"><i class="fas fa-arrow-right" style="color: var(--color-primary-text); margin-right: 10px;"></i><strong>Adhesive Tip:</strong> For a bubble-free finish on <a href="/products/plywood-wholesaler-rajkot.html">quality plywood</a>, always use branded heat-resistant adhesives and ensure proper pressing.</li>
       </ul>
     </div>
 

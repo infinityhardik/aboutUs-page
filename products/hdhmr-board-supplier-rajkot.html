@@ -3,6 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
+    <script>
+        /* Resolve the theme before first paint so the page never flashes the wrong one.
+           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+           preference, otherwise dark. */
+        (function () {
+          try {
+            var t = localStorage.getItem('theme-preference');
+            if (t !== 'light' && t !== 'dark') {
+              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+          } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        })();
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HDHMR Board Supplier in Rajkot | High-Density Panels</title>
     <meta name="description" content="HDHMR boards in Rajkot for modular kitchens, wardrobes and moisture-prone interiors. Density and thickness options with delivery across Gujarat." />
@@ -80,7 +96,7 @@
         }
 
         .navbar .menu a:hover {
-            color: var(--color-primary)
+            color: var(--color-primary-text)
         }
 
         .btn-primary {
@@ -226,7 +242,7 @@
     <!-- Hero Section -->
     <main>
     <section class="product-hero">
-        <h1>HDHMR Board <span style="color: #c58f59;">Wholesale Distribution Service</span></h1>
+        <h1>HDHMR Board <span style="color: var(--color-primary-text);">Wholesale Distribution Service</span></h1>
         <p>Mahadev Traders is the authorized regional supplier for High-Density High-Moisture Resistant (HDHMR) boards in Rajkot. Providing density-calibrated, moisture-immune substrates for premium modular kitchens and commercial interior management across Gujarat.</p>
         <div class="location-badge"><i class="fas fa-shield-virus"></i> Density >850 kg/m³ | Moisture Immune | Termite Resistant</div>
     </section>

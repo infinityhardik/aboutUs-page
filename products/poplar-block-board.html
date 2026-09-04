@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+      /* Resolve the theme before first paint so the page never flashes the wrong one.
+         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+         preference, otherwise dark. */
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Poplar Block Board Dealer in Rajkot | Wholesale Supply</title>
   <meta name="description" content="Poplar-core block board in Rajkot at 25mm and 30mm for wardrobes, lofts and low-load partitions. Compare it against pine and BWP before you buy." />
@@ -80,7 +96,7 @@
     }
 
     .navbar .menu a:hover {
-      color: var(--color-primary)
+      color: var(--color-primary-text)
     }
 
     .btn-primary {
@@ -233,7 +249,7 @@
   </nav>
   <main>
   <section class="product-hero">
-    <h1>Poplar Core Block Board <span style="color: #c58f59;">Dealer in Rajkot</span></h1>
+    <h1>Poplar Core Block Board <span style="color: var(--color-primary-text);">Dealer in Rajkot</span></h1>
     <p>Lightweight Poplar-core block board for indoor wardrobes, partitions, lofts, and budget-conscious furniture
       projects.</p>
     <div class="location-badge"><i class="fas fa-feather"></i> Lightweight | Cost-Effective</div>

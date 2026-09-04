@@ -3,6 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
+    <script>
+        /* Resolve the theme before first paint so the page never flashes the wrong one.
+           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
+           preference, otherwise dark. */
+        (function () {
+          try {
+            var t = localStorage.getItem('theme-preference');
+            if (t !== 'light' && t !== 'dark') {
+              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+          } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        })();
+      </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simson Plywood Dealer Rajkot | MR &amp; IS 710, 6-18mm</title>
     <meta name="description" content="Simson plywood in Rajkot, MR and IS 710 grades from 6mm to 18mm. Wholesale supply for furniture workshops and interior contractors." />
@@ -83,7 +99,7 @@
         }
 
         .navbar .menu a:hover {
-            color: var(--color-primary)
+            color: var(--color-primary-text)
         }
 
         .btn-primary {
@@ -221,7 +237,7 @@
     </nav>
     <main>
         <section class="product-hero">
-            <h1>Simson Plywood <span style="color: #c58f59;">Dealer in Rajkot</span> – Trusted Brand Quality
+            <h1>Simson Plywood <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Trusted Brand Quality
             </h1>
             <p>Simson plywood dealer in Rajkot - Branded quality assurance from trusted manufacturer.</p>
             <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
@@ -283,10 +299,10 @@
             
     <!-- Programmatic SEO Extended Content Section -->
     <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Simson Plywood is a popular, cost-effective commercial grade plywood that is widely utilized by developers, builders, and packaging industries across Rajkot and Saurashtra. It is manufactured from selected plantation timbers and bonded with urea-formaldehyde synthetic resin, offering a reliable surface and structural stability for cost-sensitive modular furniture.</p>
       
-      <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
+      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
       <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Featuring good screw-holding capabilities and a uniform density rating, Simson plywood is easy to saw, drill, and fabricate. It is ideal for internal structural paneling, packaging boxes, partition frames, wardrobe backing sheets, and residential ceiling work.</p>
       
       </div>
