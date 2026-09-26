@@ -1752,3 +1752,38 @@ ul.areas-grid {
   .home #contact { contain-intrinsic-size: auto 1220px; }
   .home .footer { contain-intrinsic-size: auto 1630px; }
 }
+
+/* Town list: same column counts as before, but an incomplete last row is centred
+   instead of hanging off the left edge. */
+ul.areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+ul.areas-grid .area-item {
+  flex: 0 0 calc((100% - 5rem) / 6);
+}
+
+@media (max-width: 1024px) {
+  ul.areas-grid .area-item {
+    flex-basis: calc((100% - 3rem) / 4);
+  }
+}
+
+@media (max-width: 768px) {
+  ul.areas-grid {
+    gap: 0.75rem;
+  }
+
+  ul.areas-grid .area-item {
+    flex-basis: calc((100% - 1.5rem) / 3);
+  }
+}
+
+@media (max-width: 480px) {
+  ul.areas-grid .area-item {
+    flex-basis: calc((100% - 0.75rem) / 2);
+  }
+}
