@@ -64,4 +64,4 @@
 - [Stock directory data](https://mahadev-traders.com/products.json): Every size held in regular stock with product type, thickness, size, face, core, grade and brand.
 - [XML sitemap](https://mahadev-traders.com/sitemap.xml): The canonical pages listed above.
 
-Older /services/*.html product mirrors and the misspelled /products/marlex-*.html pages redirect to the product pages above; use the canonical URLs listed here.
+Older /services/*.html product mirrors and the misspelled /products/marlex-*.html pages have been removed; use the canonical URLs listed here.
