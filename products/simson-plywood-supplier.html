@@ -1,508 +1,488 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
-    <meta charset="UTF-8" />
-    <script>
-        /* Resolve the theme before first paint so the page never flashes the wrong one.
-           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-           preference, otherwise dark. */
-        (function () {
-          try {
-            var t = localStorage.getItem('theme-preference');
-            if (t !== 'light' && t !== 'dark') {
-              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-            }
-            document.documentElement.setAttribute('data-theme', t);
-          } catch (e) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        })();
-      </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simson Plywood Dealer Rajkot | MR &amp; IS 710, 6-18mm</title>
-    <meta name="description" content="Simson plywood in Rajkot, MR and IS 710 grades from 6mm to 18mm. Wholesale supply for furniture workshops and interior contractors." />
-    <meta name="keywords"
-        content="Simson Plywood Rajkot, Simson Plywood Gujarat, Simson Dealer Ahmedabad, Mahadev Traders Simson" />
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
-    <link rel="canonical" href="https://mahadev-traders.com/products/simson-plywood-supplier.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <!-- Fonts with optimized loading -->
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-    </noscript>
-    <link rel="stylesheet" href="../styles/theme.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        media="print" onload="this.media='all'" />
-
-    <!-- Critical CSS - Inline for FCP optimization -->
-    <style>
-        :root {
-            --color-primary: #c58f59;
-            --color-bg: var(--color-bg-base);
-            --color-text: var(--color-text-main);
-            --navbar-height: var(--navbar-height);
-            --container-width: 1200px
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simson Flush Doors &amp; Block Board Dealer in Rajkot</title>
+  <meta name="description" content="Simson flush doors in 25 and 30mm and Simson block board in 25mm, MR grade on a pinewood core, from our Rajkot stock. Sizes and wholesale rates on enquiry." />
+  <link rel="canonical" href="https://mahadev-traders.com/products/simson-plywood-supplier.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-
-        [data-theme='dark'] {
-            --color-bg: var(--color-bg-base);
-            --color-text: var(--color-text-main);
-            --color-bg-surface: var(--color-bg-surface)
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            transition: background-color .3s ease, color .3s ease
-        }
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            background: var(--color-bg-surface);
-            height: var(--navbar-height);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2rem;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-        }
-
-        .navbar .menu {
-            display: flex;
-            gap: 2rem;
-            align-items: center
-        }
-
-        .navbar .menu a {
-            text-decoration: none;
-            color: var(--color-text);
-            font-weight: 500;
-            transition: color .3s ease
-        }
-
-        .navbar .menu a:hover {
-            color: var(--color-primary-text)
-        }
-
-        .btn-primary {
-            background: #8c582b;
-            color: #fff;
-            padding: .75rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: .95rem;
-            border: none;
-            cursor: pointer;
-            transition: transform .3s ease, box-shadow .3s ease;
-            box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #73441e;
-            box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-        }
-
-        .theme-toggle {
-            background: 0;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: .5rem 1rem;
-            color: var(--color-text);
-            display: flex;
-            align-items: center
-        }
-
-
-
-        @media (max-width:768px) {
-            .navbar .menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background: var(--color-bg-surface);
-                flex-direction: column;
-                justify-content: center;
-                padding: 2rem;
-                transition: right .3s ease
-            }
-
-            .navbar .menu.active {
-                right: 0
-            }
-        }
-    </style>
-
-    <!-- Main CSS - Deferred for non-blocking load -->
-    <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="../styles/index.css" />
-        <link rel="stylesheet" href="../styles/products.css" />
-    </noscript>
-    <meta name="keywords"
-        content="simson plywood, simson plywood Rajkot, simson plywood Gujarat, wholesale simson plywood" />
-    <meta name="author" content="Mahadev Traders" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Simson Plywood Dealer Rajkot | MR &amp; IS 710, 6-18mm" />
-    <meta property="og:description"
-        content="Simson plywood dealer in Rajkot - Branded quality assurance from trusted manufacturer. Call +91 6355 360702." />
-    <meta property="og:url" content="https://mahadev-traders.com/products/simson-plywood-supplier.html" />
-    <meta property="og:type" content="product" />
-    <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Simson Plywood",
-  "description": "Authorized dealer of Simson Plywood in Rajkot, Ahmedabad, and Saurashtra. Trusted brand quality for durable and high-strength plywood solutions."
-}
-</script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Plywood",
-      "item": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Simson Plywood Dealer in Rajkot – Trusted Brand Quality",
-      "item": "https://mahadev-traders.com/products/simson-plywood-supplier.html"
-    }
-  ]
-}
-    </script>
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <meta name="geo.region" content="IN-GJ" />
+  <meta name="geo.placename" content="Rajkot" />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Simson Flush Doors &amp; Block Board Dealer in Rajkot" />
+  <meta property="og:description" content="Simson flush doors in 25 and 30mm and Simson block board in 25mm, MR grade on a pinewood core, from our Rajkot stock. Sizes and wholesale rates on enquiry." />
+  <meta property="og:url" content="https://mahadev-traders.com/products/simson-plywood-supplier.html" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/doors.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Flush door dealer in Rajkot: MR and BWP waterproof doors" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Simson Flush Doors &amp; Block Board Dealer in Rajkot" />
+  <meta name="twitter:description" content="Simson flush doors in 25 and 30mm and Simson block board in 25mm, MR grade on a pinewood core, from our Rajkot stock. Sizes and wholesale rates on enquiry." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/doors.jpg" />
 </head>
 
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="brand"><a href="/">Mahadev Traders</a></div>
-        <div class="menu" id="menu">
-            <a href="/products/">Products</a>
-            <a href="/services/">Services</a>
-            <a href="/#about">About</a>
-            <a href="/#expertise">Expertise</a>
-            <a href="/#brands">Brands</a>
-            <a href="/#contact">Contact</a>
-            <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
-            <a href="tel:+916355360702" class="btn-primary">Call Now</a>
+    <nav class="navbar" id="navbar" aria-label="Main">
+    <div class="brand"><a href="/">Mahadev Traders</a></div>
+    <div class="menu" id="menu">
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
         </div>
-        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-    </nav>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
+      <a href="/services/">Services</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
+      <a href="tel:+916355360702" class="btn-primary">Call Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/"><i class="fas fa-home"></i> Home</a><span>/</span>
-        <a href="/products/">Products</a><span>/</span>
-        <span>Simson Plywood</span>
-    </nav>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+      <li aria-current="page">Simson Doors &amp; Block Board</li>
+    </ol>
+  </nav>
     <main>
-        <section class="product-hero">
-            <h1>Simson Plywood <span style="color: var(--color-primary-text);">Dealer in Rajkot</span> – Trusted Brand Quality
-            </h1>
-            <p>Simson plywood dealer in Rajkot - Branded quality assurance from trusted manufacturer.</p>
-            <div class="location-badge"><i class="fas fa-check-circle"></i> Quality Assured | Rajkot</div>
-        </section>
-        <section class="product-content">
-            <div class="product-intro">
-                <h2>✨ Durable & High-Strength</h2>
-                <p><strong>Simson Plywood</strong> from Mahadev Traders is known for its durability and strength. It is
-                    an ideal choice for both residential and commercial projects across Gujarat, offering long-lasting
-                    performance.</p>
-            </div>
-            <div class="specs-section">
-                <h3>📋 Product Specifications</h3>
-                <table class="specs-table">
-                    <thead>
-                        <tr>
-                            <th>Specification</th>
-                            <th>Details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Availability</td>
-                            <td>In Stock</td>
-                        </tr>
-                        <tr>
-                            <td>Quality</td>
-                            <td>High Strength Grade</td>
-                        </tr>
-                        <tr>
-                            <td>Applications</td>
-                            <td>Furniture, Partition, Ceiling</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>High Strength</h3>
-                    <p>Built to last with high-density materials.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-coins"></i></div>
-                    <h3>Wholesale Price</h3>
-                    <p>Best rates for bulk orders in Rajkot.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
-                    <h3>Quick Transit</h3>
-                    <p>Efficient delivery through our Gujarat network.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Workable</h3>
-                    <p>Excellent screw holding and nail holding capacity.</p>
-                </div>
-            </div>
-            
-    <!-- Programmatic SEO Extended Content Section -->
-    <div class="product-extended-details" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
-      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📘 Comprehensive Product Overview</h3>
-      <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Simson Plywood is a popular, cost-effective commercial grade plywood that is widely utilized by developers, builders, and packaging industries across Rajkot and Saurashtra. It is manufactured from selected plantation timbers and bonded with urea-formaldehyde synthetic resin, offering a reliable surface and structural stability for cost-sensitive modular furniture.</p>
-      
-      <h3 style="color: var(--color-primary-text); margin-bottom: 1.5rem;">📐 Technical Specifications & Standards</h3>
-      <p style="color: var(--color-text); line-height: 1.8; margin-bottom: 1.5rem;">Featuring good screw-holding capabilities and a uniform density rating, Simson plywood is easy to saw, drill, and fabricate. It is ideal for internal structural paneling, packaging boxes, partition frames, wardrobe backing sheets, and residential ceiling work.</p>
-      
+    <section class="product-hero">
+    <svg class="range-art hero-art hero-art-doors" data-animate viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <rect class="w2 art-frame" x="40" y="4" width="40" height="64" rx="2" />
+            <rect class="art-gap" x="44" y="8" width="32" height="56" rx="1" />
+            <g class="art-door">
+              <rect class="w1 art-leaf" x="44" y="8" width="32" height="56" rx="1" />
+              <path class="grain" d="M50 16v40M56 14v44M64 16v38M70 14v42" />
+              <circle class="w3 art-handle" cx="71" cy="38" r="2.4" />
+            </g>
+          </svg>
+      <h1>Simson Flush Doors &amp; Block Board <span class="h1-accent">in Rajkot</span></h1>
+      <p>Simson flush doors in 25 and 30mm and Simson block board in 25mm, from our Gondal Road stock in Rajkot. MR grade
+        on a Gurjan face and pinewood core, with rates quoted per order and no minimum quantity.</p>
+      <div class="location-badge"><i class="fas fa-check-circle"></i> 77 Simson door &amp; board sizes in regular stock</div>
+    </section>
+    <section class="product-content">
+      <div class="product-intro">
+        <h2>&#10024; Simson Doors and Boards for Dry Interiors</h2>
+        <p><strong>Simson</strong> is one of the brands Mahadev Traders stocks for flush doors and block board. Both lines
+          are MR (semi-waterproof) grade, built on a pinewood core with a Gurjan face, which makes them a dependable,
+          cost-effective choice for bedrooms, living rooms, offices and other dry positions in homes and projects across
+          Gujarat.</p>
+        <p>Each door and board is sold either plain or under the Simson mark. For bathrooms, kitchen sinks and anywhere
+          the door or carcass will meet water, choose a boiling-water-proof product instead &mdash; the grade matters more
+          than the brand.</p>
       </div>
 
-        <div class="specs-section" id="buying-guide">
-      <h3>&#128207; Simson Plywood in the Rajkot Range</h3>
-      <p>Simson is one of the branded plywood lines Mahadev Traders holds as an authorised dealer. Rajkot stock runs
-        6mm, 8mm, 12mm, 15mm and 18mm in MR and IS 710 grades.</p>
-      <p>The 15mm and 18mm boards are the working thicknesses for carcasses and shutters; 6mm and 8mm are backing
-        panels and drawer bottoms. Choose IS 710 where the panel meets water and MR where it does not &mdash; the
-        <a href="/products/plywood-wholesaler-rajkot.html">plywood range page</a> explains how the grades differ.</p>
-    </div>
-    <div class="specs-section" id="category-parent">
-      <h3>&#128279; In the Plywood Range</h3>
-      <p>This page sits under our <a href="/products/plywood-wholesaler-rajkot.html">Plywood wholesale range</a>. If you are still choosing between board types, start at the range page &mdash; it compares the options side by side.</p>
-      <div class="quick-links-grid">
-        <a href="/products/plywood-wholesaler-rajkot.html" class="quick-link"><i class="fas fa-cubes"></i><span>All Plywood</span></a>
-        <a href="/products/zevik-plywood-supplier.html" class="quick-link"><i class="fas fa-tree"></i><span>Zevik Plywood</span></a>
-        <a href="/products/marine-plywood-710-rajkot.html" class="quick-link"><i class="fas fa-ship"></i><span>Marine Plywood IS 710</span></a>
-        <a href="/products/commercial-plywood-mr-grade.html" class="quick-link"><i class="fas fa-industry"></i><span>Commercial MR Plywood</span></a>
-      </div>
-    </div>
-        <div class="specs-section" id="stock-sizes">
-      <h3>&#128207; Stock Sizes and Special Orders</h3>
-      <p><strong>Held as regular stock:</strong> 6mm, 12mm, 15mm and 18mm in 6x3, 6x4, 7x3, 7x4, 8x3 and 8x4 ft sheets. These are on the floor in Rajkot and go out
-        with the order.</p>
-      <p><strong>Available on special request:</strong> 8mm. These are not carried as regular
-        stock, but we arrange them to order &mdash; give us the size and the quantity with your enquiry
-        and the lead time will be confirmed alongside the rate.</p>
-    </div>
-    <div class="specs-section" id="ordering">
-      <h3>&#128230; Ordering &amp; Pricing</h3>
-      <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
-        single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
-        your own job before committing to the sheets you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given sheet moves with brand,
-        thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
-        would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
-        thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
-      <p><strong>Indicative rate band.</strong> As a broad reference across the whole range, MR grade runs about <strong>&#8377;1&ndash;100 per square foot</strong> and BWP / IS 710 grade about <strong>&#8377;1&ndash;500 per square foot</strong>. That span covers everything from the thinnest commercial board to the heaviest premium one, so treat it as a sanity check on a budget rather than a quotation &mdash; where your job lands inside it depends on the brand, thickness and grade you actually need. The firm rate comes back with your enquiry.</p>
-      <p>
-        <a href="tel:+916355360702">+91 6355 360702</a> &middot;
-        <a href="https://wa.me/916355360702" target="_blank" rel="noopener">WhatsApp</a> &middot;
-        <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
-      </p>
-          <p><strong>Delivery across Gujarat, freight quoted with the order.</strong> Freight is charged per order
-        and varies with the region, the service available on that route and the timing, so it is quoted alongside the
-        material rate rather than fixed in advance. <strong>Free delivery is available on select orders</strong>
-        &mdash; worth asking when you request the rate, because it can change which quantity makes sense to take in
-        one go.</p>
-    </div>
-    <div class="whatsapp-cta-section">
-                <h3>💬 Get Instant Quote on WhatsApp</h3>
-                <p>Chat with us for latest prices and availability</p>
-                <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20a%20quote%20for%20Simson%20Plywood"
-                    class="whatsapp-btn" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i><span>WhatsApp for Best Price</span>
-                </a>
-            </div>
-            <div class="related-products">
-                <h3>🔗 Related Products</h3>
-                <div class="quick-links-grid">
-                    <a href="/products/marllex-premium-plywood.html" class="quick-link"><i class="fas fa-cube"></i><span>Marllex
-                            Premium Plywood</span></a>
-                    <a href="/products/zevik-plywood-supplier.html" class="quick-link"><i class="fas fa-cube"></i><span>Zevik
-                            Plywood Supplier</span></a>
-                    <a href="/products/greytone-plywood-dealers.html" class="quick-link"><i class="fas fa-cube"></i><span>Greytone
-                            Plywood Dealers</span></a>
-                </div>
-            </div>
-            
-    <!-- FAQ Section -->
-    <div class="faq-section">
-      <h3>❓ Frequently Asked Questions About SIMSON PLYWOOD</h3>
-      <div class="faq-items">
-        <div class="faq-item">
-          <button class="faq-question"><span>What is the primary grade of Simson Plywood?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">It is primarily available in MR (Moisture Resistant) commercial grade, ideal for dry interior applications.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>Is Simson plywood suitable for wardrobes?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">Yes, it is highly recommended for wardrobe carcass backing, ceiling panels, shelves, and internal partitions.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>What thicknesses are available?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">We stock Simson plywood in 6mm, 8mm, 12mm, 15mm, and 18mm thicknesses.</div></div>
+      <div class="specs-section" id="simson-doors-boards">
+        <h3>&#128682; Simson Flush Doors and Block Board in Stock</h3>
+        <p>Every size below is held as regular stock in Rajkot and listed line by line on our
+          <a href="/productChart.html">specification chart</a>.</p>
+        <div style="overflow-x:auto;">
+        <table class="specs-table">
+          <thead>
+            <tr><th>Product</th><th>Grade</th><th>Thickness</th><th>Sizes</th><th>Face / core</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong><a href="/products/flush-doors-manufacturer-supplier.html">Simson flush doors</a></strong></td>
+              <td>B Grade MR (semi-waterproof)</td>
+              <td>25mm</td>
+              <td>72 to 81 in high, 24 to 48 in wide</td>
+              <td>Gurjan face, pinewood core</td>
+            </tr>
+            <tr>
+              <td><strong><a href="/products/flush-doors-manufacturer-supplier.html">Simson flush doors</a></strong></td>
+              <td>B Grade MR (semi-waterproof)</td>
+              <td>30mm</td>
+              <td>72 to 84 in high, 24 to 48 in wide</td>
+              <td>Gurjan face, pinewood core</td>
+            </tr>
+            <tr>
+              <td><strong><a href="/products/block-board-wholesale-supplier.html">Simson block board</a></strong></td>
+              <td>B Grade MR (semi-waterproof)</td>
+              <td>25mm</td>
+              <td>6x3, 6x4, 7x3, 7x4, 8x3 and 8x4 ft</td>
+              <td>Gurjan face, pinewood core</td>
+            </tr>
+          </tbody>
+        </table>
         </div>
       </div>
-    </div>
-<div class="cta-section">
-                <h3>Contact Us Today!</h3>
-                <p>Get the best deals on Simson Plywood</p>
 
-                <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
-                    <i class="fas fa-phone"></i>
-                    <span class="cta-phone">Call +91 6355 360702</span>
-                </a>
-                <a href="mailto:mahadevtraders@hotmail.com" class="cta-btn cta-btn-secondary">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email for Quote</span>
-                </a>
-            </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-door-open"></i></div>
+          <h3>25 or 30mm Doors</h3>
+          <p>30mm is the usual choice for main room doors that carry heavier hardware; 25mm suits lighter internal and
+            store-room doors.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+          <h3>Sizes in 3-inch Steps</h3>
+          <p>Widths from 24 to 48 inches and heights from 72 to 84 inches, so most openings are matched from stock
+            rather than cut down.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-th"></i></div>
+          <h3>25mm Block Board</h3>
+          <p>A pinewood core resists sagging over long spans, which is why block board is used for wardrobe shelves,
+            loft doors and bed frames.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-droplet"></i></div>
+          <h3>For Wet Areas</h3>
+          <p>Choose <a href="/products/waterproof-flush-doors-bwp.html">100% BWP flush doors</a> or
+            <a href="/products/bwp-waterproof-block-board.html">BWP block board</a> where there is water.</p>
+        </div>
+      </div>
+
+      <div class="specs-section" id="choosing">
+        <h3>&#128207; Choosing a Simson Door or Board</h3>
+        <p><strong>Measure the opening, not the old door.</strong> Give us the frame's clear height and width and we will
+          match the nearest stock size; if the opening sits between sizes, the next size up is trimmed on site.</p>
+        <p><strong>Match the grade to the room.</strong> Simson doors and boards are MR grade: right for bedrooms,
+          living areas, offices and wardrobes, wrong for bathrooms and sink units. For those positions see our
+          <a href="/products/waterproof-bathroom-doors.html">waterproof bathroom doors</a>.</p>
+        <p><strong>Compare with the rest of the range.</strong> The <a href="/products/flush-doors-manufacturer-supplier.html">flush
+          door range</a> and <a href="/products/block-board-wholesale-supplier.html">block board range</a> pages set
+          Simson alongside Marllex and the other cores we stock.</p>
+      </div>
+
+      <div class="specs-section" id="ordering">
+        <h3>&#128230; Ordering &amp; Pricing</h3>
+        <p><strong>No minimum order.</strong> One door or one sheet is a normal order, and you are welcome to take one
+          first to check it against your own job before ordering the rest.</p>
+        <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price moves with
+          size, thickness, grade, current batch, order quantity and the delivery destination. Call or send a WhatsApp
+          message with the sizes, quantity and delivery point and you will get the current rate for that order.</p>
+        <p><strong>Indicative rate band.</strong> As a broad reference, flush doors run about <strong>&#8377;1&ndash;500
+          per square foot of door area</strong> and block board about <strong>&#8377;1&ndash;500 per square foot</strong>.
+          Treat that as a sanity check on a budget rather than a quotation; the firm rate comes back with your enquiry.</p>
+        <p>
+          <a href="tel:+916355360702">+91 6355 360702</a> &middot;
+          <a href="https://wa.me/916355360702" target="_blank" rel="noopener">WhatsApp</a> &middot;
+          <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+        </p>
+        <p><strong>Delivery across Gujarat, freight quoted with the order.</strong> Freight varies with the region, the
+          route and the timing, so it is quoted alongside the material rate. <strong>Free delivery is available on
+          select orders</strong> &mdash; worth asking when you request the rate.</p>
+      </div>
+
+      <div class="whatsapp-cta-section">
+        <h3>&#128172; Get a Simson Door or Board Quote on WhatsApp</h3>
+        <p>Send the sizes and quantity for current rates and availability.</p>
+        <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20a%20quote%20for%20Simson%20flush%20doors%20%2F%20block%20board"
+          class="whatsapp-btn" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i><span>WhatsApp for Simson Rates</span>
+        </a>
+      </div>
+
+      <div class="related-products">
+        <h3>&#128279; Related Products</h3>
+        <div class="quick-links-grid">
+          <a href="/products/flush-doors-manufacturer-supplier.html" class="quick-link"><i class="fas fa-door-open"></i><span>All Flush Doors</span></a>
+          <a href="/products/marllex-flush-doors-premium.html" class="quick-link"><i class="fas fa-star"></i><span>Marllex Flush Doors</span></a>
+          <a href="/products/pine-wood-flush-doors.html" class="quick-link"><i class="fas fa-tree"></i><span>Pine Wood Flush Doors</span></a>
+          <a href="/products/block-board-wholesale-supplier.html" class="quick-link"><i class="fas fa-th"></i><span>All Block Board</span></a>
+          <a href="/products/marllex-block-board-premium.html" class="quick-link"><i class="fas fa-star"></i><span>Marllex Block Board</span></a>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h3>&#10067; Frequently Asked Questions About Simson</h3>
+        <div class="faq-items">
+          <div class="faq-item">
+            <button class="faq-question"><span>What does Mahadev Traders stock from Simson?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
+            <div class="faq-answer"><div class="faq-answer-content">Simson flush doors in 25mm and 30mm, and Simson block board in 25mm. Both are B Grade MR (semi-waterproof), with a Gurjan face on a pinewood core, sold plain or under the Simson mark.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>What sizes do Simson flush doors come in?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
+            <div class="faq-answer"><div class="faq-answer-content">Widths from 24 to 48 inches in 3-inch steps. Heights run from 72 to 81 inches in 25mm doors and from 72 to 84 inches in 30mm doors.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Can I use a Simson flush door for a bathroom?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
+            <div class="faq-answer"><div class="faq-answer-content">Not recommended. Simson doors are MR grade, made for dry rooms. For bathrooms and wet areas use a 100% BWP (boiling water proof) flush door.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question"><span>Is there a minimum order for Simson doors?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
+            <div class="faq-answer"><div class="faq-answer-content">No. A single door is a normal order, and larger quantities are quoted at a lower rate per door.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h3>Get Today's Simson Door &amp; Board Rates</h3>
+        <p>Call or email with the sizes and quantity you need.</p>
+        <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
+          <i class="fas fa-phone"></i>
+          <span class="cta-phone">Call +91 6355 360702</span>
+        </a>
+        <a href="mailto:mahadevtraders@hotmail.com" class="cta-btn cta-btn-secondary">
+          <i class="fas fa-envelope"></i>
+          <span>Email for Quote</span>
+        </a>
+      </div>
     </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Mahadev Traders</h3>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-                        Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot,
-                        Ahmedabad &
-                        Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
-                    </p>
-                </div>
-                <div class="footer-col" style="min-width: 200px;">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links" style="list-style: none;">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/products/">All Products</a></li>
-                        <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-                        <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-                        <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/"
-                            target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-                            aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                        <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-                            aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-                        <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                                class="fas fa-address-book" aria-hidden="true"></i></a>
-                        <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-                            aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door
-                    Wholesaler in Rajkot, Gujarat</p>
-            </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <h3>Mahadev Traders</h3>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Gondal Road, near S.T. Workshop,<br />Panchsheel Park, Samrat Industrial Area,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; block board</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
+      </div>
+    </div>
+  </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
     <script src="../scripts/theme.js" defer></script>
     <script src="../scripts/navbar.js" defer></script>
-    <script src="../scripts/products-nav.js" defer></script>
-
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "What is the primary grade of Simson Plywood?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It is primarily available in MR (Moisture Resistant) commercial grade, ideal for dry interior applications."
+      "@type": "ItemPage",
+      "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#webpage",
+      "url": "https://mahadev-traders.com/products/simson-plywood-supplier.html",
+      "name": "Simson Flush Doors & Block Board Dealer in Rajkot",
+      "description": "Simson flush doors in 25 and 30mm and Simson block board in 25mm, MR grade on a pinewood core, from our Rajkot stock. Sizes and wholesale rates on enquiry.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/doors.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#service"
       }
     },
     {
-      "@type": "Question",
-      "name": "Is Simson plywood suitable for wardrobes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, it is highly recommended for wardrobe carcass backing, ceiling panels, shelves, and internal partitions."
-      }
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#service",
+      "name": "Simson flush door and block board supply in Rajkot",
+      "serviceType": "Simson flush door and block board supply",
+      "category": "Flush Doors",
+      "description": "Simson flush doors in 25 and 30mm and Simson block board in 25mm, MR grade on a pinewood core, from our Rajkot stock. Sizes and wholesale rates on enquiry.",
+      "url": "https://mahadev-traders.com/products/simson-plywood-supplier.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gondal Road, near S.T. Workshop, Panchsheel Park, Samrat Industrial Area",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ],
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "Simson"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "What thicknesses are available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We stock Simson plywood in 6mm, 8mm, 12mm, 15mm, and 18mm thicknesses."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Flush Doors",
+          "item": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Simson Doors & Block Board",
+          "item": "https://mahadev-traders.com/products/simson-plywood-supplier.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/simson-plywood-supplier.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Mahadev Traders stock from Simson?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Simson flush doors in 25mm and 30mm, and Simson block board in 25mm. Both are B Grade MR (semi-waterproof), with a Gurjan face on a pinewood core, sold plain or under the Simson mark."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sizes do Simson flush doors come in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Widths from 24 to 48 inches in 3-inch steps. Heights run from 72 to 81 inches in 25mm doors and from 72 to 84 inches in 30mm doors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a Simson flush door for a bathroom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not recommended. Simson doors are MR grade, made for dry rooms. For bathrooms and wet areas use a 100% BWP (boiling water proof) flush door."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum order for Simson doors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A single door is a normal order, and larger quantities are quoted at a lower rate per door."
+          }
+        }
+      ]
     }
   ]
 }
-  </script>
-  <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        item.classList.toggle('active');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          if (i !== item) i.classList.remove('active');
-        });
-      });
-    });
   </script>
 </body>
 

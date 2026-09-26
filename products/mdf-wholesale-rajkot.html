@@ -1,328 +1,112 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
-    <meta charset="UTF-8" />
-    <script>
-        /* Resolve the theme before first paint so the page never flashes the wrong one.
-           Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-           preference, otherwise dark. */
-        (function () {
-          try {
-            var t = localStorage.getItem('theme-preference');
-            if (t !== 'light' && t !== 'dark') {
-              t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-            }
-            document.documentElement.setAttribute('data-theme', t);
-          } catch (e) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        })();
-      </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDF &amp; HDHMR Wholesale Rajkot | 3mm to 25mm</title>
-    <meta name="description" content="MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally." />
-    <meta name="keywords"
-        content="MDF wholesale Rajkot, HDHMR board Gujarat, MDF dealer Rajkot, MDF supplier Saurashtra, Motherwood MDF Rajkot, MDF board wholesale Gujarat, HDHMR wholesale Rajkot, MDF wholesaler Ahmedabad, MDF board supplier Gujarat, Super HD+WR MDF, TurBo+ MDF, Boilo MDF, Exterior Grade MDF, Action Tesa MDF, Century MDF, Greenply MDF, Greenlam MDF, E3 MDF" />
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
-    <link rel="canonical" href="https://mahadev-traders.com/products/mdf-wholesale-rajkot.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="../styles/theme.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    </noscript>
-
-    <!-- Critical CSS -->
-    <style>
-        :root {
-            --color-primary: #c58f59;
-            --color-bg: var(--color-bg-base);
-            --color-text: var(--color-text-main);
-            --navbar-height: var(--navbar-height);
-            --container-width: 1200px
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MDF &amp; HDHMR Board Dealer in Rajkot | Motherwood 3-25mm</title>
+  <meta name="description" content="MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally." />
+  <link rel="canonical" href="https://mahadev-traders.com/products/mdf-wholesale-rajkot.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-
-        [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: var(--color-bg-surface)
-    }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            transition: background-color .3s ease, color .3s ease
-        }
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            background: var(--color-bg-surface);
-            height: var(--navbar-height);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 2rem;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-        }
-
-        .navbar .menu {
-            display: flex;
-            gap: 2rem;
-            align-items: center
-        }
-
-        .navbar .menu a {
-            text-decoration: none;
-            color: var(--color-text);
-            font-weight: 500;
-            transition: color .3s ease
-        }
-
-        .navbar .menu a:hover {
-            color: var(--color-primary-text)
-        }
-
-        .btn-primary {
-            background: #8c582b;
-            color: #fff;
-            padding: .75rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: .95rem;
-            border: none;
-            cursor: pointer;
-            transition: transform .3s ease, box-shadow .3s ease;
-            box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #73441e;
-            box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-        }
-
-        .theme-toggle {
-            background: 0;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: .5rem 1rem;
-            color: var(--color-text);
-            display: flex;
-            align-items: center
-        }
-
-        
-
-        @media (max-width:768px) {
-            .navbar .menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background: var(--color-bg-surface);
-                flex-direction: column;
-                justify-content: center;
-                padding: 2rem;
-                transition: right .3s ease
-            }
-
-            .navbar .menu.active {
-                right: 0
-            }
-        }
-    </style>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="../styles/index.css" />
-        <link rel="stylesheet" href="../styles/products.css" />
-    </noscript>
-
-    <meta name="author" content="Mahadev Traders" />
-    <meta name="robots" content="index, follow" />
-    <meta name="geo.region" content="IN-GJ" />
-    <meta name="geo.placename" content="Rajkot" />
-    <meta property="og:title" content="MDF &amp; HDHMR Wholesale Rajkot | 3mm to 25mm" />
-    <meta property="og:description"
-        content="Mahadev Traders is the #1 MDF wholesale supplier in Rajkot &amp; Gujarat. Authorized dealer of Motherwood MDF — Super HD+WR, Exterior Grade &amp; TurBo+. Call +91 6355 360702." />
-    <meta property="og:url" content="https://mahadev-traders.com/products/mdf-wholesale-rajkot.html" />
-    <meta property="og:type" content="product" />
-    <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "MDF / HDHMR Board — Wholesale Supply Rajkot",
-  "description": "Authorized dealer of Motherwood MDF. Stocking Super HD+WR, Exterior Grade, and TurBo+ grades. Also stocking Action Tesa, Century, Vir, Greenply, Greenlam, and E3 at wholesale rates.",
-  "category": "Building Materials > Board > MDF",
-  "brand": {
-    "@type": "Brand",
-    "name": "Motherwood (Authorized Dealer)"
-  },
-  "image": "https://mahadev-traders.com/assets/images/motherwood-1200x764.webp"
-}
-</script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the difference between MDF and HDHMR?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "MDF (Medium Density Fibreboard) is a grain-free engineered wood ideal for dry interior applications. HDHMR (High Density High Moisture Resistant) is a more advanced version with a higher density core and special water-resistant resins. While standard MDF is for bedroom furniture and wall panels, HDHMR is specifically designed for kitchen cabinets and bathrooms where moisture levels are high."
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Which brand of MDF is best for CNC routing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For clean CNC routing and intricate carving, density is key. We recommend Motherwood TurBo+ or Action Tesa HDHMR. These boards have a very compact core that doesn't chip or fray when cut at high speeds, resulting in a smooth finish that requires minimal sanding before painting."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is MDF better than plywood for wardrobes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "MDF offers a much smoother surface for painting or laminating compared to plywood. It is also cheaper. However, for large wardrobe carcasses that need to hold heavy weight, plywood is traditionally preferred. For wardrobe shutters and decorative panels, MDF is the superior choice for a modern, seamless look."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer delivery across Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, as a wholesaler, we arrange transport for bulk MDF orders across all major cities in Gujarat including Ahmedabad, Surat, Vadodara, Jamnagar, and Morbi. For Rajkot city orders, we offer same-day or next-day delivery depending on stock availability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can MDF be used for CNC jaali cutting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, but only \"Router Grade\" high-density MDF (like Motherwood TurBo+) should be used. Low-density boards will chip and have fuzzy edges. We supply specific CNC-optimized boards for architectural carving."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer pre-laminated MDF boards?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We supply factory-pressed pre-laminated boards (one-side or both-side) in a variety of solid colors and wood textures, which is much more durable than site-pasted laminates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the internal bond strength of your boards?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our Motherwood premium range features high internal bond strength, ensuring excellent screw-holding capacity and durability under load, essential for heavy modular furniture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the lead time for bulk delivery in Surat or Vadodara?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We provide scheduled bulk delivery to Surat and Vadodara within 2-3 working days. For the Rajkot local region, we offer same-day or next-day delivery from our ready stock."
-      }
-    }
-  ]
-}
+    })();
   </script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "MDF Wholesale in Rajkot &amp; Gujarat — #1 HDHMR Board Supplier",
-      "item": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html"
-    }
-  ]
-}
-    </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <meta name="geo.region" content="IN-GJ" />
+  <meta name="geo.placename" content="Rajkot" />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MDF &amp; HDHMR Board Dealer in Rajkot | Motherwood 3-25mm" />
+  <meta property="og:description" content="MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally." />
+  <meta property="og:url" content="https://mahadev-traders.com/products/mdf-wholesale-rajkot.html" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/mdf.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MDF and HDHMR board dealer in Rajkot: Motherwood grades" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MDF &amp; HDHMR Board Dealer in Rajkot | Motherwood 3-25mm" />
+  <meta name="twitter:description" content="MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/mdf.jpg" />
 </head>
 
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="brand"><a href="/">Mahadev Traders</a></div>
-        <div class="menu" id="menu">
-            <a href="/products/" class="active">Products</a>
-            <a href="/services/">Services</a>
-            <a href="/#about">About</a>
-            <a href="/#expertise">Expertise</a>
-            <a href="/#brands">Brands</a>
-            <a href="/#contact">Contact</a>
-            <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
-            <a href="tel:+916355360702" class="btn-primary">Call Now</a>
+    <nav class="navbar" id="navbar" aria-label="Main">
+    <div class="brand"><a href="/">Mahadev Traders</a></div>
+    <div class="menu" id="menu">
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html" aria-current="page">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
         </div>
-        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-    </nav>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
+      <a href="/services/">Services</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
+      <a href="tel:+916355360702" class="btn-primary">Call Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/"><i class="fas fa-home"></i> Home</a><span>/</span>
-        <a href="/products/">Products</a><span>/</span>
-        <span>MDF Wholesale Rajkot</span>
-    </nav>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li aria-current="page">MDF &amp; HDHMR</li>
+    </ol>
+  </nav>
 
     <main>
         <section class="product-hero">
-            <h1>MDF Wholesale in <span style="color: var(--color-primary-text);">Rajkot &amp; Gujarat</span> — #1 HDHMR Board Supplier
-            </h1>
-            <p>Mahadev Traders is the leading wholesale supplier of MDF and HDHMR boards in Rajkot, Saurashtra, and
-                Gujarat. Authorized dealer of Motherwood MDF — Super HD+WR, Exterior Grade &amp; TurBo+.</p>
+    <svg class="range-art hero-art hero-art-mdf" data-animate viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <rect class="w3 art-slab" x="8" y="18" width="104" height="36" rx="3" />
+            <g class="speckle">
+              <circle cx="20" cy="28" r="1.2" /><circle cx="34" cy="42" r="1" /><circle cx="46" cy="26" r="1.1" />
+              <circle cx="58" cy="46" r="1.2" /><circle cx="70" cy="30" r="1" /><circle cx="82" cy="44" r="1.1" />
+              <circle cx="94" cy="26" r="1.2" /><circle cx="102" cy="40" r="1" /><circle cx="26" cy="47" r="0.9" />
+              <circle cx="88" cy="35" r="0.9" /><circle cx="52" cy="35" r="0.9" />
+            </g>
+            <rect class="w2" x="8" y="54" width="104" height="4" rx="2" />
+          </svg>
+            <h1>MDF &amp; HDHMR Board Dealer <span class="h1-accent">in Rajkot</span></h1>
+            <p>Mahadev Traders supplies MDF and HDHMR boards wholesale and retail from Rajkot to Saurashtra and the rest of Gujarat. Authorized dealer of Motherwood MDF — Super HD+WR, Exterior Grade &amp; TurBo+.</p>
             <div class="location-badge"><i class="fas fa-layer-group"></i> MDF / HDHMR Wholesale Supplier | Rajkot</div>
         </section>
 
         <section class="product-content">
             <div class="product-intro">
-                <h2>🏆 Gujarat's Premier MDF &amp; HDHMR Wholesale Supplier</h2>
+                <h2>🏆 MDF &amp; HDHMR Wholesale Supply in Rajkot</h2>
                 <div
                     style="margin:1.5rem 0;padding:1rem 1.5rem;background:linear-gradient(135deg,rgba(197, 143, 89,0.08),rgba(140, 88, 43,0.04));border-radius:10px;border-left:4px solid #c58f59">
                     <strong style="color: var(--color-primary-text)">MDF Quality Hierarchy (Low → High):</strong><br />
@@ -463,9 +247,9 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-                    <h3>15+ MDF Brands</h3>
-                    <p>Motherwood, Action Tesa, Century, Vir, Greenply, Greenlam, E3 &amp; more. One-stop wholesale
-                        source for all MDF needs.</p>
+                    <h3>Seven MDF Brands</h3>
+                    <p>Motherwood, Action Tesa, Century, Vir, Greenply, Greenlam and E3, plus prelam MDF. One stop
+                        for plain, high-density and pre-laminated boards.</p>
                 </div>
             </div>
 
@@ -483,8 +267,7 @@
                     suitable for kitchen cabinets, bathroom vanities, and high-humidity environments where regular MDF
                     would fail.</p>
                 <p>As Gujarat's furniture manufacturing industry grows — particularly in Rajkot, Morbi, and Ahmedabad —
-                    demand for quality MDF wholesale supply has surged. Mahadev Traders is positioned as the #1
-                    wholesale source for MDF in Saurashtra, with stock of all major grades and thicknesses available for
+                    demand for quality MDF wholesale supply has surged. Mahadev Traders supplies MDF across Saurashtra, with stock of all major grades and thicknesses available for
                     immediate dispatch.</p>
             </div>
 
@@ -515,6 +298,25 @@
                         style="padding: 1.2rem; background: var(--color-bg-surface); border-radius: 10px; border: 1px solid rgba(197, 143, 89,0.15); font-weight: 600;">
                         E3</div>
                 </div>
+            </div>
+
+            <div class="specs-section" id="prelam-mdf">
+                <h3>&#127912; Prelam MDF (Pre-Laminated MDF)</h3>
+                <p><strong>Prelam MDF</strong> is MDF with a decorative laminate or melamine finish pressed onto the board
+                    at the factory, so it arrives ready-finished on one or both faces. It saves pasting and pressing laminate
+                    on site, gives an even, factory-flat surface, and is widely used for wardrobe shutters and carcasses,
+                    kitchen cabinets, office furniture, display units and wall panelling.</p>
+                <ul class="applications-list">
+                    <li><strong>Edges need finishing:</strong> the laminate covers the faces only, so exposed edges are
+                        closed with edge-banding tape in a matching shade.</li>
+                    <li><strong>Choose the core for the room:</strong> for kitchens and humid positions, ask whether the
+                        design you want is available on a moisture-resistant or high-density core.</li>
+                    <li><strong>Pick shades against the sheet:</strong> designs change with the batch in stock, so compare
+                        against a current sample before committing a whole scheme.</li>
+                </ul>
+                <p>Designs, thicknesses and brands of prelam MDF are confirmed with your enquiry &mdash; send the design or
+                    finish you have in mind, the thickness and the quantity on
+                    <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20prelam%20MDF%20designs%20and%20rates" target="_blank" rel="noopener">WhatsApp</a>.</p>
             </div>
 
             <!-- WhatsApp CTA -->
@@ -603,7 +405,7 @@
       <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
         single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
         your own job before committing to the sheets you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given sheet moves with brand,
+      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price of any given sheet moves with brand,
         thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
         would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
         thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
@@ -689,7 +491,7 @@
             <!-- CTA -->
             <div class="cta-section">
                 <h3>Order MDF / HDHMR Boards Today!</h3>
-                <p>Get the best wholesale prices on MDF boards in Rajkot, Saurashtra &amp; Gujarat. 30+ years of trust.</p>
+                <p>Get current wholesale rates on MDF boards in Rajkot, Saurashtra &amp; Gujarat. 30+ years of trust.</p>
                 
         <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
           <i class="fas fa-phone"></i>
@@ -703,72 +505,252 @@
     </section>
     </main>
 
-    <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        item.classList.toggle('active');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          if (i !== item) i.classList.remove('active');
-        });
-      });
-    });
-    </script>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Mahadev Traders</h3>
-                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-                        Your trusted partner for premium quality MDF / HDHMR, Plywood, Block-Boards, and Flush Doors in
-                        Rajkot, Ahmedabad &amp; Saurashtra. Authorized dealer of Motherwood MDF — Super HD+WR, Exterior
-                        Grade &amp; TurBo+. Over 30 years of excellence in wholesale distribution across Gujarat.
-                    </p>
-                </div>
-                <div class="footer-col" style="min-width: 200px;">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links" style="list-style: none;">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/products/">All Products</a></li>
-                        <li><a href="/products/mdf-wholesale-rajkot.html">MDF Wholesale Rajkot</a></li>
-                        <li><a href="/products/motherwood-mdf-super-hd-wr.html">Super HD+WR MDF</a></li>
-                        <li><a href="/products/motherwood-mdf-exterior-grade.html">Exterior Grade MDF</a></li>
-                        <li><a href="/products/motherwood-mdf-turbo-plus.html">TurBo+ MDF</a></li>
-                        <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-                        <li><a href="/#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/"
-                            target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-                            aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                        <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-                            aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-                        <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                                class="fas fa-address-book" aria-hidden="true"></i></a>
-                        <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-                            aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | MDF, HDHMR &amp; Plywood Wholesale Supplier in
-                    Rajkot, Gujarat</p>
-            </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <h3>Mahadev Traders</h3>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Gondal Road, near S.T. Workshop,<br />Panchsheel Park, Samrat Industrial Area,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; block board</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
+      </div>
+    </div>
+  </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
 
     <script src="../scripts/theme.js" defer></script>
     <script src="../scripts/navbar.js" defer></script>
-    <script src="../scripts/products-nav.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#webpage",
+      "url": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html",
+      "name": "MDF & HDHMR Board Dealer in Rajkot | Motherwood 3-25mm",
+      "description": "MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/mdf.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#service",
+      "name": "MDF and HDHMR board supply in Rajkot",
+      "serviceType": "MDF and HDHMR board supply",
+      "category": "MDF & HDHMR",
+      "description": "MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally.",
+      "url": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gondal Road, near S.T. Workshop, Panchsheel Park, Samrat Industrial Area",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ],
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "Motherwood"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "MDF & HDHMR",
+          "item": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can MDF be used for CNC jaali cutting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but only \"Router Grade\" high-density MDF (like Motherwood TurBo+) should be used. Low-density boards will chip and have fuzzy edges. We supply specific CNC-optimized boards for architectural carving."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer pre-laminated MDF boards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We supply factory-pressed pre-laminated boards (one-side or both-side) in a variety of solid colors and wood textures, which is much more durable than site-pasted laminates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the internal bond strength of your boards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Motherwood premium range features high internal bond strength, ensuring excellent screw-holding capacity and durability under load, essential for heavy modular furniture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the lead time for bulk delivery in Surat or Vadodara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide scheduled bulk delivery to Surat and Vadodara within 2-3 working days. For the Rajkot local region, we offer same-day or next-day delivery from our ready stock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between MDF and HDHMR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MDF (Medium Density Fibreboard) is a grain-free engineered wood ideal for dry interior applications. HDHMR (High Density High Moisture Resistant) is a more advanced version with a higher density core and special water-resistant resins. While standard MDF is for bedroom furniture and wall panels, HDHMR is specifically designed for kitchen cabinets and bathrooms where moisture levels are high."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which brand of MDF is best for CNC routing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For clean CNC routing and intricate carving, density is key. We recommend Motherwood TurBo+ or Action Tesa HDHMR. These boards have a very compact core that doesn't chip or fray when cut at high speeds, resulting in a smooth finish that requires minimal sanding before painting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is MDF better than plywood for wardrobes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MDF offers a much smoother surface for painting or laminating compared to plywood. It is also cheaper. However, for large wardrobe carcasses that need to hold heavy weight, plywood is traditionally preferred. For wardrobe shutters and decorative panels, MDF is the superior choice for a modern, seamless look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer delivery across Gujarat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as a wholesaler, we arrange transport for bulk MDF orders across all major cities in Gujarat including Ahmedabad, Surat, Vadodara, Jamnagar, and Morbi. For Rajkot city orders, we offer same-day or next-day delivery depending on stock availability."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </body>
 
 </html>

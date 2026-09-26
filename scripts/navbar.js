@@ -333,3 +333,81 @@
     initNavbar();
   }
 })();
+
+/* Motion: marks [data-animate] elements with .is-in the first time they scroll into
+   view, keeps [data-animate="loop"] graphics playing only while visible, and turns the
+   grade guide into tabs. Everything is readable without it: CSS only hides an element's
+   start state under html.js, and reduced-motion users get the end state immediately. */
+(function () {
+  'use strict';
+
+  function initMotion() {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = document.querySelectorAll('[data-animate]');
+
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-in'); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var el = entry.target;
+          if (entry.isIntersecting) {
+            el.classList.add('is-in');
+            el.classList.add('is-playing');
+          } else {
+            el.classList.remove('is-playing');
+          }
+          if (entry.isIntersecting && el.getAttribute('data-animate') !== 'loop') {
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    }
+
+    // Grade guide: plain stacked sections without JS, tabs with it.
+    document.querySelectorAll('[data-tabs]').forEach(function (tool) {
+      var tabs = Array.prototype.slice.call(tool.querySelectorAll('[role="tab"]'));
+      var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+      if (!tabs.length) return;
+      tool.classList.add('tabs-ready');
+
+      function select(i, focus) {
+        tabs.forEach(function (t, j) {
+          var on = i === j;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+          if (panels[j]) panels[j].hidden = !on;
+        });
+        tool.setAttribute('data-level', panels[i] ? panels[i].getAttribute('data-level') : '1');
+        // Restart the water-drop demo for the newly chosen room.
+        var demo = tool.querySelector('.drop-demo');
+        if (demo && !reduce) {
+          demo.classList.remove('is-in');
+          void demo.getBoundingClientRect();
+          demo.classList.add('is-in');
+        }
+        if (focus) tabs[i].focus();
+      }
+
+      tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { select(i, false); });
+        t.addEventListener('keydown', function (e) {
+          var k = e.key, n = tabs.length, next = null;
+          if (k === 'ArrowRight' || k === 'ArrowDown') next = (i + 1) % n;
+          if (k === 'ArrowLeft' || k === 'ArrowUp') next = (i - 1 + n) % n;
+          if (k === 'Home') next = 0;
+          if (k === 'End') next = n - 1;
+          if (next !== null) { e.preventDefault(); select(next, true); }
+        });
+      });
+      select(0, false);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMotion);
+  } else {
+    initMotion();
+  }
+})();

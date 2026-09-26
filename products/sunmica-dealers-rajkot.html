@@ -1,247 +1,102 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8" />
-  <script>
-      /* Resolve the theme before first paint so the page never flashes the wrong one.
-         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-         preference, otherwise dark. */
-      (function () {
-        try {
-          var t = localStorage.getItem('theme-preference');
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sunmica Dealer in Rajkot | 0.6 to 1.5mm Laminates</title>
   <meta name="description" content="Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme." />
-  <meta name="keywords"
-    content="Sunmica Dealer Rajkot, Laminates Supplier Gujarat, Sunmica Ahmedabad, Mahadev Traders" />
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
   <link rel="canonical" href="https://mahadev-traders.com/products/sunmica-dealers-rajkot.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="../styles/theme.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
-    onload="this.media='all'" />
-
-  <!-- Critical CSS - Inline for FCP optimization -->
-  <style>
-    :root {
-      --color-primary: #c58f59;
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --navbar-height: var(--navbar-height);
-      --container-width: 1200px
-    }
-
-    [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: var(--color-bg-surface)
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      transition: background-color .3s ease, color .3s ease
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--color-bg-surface);
-      height: var(--navbar-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 2rem;
-      align-items: center
-    }
-
-    .navbar .menu a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-weight: 500;
-      transition: color .3s ease
-    }
-
-    .navbar .menu a:hover {
-      color: var(--color-primary-text)
-    }
-
-    .btn-primary {
-      background: #8c582b;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: .95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #73441e;
-      box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-    }
-
-    .theme-toggle {
-      background: 0;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .5rem 1rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center
-    }
-
-    
-
-    @media (max-width:768px) {
-      .navbar .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--color-bg-surface);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right .3s ease
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-
-      .navbar .menu.active {
-        right: 0
-      }
-    }
-  </style>
-
-  <!-- Main CSS - Deferred for non-blocking load -->
-  <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/products.css" />
-  </noscript>
-  <!-- SEO Meta Tags -->
-  <meta name="author" content="Mahadev Traders" />
-  <meta name="robots" content="index, follow" />
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Sunmica Dealer in Rajkot | 0.6 to 1.5mm Laminates" />
-  <meta property="og:description"
-    content="Premium Sunmica and decorative laminates in Rajkot. Authorised dealer for leading brands. 1000+ designs in matte, glossy, and textured finishes." />
+  <meta property="og:description" content="Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme." />
   <meta property="og:url" content="https://mahadev-traders.com/products/sunmica-dealers-rajkot.html" />
-  <meta property="og:type" content="product" />
-  <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/laminates.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Laminate and sunmica dealer in Rajkot" />
   <meta name="twitter:card" content="summary_large_image" />
-  
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Sunmica & Decorative Laminates — Rajkot & Gujarat",
-  "description": "Leading Sunmica and laminate dealer in Rajkot. Browse 1000+ premium designs in matte, glossy, suede, and textured finishes for home and office interiors.",
-  "category": "Building Materials > Finishes > Laminates",
-  "brand": {
-    "@type": "Brand",
-    "name": "Multiple Brands (Sunmica, Merino, Royal Touch, Greenlam)"
-  }
-}
-</script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Laminates",
-      "item": "https://mahadev-traders.com/products/decorative-laminates-sheets.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Sunmica &amp; Decorative Laminate Dealer in Rajkot &amp; Gujarat",
-      "item": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html"
-    }
-  ]
-}
-    </script>
+  <meta name="twitter:title" content="Sunmica Dealer in Rajkot | 0.6 to 1.5mm Laminates" />
+  <meta name="twitter:description" content="Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/laminates.jpg" />
 </head>
 
 <body>
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main">
     <div class="brand"><a href="/">Mahadev Traders</a></div>
     <div class="menu" id="menu">
-      <a href="/products/">Products</a>
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
+        </div>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
       <a href="/services/">Services</a>
       <a href="/#about">About</a>
-      <a href="/#expertise">Expertise</a>
-      <a href="/#brands">Brands</a>
       <a href="/#contact">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
       <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/"><i class="fas fa-home"></i> Home</a><span>/</span>
-    <a href="/products/">Products</a><span>/</span>
-    <span>Sunmica Dealers Rajkot</span>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+      <li aria-current="page">Sunmica</li>
+    </ol>
   </nav>
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Sunmica &amp; Decorative Laminate <span style="color: var(--color-primary-text);">Dealer in Rajkot &amp; Gujarat</span></h1>
+    <svg class="range-art hero-art hero-art-laminates" data-animate viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <g class="art-fan">
+              <rect class="lam lam1" x="30" y="14" width="60" height="44" rx="3" />
+              <rect class="lam lam2" x="30" y="14" width="60" height="44" rx="3" />
+              <rect class="lam lam3" x="30" y="14" width="60" height="44" rx="3" />
+            </g>
+          </svg>
+    <h1>Sunmica Dealer <span class="h1-accent">in Rajkot</span></h1>
     <p>Mahadev Traders is the authorised dealer for premium Sunmica and branded decorative laminates in Rajkot. Explore 1000+ designs in matte, glossy, and textured finishes for luxury interiors.</p>
     <div class="location-badge"><i class="fas fa-gem"></i> Authorised Dealer | 1000+ Designs in Stock</div>
   </section>
@@ -251,7 +106,7 @@
     <div class="product-intro">
       <h2>Transform Your Interiors with Premium Sunmica &amp; Laminates</h2>
       <p>Laminates, commonly known in India as <strong>Sunmica</strong>, are the most popular surfacing material for furniture, wall panels, and cabinets. They are created by fusing multiple layers of kraft paper with phenolic resin under high pressure and temperature, topped with a decorative paper layer that defines the design.</p>
-      <p>As a leading <strong>Sunmica dealer in Rajkot</strong>, Mahadev Traders brings you a curated collection of high-pressure laminates (HPL) that combine aesthetic beauty with extreme durability. Whether you are looking for the classic 1.0mm thick sheets for kitchen shutters or the more flexible 0.8mm <a href="/products/liner-laminates-inner.html">liner laminates</a> for wardrobe interiors, we stock them all under one roof at Gondal Road.</p>
+      <p>As a <strong>Sunmica dealer in Rajkot</strong>, Mahadev Traders brings you a curated collection of high-pressure laminates (HPL) that combine aesthetic beauty with extreme durability. Whether you are looking for the classic 1.0mm thick sheets for kitchen shutters or the more flexible 0.8mm <a href="/products/liner-laminates-inner.html">liner laminates</a> for wardrobe interiors, we stock them all under one roof at Gondal Road.</p>
       <p>Our collection features everything from natural wood grains and marble stone patterns to solid vibrant colors and abstract metallic finishes. We cater to interior designers, architects, and homeowners across Rajkot, Ahmedabad, and the Saurashtra region.</p>
     </div>
 
@@ -375,7 +230,7 @@
               </tr>
               <tr>
                 <td><strong>Supply Capacity</strong></td>
-                <td>Ready stock of 5000+ sheets across various brands for immediate dispatch.</td>
+                <td>Ready stock across various brands and shades for immediate dispatch.</td>
               </tr>
             </tbody>
           </table>
@@ -393,7 +248,7 @@
       <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
         single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
         your own job before committing to the sheets you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given sheet moves with brand,
+      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price of any given sheet moves with brand,
         thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
         would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
         thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
@@ -492,163 +347,274 @@
       </div>
     </section>
     </main>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the standard size of a Sunmica/Laminate sheet?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The standard size for decorative laminate sheets in India is 8 feet by 4 feet (2440mm x 1220mm). Some brands also offer specialty sizes like 7x3 feet for doors or oversized sheets for large office tables, but 8x4 is the universal standard stocked by all dealers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is 1.0mm thickness recommended over 0.8mm?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "1.0mm laminates are thicker, providing a flatter surface that hides minor imperfections in the underlying plywood. They also have a deeper design layer and a thicker protective overlay, making them much more resistant to wear, impact, and chipping at the edges. 0.8mm is typically used for internal surfaces (liner) or vertical surfaces with low impact."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can laminates be used on existing furniture?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, laminates can be pasted over existing plywood furniture, provided the surface is cleaned of old polish or paint and sanded to create a rough texture for the adhesive to bond. However, you cannot paste laminate over old laminate &mdash; the old layer must be removed or sanded down significantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I clean glossy Sunmica to avoid scratches?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For glossy finishes, never use abrasive pads or harsh chemical cleaners. Use a soft microfiber cloth slightly dampened with water or a very mild glass cleaner. Always wipe in a circular motion and dry the surface immediately with a dry microfiber cloth to prevent water spots."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the price of Sunmica in Rajkot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sunmica prices in Rajkot vary based on brand and finish. Standard 1.0mm matte laminates typically start from ₹800 to ₹1200 per sheet, while premium high-gloss, acrylic, or textured laminates can range from ₹1500 to ₹4500 per sheet. For wholesale bulk orders, Mahadev Traders offers special project pricing."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer home delivery in Rajkot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we offer home and site delivery for laminate orders across Rajkot city. For bulk orders across Gujarat (Ahmedabad, Surat, Jamnagar), we arrange safe transport to ensure sheets are delivered without cracks or edge damage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between 0.8mm and 1mm laminates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "1mm laminates are thicker, more durable, and offer better resistance to chipping and warping, making them ideal for external surfaces. 0.8mm sheets are more economical and are typically used for residential wardrobes or areas with moderate use."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you supply matching edge-bands for all designs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. For our primary wholesale brands, we can coordinate matching PVC edge-bands (0.8mm or 2mm) to ensure a seamless factory finish for modular furniture manufacturers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are 'Liner' laminates used for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Liner laminates (usually 0.6mm or 0.7mm) are applied to the inside of cabinets and drawers. They provide a clean, moisture-resistant finish and help balance the board to prevent warping."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which adhesive is best for high-gloss laminates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For high-gloss sheets, we recommend specialized adhesives like Fevicol Heat-X or equivalent industrial-grade contact cements. These ensure a flatter bond and minimize the 'orange peel' effect common with standard adhesives."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you handle sheet transport for bulk orders?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bulk sheets are stacked face-to-face with protective inter-leaving. We use dedicated transport vehicles with flat beds to ensure that sheets remain perfectly flat and crack-free during transit across Gujarat."
-      }
-    }
-  ]
-}
-  </script>
-  <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        item.classList.toggle('active');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          if (i !== item) i.classList.remove('active');
-        });
-      });
-    });
-  </script>
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col footer-about">
           <h3>Mahadev Traders</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
-            Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
-          </p>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Gondal Road, near S.T. Workshop,<br />Panchsheel Park, Samrat Industrial Area,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-        <div class="footer-col" style="min-width: 200px;">
-          <h3>Quick Links</h3>
-          <ul class="footer-links" style="list-style: none;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products/">All Products</a></li>
-            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-            <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-            <li><a href="/#about">About Us</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Connect With Us</h3>
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; block board</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
           <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-              aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-              aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                class="fas fa-address-book" aria-hidden="true"></i></a>
-            <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-              aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
       </div>
     </div>
   </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
   <script src="../scripts/theme.js" defer></script>
   <script src="../scripts/navbar.js" defer></script>
-  <script src="../scripts/products-nav.js" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemPage",
+      "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#webpage",
+      "url": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html",
+      "name": "Sunmica Dealer in Rajkot | 0.6 to 1.5mm Laminates",
+      "description": "Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/laminates.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#service",
+      "name": "Sunmica and laminate supply in Rajkot",
+      "serviceType": "Sunmica and laminate supply",
+      "category": "Laminates",
+      "description": "Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme.",
+      "url": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gondal Road, near S.T. Workshop, Panchsheel Park, Samrat Industrial Area",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Laminates",
+          "item": "https://mahadev-traders.com/products/decorative-laminates-sheets.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Sunmica",
+          "item": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/sunmica-dealers-rajkot.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the standard size of a Sunmica/Laminate sheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard size for decorative laminate sheets in India is 8 feet by 4 feet (2440mm x 1220mm). Some brands also offer specialty sizes like 7x3 feet for doors or oversized sheets for large office tables, but 8x4 is the universal standard stocked by all dealers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can laminates be used on existing furniture?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, laminates can be pasted over existing plywood furniture, provided the surface is cleaned of old polish or paint and sanded to create a rough texture for the adhesive to bond. However, you cannot paste laminate over old laminate — the old layer must be removed or sanded down significantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I clean glossy Sunmica to avoid scratches?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For glossy finishes, never use abrasive pads or harsh chemical cleaners. Use a soft microfiber cloth slightly dampened with water or a very mild glass cleaner. Always wipe in a circular motion and dry the surface immediately with a dry microfiber cloth to prevent water spots."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of Sunmica in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sunmica prices in Rajkot vary based on brand and finish. Standard 1.0mm matte laminates typically start from ₹800 to ₹1200 per sheet, while premium high-gloss, acrylic, or textured laminates can range from ₹1500 to ₹4500 per sheet. For wholesale bulk orders, Mahadev Traders offers special project pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer home delivery in Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer home and site delivery for laminate orders across Rajkot city. For bulk orders across Gujarat (Ahmedabad, Surat, Jamnagar), we arrange safe transport to ensure sheets are delivered without cracks or edge damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between 0.8mm and 1mm laminates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1mm laminates are thicker, more durable, and offer better resistance to chipping and warping, making them ideal for external surfaces. 0.8mm sheets are more economical and are typically used for residential wardrobes or areas with moderate use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you supply matching edge-bands for all designs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For our primary wholesale brands, we can coordinate matching PVC edge-bands (0.8mm or 2mm) to ensure a seamless factory finish for modular furniture manufacturers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are 'Liner' laminates used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Liner laminates (usually 0.6mm or 0.7mm) are applied to the inside of cabinets and drawers. They provide a clean, moisture-resistant finish and help balance the board to prevent warping."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which adhesive is best for high-gloss laminates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For high-gloss sheets, we recommend specialized adhesives like Fevicol Heat-X or equivalent industrial-grade contact cements. These ensure a flatter bond and minimize the 'orange peel' effect common with standard adhesives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle sheet transport for bulk orders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bulk sheets are stacked face-to-face with protective inter-leaving. We use dedicated transport vehicles with flat beds to ensure that sheets remain perfectly flat and crack-free during transit across Gujarat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is 1.0mm thickness recommended over 0.8mm?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1.0mm laminates are thicker, providing a flatter surface that hides minor imperfections in the underlying plywood. They also have a deeper design layer and a thicker protective overlay, making them much more resistant to wear, impact, and chipping at the edges. 0.8mm is typically used for internal surfaces (liner) or vertical surfaces with low impact."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </body>
 
 </html>

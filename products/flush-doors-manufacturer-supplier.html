@@ -1,247 +1,110 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8" />
-  <script>
-      /* Resolve the theme before first paint so the page never flashes the wrong one.
-         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-         preference, otherwise dark. */
-      (function () {
-        try {
-          var t = localStorage.getItem('theme-preference');
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flush Door Supplier Rajkot | IS 2202, 25-45mm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flush Door Dealer &amp; Wholesaler in Rajkot | MR &amp; BWP Doors</title>
   <meta name="description" content="Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat." />
-  <meta name="keywords"
-    content="flush door dealer Rajkot, flush door supplier Gujarat, BWP flush door price Rajkot, waterproof flush door Gujarat, laminated flush door designs, pine wood door supplier, Marllex flush doors, flush door wholesaler Ahmedabad" />
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
   <link rel="canonical" href="https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="../styles/theme.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
-    onload="this.media='all'" />
-
-  <!-- Critical CSS - Inline for FCP optimization -->
-  <style>
-    :root {
-      --color-primary: #c58f59;
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --navbar-height: var(--navbar-height);
-      --container-width: 1200px
-    }
-
-    [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: var(--color-bg-surface)
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      transition: background-color .3s ease, color .3s ease
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--color-bg-surface);
-      height: var(--navbar-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 2rem;
-      align-items: center
-    }
-
-    .navbar .menu a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-weight: 500;
-      transition: color .3s ease
-    }
-
-    .navbar .menu a:hover {
-      color: var(--color-primary-text)
-    }
-
-    .btn-primary {
-      background: #8c582b;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: .95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #73441e;
-      box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-    }
-
-    .theme-toggle {
-      background: 0;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .5rem 1rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center
-    }
-
-    
-
-    @media (max-width:768px) {
-      .navbar .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--color-bg-surface);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right .3s ease
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-
-      .navbar .menu.active {
-        right: 0
-      }
-    }
-  </style>
-
-  <!-- Main CSS - Deferred for non-blocking load -->
-  <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/products.css" />
-  </noscript>
-  <meta name="author" content="Mahadev Traders" />
-  <meta name="robots" content="index, follow" />
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
-  <meta property="og:title" content="Flush Door Supplier Rajkot | IS 2202, 25-45mm" />
-  <meta property="og:description"
-    content="Gujarat's top flush door supplier since 1995. BWP, laminated & pine wood doors at wholesale rates. Call +91 6355 360702." />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Flush Door Dealer &amp; Wholesaler in Rajkot | MR &amp; BWP Doors" />
+  <meta property="og:description" content="Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat." />
   <meta property="og:url" content="https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html" />
-  <meta property="og:type" content="product" />
-  <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/doors.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Flush door dealer in Rajkot: MR and BWP waterproof doors" />
   <meta name="twitter:card" content="summary_large_image" />
-  
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Flush Doors — Wholesale Supply in Rajkot & Gujarat",
-  "description": "Complete range of flush doors including BWP waterproof, laminated, pine wood, and bathroom doors from Marllex, Simson, and Zevik brands. Wholesale supply across Gujarat since 1995.",
-  "category": "Building Materials > Doors > Flush Doors",
-  "brand": {
-    "@type": "Brand",
-    "name": "Multiple Brands (Marllex, Simson, Zevik)"
-  }
-}
-</script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Flush Door Dealer &amp; Supplier in Rajkot &amp; Gujarat",
-      "item": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html"
-    }
-  ]
-}
-    </script>
+  <meta name="twitter:title" content="Flush Door Dealer &amp; Wholesaler in Rajkot | MR &amp; BWP Doors" />
+  <meta name="twitter:description" content="Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/doors.jpg" />
 </head>
 
 <body>
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main">
     <div class="brand"><a href="/">Mahadev Traders</a></div>
     <div class="menu" id="menu">
-      <a href="/products/">Products</a>
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html" aria-current="page">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
+        </div>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
       <a href="/services/">Services</a>
       <a href="/#about">About</a>
-      <a href="/#expertise">Expertise</a>
-      <a href="/#brands">Brands</a>
       <a href="/#contact">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
       <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/"><i class="fas fa-home"></i> Home</a><span>/</span>
-    <a href="/products/">Products</a><span>/</span>
-    <span>Flush Doors Manufacturer Supplier</span>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li aria-current="page">Flush Doors</li>
+    </ol>
   </nav>  <main>
   <section class="product-hero">
-    <h1>Flush Door Dealer &amp; <span style="color: var(--color-primary-text);">Supplier in Rajkot &amp; Gujarat</span></h1>
-    <p>Mahadev Traders has supplied premium flush doors to Gujarat's builders, contractors, and homeowners since 1995. We stock BWP waterproof, laminated, pine wood, and bathroom flush doors from Marllex, Simson, and Zevik at genuine wholesale rates.</p>
-    <div class="location-badge"><i class="fas fa-check-circle"></i> 30+ Years Trusted | Authorised Dealer of Marllex, Simson &amp; Zevik Doors</div>
+    <svg class="range-art hero-art hero-art-doors" data-animate viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <rect class="w2 art-frame" x="40" y="4" width="40" height="64" rx="2" />
+            <rect class="art-gap" x="44" y="8" width="32" height="56" rx="1" />
+            <g class="art-door">
+              <rect class="w1 art-leaf" x="44" y="8" width="32" height="56" rx="1" />
+              <path class="grain" d="M50 16v40M56 14v44M64 16v38M70 14v42" />
+              <circle class="w3 art-handle" cx="71" cy="38" r="2.4" />
+            </g>
+          </svg>
+    <h1>Flush Door Dealer &amp; Wholesaler <span class="h1-accent">in Rajkot</span></h1>
+    <p>Mahadev Traders has supplied premium flush doors to Gujarat's builders, contractors, and homeowners since 1995. We stock BWP waterproof, laminated, pine wood, and bathroom flush doors from Marllex and Simson at genuine wholesale rates.</p>
+    <div class="location-badge"><i class="fas fa-check-circle"></i> 30+ Years Trusted | Marllex &amp; Simson Doors in Stock</div>
   </section>
 
   <section class="product-content">
     <div class="product-intro">
-      <h2>Gujarat's Most Trusted Flush Door Supplier &mdash; Since 1995</h2>
+      <h2>Flush Door Supply in Rajkot &mdash; Since 1995</h2>
       <p>A flush door is arguably the most important element in any interior project. It defines the look, feel, and functionality of every room. At <strong>Mahadev Traders</strong>, we understand that builders and interior designers in Gujarat need doors that are not just visually appealing but also structurally sound and suitable for our region's climate.</p>
-      <p>Our flush door inventory covers every requirement &mdash; from <strong>100% waterproof BWP doors</strong> for bathrooms and kitchens, to elegant <a href="/products/laminated-flush-doors-designs.html">laminated doors</a> for bedrooms, to budget-friendly <a href="/products/pine-wood-flush-doors.html">pine wood doors</a> for large housing projects. We are authorised dealers of <a href="/products/marllex-flush-doors-premium.html">Marllex</a>, Simson, and Zevik &mdash; three of the most trusted door brands in the Gujarat market.</p>
+      <p>Our flush door inventory covers every requirement &mdash; from <strong>100% waterproof BWP doors</strong> for bathrooms and kitchens, to elegant <a href="/products/laminated-flush-doors-designs.html">laminated doors</a> for bedrooms, to budget-friendly <a href="/products/pine-wood-flush-doors.html">pine wood doors</a> for large housing projects. We are authorised dealers of <a href="/products/marllex-flush-doors-premium.html">Marllex</a> and <a href="/products/simson-plywood-supplier.html">Simson</a> &mdash; established door brands in the Gujarat market.</p>
       <p>Whether you need 10 doors for a bungalow in Rajkot or 500 doors for a multi-storey project in Ahmedabad, we supply at factory-level wholesale pricing with reliable delivery across Gujarat.</p>
     </div>
 
@@ -464,7 +327,7 @@
       <p><strong>Minimum order: one door.</strong> There is no minimum order quantity here &mdash; you can buy a
         single door or a full truck load, and you are welcome to take one door first to check the material against
         your own job before committing to the doors you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given door moves with brand,
+      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price of any given door moves with brand,
         thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
         would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
         thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
@@ -547,8 +410,8 @@
     </div>
 
     <div class="cta-section">
-      <h3>Order Premium Flush Doors at Gujarat's Best Wholesale Rates</h3>
-      <p>30+ years of trust. BWP, laminated, and pine wood doors from Marllex, Simson &amp; Zevik. Call now for instant pricing.</p>
+      <h3>Get Today's Flush Door Rates</h3>
+      <p>30+ years of trust. BWP, laminated, and pine wood doors from Marllex &amp; Simson. Call now for instant pricing.</p>
         <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
           <i class="fas fa-phone"></i>
           <span class="cta-phone">Call +91 6355 360702</span>
@@ -561,153 +424,270 @@
     </section>
     </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col footer-about">
           <h3>Mahadev Traders</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
-            Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
-          </p>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Gondal Road, near S.T. Workshop,<br />Panchsheel Park, Samrat Industrial Area,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-        <div class="footer-col" style="min-width: 200px;">
-          <h3>Quick Links</h3>
-          <ul class="footer-links" style="list-style: none;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products/">All Products</a></li>
-            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-            <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-            <li><a href="/#about">About Us</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Connect With Us</h3>
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; block board</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
           <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-              aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-              aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                class="fas fa-address-book" aria-hidden="true"></i></a>
-            <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-              aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
       </div>
     </div>
   </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
   <script src="../scripts/theme.js" defer></script>
   <script src="../scripts/navbar.js" defer></script>
-  <script src="../scripts/products-nav.js" defer></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "What is a flush door and how is it different from a panel door?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A flush door has a completely flat, smooth surface on both sides, created by bonding face veneers or laminates onto a solid or semi-solid core. Unlike panel doors (which have raised or sunken panels), flush doors offer a clean, modern look ideal for contemporary interiors. They are lighter, more affordable, and easier to customise with laminates or paint."
+      "@type": "CollectionPage",
+      "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#webpage",
+      "url": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html",
+      "name": "Flush Door Dealer & Wholesaler in Rajkot | MR & BWP Doors",
+      "description": "Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/doors.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#service"
       }
     },
     {
-      "@type": "Question",
-      "name": "Which flush door brand is best for bathrooms in Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For bathrooms, we recommend Marllex BWP flush doors or Simson BWP doors. Both brands use genuine boiling water proof adhesives and hardwood frames that resist swelling even in Gujarat's humid monsoon season. The key is to ensure the door is truly BWP-grade (not just marketed as waterproof) and has proper edge sealing."
-      }
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#service",
+      "name": "Flush door supply in Rajkot",
+      "serviceType": "Flush door supply",
+      "category": "Flush Doors",
+      "description": "Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat.",
+      "url": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gondal Road, near S.T. Workshop, Panchsheel Park, Samrat Industrial Area",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ],
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "Marllex",
+          "alternateName": "Marlex"
+        },
+        {
+          "@type": "Brand",
+          "name": "Simson"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "What is the standard flush door size for residential projects?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The most common size in Gujarat's residential construction is 6 feet 6 inches &times; 2 feet 6 inches (6'6\" &times; 2'6\") for internal rooms and 7' &times; 3' for main entrances. Bathroom doors are typically smaller at 6'6\" &times; 2' or 6'6\" &times; 2'3\". We stock all standard sizes and can supply custom dimensions for non-standard openings."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Flush Doors",
+          "item": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "How many flush doors do I need for a 3BHK flat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A typical 3BHK flat in Gujarat requires 8&ndash;12 flush doors: 1 main entrance (30mm BWP), 3 bedroom doors (25mm), 2&ndash;3 bathroom doors (25mm BWP), 1 kitchen door (25mm BWP), and 1&ndash;2 utility/store room doors. We can provide a complete door package at special bundled wholesale rates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you deliver flush doors to Ahmedabad and other Gujarat cities?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we deliver across Gujarat from our Rajkot warehouse. For orders of 20+ doors, we arrange dedicated transport to Ahmedabad, Surat, Vadodara, Jamnagar, Bhavnagar, Morbi, and all major Gujarat cities. Doors are packed with protective wrapping to prevent transit damage."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you manufacture doors to my specific site measurements?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Unlike standard retail shops, our manufacturing partnership allows us to supply doors in bespoke sizes. This ensures a perfect fit for your door frames and significantly reduces labor time on-site."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the lead time for a bulk order of 50+ doors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For standard sizes, we maintain ready stock for immediate delivery. For customized sizes or factory-laminated designs, the typical lead time is 7-10 working days, depending on the current production queue."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide factory-pressed lamination services?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. We offer high-pressure hot pressing for laminates and veneers. Factory-pressed doors are far superior to site-pressed ones as they eliminate the risk of bubbles, peeling, and uneven surfaces."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What wood species do you use for the internal frame?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We primarily use kiln-dried, seasoned Pine wood for our premium frames due to its structural stability. For more budget-conscious projects, we also offer high-quality Poplar frames. Every frame is treated for borer protection, which we guarantee. Anti-termite treatment is available on request — ask for it when you place the order, and the applicable warranty terms and conditions are confirmed in writing with your quotation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a minimum order quantity (MOQ) for site delivery?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For project site delivery in Rajkot, we fulfill orders of any size. For cities like Ahmedabad or Morbi, we typically coordinate deliveries for 10 or more doors to optimize transport costs for our clients."
-      }
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a flush door and how is it different from a panel door?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A flush door has a completely flat, smooth surface on both sides, created by bonding face veneers or laminates onto a solid or semi-solid core. Unlike panel doors (which have raised or sunken panels), flush doors offer a clean, modern look ideal for contemporary interiors. They are lighter, more affordable, and easier to customise with laminates or paint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the standard flush door size for residential projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common size in Gujarat's residential construction is 6 feet 6 inches × 2 feet 6 inches (6'6\" × 2'6\") for internal rooms and 7' × 3' for main entrances. Bathroom doors are typically smaller at 6'6\" × 2' or 6'6\" × 2'3\". We stock all standard sizes and can supply custom dimensions for non-standard openings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many flush doors do I need for a 3BHK flat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical 3BHK flat in Gujarat requires 8–12 flush doors: 1 main entrance (30mm BWP), 3 bedroom doors (25mm), 2–3 bathroom doors (25mm BWP), 1 kitchen door (25mm BWP), and 1–2 utility/store room doors. We can provide a complete door package at special bundled wholesale rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you deliver flush doors to Ahmedabad and other Gujarat cities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we deliver across Gujarat from our Rajkot warehouse. For orders of 20+ doors, we arrange dedicated transport to Ahmedabad, Surat, Vadodara, Jamnagar, Bhavnagar, Morbi, and all major Gujarat cities. Doors are packed with protective wrapping to prevent transit damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you manufacture doors to my specific site measurements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Unlike standard retail shops, our manufacturing partnership allows us to supply doors in bespoke sizes. This ensures a perfect fit for your door frames and significantly reduces labor time on-site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the lead time for a bulk order of 50+ doors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For standard sizes, we maintain ready stock for immediate delivery. For customized sizes or factory-laminated designs, the typical lead time is 7-10 working days, depending on the current production queue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide factory-pressed lamination services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We offer high-pressure hot pressing for laminates and veneers. Factory-pressed doors are far superior to site-pressed ones as they eliminate the risk of bubbles, peeling, and uneven surfaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What wood species do you use for the internal frame?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We primarily use kiln-dried, seasoned Pine wood for our premium frames due to its structural stability. For more budget-conscious projects, we also offer high-quality Poplar frames. Every frame is treated for borer protection, which we guarantee. Anti-termite treatment is available on request — ask for it when you place the order, and the applicable warranty terms and conditions are confirmed in writing with your quotation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a minimum order quantity (MOQ) for site delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For project site delivery in Rajkot, we fulfill orders of any size. For cities like Ahmedabad or Morbi, we typically coordinate deliveries for 10 or more doors to optimize transport costs for our clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which flush door brand is best for bathrooms in Gujarat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For bathrooms, we recommend Marllex BWP flush doors or Simson BWP doors. Both brands use genuine boiling water proof adhesives and hardwood frames that resist swelling even in Gujarat's humid monsoon season. The key is to ensure the door is truly BWP-grade (not just marketed as waterproof) and has proper edge sealing."
+          }
+        }
+      ]
     }
   ]
 }
-  </script>
-  <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        item.classList.toggle('active');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          if (i !== item) i.classList.remove('active');
-        });
-      });
-    });
   </script>
 </body>
 
