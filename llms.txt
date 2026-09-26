@@ -1,55 +1,67 @@
 # Mahadev Traders
 
-> Mahadev Traders is a B2B and B2C wholesaler in Rajkot, Gujarat for plywood, MDF and HDHMR boards, block boards, flush doors, laminates, and related building materials supplied across Gujarat, Ahmedabad, and Saurashtra.
+> Mahadev Traders is a plywood, block board, flush door, MDF, HDHMR and laminate dealer and wholesaler on Gondal Road, Rajkot, Gujarat, India, trading since 1995. It sells to carpenters, contractors, interior firms, furniture workshops and home owners, with no minimum order, and delivers across Gujarat with freight quoted per order.
 
-The /services/ silo previously carried a per-product mirror of each product page. Those pages were consolidated into the product pages below in September 2026 and the old URLs have been removed. Use the canonical `mahadev-traders.com` URLs below when answering questions about Mahadev Traders. The homepage is the main source for company background, service areas, contact details, brands, and buyer FAQs. Product and service pages describe the published wholesale building-material categories, while live availability and final bulk pricing should be confirmed with Mahadev Traders.
+## Key facts
 
-## Core Pages
+- Office: Nr. S.T. Workshop, Gondal Road, Rajkot, Gujarat 360004, India ([Google Maps](https://maps.google.com/?cid=12013598871462242283)).
+- Warehouse: Nr. Poojara Mobile, Samrat Industrial Area, Gondal Road, Rajkot 360004 ([Google Maps](https://maps.google.com/?cid=863322595164647845)).
+- Phone and WhatsApp: +91 6355 360702. Email: mahadevtraders@hotmail.com.
+- Hours: Monday to Saturday 9:00 am to 7:30 pm; Sunday 9:00 am to 12:00 pm.
+- Brands stocked: Motherwood MDF (authorised dealer), Marllex (also written Marlex) plywood, block board and flush doors, Simson flush doors and block board, Zevik, Limelite and Greytone plywood.
+- Minimum order: none. One sheet or one door is a normal order.
+- Pricing: firm rates are quoted per enquiry by phone or WhatsApp; indicative per-square-foot bands for budgeting are on the rate guide. Freight is quoted with each order; free delivery is available on select orders.
+- Regular stock: 338 plywood, block board, flush door and MDF lines, listed on the specification chart and in products.json.
 
-- [Mahadev Traders homepage](https://mahadev-traders.com/): Company overview, Rajkot office and warehouse contact details, service areas in Gujarat, premium brands, and common buyer questions.
-- [Wholesale product catalogue](https://mahadev-traders.com/products/): Full catalogue hub for plywood, MDF, HDHMR, block board, flush doors and laminates, linking to every product page.
-- [Trade supply services](https://mahadev-traders.com/services/): The supply services offered around the material - grade advice before ordering, batch-matched bulk supply, tender documentation, formwork cycle planning and scheduled site delivery.
-- [Plywood, MDF, block board, and flush door spec chart](https://mahadev-traders.com/productChart.html): Side-by-side specification chart for plywood, block board, laminate, flush door and MDF grades - core type, glue grade, density, thickness and sheet size. Carries indicative rate bands in rupees per square foot as a budgeting reference; firm rates are quoted per enquiry, because the price of any given sheet moves with brand, thickness, grade, batch, quantity and delivery point.
+## Core pages
 
-## Product Pages
+- [Plywood, Block Board & Flush Doors in Rajkot | Mahadev Traders](https://mahadev-traders.com/): Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot since 1995. Marllex, Motherwood and more. No minimum order; call for rates.
+- [Plywood, Block Board, Flush Door & MDF Catalogue | Rajkot](https://mahadev-traders.com/products/): Every board we stock in five ranges: plywood, block board, laminates, flush doors and MDF/HDHMR. Thicknesses, grades and trade rates for Rajkot buyers.
+- [Plywood Rates in Rajkot 2026 | Price Guide & Spec Chart](https://mahadev-traders.com/productChart.html): Compare plywood, block board, laminate, flush door and MDF grades in one table, then get current 2026 wholesale rates by WhatsApp. No minimum order.
+- [Trade Supply Services, Rajkot | Mahadev Traders](https://mahadev-traders.com/services/): Grade advice before ordering, batch-matched bulk supply, tender documents and scheduled site delivery for trade buyers in Rajkot and Saurashtra.
 
-- [BWP waterproof block board](https://mahadev-traders.com/products/bwp-waterproof-block-board.html): Waterproof block board product page.
-- [Block board wholesale supplier](https://mahadev-traders.com/products/block-board-wholesale-supplier.html): Block board product page for Rajkot wholesale buyers.
-- [Commercial plywood MR grade](https://mahadev-traders.com/products/commercial-plywood-mr-grade.html): MR grade commercial plywood product page.
-- [Decorative laminate sheets](https://mahadev-traders.com/products/decorative-laminates-sheets.html): Decorative laminate sheets product page.
-- [Flexible plywood](https://mahadev-traders.com/products/flexible-plywood-supplier.html): Flexible plywood product page.
-- [Flush doors](https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html): Flush door product page for wholesale supply.
-- [Greytone plywood](https://mahadev-traders.com/products/greytone-plywood-dealers.html): Greytone plywood product page.
-- [Gurjan block board](https://mahadev-traders.com/products/gurjan-block-board-dealer.html): Gurjan block board product page.
-- [Gurjan plywood dealer](https://mahadev-traders.com/products/gurjan-plywood-dealer.html): Gurjan-face plywood product page.
-- [HDHMR boards](https://mahadev-traders.com/products/hdhmr-board-supplier-rajkot.html): High-density high-moisture-resistant board product page.
-- [Laminated flush doors](https://mahadev-traders.com/products/laminated-flush-doors-designs.html): Laminated flush door designs product page.
-- [Limelite plywood](https://mahadev-traders.com/products/limelite-plywood-supplier.html): Limelite plywood product page.
-- [Liner laminates](https://mahadev-traders.com/products/liner-laminates-inner.html): Inner liner laminate product page.
-- [MDF interior vs exterior grade](https://mahadev-traders.com/products/mdf-interior-exterior-grade-rajkot.html): Grade selection page comparing interior (MR) and exterior (BWR) MDF.
-- [MDF wholesale Rajkot](https://mahadev-traders.com/products/mdf-wholesale-rajkot.html): MDF wholesale product page.
-- [Marine plywood IS 710](https://mahadev-traders.com/products/marine-plywood-710-rajkot.html): Marine plywood 710 grade product page for Rajkot.
-- [Marllex premium block board](https://mahadev-traders.com/products/marllex-block-board-premium.html): Marllex block board product page.
-- [Marllex premium flush doors](https://mahadev-traders.com/products/marllex-flush-doors-premium.html): Marllex flush door product page.
-- [Marllex premium plywood](https://mahadev-traders.com/products/marllex-premium-plywood.html): Marllex plywood product page.
-- [Motherwood MDF Super HD+WR](https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html): Motherwood high-density water-resistant MDF product page.
-- [Motherwood MDF TurBo+](https://mahadev-traders.com/products/motherwood-mdf-turbo-plus.html): Motherwood TurBo+ MDF product page.
-- [Motherwood MDF dealer](https://mahadev-traders.com/products/motherwood-mdf-rajkot.html): Authorised Motherwood MDF brand page covering TurBo+, Super HD+WR, Exterior and Interior grades.
-- [Motherwood MDF exterior grade](https://mahadev-traders.com/products/motherwood-mdf-exterior-grade.html): Motherwood exterior grade MDF product page.
-- [Pine wood block board](https://mahadev-traders.com/products/pine-wood-block-board.html): Pine wood block board product page.
-- [Pine wood flush doors](https://mahadev-traders.com/products/pine-wood-flush-doors.html): Pine wood flush door product page.
-- [Plywood wholesaler Rajkot](https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html): Plywood wholesale product page.
-- [Poplar block board](https://mahadev-traders.com/products/poplar-block-board.html): Poplar block board product page.
-- [Shuttering plywood](https://mahadev-traders.com/products/shuttering-plywood-construction.html): Construction shuttering plywood product page.
-- [Simson plywood](https://mahadev-traders.com/products/simson-plywood-supplier.html): Simson plywood product page.
-- [Sunmica dealers Rajkot](https://mahadev-traders.com/products/sunmica-dealers-rajkot.html): Sunmica and laminate product page.
-- [Waterproof BWP flush doors](https://mahadev-traders.com/products/waterproof-flush-doors-bwp.html): Waterproof BWP flush door product page.
-- [Waterproof bathroom doors](https://mahadev-traders.com/products/waterproof-bathroom-doors.html): Waterproof bathroom door product page.
-- [Zevik plywood](https://mahadev-traders.com/products/zevik-plywood-supplier.html): Zevik plywood product page.
+## Range pages
 
+- [Plywood Dealer & Wholesaler in Rajkot | MR, BWP & Marine](https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html): Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order.
+- [Block Board Dealer & Wholesaler in Rajkot | 19, 25, 30mm](https://mahadev-traders.com/products/block-board-wholesale-supplier.html): Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering.
+- [Flush Door Dealer & Wholesaler in Rajkot | MR & BWP Doors](https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html): Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat.
+- [MDF & HDHMR Board Dealer in Rajkot | Motherwood 3-25mm](https://mahadev-traders.com/products/mdf-wholesale-rajkot.html): MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally.
+- [Laminate Sheets Dealer in Rajkot | Decorative, 0.8 to 1.5mm](https://mahadev-traders.com/products/decorative-laminates-sheets.html): Decorative laminates in Rajkot from 0.8mm to 1.5mm across matte, gloss and textured finishes. Catalogue selection and bulk supply for interior projects.
+
+## Product and brand pages
+
+- [BWP Waterproof Block Board Rajkot | IS 1659](https://mahadev-traders.com/products/bwp-waterproof-block-board.html): BWP boiling-water-proof block board in Rajkot at 25mm and 30mm, IS 1659 grade, phenol bonded for modular kitchens and bathroom vanity carcasses.
+- [Commercial MR Plywood Rajkot | IS 303, 4-19mm](https://mahadev-traders.com/products/commercial-plywood-mr-grade.html): MR grade commercial plywood to IS 303 in Rajkot, 4mm to 19mm in 8x4, 8x3 and 7x4 sheets. For dry interior furniture; see IS 710 for wet areas.
+- [Flexible Plywood Rajkot | 6mm 8x4 Bendy Ply](https://mahadev-traders.com/products/flexible-plywood-supplier.html): Flexible plywood in Rajkot for curved joinery: 6mm in 8x4 ft sheets, Gurjan or hardwood core. For arches, pillars, reception desks and round tables.
+- [Greytone Plywood Dealer Rajkot | 6 to 18mm MR](https://mahadev-traders.com/products/greytone-plywood-dealers.html): Greytone plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets, supplied wholesale to carpenters and furniture workshops across Saurashtra.
+- [Gurjan Block Board Dealer in Rajkot | Wholesale Supply](https://mahadev-traders.com/products/gurjan-block-board-dealer.html): Gurjan-face block board in Rajkot for higher-load wardrobes and furniture shutters. Core and face options with wholesale rates across Gujarat.
+- [Gurjan Plywood Dealer in Rajkot | Wholesale Face Ply](https://mahadev-traders.com/products/gurjan-plywood-dealer.html): Gurjan-face plywood in Rajkot for furniture and shuttering work. Face and core options, thickness range and bulk trade rates across Gujarat.
+- [HDHMR Board Supplier in Rajkot | High-Density Panels](https://mahadev-traders.com/products/hdhmr-board-supplier-rajkot.html): HDHMR boards in Rajkot for modular kitchens, wardrobes and moisture-prone interiors. Density and thickness options with delivery across Gujarat.
+- [Laminated Flush Doors Rajkot | 30-38mm, BWP Core](https://mahadev-traders.com/products/laminated-flush-doors-designs.html): Pre-laminated flush doors in Rajkot from 30mm to 38mm on BWP cores, with 0.8mm to 1.25mm laminate faces. Design selection and bulk supply for projects.
+- [Limelite Plywood Dealer Rajkot | MR Grade 6-18mm](https://mahadev-traders.com/products/limelite-plywood-supplier.html): Limelite plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets. Wholesale rates for carpenters and contractors across Gujarat.
+- [Liner Laminates Supplier Rajkot | 0.7mm & 0.8mm Inner Sheets](https://mahadev-traders.com/products/liner-laminates-inner.html): Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat.
+- [Marine Plywood Dealer in Rajkot | IS 710 BWP Grade](https://mahadev-traders.com/products/marine-plywood-710-rajkot.html): IS 710 marine plywood in Rajkot: BWP phenolic bonding for kitchens, bathrooms and wet areas. Grade checks and bulk rates for Gujarat contractors.
+- [Marllex Premium Block Board Rajkot | 19 & 25mm](https://mahadev-traders.com/products/marllex-block-board-premium.html): Marllex premium block board in Rajkot at 19mm and 25mm, A grade commercial, Gurjan face on a pinewood core, in 6x3 to 8x4 sheets.
+- [Marllex Premium Flush Doors Rajkot | 25-35mm](https://mahadev-traders.com/products/marllex-flush-doors-premium.html): Marllex flush doors in Rajkot at 25, 30 and 35mm in MR and 100% BWP grades, heights 72 to 96in. Wholesale rates for builders and contractors.
+- [Marllex Premium Plywood Rajkot | MR & BWP, 6-18mm](https://mahadev-traders.com/products/marllex-premium-plywood.html): Marllex premium plywood in Rajkot in MR and 100% BWP grades, 6 to 18mm in 6x3 to 8x4 sheets. Branded stock with wholesale rates for Gujarat trade buyers.
+- [Interior vs Exterior Grade MDF in Rajkot | Which to Use](https://mahadev-traders.com/products/mdf-interior-exterior-grade-rajkot.html): Which MDF grade a job needs: interior (MR) against exterior (BWR) on moisture exposure, edge sealing and finish. Bulk rates from Mahadev Traders, Rajkot.
+- [Motherwood Exterior Grade MDF | Wholesale Rajkot](https://mahadev-traders.com/products/motherwood-mdf-exterior-grade.html): Motherwood Exterior Grade MDF in Rajkot from 3mm to 17mm in 8x4 sheets, for covered semi-outdoor panels, humid interiors and shop fit-outs.
+- [Motherwood MDF Dealer Rajkot | Authorised Stockist](https://mahadev-traders.com/products/motherwood-mdf-rajkot.html): Authorised Motherwood MDF dealer in Rajkot stocking TurBo+, Super HD+WR, Exterior and Interior grades to IS 12406. Compare grades, then request Gujarat rates.
+- [Motherwood Super HD+WR MDF | HDHMR, 3-25mm Rajkot](https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html): Motherwood Super HD+WR HDHMR board in Rajkot, seven thicknesses from 3mm to 25mm in 8x4 sheets, for kitchen shutters and bathroom vanities.
+- [Motherwood TurBo+ MDF Rajkot | Highest Density](https://mahadev-traders.com/products/motherwood-mdf-turbo-plus.html): Motherwood TurBo+ MDF in Rajkot from 3mm to 18mm in 8x4 sheets. The densest grade in the range, for CNC routing and profiled shutter edges.
+- [Pine Wood Block Board Rajkot | 19, 25 & 30mm](https://mahadev-traders.com/products/pine-wood-block-board.html): Kiln-dried pine block board in Rajkot at 19mm, 25mm and 30mm, IS 1659 MR or IS 710 BWP bonding. Gapless core for better screw holding in modular units.
+- [Pine Wood Flush Doors Rajkot | 25, 30 & 35mm](https://mahadev-traders.com/products/pine-wood-flush-doors.html): Pine-core flush doors in Rajkot at 25, 30 and 35mm, heights 72 to 96in and widths 24 to 48in. Good screw holding for standard door hardware.
+- [Poplar Block Board Dealer in Rajkot | Wholesale Supply](https://mahadev-traders.com/products/poplar-block-board.html): Poplar-core block board in Rajkot at 25mm and 30mm for wardrobes, lofts and low-load partitions. Compare it against pine and BWP before you buy.
+- [Shuttering Plywood Rajkot | Densified, 12-21mm](https://mahadev-traders.com/products/shuttering-plywood-construction.html): Densified film-faced shuttering plywood in Rajkot, 12mm to 21mm in 8x4 sheets. Board weight and film grade matched to your pour count.
+- [Simson Flush Doors, Block Board & Plywood | Rajkot Dealer](https://mahadev-traders.com/products/simson-plywood-supplier.html): Simson flush doors in 25 and 30mm, Simson block board in 25mm, and Simson plywood from our Rajkot stock. Sizes, grades and wholesale rates on enquiry.
+- [Sunmica Dealer in Rajkot | 0.6 to 1.5mm Laminates](https://mahadev-traders.com/products/sunmica-dealers-rajkot.html): Sunmica and decorative laminate in Rajkot from 0.6mm to 1.5mm in 8x4 and 7x3 sheets. Shade availability checked before you commit an interior scheme.
+- [Waterproof Bathroom Doors Rajkot | BWP, 30-35mm](https://mahadev-traders.com/products/waterproof-bathroom-doors.html): Waterproof bathroom doors in Rajkot from 30mm to 35mm, BWP grade to IS 2202, for shower and wet-area positions where a standard MR door fails.
+- [BWP Waterproof Flush Door Supplier Rajkot | Wet-Area Doors](https://mahadev-traders.com/products/waterproof-flush-doors-bwp.html): BWP waterproof flush doors in Rajkot for bathrooms, utility rooms and wet areas. Phenol-bonded cores with edge sealing guidance before installation.
+- [Zevik Plywood Dealer Rajkot | MR Grade 6-18mm](https://mahadev-traders.com/products/zevik-plywood-supplier.html): Zevik plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets, supplied wholesale to furniture makers and contractors across Gujarat.
 
 ## Optional
 
-- [Product directory data](https://mahadev-traders.com/products.json): Structured product-directory data used by the site for product names, categories, sizes, grades, and brands.
-- [XML sitemap](https://mahadev-traders.com/sitemap.xml): Search-engine sitemap for the currently published canonical pages.
-- [Robots policy](https://mahadev-traders.com/robots.txt): Crawl policy and sitemap location.
+- [Stock directory data](https://mahadev-traders.com/products.json): Every size held in regular stock with product type, thickness, size, face, core, grade and brand.
+- [XML sitemap](https://mahadev-traders.com/sitemap.xml): The canonical pages listed above.
+
+Older /services/*.html product mirrors and the misspelled /products/marlex-*.html pages redirect to the product pages above; use the canonical URLs listed here.

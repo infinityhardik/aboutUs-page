@@ -1,260 +1,297 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8" />
-  <script>
-      /* Resolve the theme before first paint so the page never flashes the wrong one.
-         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-         preference, otherwise dark. */
-      (function () {
-        try {
-          var t = localStorage.getItem('theme-preference');
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Block Board Wholesaler in Rajkot | 19, 25 &amp; 30mm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Block Board Dealer &amp; Wholesaler in Rajkot | 19, 25, 30mm</title>
   <meta name="description" content="Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering." />
-  <meta name="keywords"
-    content="Block Board Wholesaler Rajkot, Block Board Supplier Gujarat, Block Board Dealer Ahmedabad, Block Board Wholesaler Gujarat, Mahadev Traders" />
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
   <link rel="canonical" href="https://mahadev-traders.com/products/block-board-wholesale-supplier.html" />
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-
-  <!-- Fonts -->
-  <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="../styles/theme.css" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
-    onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </noscript>
-
-  <!-- CSS -->
-
-  <!-- Critical CSS - Inline for FCP optimization -->
-  <style>
-    :root {
-      --color-primary: #c58f59;
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --navbar-height: var(--navbar-height);
-      --container-width: 1200px
-    }
-
-    [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: var(--color-bg-surface)
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      transition: background-color .3s ease, color .3s ease
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--color-bg-surface);
-      height: var(--navbar-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 2rem;
-      align-items: center
-    }
-
-    .navbar .menu a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-weight: 500;
-      transition: color .3s ease
-    }
-
-    .navbar .menu a:hover {
-      color: var(--color-primary-text)
-    }
-
-    .btn-primary {
-      background: #8c582b;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: .95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #73441e;
-      box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-    }
-
-    .theme-toggle {
-      background: 0;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .5rem 1rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center
-    }
-
-    
-
-    @media (max-width:768px) {
-      .navbar .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--color-bg-surface);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right .3s ease
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-
-      .navbar .menu.active {
-        right: 0
-      }
-    }
-  </style>
-
-  <!-- Main CSS - Deferred for non-blocking load -->
-  <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/products.css" />
-  </noscript>
-
-  <!-- SEO Meta Tags -->
-  <meta name="author" content="Mahadev Traders" />
-  <meta name="robots" content="index, follow" />
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
-  <meta property="og:title" content="Block Board Wholesaler in Rajkot | 19, 25 &amp; 30mm" />
-  <meta property="og:description"
-    content="Premium block boards at wholesale rates. Gurjan, pine, poplar & BWP grades from Marllex, Simson & Zevik. Call +91 6355 360702." />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Block Board Dealer &amp; Wholesaler in Rajkot | 19, 25, 30mm" />
+  <meta property="og:description" content="Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering." />
   <meta property="og:url" content="https://mahadev-traders.com/products/block-board-wholesale-supplier.html" />
-  <meta property="og:type" content="product" />
-  <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/blockboard.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Block board dealer in Rajkot: pine, poplar and Gurjan cores" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Structured Data - Product Schema -->
-  
+  <meta name="twitter:title" content="Block Board Dealer &amp; Wholesaler in Rajkot | 19, 25, 30mm" />
+  <meta name="twitter:description" content="Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/blockboard.jpg" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Block Board — Wholesale Supply in Rajkot & Gujarat",
-  "description": "Premium block boards in Gurjan, pine, poplar, and BWP waterproof grades from Marllex, Simson, and Zevik. Wholesale supply for furniture manufacturers across Gujarat since 1995.",
-  "category": "Building Materials > Board > Block Board",
-  "brand": {
-    "@type": "Brand",
-    "name": "Multiple Brands (Marllex, Simson, Zevik)"
-  }
-}
-</script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
+      "@type": "CollectionPage",
+      "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#webpage",
+      "url": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html",
+      "name": "Block Board Dealer & Wholesaler in Rajkot | 19, 25, 30mm",
+      "description": "Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/blockboard.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#service"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#service",
+      "name": "Block board supply in Rajkot",
+      "serviceType": "Block board supply",
+      "category": "Block Board",
+      "description": "Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering.",
+      "url": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ],
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "Marllex",
+          "alternateName": "Marlex"
+        },
+        {
+          "@type": "Brand",
+          "name": "Simson"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Block Board Wholesaler &amp; Supplier in Rajkot &amp; Gujarat",
-      "item": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html"
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Block Board",
+          "item": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between block board and plywood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Block board has a core made of solid wood strips (battens) glued edge-to-edge, while plywood has multiple thin cross-grain veneer layers. Block board is better for large flat surfaces like wardrobe shutters and table tops because it resists sagging. Plywood is better for applications requiring bending or where the edges will be visible, as block board edges can show the core battens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum order for wholesale block board rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no minimum order — one sheet is a normal order. The rate moves with quantity, so larger orders are priced lower per sheet. Contact us for project-specific quotes — we regularly supply bulk orders to furniture manufacturers and contractors across Rajkot, Ahmedabad, Surat, and other Gujarat cities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you supply block boards to cities outside Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we deliver across Gujarat from our Rajkot warehouse. Regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. For bulk orders, we arrange dedicated transport with protective packaging to prevent edge damage during transit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I choose Block Board over Plywood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose block board for large unsupported surfaces like wardrobe shutters or office partitions. It is much more resistant to bending (warping) over long spans compared to plywood, which is better for structural \"skeletons.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Pine and Poplar cores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pine core boards are heavier, denser, and have superior screw-holding capacity, making them ideal for high-end furniture. Poplar core boards are lighter and more cost-effective, suitable for budget modular furniture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you supply cut-to-size block boards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For bulk factory orders, we can facilitate custom-sized boards directly from our manufacturing partners. For regular retail/contractor orders, we supply standard 8x4 sheets from our ready stock."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I verify the BWP (Waterproof) grade on-site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Authentic BWP block boards will have a specific IS:1659 marking. We also provide a 72-hour boiling water test certificate from the manufacturer for bulk institutional supplies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the lead time for site delivery in Ahmedabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We coordinate next-day delivery for Ahmedabad and Saurashtra regions for orders placed before 1 PM. Our logistics team ensures damage-free unloading at the site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which block board core type is best for wardrobes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For premium wardrobes, Gurjan block board offers the best combination of strength, durability, and screw-holding capacity. For budget-friendly projects, pine wood block board offers excellent value. We recommend 19mm thickness for wardrobe shutters and 25mm for extra-large doors exceeding 2.5 feet in width."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use block board in kitchens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but only if you use BWP (waterproof) grade block board. Standard MR-grade block board will swell from kitchen moisture. For below-counter carcasses near the sink, we generally recommend marine plywood instead, as it provides better water resistance in high-splash zones."
+          }
+        }
+      ]
     }
   ]
 }
-    </script>
+  </script>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main">
     <div class="brand"><a href="/">Mahadev Traders</a></div>
     <div class="menu" id="menu">
-      <a href="/products/">Products</a>
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html" aria-current="page">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
+        </div>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
       <a href="/services/">Services</a>
       <a href="/#about">About</a>
-      <a href="/#expertise">Expertise</a>
-      <a href="/#brands">Brands</a>
       <a href="/#contact">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
       <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
-
-  <!-- Breadcrumb -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/"><i class="fas fa-home"></i> Home</a>
-    <span>/</span>
-    <a href="/products/">Products</a>
-    <span>/</span>
-    <span>Block Board Wholesale</span>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li aria-current="page">Block Board</li>
+    </ol>
   </nav>
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Block Board <span style="color: var(--color-primary-text);">Wholesaler &amp; Supplier in Rajkot &amp; Gujarat</span></h1>
+    <h1>Block Board Dealer &amp; Wholesaler <span class="h1-accent">in Rajkot</span></h1>
     <p>Mahadev Traders supplies premium block boards in Gurjan, pine, poplar, and BWP waterproof grades from Marllex, Simson, and Zevik at genuine wholesale rates. Trusted by Gujarat's furniture manufacturers and contractors since 1995.</p>
     <div class="location-badge"><i class="fas fa-boxes"></i> 30+ Years Trusted | Authorised Dealer of Marllex, Simson &amp; Zevik</div>
   </section>
@@ -265,7 +302,7 @@
       <h2>What Is Block Board &amp; Why Do Gujarat's Top Carpenters Prefer It?</h2>
       <p>A <strong>block board</strong> is a core-based engineered wood product where solid timber strips (battens) are edge-glued together and sandwiched between veneer layers. This construction gives block boards superior strength, rigidity, and screw-holding capacity compared to plywood of the same thickness &mdash; making them the preferred choice for heavy-duty furniture applications.</p>
       <p>At <strong>Mahadev Traders</strong>, we stock block boards from all three of our authorised brands &mdash; <a href="/products/marllex-block-board-premium.html">Marllex</a>, Simson, and Zevik &mdash; in multiple core types. Gujarat's top furniture workshops and interior contractors choose block boards for large wardrobe shutters, long bookshelves, and conference tables because they resist bowing and sagging far better than standard plywood.</p>
-      <p>Whether you need 25 sheets for a residential project or 500+ sheets for a commercial fit-out, we offer genuine wholesale rates with same-day dispatch from our Rajkot warehouse.</p>
+      <p>Whether you need 25 sheets for a residential project or 500+ sheets for a commercial fit-out, the rate is quoted for that quantity and the order is dispatched from our Rajkot warehouse.</p>
     </div>
 
     <!-- Specification Table -->
@@ -475,7 +512,7 @@
       <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
         single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
         your own job before committing to the sheets you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given sheet moves with brand,
+      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price of any given sheet moves with brand,
         thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
         would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
         thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
@@ -524,7 +561,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-question"><span>What is the minimum order for wholesale block board rates?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">Wholesale pricing starts at 25 sheets per order. For orders exceeding 100 sheets, we offer additional volume discounts. Contact us for project-specific quotes &mdash; we regularly supply bulk orders to furniture manufacturers and contractors across Rajkot, Ahmedabad, Surat, and other Gujarat cities.</div></div>
+          <div class="faq-answer"><div class="faq-answer-content">There is no minimum order &mdash; one sheet is a normal order. The rate moves with quantity, so larger orders are priced lower per sheet. Contact us for project-specific quotes &mdash; we regularly supply bulk orders to furniture manufacturers and contractors across Rajkot, Ahmedabad, Surat, and other Gujarat cities.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question"><span>Do you supply block boards to cities outside Rajkot?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
@@ -563,7 +600,7 @@
 
     <!-- CTA Section -->
     <div class="cta-section">
-      <h3>Order Premium Block Boards at Gujarat's Best Wholesale Rates</h3>
+      <h3>Get Today's Block Board Rates</h3>
       <p>Gurjan, pine, poplar &amp; BWP grades from Marllex, Simson &amp; Zevik. 30+ years of trusted supply across Gujarat.</p>
       
         <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
@@ -578,144 +615,72 @@
     </section>
     </main>
 
-  <!-- Footer -->!-- Footer -->
+  !-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col footer-about">
           <h3>Mahadev Traders</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
-            Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
-          </p>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Nr. S.T. Workshop, Gondal Road,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-        <div class="footer-col" style="min-width: 200px;">
-          <h3>Quick Links</h3>
-          <ul class="footer-links" style="list-style: none;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products/">All Products</a></li>
-            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-            <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-            <li><a href="/#about">About Us</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Connect With Us</h3>
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; boards</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
           <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-              aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-              aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                class="fas fa-address-book" aria-hidden="true"></i></a>
-            <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-              aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
       </div>
     </div>
   </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
 
   <script src="../scripts/theme.js" defer></script>
   <script src="../scripts/navbar.js" defer></script>
   <script src="../scripts/products-nav.js" defer></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the difference between block board and plywood?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Block board has a core made of solid wood strips (battens) glued edge-to-edge, while plywood has multiple thin cross-grain veneer layers. Block board is better for large flat surfaces like wardrobe shutters and table tops because it resists sagging. Plywood is better for applications requiring bending or where the edges will be visible, as block board edges can show the core battens."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which block board core type is best for wardrobes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For premium wardrobes, Gurjan block board offers the best combination of strength, durability, and screw-holding capacity. For budget-friendly projects, pine wood block board offers excellent value. We recommend 19mm thickness for wardrobe shutters and 25mm for extra-large doors exceeding 2.5 feet in width."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use block board in kitchens?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, but only if you use BWP (waterproof) grade block board. Standard MR-grade block board will swell from kitchen moisture. For below-counter carcasses near the sink, we generally recommend marine plywood instead, as it provides better water resistance in high-splash zones."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the minimum order for wholesale block board rates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Wholesale pricing starts at 25 sheets per order. For orders exceeding 100 sheets, we offer additional volume discounts. Contact us for project-specific quotes &mdash; we regularly supply bulk orders to furniture manufacturers and contractors across Rajkot, Ahmedabad, Surat, and other Gujarat cities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you supply block boards to cities outside Rajkot?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we deliver across Gujarat from our Rajkot warehouse. Regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. For bulk orders, we arrange dedicated transport with protective packaging to prevent edge damage during transit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When should I choose Block Board over Plywood?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Choose block board for large unsupported surfaces like wardrobe shutters or office partitions. It is much more resistant to bending (warping) over long spans compared to plywood, which is better for structural \"skeletons.\""
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between Pine and Poplar cores?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pine core boards are heavier, denser, and have superior screw-holding capacity, making them ideal for high-end furniture. Poplar core boards are lighter and more cost-effective, suitable for budget modular furniture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you supply cut-to-size block boards?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For bulk factory orders, we can facilitate custom-sized boards directly from our manufacturing partners. For regular retail/contractor orders, we supply standard 8x4 sheets from our ready stock."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I verify the BWP (Waterproof) grade on-site?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Authentic BWP block boards will have a specific IS:1659 marking. We also provide a 72-hour boiling water test certificate from the manufacturer for bulk institutional supplies."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the lead time for site delivery in Ahmedabad?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We coordinate next-day delivery for Ahmedabad and Saurashtra regions for orders placed before 1 PM. Our logistics team ensures damage-free unloading at the site."
-      }
-    }
-  ]
-}
-  </script>
   <script>
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {

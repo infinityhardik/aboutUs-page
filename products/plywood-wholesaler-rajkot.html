@@ -1,251 +1,323 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8" />
-  <script>
-      /* Resolve the theme before first paint so the page never flashes the wrong one.
-         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-         preference, otherwise dark. */
-      (function () {
-        try {
-          var t = localStorage.getItem('theme-preference');
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plywood Wholesaler in Rajkot | MR, BWP &amp; IS 710</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plywood Dealer &amp; Wholesaler in Rajkot | MR, BWP &amp; Marine</title>
   <meta name="description" content="Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order." />
-  <meta name="keywords"
-    content="plywood wholesaler Rajkot, plywood dealer Gujarat, marine plywood Rajkot, commercial plywood Ahmedabad, furniture plywood Saurashtra, BWP plywood Gujarat, MR grade plywood, shuttering plywood Rajkot, Marllex plywood dealer, plywood supplier Gujarat" />
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
   <link rel="canonical" href="https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="../styles/theme.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
-    onload="this.media='all'" />
-
-  <!-- Critical CSS - Inline for FCP optimization -->
-  <style>
-    :root {
-      --color-primary: #c58f59;
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --navbar-height: var(--navbar-height);
-      --container-width: 1200px
-    }
-
-    [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: var(--color-bg-surface)
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      transition: background-color .3s ease, color .3s ease
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--color-bg-surface);
-      height: var(--navbar-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 2rem;
-      align-items: center
-    }
-
-    .navbar .menu a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-weight: 500;
-      transition: color .3s ease
-    }
-
-    .navbar .menu a:hover {
-      color: var(--color-primary-text)
-    }
-
-    .btn-primary {
-      background: #8c582b;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: .95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #73441e;
-      box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-    }
-
-    .theme-toggle {
-      background: 0;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .5rem 1rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center
-    }
-
-    
-
-    @media (max-width:768px) {
-      .navbar .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--color-bg-surface);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right .3s ease
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-
-      .navbar .menu.active {
-        right: 0
-      }
-    }
-  </style>
-
-  <!-- Main CSS - Deferred for non-blocking load -->
-  <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/products.css" />
-  </noscript>
-  <meta name="author" content="Mahadev Traders" />
-  <meta name="robots" content="index, follow" />
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
-  <meta property="og:title" content="Plywood Wholesaler in Rajkot | MR, BWP &amp; IS 710" />
-  <meta property="og:description"
-    content="Gujarat's most trusted plywood wholesaler since 1995. Marine, commercial & furniture-grade plywood at wholesale rates. Call +91 6355 360702." />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Plywood Dealer &amp; Wholesaler in Rajkot | MR, BWP &amp; Marine" />
+  <meta property="og:description" content="Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order." />
   <meta property="og:url" content="https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html" />
-  <meta property="og:type" content="product" />
-  <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/plywood.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Plywood dealer and wholesaler in Rajkot: MR, BWP and marine grades" />
   <meta name="twitter:card" content="summary_large_image" />
-  
+  <meta name="twitter:title" content="Plywood Dealer &amp; Wholesaler in Rajkot | MR, BWP &amp; Marine" />
+  <meta name="twitter:description" content="Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/plywood.jpg" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Premium Plywood — Wholesale Supply in Rajkot & Gujarat",
-  "description": "Complete range of marine (BWP 710), commercial (MR grade), shuttering, and furniture-grade plywood from authorised brands Marllex, Zevik, Simson, Greytone, and Limelite. Wholesale supply across Gujarat since 1995.",
-  "category": "Building Materials > Plywood",
-  "material": "Hardwood, Gurjan, Pine",
-  "brand": {
-    "@type": "Brand",
-    "name": "Multiple Brands (Marllex, Zevik, Simson, Greytone, Limelite)"
-  }
-}
-</script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
+      "@type": "CollectionPage",
+      "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#webpage",
+      "url": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html",
+      "name": "Plywood Dealer & Wholesaler in Rajkot | MR, BWP & Marine",
+      "description": "Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/plywood.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#service"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#service",
+      "name": "Plywood supply in Rajkot",
+      "serviceType": "Plywood supply",
+      "category": "Plywood",
+      "description": "Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order.",
+      "url": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ],
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "Marllex",
+          "alternateName": "Marlex"
+        },
+        {
+          "@type": "Brand",
+          "name": "Zevik"
+        },
+        {
+          "@type": "Brand",
+          "name": "Limelite"
+        },
+        {
+          "@type": "Brand",
+          "name": "Greytone"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "No.1 Plywood Wholesaler &amp; Dealer in Rajkot, Gujarat",
-      "item": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html"
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Plywood",
+          "item": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between BWP and MR-grade plywood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BWP (Boiling Water Proof) plywood conforms to IS:710 and can withstand prolonged exposure to boiling water without delamination. It is essential for kitchens, bathrooms, and any area exposed to moisture or humidity. MR (Moisture Resistant) plywood conforms to IS:303 and handles normal indoor humidity but is not suitable for direct water contact. At Mahadev Traders, we always recommend BWP for wet areas and MR for dry interiors to balance performance and cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which plywood thickness should I use for kitchen cabinets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For kitchen cabinet carcasses (the box structure), use 18mm or 19mm BWP marine plywood — this provides the structural strength needed to support countertops and stored items. For cabinet shutters (doors), 12mm BWP plywood is standard. For back panels, 6mm plywood is sufficient. Always use BWP grade in kitchens as MR-grade plywood will swell from cooking steam over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you supply plywood to Ahmedabad, Surat, and other Gujarat cities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we deliver plywood orders across Gujarat from our Rajkot warehouse. Our regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. Freight depends on the route, the load and the timing, so it is quoted with the order; free delivery is available on select orders. Call us at +91 6355 360702 for delivery timelines to your city."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I verify if plywood is genuinely BWP grade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Genuine BWP plywood carries the ISI mark with IS:710 printed on every sheet along with the manufacturer's licence number. You can verify this number on the Bureau of Indian Standards (BIS) website. Additionally, the edge of BWP plywood shows tightly bonded layers with no visible gaps. At Mahadev Traders, we only stock certified plywood from authorised manufacturers — every sheet is traceable to its source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum order quantity for wholesale plywood rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no minimum order — one sheet is a normal order. The rate moves with quantity, so larger orders are priced lower per sheet: ask for the rate at the quantity you actually need. Whether you are a carpenter buying for a single project or a contractor ordering for a multi-storey building, the quote is made for that order. Contact us on WhatsApp or call for your specific requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is better for furniture in Rajkot — plywood or MDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both have their strengths. Plywood is superior for structural applications, screw-holding, and load-bearing furniture (wardrobes, kitchen carcasses, bed frames). MDF is better for decorative elements requiring smooth, uniform surfaces (cabinet doors, wall panels, CNC-cut designs). In Rajkot's climate, we recommend plywood for the structure and MDF for the finishing elements. Many modern kitchens use this combination for the best balance of strength and aesthetics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum order for site delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no minimum for delivery. Freight is quoted with each order and depends on the route, the load and the timing; free delivery is available on select orders, so ask about it when you request the rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer material on a credit basis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer credit facilities to registered contractors and firms after a successful initial transaction and basic KYC verification. We support flexible payment cycles aligned with your project milestones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you supply plywood outside of Gujarat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While our primary service area is Gujarat (including Kutch and Saurashtra), we can facilitate full-truckload (FTL) deliveries to neighboring states like Rajasthan and Maharashtra for large institutional projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you ensure the quality of bulk orders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every bulk consignment undergoes a rigorous Pre-Delivery Inspection (PDI) at our warehouse. We check for core gaps, surface finish, and thickness consistency to ensure that the material delivered at the site is 100% compliant with your order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide samples for architect approval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide 6x6 inch samples and full-size sample sheets for technical testing and architect approval for any ongoing or upcoming projects."
+          }
+        }
+      ]
     }
   ]
 }
-    </script>
+  </script>
 </head>
 
 <body>
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main">
     <div class="brand"><a href="/">Mahadev Traders</a></div>
     <div class="menu" id="menu">
-      <a href="/products/">Products</a>
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html" aria-current="page">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
+        </div>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
       <a href="/services/">Services</a>
       <a href="/#about">About</a>
-      <a href="/#expertise">Expertise</a>
-      <a href="/#brands">Brands</a>
       <a href="/#contact">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
       <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/"><i class="fas fa-home"></i> Home</a><span>/</span>
-    <a href="/products/">Products</a><span>/</span>
-    <span>Plywood Wholesaler Rajkot</span>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li aria-current="page">Plywood</li>
+    </ol>
   </nav>
   <main>
   <section class="product-hero">
-    <h1>No.1 Plywood Wholesaler &amp; <span style="color: var(--color-primary-text);">Dealer in Rajkot, Gujarat</span></h1>
-    <p>Mahadev Traders has been Gujarat's most trusted plywood wholesaler since 1995. We supply marine, commercial, shuttering, and furniture-grade plywood from authorised brands at unbeatable wholesale rates across Rajkot, Ahmedabad, Saurashtra, and all of Gujarat.</p>
+    <h1>Plywood Dealer &amp; Wholesaler <span class="h1-accent">in Rajkot</span></h1>
+    <p>Mahadev Traders has sold plywood from Gondal Road, Rajkot since 1995: MR and BWP furniture plywood, IS 710 marine plywood, shuttering and flexible plywood, from one sheet to a full truck, with delivery across Rajkot, Saurashtra and Gujarat.</p>
     <div class="location-badge"><i class="fas fa-check-circle"></i> 30+ Years Trusted | Rajkot, Ahmedabad &amp; All Gujarat</div>
   </section>
 
   <section class="product-content">
     <!-- Expert Introduction -->
     <div class="product-intro">
-      <h2>Why Mahadev Traders Is Gujarat's Leading Plywood Wholesaler</h2>
-      <p>When carpenters, contractors, interior designers, or furniture manufacturers in Gujarat need plywood, one name comes up consistently &mdash; <strong>Mahadev Traders</strong>. Located on Gondal Road in Rajkot, we have been the backbone of Gujarat's plywood supply chain for over three decades.</p>
+      <h2>Plywood Wholesale and Retail Supply in Rajkot</h2>
+      <p>When carpenters, contractors, interior designers, or furniture manufacturers in Gujarat need plywood, they want the right grade, in stock, at a fair rate. <strong>Mahadev Traders</strong> has supplied that from Gondal Road in Rajkot for over three decades.</p>
       <p>Unlike retail shops that stock limited varieties, we maintain a <strong>massive warehouse inventory</strong> of plywood in every grade, thickness, and brand combination. Whether you need a single sheet of 18mm Gurjan-face marine plywood for a kitchen project or 500 sheets of commercial MR-grade plywood for a large housing project in Ahmedabad &mdash; we deliver at genuine wholesale pricing.</p>
-      <p>We are <strong>authorised dealers</strong> of leading plywood brands including <a href="/products/marllex-premium-plywood.html">Marllex</a>, <a href="/products/zevik-plywood-supplier.html">Zevik</a>, <a href="/products/simson-plywood-supplier.html">Simson</a>, <a href="/products/greytone-plywood-dealers.html">Greytone</a>, and <a href="/products/limelite-plywood-supplier.html">Limelite</a>. Every sheet we sell comes with genuine manufacturer certification &mdash; no duplicates, no seconds, no off-brand substitutes.</p>
+      <p>We are <strong>authorised dealers</strong> of plywood brands including <a href="/products/marllex-premium-plywood.html">Marllex</a>, <a href="/products/zevik-plywood-supplier.html">Zevik</a>, <a href="/products/simson-plywood-supplier.html">Simson</a>, <a href="/products/greytone-plywood-dealers.html">Greytone</a>, and <a href="/products/limelite-plywood-supplier.html">Limelite</a>. Every sheet we sell comes with genuine manufacturer certification &mdash; no duplicates, no seconds, no off-brand substitutes.</p>
     </div>
 
     <!-- Detailed Specifications Table -->
@@ -265,15 +337,15 @@
           <tr>
             <td><strong><a href="/products/marine-plywood-710-rajkot.html">Marine Plywood</a></strong></td>
             <td>BWP 710 (IS:710)</td>
-            <td>6, 9, 12, 16, 19 mm</td>
+            <td>6, 9, 12, 18 mm</td>
             <td>8&times;4 ft, 7&times;4 ft</td>
             <td>Kitchens, bathrooms, outdoor furniture</td>
           </tr>
           <tr>
             <td><strong><a href="/products/commercial-plywood-mr-grade.html">Commercial Plywood</a></strong></td>
             <td>MR Grade (IS:303)</td>
-            <td>4, 6, 9, 12, 18, 19 mm</td>
-            <td>8&times;4 ft, 7&times;4 ft, 6&times;4 ft</td>
+            <td>6, 9, 12, 15, 18 mm</td>
+            <td>6&times;3 to 8&times;4 ft</td>
             <td>Bedroom furniture, wardrobes, shelving</td>
           </tr>
           <tr>
@@ -317,13 +389,13 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-warehouse"></i></div>
-        <h3>Massive Ready Stock</h3>
-        <p>Over 10,000 sheets in stock at our Gondal Road warehouse. Marine, commercial, shuttering &mdash; all grades, all thicknesses.</p>
+        <h3>Ready Stock in Rajkot</h3>
+        <p>108 plywood lines held as regular stock at our Gondal Road warehouse: MR and 100% BWP, 6 to 18mm, 6x3 to 8x4 ft.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
         <h3>Gujarat-Wide Delivery</h3>
-        <p>Same-day dispatch from Rajkot. We deliver to Ahmedabad, Morbi, Jamnagar, Bhavnagar, Surat, and across Gujarat.</p>
+        <p>Dispatch from our Rajkot warehouse to Ahmedabad, Morbi, Jamnagar, Bhavnagar, Surat and across Gujarat, with freight quoted per order.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
@@ -438,7 +510,7 @@
               </tr>
               <tr>
                 <td><strong>Inventory Capacity</strong></td>
-                <td>Ready stock of 5000+ sheets across 20+ variants at any given time.</td>
+                <td>108 plywood lines held as regular stock (6 to 18mm, MR and BWP); other sizes arranged to order.</td>
               </tr>
               <tr>
                 <td><strong>Lead Time</strong></td>
@@ -548,7 +620,7 @@
       <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
         single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
         your own job before committing to the sheets you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given sheet moves with brand,
+      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price of any given sheet moves with brand,
         thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
         would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
         thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
@@ -621,7 +693,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Yes, we deliver bulk plywood orders across Gujarat from our Rajkot warehouse. Our regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. For orders above a minimum quantity, we arrange dedicated transport at competitive freight rates. Call us at +91 6355 360702 for delivery timelines to your city.
+              Yes, we deliver plywood orders across Gujarat from our Rajkot warehouse. Our regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. Freight depends on the route, the load and the timing, so it is quoted with the order; free delivery is available on select orders. Call us at +91 6355 360702 for delivery timelines to your city.
             </div>
           </div>
         </div>
@@ -643,7 +715,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-content">
-              Our wholesale pricing is available for orders starting from 25 sheets. For larger orders of 100+ sheets, we offer additional volume discounts. Whether you are a carpenter buying for a single project or a contractor ordering for a multi-storey building, we have a pricing tier that works for you. Contact us on WhatsApp or call for your specific requirements.
+              There is no minimum order &mdash; one sheet is a normal order. The rate moves with quantity, so larger orders are priced lower per sheet: ask for the rate at the quantity you actually need. Whether you are a carpenter buying for a single project or a contractor ordering for a multi-storey building, the quote is made for that order. Contact us on WhatsApp or call for your specific requirements.
             </div>
           </div>
         </div>
@@ -660,7 +732,7 @@
         </div>
         <div class="faq-item">
                   <button class="faq-question"><span>What is the minimum order for site delivery?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-                  <div class="faq-answer"><div class="faq-answer-content">For local Rajkot delivery, we provide free transport for orders above 25 sheets. For smaller quantities or long-distance delivery across Gujarat, a nominal transport fee may apply depending on the volume.</div></div>
+                  <div class="faq-answer"><div class="faq-answer-content">There is no minimum for delivery. Freight is quoted with each order and depends on the route, the load and the timing; free delivery is available on select orders, so ask about it when you request the rate.</div></div>
                 </div>
         <div class="faq-item">
                   <button class="faq-question"><span>Do you offer material on a credit basis?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
@@ -678,16 +750,12 @@
                   <button class="faq-question"><span>Do you provide samples for architect approval?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
                   <div class="faq-answer"><div class="faq-answer-content">Yes, we provide 6x6 inch samples and full-size sample sheets for technical testing and architect approval for any ongoing or upcoming projects.</div></div>
                 </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>Which is better for furniture in Rajkot &mdash; plywood or MDF?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">Both have their strengths. Plywood is superior for structural applications, screw-holding, and load-bearing furniture (wardrobes, kitchen carcasses, bed frames). MDF is better for decorative elements requiring smooth, uniform surfaces (cabinet doors, wall panels, CNC-cut designs). In Rajkot's climate, we recommend plywood for the structure and MDF for the finishing elements. Many modern kitchens use this combination for the best balance of strength and aesthetics.</div></div>
-        </div>
       </div>
     </div>
 
     <!-- Final CTA -->
     <div class="cta-section">
-      <h3>Get Gujarat's Best Wholesale Plywood Rates Today</h3>
+      <h3>Get Today's Plywood Rates</h3>
       <p>30+ years trusted by Gujarat's carpenters, contractors, and interior designers. Call now for instant pricing on any plywood grade.</p>
         <a href="tel:+916355360702" class="cta-btn cta-btn-primary">
           <i class="fas fa-phone"></i>
@@ -701,152 +769,71 @@
     </section>
     </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col footer-about">
           <h3>Mahadev Traders</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
-            Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
-          </p>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Nr. S.T. Workshop, Gondal Road,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-        <div class="footer-col" style="min-width: 200px;">
-          <h3>Quick Links</h3>
-          <ul class="footer-links" style="list-style: none;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products/">All Products</a></li>
-            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-            <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-            <li><a href="/#about">About Us</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Connect With Us</h3>
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; boards</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
           <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-              aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-              aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                class="fas fa-address-book" aria-hidden="true"></i></a>
-            <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-              aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
       </div>
     </div>
   </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
   <script src="../scripts/theme.js" defer></script>
   <script src="../scripts/navbar.js" defer></script>
   <script src="../scripts/products-nav.js" defer></script>
   <!-- FAQPage Schema -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the difference between BWP and MR-grade plywood?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "BWP (Boiling Water Proof) plywood conforms to IS:710 and can withstand prolonged exposure to boiling water without delamination. It is essential for kitchens, bathrooms, and any area exposed to moisture or humidity. MR (Moisture Resistant) plywood conforms to IS:303 and handles normal indoor humidity but is not suitable for direct water contact. At Mahadev Traders, we always recommend BWP for wet areas and MR for dry interiors to balance performance and cost."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which plywood thickness should I use for kitchen cabinets?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For kitchen cabinet carcasses (the box structure), use 18mm or 19mm BWP marine plywood &mdash; this provides the structural strength needed to support countertops and stored items. For cabinet shutters (doors), 12mm BWP plywood is standard. For back panels, 6mm plywood is sufficient. Always use BWP grade in kitchens as MR-grade plywood will swell from cooking steam over time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you supply plywood to Ahmedabad, Surat, and other Gujarat cities?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we deliver bulk plywood orders across Gujarat from our Rajkot warehouse. Our regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. For orders above a minimum quantity, we arrange dedicated transport at competitive freight rates. Call us at +91 6355 360702 for delivery timelines to your city."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I verify if plywood is genuinely BWP grade?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Genuine BWP plywood carries the ISI mark with IS:710 printed on every sheet along with the manufacturer's licence number. You can verify this number on the Bureau of Indian Standards (BIS) website. Additionally, the edge of BWP plywood shows tightly bonded layers with no visible gaps. At Mahadev Traders, we only stock certified plywood from authorised manufacturers &mdash; every sheet is traceable to its source."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the minimum order quantity for wholesale plywood rates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our wholesale pricing is available for orders starting from 25 sheets. For larger orders of 100+ sheets, we offer additional volume discounts. Whether you are a carpenter buying for a single project or a contractor ordering for a multi-storey building, we have a pricing tier that works for you. Contact us on WhatsApp or call for your specific requirements."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which is better for furniture in Rajkot &mdash; plywood or MDF?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Both have their strengths. Plywood is superior for structural applications, screw-holding, and load-bearing furniture (wardrobes, kitchen carcasses, bed frames). MDF is better for decorative elements requiring smooth, uniform surfaces (cabinet doors, wall panels, CNC-cut designs). In Rajkot's climate, we recommend plywood for the structure and MDF for the finishing elements. Many modern kitchens use this combination for the best balance of strength and aesthetics."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the minimum order for site delivery?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For local Rajkot delivery, we provide free transport for orders above 25 sheets. For smaller quantities or long-distance delivery across Gujarat, a nominal transport fee may apply depending on the volume."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer material on a credit basis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we offer credit facilities to registered contractors and firms after a successful initial transaction and basic KYC verification. We support flexible payment cycles aligned with your project milestones."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you supply plywood outside of Gujarat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "While our primary service area is Gujarat (including Kutch and Saurashtra), we can facilitate full-truckload (FTL) deliveries to neighboring states like Rajasthan and Maharashtra for large institutional projects."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do you ensure the quality of bulk orders?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Every bulk consignment undergoes a rigorous Pre-Delivery Inspection (PDI) at our warehouse. We check for core gaps, surface finish, and thickness consistency to ensure that the material delivered at the site is 100% compliant with your order."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide samples for architect approval?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we provide 6x6 inch samples and full-size sample sheets for technical testing and architect approval for any ongoing or upcoming projects."
-      }
-    }
-  ]
-}
-  </script>
   <script>
     // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(button => {

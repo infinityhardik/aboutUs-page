@@ -1,247 +1,293 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8" />
-  <script>
-      /* Resolve the theme before first paint so the page never flashes the wrong one.
-         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-         preference, otherwise dark. */
-      (function () {
-        try {
-          var t = localStorage.getItem('theme-preference');
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Liner Laminates Supplier Rajkot | 0.7mm & 0.8mm Inner Sheets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liner Laminates Supplier Rajkot | 0.7mm &amp; 0.8mm Inner Sheets</title>
   <meta name="description" content="Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat." />
-  <meta name="keywords"
-    content="Liner Laminates Rajkot, Inner Laminates Gujarat, Laminate Supplier Ahmedabad, Mahadev Traders" />
-  <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
   <link rel="canonical" href="https://mahadev-traders.com/products/liner-laminates-inner.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="../styles/theme.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
-    onload="this.media='all'" />
-
-  <!-- Critical CSS - Inline for FCP optimization -->
-  <style>
-    :root {
-      --color-primary: #c58f59;
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --navbar-height: var(--navbar-height);
-      --container-width: 1200px
-    }
-
-    [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: var(--color-bg-surface)
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      transition: background-color .3s ease, color .3s ease
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--color-bg-surface);
-      height: var(--navbar-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 2rem;
-      align-items: center
-    }
-
-    .navbar .menu a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-weight: 500;
-      transition: color .3s ease
-    }
-
-    .navbar .menu a:hover {
-      color: var(--color-primary-text)
-    }
-
-    .btn-primary {
-      background: #8c582b;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: .95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #73441e;
-      box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-    }
-
-    .theme-toggle {
-      background: 0;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .5rem 1rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center
-    }
-
-    
-
-    @media (max-width:768px) {
-      .navbar .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--color-bg-surface);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right .3s ease
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-
-      .navbar .menu.active {
-        right: 0
-      }
-    }
-  </style>
-
-  <!-- Main CSS - Deferred for non-blocking load -->
-  <link rel="stylesheet" href="../styles/index.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="../styles/products.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/products.css" />
-  </noscript>
-  <!-- SEO Meta Tags -->
-  <meta name="author" content="Mahadev Traders" />
-  <meta name="robots" content="index, follow" />
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
-  <meta property="og:title" content="Liner Laminates (Inner) Wholesaler in Rajkot | Mahadev Traders" />
-  <meta property="og:description"
-    content="Wholesale supplier of 0.7mm & 0.8mm Liner Laminates in Rajkot. Premium white and off-white balancing sheets for cabinet interiors. Durable and easy to clean." />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Liner Laminates Supplier Rajkot | 0.7mm &amp; 0.8mm Inner Sheets" />
+  <meta property="og:description" content="Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat." />
   <meta property="og:url" content="https://mahadev-traders.com/products/liner-laminates-inner.html" />
-  <meta property="og:type" content="product" />
-  <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/laminates.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Laminate and sunmica dealer in Rajkot" />
   <meta name="twitter:card" content="summary_large_image" />
-  
+  <meta name="twitter:title" content="Liner Laminates Supplier Rajkot | 0.7mm &amp; 0.8mm Inner Sheets" />
+  <meta name="twitter:description" content="Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/laminates.jpg" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Liner Laminates (Inner Cabin Balancing Sheets)",
-  "description": "High-quality 0.7mm and 0.8mm liner laminates for cabinet and wardrobe interiors. Provides a smooth, hygienic, and easy-to-clean surface for all types of storage furniture.",
-  "category": "Building Materials > Finishes > Laminates",
-  "brand": {
-    "@type": "Brand",
-    "name": "Mahadev Standard Collection"
-  }
-}
-</script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
+      "@type": "ItemPage",
+      "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#webpage",
+      "url": "https://mahadev-traders.com/products/liner-laminates-inner.html",
+      "name": "Liner Laminates Supplier Rajkot | 0.7mm & 0.8mm Inner Sheets",
+      "description": "Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/laminates.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "breadcrumb": {
+        "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "about": {
+        "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#service"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://mahadev-traders.com/products/"
+      "@type": "Service",
+      "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#service",
+      "name": "Liner laminate supply in Rajkot",
+      "serviceType": "Liner laminate supply",
+      "category": "Laminates",
+      "description": "Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat.",
+      "url": "https://mahadev-traders.com/products/liner-laminates-inner.html",
+      "provider": {
+        "@type": "WholesaleStore",
+        "@id": "https://mahadev-traders.com/#business",
+        "name": "Mahadev Traders",
+        "url": "https://mahadev-traders.com/",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "image": "https://mahadev-traders.com/assets/og/home.jpg",
+        "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2594209,
+          "longitude": 70.7999294
+        },
+        "hasMap": "https://maps.google.com/?cid=12013598871462242283"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Laminates",
-      "item": "https://mahadev-traders.com/products/decorative-laminates-sheets.html"
+      "@type": "BreadcrumbList",
+      "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mahadev-traders.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://mahadev-traders.com/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Laminates",
+          "item": "https://mahadev-traders.com/products/decorative-laminates-sheets.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Liner Laminates",
+          "item": "https://mahadev-traders.com/products/liner-laminates-inner.html"
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Liner Laminates (Inner) Wholesaler in Rajkot &amp; Gujarat",
-      "item": "https://mahadev-traders.com/products/liner-laminates-inner.html"
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/products/liner-laminates-inner.html#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is it called a 'Balancing Sheet'?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you paste a decorative laminate on one side of plywood, the board tends to bend due to surface tension. Pasting a liner on the other side provides equal tension, keeping the board straight and \"balanced.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do liner laminates come in different colors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most liners come in shades of white (Warm White, Cold White, Frosty White) and off-white. However, we also stock some wooden-print and fabric-print liners for premium wardrobe interiors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it necessary to use liners inside kitchen cabinets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Kitchens are high-moisture zones. Liner laminates protect the raw plywood from absorbing steam and oil, preventing the wood from rotting or attracting pests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What glue should be used for pasting liners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard D3 grade synthetic resin adhesives (White Glue) work perfectly. For kitchen applications, we recommend using a waterproof adhesive for extra protection against moisture delamination."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the purpose of a 'Balancing' laminate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you apply a decorative laminate to one side of a board, the board will naturally pull or 'cup' in that direction. A liner laminate on the back side provides equal tension, keeping the panel perfectly straight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use 0.7mm liner for external wardrobe doors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Liner laminates are meant for interior surfacing where they are protected from direct impacts and scratches. For external doors, we recommend 1mm decorative laminates for better durability and aesthetics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do your white liners yellow over time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We supply premium-grade liners with high UV stability. While lower-quality liners may yellow, our products are engineered to maintain their 'Frosty White' or 'Off-White' shade for 10-15 years in indoor conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it possible to glue liner on both sides of a board?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For internal partitions in wardrobes or offices where both sides are visible but don't require decorative finishes, using liners on both sides is a very cost-effective and structurally sound choice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the standard sheet size for liner laminates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The standard sheet size is 8x4 feet (2440mm x 1220mm), matching the standard sizes of Plywood and MDF boards for zero-waste application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use 0.7mm liner for the exterior of my furniture?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We don't recommend it. Exterior surfaces face much more wear and tear. You should use at least a 1.0mm decorative laminate for the outside for better scratch resistance and visual depth."
+          }
+        }
+      ]
     }
   ]
 }
-    </script>
+  </script>
 </head>
 
 <body>
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main">
     <div class="brand"><a href="/">Mahadev Traders</a></div>
     <div class="menu" id="menu">
-      <a href="/products/">Products</a>
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
+        </div>
+      </div>
+      <a href="/productChart.html">Price Chart</a>
       <a href="/services/">Services</a>
       <a href="/#about">About</a>
-      <a href="/#expertise">Expertise</a>
-      <a href="/#brands">Brands</a>
       <a href="/#contact">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
       <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/"><i class="fas fa-home"></i> Home</a><span>/</span>
-    <a href="/products/">Products</a><span>/</span>
-    <span>Liner Laminates Inner</span>
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+      <li aria-current="page">Liner Laminates</li>
+    </ol>
   </nav>
   <!-- Hero Section -->
   <main>
   <section class="product-hero">
-    <h1>Liner Laminates (Inner) <span style="color: var(--color-primary-text);">Wholesaler in Rajkot &amp; Gujarat</span></h1>
+    <h1>Liner Laminate Supplier <span class="h1-accent">in Rajkot</span></h1>
     <p>Mahadev Traders supplies premium 0.7mm and 0.8mm liner laminates for the internal surfaces of wardrobes and cabinets. Durable, hygienic, and cost-effective solutions to give your furniture a clean, professional finish inside and out.</p>
     <div class="location-badge"><i class="fas fa-layer-group"></i> Bulk Stock | White, Off-White &amp; Wooden Prints</div>
   </section>
@@ -251,7 +297,7 @@
     <div class="product-intro">
       <h2>The Professional Secret to Long-Lasting Cabinet Interiors</h2>
       <p>When designing furniture, the exterior gets all the attention, but the <strong>interior finish</strong> is what determines the longevity and hygiene of your storage. <strong>Liner Laminates</strong>, also known as balancing sheets, are thin laminates specifically designed to be pasted on the inner surfaces of cabinets, drawers, and wardrobes.</p>
-      <p>At <strong>Mahadev Traders</strong>, we emphasize the use of high-quality liners to prevent <strong>warping</strong>. When you paste a thick <a href="/products/decorative-laminates-sheets.html">decorative laminate</a> on one side of a plywood sheet, it creates tension. Pasting a liner laminate on the other side "balances" the board, ensuring it remains perfectly straight for years. As a leading <strong>laminate wholesaler in Rajkot</strong>, we stock thousands of liner sheets that are trusted by modular kitchen manufacturers across Gujarat.</p>
+      <p>At <strong>Mahadev Traders</strong>, we emphasize the use of high-quality liners to prevent <strong>warping</strong>. When you paste a thick <a href="/products/decorative-laminates-sheets.html">decorative laminate</a> on one side of a plywood sheet, it creates tension. Pasting a liner laminate on the other side "balances" the board, ensuring it remains perfectly straight for years. As a <strong>laminate wholesaler in Rajkot</strong>, we stock thousands of liner sheets that are trusted by modular kitchen manufacturers across Gujarat.</p>
       <p>Beyond structural benefits, liner laminates provide a smooth, non-porous surface that is far superior to paint or polish for storing clothes, kitchenware, and expensive accessories.</p>
       <p>For buyers comparing this page with decorative laminates: liner sheets are selected for inner balancing and cleanability, not for front-facing design impact. For outside shutters, we normally recommend a thicker 1mm decorative laminate; for the inside of the same shutter, a liner sheet keeps cost and weight under control.</p>
     </div>
@@ -383,7 +429,7 @@
       <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
         single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
         your own job before committing to the sheets you actually need.</p>
-      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band above, the price of any given sheet moves with brand,
+      <p><strong>Firm rates are quoted on enquiry.</strong> Beyond the indicative band below, the price of any given sheet moves with brand,
         thickness, grade, current batch, order quantity and the delivery destination, so a fixed number on this page
         would be out of date within weeks and wrong for most orders anyway. Call or send a WhatsApp message with the
         thickness, quantity and delivery point and you will get the current best rate for that specific order.</p>
@@ -400,7 +446,7 @@
     </div>
     <div class="whatsapp-cta-section">
       <h3>💬 Get Bulk Wholesale Rates</h3>
-      <p>Planning a large project or a modular furniture factory? Mahadev Traders offers unbeatable rates on bulk purchases of 100+ liner sheets.</p>
+      <p>Planning a large project or a modular furniture factory? Mahadev Traders quotes lower per-sheet rates on bulk purchases of 100+ liner sheets.</p>
       <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20a%20bulk%20wholesale%20quote%20for%200.7mm/0.8mm%20Liner%20Laminates"
         class="whatsapp-btn" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i><span>WhatsApp for Bulk Quote</span>
@@ -482,95 +528,6 @@
       </div>
     </section>
     </main>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Why is it called a 'Balancing Sheet'?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When you paste a decorative laminate on one side of plywood, the board tends to bend due to surface tension. Pasting a liner on the other side provides equal tension, keeping the board straight and \"balanced.\""
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use 0.7mm liner for the exterior of my furniture?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We don't recommend it. Exterior surfaces face much more wear and tear. You should use at least a 1.0mm decorative laminate for the outside for better scratch resistance and visual depth."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do liner laminates come in different colors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most liners come in shades of white (Warm White, Cold White, Frosty White) and off-white. However, we also stock some wooden-print and fabric-print liners for premium wardrobe interiors."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it necessary to use liners inside kitchen cabinets?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. Kitchens are high-moisture zones. Liner laminates protect the raw plywood from absorbing steam and oil, preventing the wood from rotting or attracting pests."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What glue should be used for pasting liners?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Standard D3 grade synthetic resin adhesives (White Glue) work perfectly. For kitchen applications, we recommend using a waterproof adhesive for extra protection against moisture delamination."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of a 'Balancing' laminate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "When you apply a decorative laminate to one side of a board, the board will naturally pull or 'cup' in that direction. A liner laminate on the back side provides equal tension, keeping the panel perfectly straight."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use 0.7mm liner for external wardrobe doors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Liner laminates are meant for interior surfacing where they are protected from direct impacts and scratches. For external doors, we recommend 1mm decorative laminates for better durability and aesthetics."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do your white liners yellow over time?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We supply premium-grade liners with high UV stability. While lower-quality liners may yellow, our products are engineered to maintain their 'Frosty White' or 'Off-White' shade for 10-15 years in indoor conditions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it possible to glue liner on both sides of a board?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. For internal partitions in wardrobes or offices where both sides are visible but don't require decorative finishes, using liners on both sides is a very cost-effective and structurally sound choice."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the standard sheet size for liner laminates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The standard sheet size is 8x4 feet (2440mm x 1220mm), matching the standard sizes of Plywood and MDF boards for zero-waste application."
-      }
-    }
-  ]
-}
-  </script>
   <script>
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
@@ -582,52 +539,67 @@
       });
     });
   </script>
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col footer-about">
           <h3>Mahadev Traders</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality plywood, MDF, block-boards, and flush doors in Rajkot, Ahmedabad &
-            Saurashtra. Over 30 years of excellence in wholesale distribution across Gujarat.
-          </p>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Nr. S.T. Workshop, Gondal Road,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-        <div class="footer-col" style="min-width: 200px;">
-          <h3>Quick Links</h3>
-          <ul class="footer-links" style="list-style: none;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products/">All Products</a></li>
-            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-            <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-            <li><a href="/#about">About Us</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Connect With Us</h3>
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; boards</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
           <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-              aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-              aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                class="fas fa-address-book" aria-hidden="true"></i></a>
-            <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-              aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
       </div>
     </div>
   </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
   <script src="../scripts/theme.js" defer></script>
   <script src="../scripts/navbar.js" defer></script>
   <script src="../scripts/products-nav.js" defer></script>

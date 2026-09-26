@@ -1,1356 +1,1047 @@
 <!DOCTYPE html>
 <html lang="en-IN">
-
 <head>
   <meta charset="UTF-8" />
-  <script>
-      /* Resolve the theme before first paint so the page never flashes the wrong one.
-         Mirrors scripts/theme.js: an explicit saved choice wins, otherwise the OS
-         preference, otherwise dark. */
-      (function () {
-        try {
-          var t = localStorage.getItem('theme-preference');
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
-    </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Wholesale plywood, block board, laminate, flush door, MDF and HDHMR supplier in Rajkot since 1995. Grade advice and bulk trade rates across Gujarat." />
-  <title>Wholesale Plywood, MDF & Flush Doors | Mahadev Traders</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plywood, Block Board &amp; Flush Doors in Rajkot | Mahadev Traders</title>
+  <meta name="description" content="Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot since 1995. Marllex, Motherwood and more. No minimum order; call for rates." />
   <link rel="canonical" href="https://mahadev-traders.com/" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Global Structured Data -->
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-
-  <!-- Fonts with optimized loading -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-  </noscript>
-  <link rel="stylesheet" href="styles/theme.css" />
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
-    onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </noscript>
-
-  <!-- Critical CSS - Inline for FCP optimization -->
-  <style>
-    :root {
-      --color-primary: #c58f59;
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --navbar-height: 80px;
-      --navbar-mobile-height: 64px;
-      --container-width: 1200px
-    }
-
-    [data-theme='dark'] {
-      --color-bg: var(--color-bg-base);
-      --color-text: var(--color-text-main);
-      --color-bg-surface: #111827
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.6;
-      transition: background-color .3s ease, color .3s ease
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: var(--color-bg-surface);
-      height: var(--navbar-height);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
-    }
-
-    .navbar .menu {
-      display: flex;
-      gap: 2rem;
-      align-items: center
-    }
-
-    .navbar .menu a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-weight: 500;
-      transition: color .3s ease
-    }
-
-    .navbar .menu a:hover {
-      color: var(--color-primary-text)
-    }
-
-    .btn-primary {
-      background: #8c582b;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: .95rem;
-      border: none;
-      cursor: pointer;
-      transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 0 15px rgba(140, 88, 43, .4)
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #73441e;
-      box-shadow: 0 0 25px rgba(140, 88, 43, .6)
-    }
-
-    .theme-toggle {
-      background: 0;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .5rem 1rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center
-    }
-
-    .hero {
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      padding: calc(var(--navbar-height) + 1rem) 2rem 2rem;
-      background: linear-gradient(135deg, var(--color-bg) 0%, rgba(197, 143, 89, .07) 100%)
-    }
-
-    .hero-content {
-      width: min(1200px, 100%);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
-      gap: clamp(2rem, 5vw, 4rem);
-      align-items: center
-    }
-
-    .hero h1 {
-      font-size: clamp(2.45rem, 4.8vw, 4.1rem);
-      font-weight: 800;
-      margin-bottom: 1.25rem;
-      line-height: 1.02
-    }
-
-    .hero-lead {
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
-      max-width: 680px;
-      margin: 0 0 1.75rem;
-      color: var(--color-text)
-    }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      width: fit-content;
-      margin-bottom: 1rem;
-      padding: .45rem .75rem;
-      border-radius: 50px;
-      background: rgba(197, 143, 89, .09);
-      font-size: .78rem;
-      font-weight: 800;
-      text-transform: uppercase
-    }
-
-    .section-padding {
-      padding: 4rem 2rem
-    }
-
-    h2,
-    h3 {
-      font-weight: 700;
-      margin-bottom: 1rem
-    }
-
-    @media (max-width:768px) {
-      .navbar .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: var(--color-bg-surface);
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right .3s ease
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <script>
+    /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme-preference');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
-
-      .navbar .menu.active {
-        right: 0
-      }
-
-      .hero {
-        min-height: auto;
-        padding: calc(var(--navbar-mobile-height) + 1.25rem) 1rem 3rem
-      }
-
-      .hero-content {
-        grid-template-columns: 1fr
-      }
-
-      .hero h1 {
-        font-size: 2.55rem
-      }
-
-      .btn-primary {
-        padding: .6rem 1.2rem;
-        font-size: .9rem
-      }
-    }
-  </style>
-
-  <!-- Main CSS - Deferred for non-blocking load -->
-  <link rel="stylesheet" href="styles/index.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="styles/index.css" />
-  </noscript>
-
-  <!-- SEO Meta Tags -->
-  <meta name="keywords"
-    content="MDF wholesale Rajkot, HDHMR board Gujarat, Motherwood MDF dealer Rajkot, Super HD+WR MDF Gujarat, TurBo+ MDF Saurashtra, Boilo MDF wholesale, Exterior Grade MDF Rajkot, MDF board supplier Ahmedabad, plywood wholesaler Rajkot, block-board supplier Gujarat, flush door manufacturer Saurashtra, plywood dealers Ahmedabad, best plywood Rajkot, wholesale block board, flush door suppliers, marine plywood, commercial plywood, furniture material Rajkot, plywood in Gujarat, Mahadev Traders Rajkot" />
-  <meta name="author" content="Mahadev Traders" />
+    })();
+  </script>
+  <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/icons/favicon-48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+  <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/styles/theme.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
-  <meta name="geo.position" content="22.3039;70.7839" />
-  <meta name="ICBM" content="22.3039, 70.7839" />
-
-  <meta property="og:title"
-    content="Mahadev Traders - Wholesale Plywood, MDF, Block-Board & Flush Doors in Rajkot, Gujarat" />
-  <meta property="og:description"
-    content="Leading wholesaler of premium plywood, mdf, hdhmr, block-boards, and flush doors in Rajkot, Ahmedabad & Saurashtra. 30+ years experience. Authorized dealers of Marllex, Zevik, Simson." />
-  <meta property="og:image" content="https://mahadev-traders.com/assets/favicon.webp" />
+  <meta name="geo.position" content="22.2594209;70.7999294" />
+  <meta name="ICBM" content="22.2594209, 70.7999294" />
+  <meta property="og:site_name" content="Mahadev Traders" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Plywood, Block Board &amp; Flush Doors in Rajkot | Mahadev Traders" />
+  <meta property="og:description" content="Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot since 1995. Marllex, Motherwood and more. No minimum order; call for rates." />
   <meta property="og:url" content="https://mahadev-traders.com/" />
-  <meta property="og:type" content="business.business" />
+  <meta property="og:image" content="https://mahadev-traders.com/assets/og/home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Mahadev Traders, Rajkot: plywood, block board, flush doors, MDF and laminates" />
   <meta name="twitter:card" content="summary_large_image" />
-
-    <script type="application/ld+json">
-  {
+  <meta name="twitter:title" content="Plywood, Block Board &amp; Flush Doors in Rajkot | Mahadev Traders" />
+  <meta name="twitter:description" content="Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot since 1995. Marllex, Motherwood and more. No minimum order; call for rates." />
+  <meta name="twitter:image" content="https://mahadev-traders.com/assets/og/home.jpg" />
+  <script type="application/ld+json">
+{
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://mahadev-traders.com/"
-    }
-  ]
-}
-    </script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://mahadev-traders.com/#website",
-  "name": "Mahadev Traders",
-  "url": "https://mahadev-traders.com/",
-  "publisher": {
-    "@id": "https://mahadev-traders.com/#organization"
-  }
-}
-    </script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://mahadev-traders.com/#organization",
-  "name": "Mahadev Traders",
-  "url": "https://mahadev-traders.com/",
-  "logo": "https://mahadev-traders.com/assets/favicon.webp",
-  "email": "mahadevtraders@hotmail.com",
-  "telephone": "+916355360702",
-  "foundingDate": "1995",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Nr. S.T. Workshop, Gondal Road",
-    "addressLocality": "Rajkot",
-    "addressRegion": "Gujarat",
-    "postalCode": "360004",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/",
-    "https://www.instagram.com/mahadev_traders_rajkot/",
-    "https://www.indiamart.com/mahadev-traders-rajkot/",
-    "https://jsdl.in/DT-50F5ACN1S8F",
-    "https://maps.app.goo.gl/iGgzod36cLGykRej9"
-  ]
-}
-    </script>
-    <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://mahadev-traders.com/#business",
-  "name": "Mahadev Traders",
-  "description": "Premium Plywood, MDF, Block-Board & Flush Door Wholesaler in Rajkot, Gujarat, serving Ahmedabad & Saurashtra.",
-  "url": "https://mahadev-traders.com/",
-  "image": "https://mahadev-traders.com/assets/favicon.webp",
-  "telephone": "+916355360702",
-  "email": "mahadevtraders@hotmail.com",
-  "priceRange": "₹₹",
-  "foundingDate": "1995",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Nr. S.T. Workshop, Gondal Road",
-    "addressLocality": "Rajkot",
-    "addressRegion": "Gujarat",
-    "postalCode": "360004",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "22.3039",
-    "longitude": "70.7839"
-  },
-  "hasMap": "https://maps.app.goo.gl/iGgzod36cLGykRej9",
-  "currenciesAccepted": "INR",
-  "openingHoursSpecification": [
+      "@type": "WebSite",
+      "@id": "https://mahadev-traders.com/#website",
+      "url": "https://mahadev-traders.com/",
+      "name": "Mahadev Traders",
+      "alternateName": "Mahadev Traders Rajkot",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://mahadev-traders.com/#organization"
+      }
+    },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+      "@type": "Organization",
+      "@id": "https://mahadev-traders.com/#organization",
+      "name": "Mahadev Traders",
+      "url": "https://mahadev-traders.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/icons/logo-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "email": "mahadevtraders@hotmail.com",
+      "telephone": "+916355360702",
+      "foundingDate": "1995",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "postalCode": "360004",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+916355360702",
+        "email": "mahadevtraders@hotmail.com",
+        "contactType": "sales",
+        "areaServed": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/",
+        "https://www.instagram.com/mahadev_traders_rajkot/",
+        "https://www.indiamart.com/mahadev-traders-rajkot/",
+        "https://www.justdial.com/DT-50F5ACN1S8F",
+        "https://maps.google.com/?cid=12013598871462242283"
+      ]
+    },
+    {
+      "@type": "WholesaleStore",
+      "@id": "https://mahadev-traders.com/#business",
+      "name": "Mahadev Traders",
+      "url": "https://mahadev-traders.com/",
+      "telephone": "+916355360702",
+      "email": "mahadevtraders@hotmail.com",
+      "image": "https://mahadev-traders.com/assets/og/home.jpg",
+      "logo": "https://mahadev-traders.com/assets/icons/logo-512.png",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nr. S.T. Workshop, Gondal Road",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "postalCode": "360004",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.2594209,
+        "longitude": 70.7999294
+      },
+      "hasMap": "https://maps.google.com/?cid=12013598871462242283",
+      "alternateName": "Mahadev Traders Plywood, Block-Board & Flush-Door Wholesaler",
+      "description": "Plywood, block board, flush door, MDF, HDHMR and laminate dealer and wholesaler on Gondal Road, Rajkot, supplying trade and retail buyers across Gujarat since 1995.",
+      "foundingDate": "1995",
+      "currenciesAccepted": "INR",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "19:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "09:00",
+          "closes": "12:00"
+        }
       ],
-      "opens": "09:00",
-      "closes": "19:30"
+      "parentOrganization": {
+        "@id": "https://mahadev-traders.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rajkot"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Saurashtra"
+        },
+        {
+          "@type": "State",
+          "name": "Gujarat"
+        },
+        {
+          "@type": "City",
+          "name": "Morbi"
+        },
+        {
+          "@type": "City",
+          "name": "Gondal"
+        },
+        {
+          "@type": "City",
+          "name": "Jetpur"
+        },
+        {
+          "@type": "City",
+          "name": "Jamnagar"
+        },
+        {
+          "@type": "City",
+          "name": "Junagadh"
+        },
+        {
+          "@type": "City",
+          "name": "Porbandar"
+        },
+        {
+          "@type": "City",
+          "name": "Amreli"
+        },
+        {
+          "@type": "City",
+          "name": "Bhavnagar"
+        },
+        {
+          "@type": "City",
+          "name": "Surendranagar"
+        },
+        {
+          "@type": "City",
+          "name": "Botad"
+        },
+        {
+          "@type": "City",
+          "name": "Ahmedabad"
+        },
+        {
+          "@type": "City",
+          "name": "Vadodara"
+        },
+        {
+          "@type": "City",
+          "name": "Surat"
+        },
+        {
+          "@type": "City",
+          "name": "Gandhidham"
+        },
+        {
+          "@type": "City",
+          "name": "Bhuj"
+        }
+      ],
+      "knowsAbout": [
+        "Plywood",
+        "Marine plywood (IS 710)",
+        "Block board",
+        "Flush doors",
+        "Medium-density fibreboard (MDF)",
+        "HDHMR board",
+        "Decorative laminates",
+        "Sunmica"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Plywood, block board, flush doors, MDF and laminates",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Plywood",
+            "url": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Block Board",
+            "url": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Flush Doors",
+            "url": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "MDF & HDHMR",
+            "url": "https://mahadev-traders.com/products/mdf-wholesale-rajkot.html"
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Laminates",
+            "url": "https://mahadev-traders.com/products/decorative-laminates-sheets.html"
+          }
+        ]
+      },
+      "department": {
+        "@type": "LocalBusiness",
+        "@id": "https://mahadev-traders.com/#warehouse",
+        "name": "Mahadev Traders Warehouse",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nr. Poojara Mobile, Samrat Industrial Area, Gondal Road",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "postalCode": "360004",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 22.2613153,
+          "longitude": 70.7982756
+        },
+        "hasMap": "https://maps.google.com/?cid=863322595164647845",
+        "telephone": "+916355360702"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/",
+        "https://www.instagram.com/mahadev_traders_rajkot/",
+        "https://www.indiamart.com/mahadev-traders-rajkot/",
+        "https://www.justdial.com/DT-50F5ACN1S8F",
+        "https://maps.google.com/?cid=12013598871462242283"
+      ]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Sunday",
-      "opens": "09:00",
-      "closes": "12:00"
+      "@type": "WebPage",
+      "@id": "https://mahadev-traders.com/#webpage",
+      "url": "https://mahadev-traders.com/",
+      "name": "Plywood, Block Board & Flush Doors in Rajkot | Mahadev Traders",
+      "description": "Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot since 1995. Marllex, Motherwood and more. No minimum order; call for rates.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://mahadev-traders.com/assets/og/home.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "dateModified": "2026-09-26",
+      "about": {
+        "@id": "https://mahadev-traders.com/#business"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mahadev-traders.com/#faq",
+      "isPartOf": {
+        "@id": "https://mahadev-traders.com/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Mahadev Traders in Rajkot, and when are you open?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our office is near the S.T. Workshop on Gondal Road, Rajkot 360004, and the warehouse is in the Samrat Industrial Area near Poojara Mobile, also on Gondal Road. We are open Monday to Saturday from 9:00 am to 7:30 pm and on Sunday from 9:00 am to 12:00 pm. Call +91 6355 360702 before you come if you want a particular size kept aside."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you sell to home owners, or only to the trade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both. There is no minimum order: one sheet, one door or a full truck load are all normal orders. Carpenters and contractors buying regularly get trade rates, and a home owner can take a single sheet to check it against the job before ordering the rest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which plywood should I use for a kitchen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use 100% BWP marine plywood to IS 710 for base cabinets, the sink unit and anything that will see water or steam. MR grade plywood is fine for dry wardrobes, beds and TV units. For carcasses 18mm is the working thickness, and 6mm is enough for back panels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between BWP and BWR plywood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BWP (Boiling Water Proof) is the higher grade. BWP plywood is bonded to withstand prolonged exposure to water and is the grade for kitchens and bathrooms, while BWR (Boiling Water Resistant) suits areas with only mild humidity. We supply BWP marine plywood and BWP flush doors for wet areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is MDF and how is it different from plywood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MDF (Medium Density Fibreboard) is made from wood fibres bonded with resin under heat and pressure. Unlike plywood it has a smooth, uniform surface with no grain or knots, which makes it ideal for painting, routing and precision shutters, while plywood is stronger for load-bearing carcasses. Motherwood grades run, from entry to top: Interior, Exterior, Super HD+WR (HDHMR) and TurBo+. Compare them on the Motherwood MDF page ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is HDHMR, and what is Super HD+WR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HDHMR stands for High Density High Moisture Resistant board, a denser, more moisture-resistant category of fibreboard. Motherwood's Super HD+WR is an HDHMR-grade board, stocked in 3, 5.5, 7.5, 11, 16.75, 18 and 25mm (8x4 ft), and suits kitchen shutters, bathroom vanities and humid interiors. See HDHMR boards for how it compares with plywood."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is TurBo+ MDF, and what does Boilo mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TurBo+ is Motherwood's highest-density MDF, stocked in 3, 5.5, 8, 12 and 18mm. Boilo refers to boiling-water resistance: a Boilo board is made to survive boiling-water exposure, which is why TurBo+ is used for CNC-profiled shutters and demanding, humid positions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What flush door sizes do you stock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flush doors in 25, 30 and 35mm thickness, in heights from 72 to 96 inches and widths from 24 to 48 inches. MR grade doors suit bedrooms and other dry rooms; 100% BWP doors are for bathrooms and wet areas. Stock is from Marllex and Simson."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you deliver outside Rajkot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We dispatch from our Gondal Road warehouse to Morbi, Jamnagar, Junagadh, Ahmedabad, Surat, Vadodara and across Gujarat. Freight depends on the route, the load and the timing, so it is quoted with the order; free delivery is available on select orders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get current rates and place an order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call +91 6355 360702 or send a WhatsApp message with the thickness, grade, quantity and delivery point, and you get the current rate for that order. Trade buyers can also order through Vaives.com . For a budget before you ask, see the rate guide and spec chart ."
+          }
+        }
+      ]
     }
-  ],
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Rajkot"
-    },
-    {
-      "@type": "City",
-      "name": "Ahmedabad"
-    },
-    {
-      "@type": "City",
-      "name": "Saurashtra"
-    },
-    {
-      "@type": "City",
-      "name": "Morbi"
-    },
-    {
-      "@type": "City",
-      "name": "Gondal"
-    },
-    {
-      "@type": "City",
-      "name": "Vadodara"
-    },
-    {
-      "@type": "City",
-      "name": "Surat"
-    },
-    {
-      "@type": "City",
-      "name": "Jamnagar"
-    },
-    {
-      "@type": "City",
-      "name": "Dwarka"
-    },
-    {
-      "@type": "City",
-      "name": "Botad"
-    },
-    {
-      "@type": "City",
-      "name": "Jasdan"
-    },
-    {
-      "@type": "City",
-      "name": "Mahuva"
-    },
-    {
-      "@type": "City",
-      "name": "Amreli"
-    },
-    {
-      "@type": "City",
-      "name": "Junagadh"
-    },
-    {
-      "@type": "City",
-      "name": "Porbandar"
-    },
-    {
-      "@type": "City",
-      "name": "Gujarat"
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/",
-    "https://www.instagram.com/mahadev_traders_rajkot/",
-    "https://www.indiamart.com/mahadev-traders-rajkot/",
-    "https://jsdl.in/DT-50F5ACN1S8F",
-    "https://maps.app.goo.gl/iGgzod36cLGykRej9"
   ]
 }
-    </script>
+  </script>
 </head>
 
-<body>
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="brand">
-      <a href="/">Mahadev Traders</a>
-    </div>
+<body class="home">
+  <nav class="navbar" id="navbar" aria-label="Main">
+    <div class="brand"><a href="/">Mahadev Traders</a></div>
     <div class="menu" id="menu">
-      <a href="/products/">Products</a>
+      <div class="nav-group">
+        <a href="/products/" class="nav-group-label">Products</a>
+        <div class="nav-group-panel">
+          <a href="/products/plywood-wholesaler-rajkot.html">Plywood</a>
+          <a href="/products/block-board-wholesale-supplier.html">Block Board</a>
+          <a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a>
+          <a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a>
+          <a href="/products/decorative-laminates-sheets.html">Laminates</a>
+        </div>
+      </div>
       <a href="/productChart.html">Price Chart</a>
       <a href="/services/">Services</a>
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#brands">Brands</a>
-      <a href="#contact">Contact</a>
-      <button class="theme-toggle" aria-label="Toggle theme" title="Dark Mode"></button>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme"></button>
       <a href="tel:+916355360702" class="btn-primary">Call Now</a>
     </div>
-    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false"
-      aria-controls="menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Hero Section -->
+  <main id="main">
   <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-copy">
-        <p class="hero-eyebrow">Rajkot's trusted wholesale supply house</p>
-        <h1>Wholesale Plywood, Block-Boards, Flush Doors & <span class="text-gradient">MDF in Gujarat</span></h1>
-        <p class="hero-lead">Source certified plywood, MDF, block-boards, and branded flush doors from Mahadev Traders -
-          serving Rajkot, Ahmedabad, Saurashtra, and Gujarat for homes, interiors, furniture, and commercial projects. <strong>No minimum order</strong> &mdash; one sheet or a full truck &mdash; with current rates quoted on call or WhatsApp. Delivered across Gujarat, freight quoted per order.</p>
-        <div class="hero-actions" aria-label="Primary actions">
-          <a href="/products/" class="btn-primary hero-cta">View Products</a>
-          <a href="tel:+916355360702" class="btn-outline hero-cta">Call for Quote</a>
+        <p class="hero-eyebrow">Gondal Road, Rajkot &middot; Since 1995</p>
+        <h1>Plywood, Block Board, Flush Door &amp; MDF Dealer <span class="text-gradient">in Rajkot</span></h1>
+        <p class="hero-lead">Mahadev Traders stocks plywood, block board, flush doors, MDF, HDHMR and laminates for carpenters,
+          contractors, interior firms and home owners across Rajkot and Gujarat. <strong>No minimum order</strong> &mdash; one
+          sheet or a full truck &mdash; with current rates on call or WhatsApp and delivery across Gujarat.</p>
+        <div class="hero-actions">
+          <a href="/products/" class="btn-primary hero-cta">Browse Products</a>
+          <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20current%20rates%20for%20plywood%20%2F%20doors" class="btn-outline hero-cta" target="_blank" rel="noopener">WhatsApp for Rates</a>
         </div>
         <div class="hero-stats" aria-label="Company highlights">
           <div class="stat-item">
-            <div class="stat-number">30+</div>
-            <p>Years Experience</p>
+            <div class="stat-number">1995</div>
+            <p>Established</p>
           </div>
           <div class="stat-item">
-            <div class="stat-number">5k+</div>
-            <p>Happy Clients</p>
+            <div class="stat-number">338</div>
+            <p>Sizes in stock</p>
           </div>
           <div class="stat-item">
-            <div class="stat-number">15+</div>
-            <p>Premium Brands</p>
+            <div class="stat-number">1</div>
+            <p>Sheet minimum</p>
           </div>
         </div>
       </div>
-      <div class="hero-showcase" aria-label="Product categories and premium brands">
+      <div class="hero-showcase">
         <div class="hero-panel hero-panel-main">
-          <span class="panel-label">Wholesale Range</span>
-          <strong>Plywood / MDF / HDHMR / Block-Board / Flush Doors</strong>
-          <small>Bulk-ready supply for furniture, interiors, kitchens, doors, and construction.</small>
+          <span class="panel-label">What we stock</span>
+          <ul class="hero-range-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+          </ul>
+          <small>MR, BWP and IS 710 plywood &middot; 19&ndash;25mm block board &middot; 25&ndash;35mm flush doors &middot; 3&ndash;25mm MDF</small>
         </div>
         <div class="hero-panel hero-panel-brands">
-          <span>Marllex</span>
-          <span>Zevik</span>
-          <span>Simson</span>
-          <span>Greytone</span>
-          <span>Limelite</span>
-          <span>Motherwood</span>
+          <a href="/products/marllex-premium-plywood.html">Marllex</a>
+          <a href="/products/motherwood-mdf-rajkot.html">Motherwood</a>
+          <a href="/products/simson-plywood-supplier.html">Simson</a>
+          <a href="/products/zevik-plywood-supplier.html">Zevik</a>
+          <a href="/products/limelite-plywood-supplier.html">Limelite</a>
+          <a href="/products/greytone-plywood-dealers.html">Greytone</a>
         </div>
         <div class="hero-panel hero-panel-metric">
-          <span class="panel-label">Coverage</span>
-          <strong>Rajkot to Gujarat</strong>
-          <small>Fast coordination for dealers, contractors, carpenters, and interior firms.</small>
+          <span class="panel-label">Opening hours</span>
+          <strong>Mon&ndash;Sat 9 am&ndash;7:30 pm</strong>
+          <small>Sunday 9 am&ndash;12 pm &middot; <a href="tel:+916355360702">+91 6355 360702</a></small>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Expertise Section -->
-  <section class="section-padding expertise" id="expertise">
+  <section class="section-padding ranges" id="ranges">
     <div class="container">
       <div class="section-header reveal">
-        <h2>Why Choose Mahadev Traders for Plywood, MDF, Block-Board & Flush Door in Rajkot & Gujarat?</h2>
-        <p>We provide Expert recommendations for plywood, block-board, and flush door solutions in Rajkot, Ahmedabad and
-          Saurashtra with uncompromising
-          quality standards.</p>
+        <h2>Plywood, Boards, Doors &amp; Laminates Stocked in Rajkot</h2>
+        <p>Five ranges held at our Gondal Road warehouse. Each range page compares the grades, thicknesses and brands,
+          so you can shortlist the right board before you ask for a rate.</p>
+      </div>
+      <div class="range-grid">
+        <article class="range-card reveal">
+          <svg class="range-art" viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <g class="art-layers">
+              <rect class="w1" x="8" y="12" width="104" height="7" rx="2" />
+              <rect class="w2" x="8" y="21" width="104" height="7" rx="2" />
+              <rect class="w1" x="8" y="30" width="104" height="7" rx="2" />
+              <rect class="w2" x="8" y="39" width="104" height="7" rx="2" />
+              <rect class="w1" x="8" y="48" width="104" height="7" rx="2" />
+            </g>
+            <path class="grain" d="M14 15.5h30M52 15.5h22M84 15.5h22M20 33.5h26M58 33.5h40M14 51.5h36M60 51.5h28" />
+          </svg>
+          <h3><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></h3>
+          <p>MR (semi-waterproof) and 100% BWP / IS 710 marine plywood in 6, 9, 12, 15 and 18mm, sheets from 6x3 to 8x4 ft.
+            Marllex, Zevik, Limelite and Greytone.</p>
+          <ul class="range-links">
+            <li><a href="/products/marine-plywood-710-rajkot.html">Marine plywood IS 710</a></li>
+            <li><a href="/products/commercial-plywood-mr-grade.html">Commercial MR plywood</a></li>
+            <li><a href="/products/shuttering-plywood-construction.html">Shuttering plywood</a></li>
+          </ul>
+        </article>
+        <article class="range-card reveal">
+          <svg class="range-art" viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <g class="art-layers">
+              <rect class="w3 art-top" x="8" y="10" width="104" height="6" rx="2" />
+              <g class="art-core">
+                <rect class="w1" x="8" y="18" width="16" height="36" />
+                <rect class="w2" x="25" y="18" width="16" height="36" />
+                <rect class="w1" x="42" y="18" width="16" height="36" />
+                <rect class="w2" x="59" y="18" width="16" height="36" />
+                <rect class="w1" x="76" y="18" width="16" height="36" />
+                <rect class="w2" x="93" y="18" width="19" height="36" />
+              </g>
+              <rect class="w3 art-bottom" x="8" y="56" width="104" height="6" rx="2" />
+            </g>
+          </svg>
+          <h3><a href="/products/block-board-wholesale-supplier.html">Block Board</a></h3>
+          <p>Gurjan-face block board on a pinewood core in 19 and 25mm, sheets from 6x3 to 8x4 ft, from Marllex and Simson,
+            plus poplar and BWP cores for lighter or wetter jobs.</p>
+          <ul class="range-links">
+            <li><a href="/products/pine-wood-block-board.html">Pine wood block board</a></li>
+            <li><a href="/products/poplar-block-board.html">Poplar block board</a></li>
+            <li><a href="/products/bwp-waterproof-block-board.html">BWP waterproof block board</a></li>
+          </ul>
+        </article>
+        <article class="range-card reveal">
+          <svg class="range-art" viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <rect class="w2 art-frame" x="40" y="4" width="40" height="64" rx="2" />
+            <rect class="w1 art-leaf" x="44" y="8" width="32" height="56" rx="1" />
+            <path class="grain" d="M50 16v40M56 14v44M64 16v38M70 14v42" />
+            <circle class="w3 art-handle" cx="71" cy="38" r="2.4" />
+          </svg>
+          <h3><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></h3>
+          <p>Flush doors in 25, 30 and 35mm, heights 72 to 96 in and widths 24 to 48 in, in MR and 100% BWP grades from
+            Marllex and Simson.</p>
+          <ul class="range-links">
+            <li><a href="/products/waterproof-flush-doors-bwp.html">BWP waterproof flush doors</a></li>
+            <li><a href="/products/laminated-flush-doors-designs.html">Laminated flush doors</a></li>
+            <li><a href="/products/waterproof-bathroom-doors.html">Waterproof bathroom doors</a></li>
+          </ul>
+        </article>
+        <article class="range-card reveal">
+          <svg class="range-art" viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <rect class="w3 art-slab" x="8" y="18" width="104" height="36" rx="3" />
+            <g class="speckle">
+              <circle cx="20" cy="28" r="1.2" /><circle cx="34" cy="42" r="1" /><circle cx="46" cy="26" r="1.1" />
+              <circle cx="58" cy="46" r="1.2" /><circle cx="70" cy="30" r="1" /><circle cx="82" cy="44" r="1.1" />
+              <circle cx="94" cy="26" r="1.2" /><circle cx="102" cy="40" r="1" /><circle cx="26" cy="47" r="0.9" />
+              <circle cx="88" cy="35" r="0.9" /><circle cx="52" cy="35" r="0.9" />
+            </g>
+            <rect class="w2" x="8" y="54" width="104" height="4" rx="2" />
+          </svg>
+          <h3><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></h3>
+          <p>Authorised Motherwood stock: TurBo+, Super HD+WR (HDHMR) and Exterior grade MDF from 3 to 25mm in 8x4 ft
+            sheets, for shutters, CNC work and moisture-prone kitchens.</p>
+          <ul class="range-links">
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/hdhmr-board-supplier-rajkot.html">HDHMR board</a></li>
+            <li><a href="/products/mdf-interior-exterior-grade-rajkot.html">Interior vs exterior MDF</a></li>
+          </ul>
+        </article>
+        <article class="range-card reveal">
+          <svg class="range-art" viewBox="0 0 120 72" aria-hidden="true" focusable="false">
+            <g class="art-fan">
+              <rect class="lam lam1" x="30" y="14" width="60" height="44" rx="3" />
+              <rect class="lam lam2" x="30" y="14" width="60" height="44" rx="3" />
+              <rect class="lam lam3" x="30" y="14" width="60" height="44" rx="3" />
+            </g>
+          </svg>
+          <h3><a href="/products/decorative-laminates-sheets.html">Laminates</a></h3>
+          <p>Decorative laminates and sunmica from 0.8 to 1.5mm in matte, gloss and textured finishes, plus liner sheets for
+            the inside faces of wardrobes and cabinets.</p>
+          <ul class="range-links">
+            <li><a href="/products/sunmica-dealers-rajkot.html">Sunmica</a></li>
+            <li><a href="/products/liner-laminates-inner.html">Liner laminates</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Decorative laminate sheets</a></li>
+          </ul>
+        </article>
+        <article class="range-card range-card-cta reveal">
+          <h3>Not sure which grade?</h3>
+          <p>Compare every size we hold on one chart, or send us the job &mdash; room, moisture exposure and finish &mdash; and
+            we will tell you which board it actually needs.</p>
+          <ul class="range-links">
+            <li><a href="/productChart.html">Price guide &amp; spec chart</a></li>
+            <li><a href="/services/">Grade advice &amp; trade services</a></li>
+            <li><a href="/products/">Full product catalogue</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding expertise" id="why">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Why Rajkot Carpenters and Contractors Buy From Us</h2>
+        <p>Three decades in the trade have taught us that the right board for the job matters more than the cheapest one.</p>
       </div>
       <div class="bento-grid">
         <div class="bento-card reveal">
-          <i class="fas fa-gem bento-icon" aria-hidden="true"></i>
-          <h3>Premium Quality at Wholesale Prices</h3>
-          <p>We maintain uncompromising standards to ensure every plywood sheet, block-board panel, and flush door meets
-            the highest benchmarks. Get the best wholesale prices in Rajkot and Ahmedabad.</p>
+          <i class="fas fa-scale-balanced bento-icon" aria-hidden="true"></i>
+          <h3>Grade Advice Before You Buy</h3>
+          <p>Tell us the room, the moisture exposure and the finish, and we will tell you whether MR, BWP or IS 710 is the
+            right bonding grade &mdash; including when the cheaper board is the correct answer. <a href="/services/">How we advise</a></p>
         </div>
         <div class="bento-card reveal">
           <i class="fas fa-layer-group bento-icon" aria-hidden="true"></i>
-          <h3>Vast Variety of Products</h3>
-          <p>From affordable essentials to luxury finishes, our diverse range covers premium plywood, mdf, hdhmr and
-            block-boards suitable for furniture, and flush doors for shuttering purposes. Suitable for contractors in
-            Saurashtra and Gujarat.</p>
+          <h3>No Minimum Order</h3>
+          <p>Take one sheet to check against your own job, then order the rest. A single door and a full truck load are
+            both normal orders here.</p>
         </div>
         <div class="bento-card reveal">
-          <i class="fas fa-lightbulb bento-icon" aria-hidden="true"></i>
-          <h3>Innovation in Wholesaling</h3>
-          <p>Pioneering new trends in the plywood industry. Leveraging technology like Vaives.com for seamless order
-            management and delivery across Gujarat, including Morbi and Jamnagar.</p>
+          <i class="fas fa-table bento-icon" aria-hidden="true"></i>
+          <h3>Every Size Listed</h3>
+          <p>All 338 plywood, block board, flush door and MDF sizes we hold are on the <a href="/productChart.html">spec chart</a>
+            with thickness, face, core, grade and brand.</p>
         </div>
         <div class="bento-card reveal">
-          <i class="fas fa-handshake bento-icon" aria-hidden="true"></i>
-          <h3>Reliability & Trust</h3>
-          <p>Trusted by generations for delivering quality plywood, block-board, and flush door solutions. Oldest and
-            most established wholesaler serving the Saurashtra region.</p>
+          <i class="fas fa-certificate bento-icon" aria-hidden="true"></i>
+          <h3>Authorised Motherwood Dealer</h3>
+          <p>Genuine factory stock of <a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a> &mdash; TurBo+,
+            Super HD+WR and Exterior grade &mdash; with the manufacturer's own warranty on the board.</p>
         </div>
         <div class="bento-card reveal">
-          <i class="fas fa-heart bento-icon" aria-hidden="true"></i>
-          <h3>Passion for Excellence</h3>
-          <p>Fueling our craft with genuine love for customer satisfaction. Every plywood sheet reflects our passion for
-            delivering the best building materials in Rajkot and Gujarat.</p>
+          <i class="fas fa-truck bento-icon" aria-hidden="true"></i>
+          <h3>Delivery Across Gujarat</h3>
+          <p>Dispatch from our Gondal Road warehouse. Freight is quoted with the order, and free delivery is available on
+            select orders &mdash; worth asking when you request the rate.</p>
         </div>
         <div class="bento-card reveal">
-          <i class="fas fa-users bento-icon" aria-hidden="true"></i>
-          <h3>Long-Term Partnerships</h3>
-          <p>Dedicated to building long-term relationships with clients in Rajkot, Ahmedabad, and beyond. As your
-            trusted wholesaler, we prioritize your success.</p>
+          <i class="fab fa-whatsapp bento-icon" aria-hidden="true"></i>
+          <h3>Rates on WhatsApp</h3>
+          <p>Send the thickness, grade, quantity and delivery point, and the current rate for that order comes back,
+            usually the same day.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Us Section -->
   <section class="section-padding about-section" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-image reveal">
-          <img src="assets/favicon.webp" alt="Mahadev Traders - Best Plywood Wholesaler in Rajkot, Ahmedabad & Gujarat"
-            width="400" height="400" loading="lazy" />
+          <img src="/assets/icons/logo-512.png" alt="Mahadev Traders logo" width="400" height="400" loading="lazy" decoding="async" />
         </div>
         <div class="about-content reveal">
-          <h2>Our <span class="text-gradient">Legacy in Gujarat's Plywood Industry</span></h2>
-          <p>Embark on a journey with Mahadev Traders, the trailblazers and pioneer wholesalers of Rajkot's plywood,
-            block-board, and flush-door industry. With a rich history spanning over three decades, we stand as the
-            epitome of quality in the Saurashtra and Gujarat wholesale market.</p>
-          <p>We blend tradition with modernity to deliver premium plywood sheets, block-boards, and flush doors that
-            exceed expectations. As experienced Plywood & Timber Wholesalers on Gondal Road, Rajkot, we serve
-            contractors, furniture manufacturers, and retailers across Rajkot, Ahmedabad, Jamnagar, and the entire
-            Saurashtra region.</p>
-          <p>Our proprietary technology, <a href="https://vaives.com"><strong>Vaives.com</strong></a> streamlines our
-            Order Management System, ensuring fast delivery of plywood and block-boards across Gujarat.</p>
-          <a href="#contact" class="btn-primary">Get in Touch for Wholesale Rates</a>
+          <h2>About <span class="text-gradient">Mahadev Traders</span></h2>
+          <p>Mahadev Traders has supplied plywood, block board and flush doors in Rajkot since 1995, and now also stocks MDF,
+            HDHMR and laminates, and the customers are the same mix they have always been:
+            carpenters and furniture workshops, building contractors, interior designers, and home owners fitting out a
+            single room.</p>
+          <p>Enquiries are handled at our office near the S.T. Workshop on Gondal Road, and orders go out from our
+            warehouse in the Samrat Industrial Area a few minutes away, to sites and workshops across Rajkot, Saurashtra
+            and the rest of Gujarat.</p>
+          <p>We also built <a href="https://vaives.com" target="_blank" rel="noopener"><strong>Vaives.com</strong></a>, our own
+            order-management platform, which keeps repeat trade orders, stock and dispatch in one place.</p>
+          <a href="#contact" class="btn-primary">Visit or Call Us</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Brands Section -->
   <section class="section-padding brands-section" id="brands">
     <div class="container">
       <div class="section-header reveal">
-        <h2>Authorized Dealers of Premium Brands | Wholesale Plywood, MDF, Block-Board & Flush-Door in Rajkot</h2>
-        <p>Proud partners with industry-leading brands like <strong>Motherwood MDF</strong>, Marllex, Zevik, and Simson.
-          We are the trusted hub for <strong>MDF wholesale in Rajkot</strong> and across Gujarat, offering premium
-          building materials at unbeatable rates.</p>
+        <h2>Brands We Stock</h2>
+        <p>Authorised <strong>Motherwood MDF</strong> dealer, with Marllex, Simson, Zevik, Limelite and Greytone across
+          plywood, block board and flush doors.</p>
       </div>
       <div class="brands-slider">
-        <!-- Duplicate items for infinite scroll effect -->
         <a href="/products/motherwood-mdf-rajkot.html" class="brand-link">
-          <img src="assets/images/motherwood-1200x764.webp" class="brand-item"
-            alt="Motherwood MDF - Leading MDF Brand in Rajkot" loading="lazy" width="1200" height="764"
-            style="object-fit: contain; padding: 10px;" />
+          <img src="/assets/images/motherwood-1200x764.webp" class="brand-item brand-item-contain"
+            alt="Motherwood MDF and HDHMR boards" loading="lazy" decoding="async" width="1200" height="466" />
         </a>
         <a href="/products/marllex-premium-plywood.html" class="brand-link">
-          <img src="assets/images/marllex-1200x764.webp" class="brand-item" alt="Marllex Plywood - Premium Brand"
-            loading="lazy" width="1200" height="764" />
-        </a>
-        <a href="/products/zevik-plywood-supplier.html" class="brand-link">
-          <img src="assets/images/zevik-1200x762.webp" class="brand-item" alt="Zevik Block-Board - Quality Brand"
-            loading="lazy" width="1200" height="762" />
+          <img src="/assets/images/marllex-1200x764.webp" class="brand-item" alt="Marllex plywood, block board and flush doors"
+            loading="lazy" decoding="async" width="1200" height="764" />
         </a>
         <a href="/products/simson-plywood-supplier.html" class="brand-link">
-          <img src="assets/images/simson-1200x681.webp" class="brand-item" alt="Simson Plywood - Trusted Brand"
-            loading="lazy" width="1200" height="681" />
-        </a>
-        <a href="/products/limelite-plywood-supplier.html" class="brand-link">
-          <img src="assets/images/limelite-1200x515.webp" class="brand-item" alt="Limelite Flush Door - Premium Quality"
-            loading="lazy" width="1200" height="515" />
-        </a>
-        <a href="/products/greytone-plywood-dealers.html" class="brand-link">
-          <img src="assets/images/greytone-1200x510.webp" class="brand-item"
-            alt="Greytone Block-Board - Superior Quality" loading="lazy" width="1200" height="510" />
-        </a>
-        <!-- Repeat for infinite scroll -->
-        <a href="/products/motherwood-mdf-rajkot.html" class="brand-link">
-          <img src="assets/images/motherwood-1200x764.webp" class="brand-item"
-            alt="Motherwood MDF - Leading MDF Brand in Rajkot" loading="lazy" width="1200" height="764"
-            style="object-fit: contain; padding: 10px;" />
-        </a>
-        <a href="/products/marllex-premium-plywood.html" class="brand-link">
-          <img src="assets/images/marllex-1200x764.webp" class="brand-item" alt="Marllex Plywood - Premium Brand"
-            loading="lazy" width="1200" height="764" />
+          <img src="/assets/images/simson-1200x681.webp" class="brand-item" alt="Simson flush doors and block board"
+            loading="lazy" decoding="async" width="1200" height="681" />
         </a>
         <a href="/products/zevik-plywood-supplier.html" class="brand-link">
-          <img src="assets/images/zevik-1200x762.webp" class="brand-item" alt="Zevik Block-Board - Quality Brand"
-            loading="lazy" width="1200" height="762" />
-        </a>
-        <a href="/products/simson-plywood-supplier.html" class="brand-link">
-          <img src="assets/images/simson-1200x681.webp" class="brand-item" alt="Simson Plywood - Trusted Brand"
-            loading="lazy" width="1200" height="681" />
+          <img src="/assets/images/zevik-1200x762.webp" class="brand-item" alt="Zevik plywood"
+            loading="lazy" decoding="async" width="1200" height="762" />
         </a>
         <a href="/products/limelite-plywood-supplier.html" class="brand-link">
-          <img src="assets/images/limelite-1200x515.webp" class="brand-item" alt="Limelite Flush Door - Premium Quality"
-            loading="lazy" width="1200" height="515" />
+          <img src="/assets/images/limelite-1200x515.webp" class="brand-item" alt="Limelite plywood"
+            loading="lazy" decoding="async" width="1074" height="462" />
         </a>
         <a href="/products/greytone-plywood-dealers.html" class="brand-link">
-          <img src="assets/images/greytone-1200x510.webp" class="brand-item"
-            alt="Greytone Block-Board - Superior Quality" loading="lazy" width="1200" height="510" />
+          <img src="/assets/images/greytone-1200x510.webp" class="brand-item" alt="Greytone plywood"
+            loading="lazy" decoding="async" width="972" height="441" />
+        </a>
+        <!-- Second copy only exists to make the marquee loop; hidden from assistive tech and the tab order. -->
+        <a href="/products/motherwood-mdf-rajkot.html" class="brand-link" aria-hidden="true" tabindex="-1">
+          <img src="/assets/images/motherwood-1200x764.webp" class="brand-item brand-item-contain" alt="" loading="lazy"
+            decoding="async" width="1200" height="466" />
+        </a>
+        <a href="/products/marllex-premium-plywood.html" class="brand-link" aria-hidden="true" tabindex="-1">
+          <img src="/assets/images/marllex-1200x764.webp" class="brand-item" alt="" loading="lazy" decoding="async"
+            width="1200" height="764" />
+        </a>
+        <a href="/products/simson-plywood-supplier.html" class="brand-link" aria-hidden="true" tabindex="-1">
+          <img src="/assets/images/simson-1200x681.webp" class="brand-item" alt="" loading="lazy" decoding="async"
+            width="1200" height="681" />
+        </a>
+        <a href="/products/zevik-plywood-supplier.html" class="brand-link" aria-hidden="true" tabindex="-1">
+          <img src="/assets/images/zevik-1200x762.webp" class="brand-item" alt="" loading="lazy" decoding="async"
+            width="1200" height="762" />
+        </a>
+        <a href="/products/limelite-plywood-supplier.html" class="brand-link" aria-hidden="true" tabindex="-1">
+          <img src="/assets/images/limelite-1200x515.webp" class="brand-item" alt="" loading="lazy" decoding="async"
+            width="1074" height="462" />
+        </a>
+        <a href="/products/greytone-plywood-dealers.html" class="brand-link" aria-hidden="true" tabindex="-1">
+          <img src="/assets/images/greytone-1200x510.webp" class="brand-item" alt="" loading="lazy" decoding="async"
+            width="972" height="441" />
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
   <section class="section-padding faq-section" id="faq">
     <div class="container">
       <div class="section-header reveal">
         <h2>Frequently Asked Questions</h2>
       </div>
-      <div class="accordion reveal" role="list">
-        <div class="accordion-item" role="listitem">
+      <div class="accordion reveal">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-1" aria-expanded="false"
-              aria-controls="faq-answer-1">
-              <span>Why is Mahadev Traders the leading plywood &amp; MDF wholesaler in Gujarat?</span>
+            <button class="accordion-header" type="button" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>Where is Mahadev Traders in Rajkot, and when are you open?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
-            <p>With over 30 years of expertise since 1995, we are the most trusted wholesaler for premium plywood, MDF,
-              HDHMR, block-board, and flush-doors in Rajkot, Ahmedabad, and across Gujarat. We provide factory-direct
-              pricing on top-tier brands like <a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a>, <a href="/products/marllex-premium-plywood.html">Marllex</a>, <a href="/products/zevik-plywood-supplier.html">Zevik</a>, <a href="/products/simson-plywood-supplier.html">Simson</a>, <a href="/products/greytone-plywood-dealers.html">Greytone</a> and <a href="/products/limelite-plywood-supplier.html">Limelite</a>.</p>
+            <p>Our office is near the S.T. Workshop on Gondal Road, Rajkot 360004, and the warehouse is in the Samrat
+              Industrial Area near Poojara Mobile, also on Gondal Road. We are open Monday to Saturday from 9:00 am to
+              7:30 pm and on Sunday from 9:00 am to 12:00 pm. Call <a href="tel:+916355360702">+91 6355 360702</a> before
+              you come if you want a particular size kept aside.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-2" aria-expanded="false"
-              aria-controls="faq-answer-2">
-              <span>What is MDF and how is it different from Plywood?</span>
+            <button class="accordion-header" type="button" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>Do you sell to home owners, or only to the trade?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
-            <p>MDF (Medium Density Fibreboard) is an engineered wood product made from wood fibres bonded with resin
-              under high pressure and heat. Unlike plywood, MDF has a smooth, uniform surface with no grain or knots,
-              making it ideal for painting, routing, and precision furniture work. It is available in four grades — from
-              lowest to highest: <strong>Interior Grade</strong> (standard dry-area use), <strong>Exterior
-                Grade</strong> (outdoor &amp; semi-outdoor), <strong>Super HD+WR / HDHMR</strong> (high moisture
-              resistant for kitchens &amp; bathrooms), and <strong>TurBo+</strong> (highest density, best moisture
-              resistance, top performance). At Mahadev Traders, we stock Motherwood MDF in all four grades for wholesale
-              supply across Gujarat through our <a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF dealer Gujarat</a> page.</p>
+            <p>Both. There is no minimum order: one sheet, one door or a full truck load are all normal orders. Carpenters
+              and contractors buying regularly get trade rates, and a home owner can take a single sheet to check it
+              against the job before ordering the rest.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-3" aria-expanded="false"
-              aria-controls="faq-answer-3">
-              <span>What is HDHMR and Super HD+WR MDF?</span>
+            <button class="accordion-header" type="button" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>Which plywood should I use for a kitchen?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
-            <p>HDHMR stands for High Density High Moisture Resistant board — a premium category of MDF engineered for
-              superior density and moisture resistance. Motherwood's <strong>Super HD+WR</strong> (Super High Density +
-              Water Resistant) is an HDHMR-grade board available in thicknesses of 3, 5.5, 7.5, 11, 16.75, 18, and 25 mm
-              (8×4 ft). It is ideal for kitchen cabinets, bathroom furniture, and high-humidity interior applications
-              across Rajkot, Saurashtra, and Gujarat. See our <a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF wholesale Rajkot</a> guide for current grade availability.</p>
+            <p>Use 100% BWP <a href="/products/marine-plywood-710-rajkot.html">marine plywood to IS 710</a> for base
+              cabinets, the sink unit and anything that will see water or steam. <a href="/products/commercial-plywood-mr-grade.html">MR
+              grade plywood</a> is fine for dry wardrobes, beds and TV units. For carcasses 18mm is the working thickness,
+              and 6mm is enough for back panels.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-4" aria-expanded="false"
-              aria-controls="faq-answer-4">
-              <span>What is TurBo+ Grade MDF and what is Boilo?</span>
+            <button class="accordion-header" type="button" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>What is the difference between BWP and BWR plywood?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
-            <p><strong>TurBo+</strong> is Motherwood's <strong>highest density MDF</strong> — the top tier in the MDF
-              quality hierarchy, offering the best moisture resistance and product performance of all MDF grades. It is
-              available in 3, 5.5, 8, 12, and 18 mm thicknesses. <strong>Boilo</strong> is a boiling-water resistance
-              test standard — a board that passes the Boilo test can withstand boiling water immersion. TurBo+ meets
-              this standard, making it suitable for demanding applications including high-humidity environments. The
-              correct MDF grade hierarchy from lowest to highest is: Interior Grade → Exterior Grade → Super HD+WR
-              (HDHMR) → <strong>TurBo+ (BEST)</strong>. All grades are available for wholesale from Mahadev Traders in
-              Rajkot. Buyers can compare grades on our <a href="/products/motherwood-mdf-rajkot.html">authorized Motherwood MDF page</a>.</p>
+            <p>BWP (Boiling Water Proof) is the higher grade. BWP plywood is bonded to withstand prolonged exposure to
+              water and is the grade for kitchens and bathrooms, while BWR (Boiling Water Resistant) suits areas with only
+              mild humidity. We supply <a href="/products/marine-plywood-710-rajkot.html">BWP marine plywood</a> and
+              <a href="/products/waterproof-flush-doors-bwp.html">BWP flush doors</a> for wet areas.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-5" aria-expanded="false"
-              aria-controls="faq-answer-5">
-              <span>What types of Plywood and Flush Doors do we supply?</span>
+            <button class="accordion-header" type="button" id="faq-question-5" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>What is MDF and how is it different from plywood?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
-            <p>We specialize in a comprehensive range including 100% BWP (Boiling Water Proof) Marine Plywood, MR Grade
-              Plywood, Commercial Grade Plywood, premium BWP Flush Doors, and now MDF / HDHMR boards from Motherwood,
-              Action Tesa, Century, Vir, Greenply, Greenlam, and E3. Our products are ideal for furniture, wardrobes,
-              kitchens, and commercial construction projects, including <a href="/products/marine-plywood-710-rajkot.html">marine plywood IS 710</a>, <a href="/products/waterproof-flush-doors-bwp.html">BWP waterproof flush doors</a>, and <a href="/products/pine-wood-flush-doors.html">pine wood flush doors</a>.</p>
+            <p>MDF (Medium Density Fibreboard) is made from wood fibres bonded with resin under heat and pressure. Unlike
+              plywood it has a smooth, uniform surface with no grain or knots, which makes it ideal for painting, routing
+              and precision shutters, while plywood is stronger for load-bearing carcasses. Motherwood grades run, from
+              entry to top: Interior, Exterior, Super HD+WR (HDHMR) and TurBo+. Compare them on the
+              <a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF page</a>.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-6" aria-expanded="false"
-              aria-controls="faq-answer-6">
-              <span>What is the difference between BWP and BWR Plywood?</span>
+            <button class="accordion-header" type="button" id="faq-question-6" aria-expanded="false" aria-controls="faq-answer-6">
+              <span>What is HDHMR, and what is Super HD+WR?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
-            <p>BWP (Boiling Water Proof) is superior to BWR (Boiling Water Resistant). BWP plywood can withstand
-              prolonged exposure to boiling water and is recommended for kitchens and bathrooms, while BWR is suitable
-              for areas with mild humidity. At Mahadev Traders, we provide certified <a href="/products/marine-plywood-710-rajkot.html">BWP marine plywood</a> and <a href="/products/waterproof-flush-doors-bwp.html">BWP grade flush doors</a> for maximum durability.
-            </p>
+            <p>HDHMR stands for High Density High Moisture Resistant board, a denser, more moisture-resistant category of
+              fibreboard. Motherwood's <a href="/products/motherwood-mdf-super-hd-wr.html">Super HD+WR</a> is an HDHMR-grade
+              board, stocked in 3, 5.5, 7.5, 11, 16.75, 18 and 25mm (8x4 ft), and suits kitchen shutters, bathroom vanities
+              and humid interiors. See <a href="/products/hdhmr-board-supplier-rajkot.html">HDHMR boards</a> for how it
+              compares with plywood.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-7" aria-expanded="false"
-              aria-controls="faq-answer-7">
-              <span>Do you deliver bulk orders to Ahmedabad, Surat, and Vadodara?</span>
+            <button class="accordion-header" type="button" id="faq-question-7" aria-expanded="false" aria-controls="faq-answer-7">
+              <span>What is TurBo+ MDF, and what does Boilo mean?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" hidden>
-            <p>Yes, we provide reliable doorstep delivery for bulk wholesale orders across all major cities of Gujarat,
-              including Ahmedabad, Surat, Vadodara, Gandhidham, and more. Our logistics network ensures timely delivery
-              of MDF, plywood, and block-boards from our Rajkot hub, including <a href="/products/block-board-wholesale-supplier.html">block board wholesale Rajkot</a> orders.</p>
+            <p><a href="/products/motherwood-mdf-turbo-plus.html">TurBo+</a> is Motherwood's highest-density MDF, stocked in
+              3, 5.5, 8, 12 and 18mm. Boilo refers to boiling-water resistance: a Boilo board is made to survive
+              boiling-water exposure, which is why TurBo+ is used for CNC-profiled shutters and demanding, humid positions.</p>
           </div>
         </div>
-        <div class="accordion-item" role="listitem">
+        <div class="accordion-item">
           <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-8" aria-expanded="false"
-              aria-controls="faq-answer-8">
-              <span>How do I check current wholesale prices and place an order?</span>
+            <button class="accordion-header" type="button" id="faq-question-8" aria-expanded="false" aria-controls="faq-answer-8">
+              <span>What flush door sizes do you stock?</span>
               <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
             </button>
           </h3>
           <div class="accordion-body" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" hidden>
-            <p>You can get an instant quote by calling us at <a href="tel:+916355360702"><strong>+91 6355 360
-                  702</strong></a>. For a seamless digital experience, you can also browse and order via <a
-                href="https://vaives.com" target="_blank" rel="noopener noreferrer"><strong>Vaives.com</strong></a>, our
-              dedicated platform for wholesale building materials. You can also review the <a href="/productChart.html">plywood price chart Rajkot 2026</a> before requesting a live quote.</p>
+            <p><a href="/products/flush-doors-manufacturer-supplier.html">Flush doors</a> in 25, 30 and 35mm thickness, in
+              heights from 72 to 96 inches and widths from 24 to 48 inches. MR grade doors suit bedrooms and other dry
+              rooms; 100% BWP doors are for bathrooms and wet areas. Stock is from Marllex and Simson.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-title">
+            <button class="accordion-header" type="button" id="faq-question-9" aria-expanded="false" aria-controls="faq-answer-9">
+              <span>Do you deliver outside Rajkot?</span>
+              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+            </button>
+          </h3>
+          <div class="accordion-body" id="faq-answer-9" role="region" aria-labelledby="faq-question-9" hidden>
+            <p>Yes. We dispatch from our Gondal Road warehouse to Morbi, Jamnagar, Junagadh, Ahmedabad, Surat, Vadodara and
+              across Gujarat. Freight depends on the route, the load and the timing, so it is quoted with the order; free
+              delivery is available on select orders.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-title">
+            <button class="accordion-header" type="button" id="faq-question-10" aria-expanded="false" aria-controls="faq-answer-10">
+              <span>How do I get current rates and place an order?</span>
+              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+            </button>
+          </h3>
+          <div class="accordion-body" id="faq-answer-10" role="region" aria-labelledby="faq-question-10" hidden>
+            <p>Call <a href="tel:+916355360702">+91 6355 360702</a> or send a <a href="https://wa.me/916355360702" target="_blank" rel="noopener">WhatsApp
+              message</a> with the thickness, grade, quantity and delivery point, and you get the current rate for that
+              order. Trade buyers can also order through <a href="https://vaives.com" target="_blank" rel="noopener">Vaives.com</a>.
+              For a budget before you ask, see the <a href="/productChart.html">rate guide and spec chart</a>.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Areas Section -->
-  <section class="section-padding service-areas" id="locations" style="background: var(--color-bg-surface);">
+  <section class="section-padding service-areas" id="locations">
     <div class="container">
       <div class="section-header reveal">
-        <h2>Our Service Areas in <span class="text-gradient">Gujarat</span></h2>
-        <p>As the leading wholesale distributor, we serve a wide region including major cities and industrial hubs
-          across Gujarat and Saurashtra.</p>
+        <h2>Delivery Across <span class="text-gradient">Gujarat</span></h2>
+        <p>Orders are dispatched from our Rajkot warehouse to sites, workshops and dealers across Saurashtra, Kutch and
+          the rest of Gujarat, with freight quoted per order.</p>
       </div>
-      <div class="areas-grid">
-        <div class="area-item reveal"><strong>Rajkot</strong></div>
-        <div class="area-item reveal"><strong>Ahmedabad</strong></div>
-        <div class="area-item reveal"><strong>Surat</strong></div>
-        <div class="area-item reveal"><strong>Vadodara</strong></div>
-        <div class="area-item reveal"><strong>Bhavnagar</strong></div>
-        <div class="area-item reveal"><strong>Jamnagar</strong></div>
-        <div class="area-item reveal"><strong>Gandhinagar</strong></div>
-        <div class="area-item reveal"><strong>Junagadh</strong></div>
-        <div class="area-item reveal"><strong>Gandhidham</strong></div>
-        <div class="area-item reveal"><strong>Anand</strong></div>
-        <div class="area-item reveal"><strong>Navsari</strong></div>
-        <div class="area-item reveal"><strong>Morbi</strong></div>
-        <div class="area-item reveal"><strong>Nadiad</strong></div>
-        <div class="area-item reveal"><strong>Surendranagar</strong></div>
-        <div class="area-item reveal"><strong>Bharuch</strong></div>
-        <div class="area-item reveal"><strong>Mehsana</strong></div>
-        <div class="area-item reveal"><strong>Bhuj</strong></div>
-        <div class="area-item reveal"><strong>Porbandar</strong></div>
-        <div class="area-item reveal"><strong>Palanpur</strong></div>
-        <div class="area-item reveal"><strong>Valsad</strong></div>
-        <div class="area-item reveal"><strong>Vapi</strong></div>
-        <div class="area-item reveal"><strong>Gondal</strong></div>
-        <div class="area-item reveal"><strong>Veraval</strong></div>
-        <div class="area-item reveal"><strong>Godhra</strong></div>
-        <div class="area-item reveal"><strong>Patan</strong></div>
-        <div class="area-item reveal"><strong>Dahod</strong></div>
-        <div class="area-item reveal"><strong>Botad</strong></div>
-        <div class="area-item reveal"><strong>Jetpur</strong></div>
-        <div class="area-item reveal"><strong>Amreli</strong></div>
-        <div class="area-item reveal"><strong>Deesa</strong></div>
-      </div>
+      <ul class="areas-grid">
+        <li class="area-item reveal">Rajkot</li>
+        <li class="area-item reveal">Ahmedabad</li>
+        <li class="area-item reveal">Surat</li>
+        <li class="area-item reveal">Vadodara</li>
+        <li class="area-item reveal">Bhavnagar</li>
+        <li class="area-item reveal">Jamnagar</li>
+        <li class="area-item reveal">Gandhinagar</li>
+        <li class="area-item reveal">Junagadh</li>
+        <li class="area-item reveal">Gandhidham</li>
+        <li class="area-item reveal">Anand</li>
+        <li class="area-item reveal">Navsari</li>
+        <li class="area-item reveal">Morbi</li>
+        <li class="area-item reveal">Nadiad</li>
+        <li class="area-item reveal">Surendranagar</li>
+        <li class="area-item reveal">Bharuch</li>
+        <li class="area-item reveal">Mehsana</li>
+        <li class="area-item reveal">Bhuj</li>
+        <li class="area-item reveal">Porbandar</li>
+        <li class="area-item reveal">Palanpur</li>
+        <li class="area-item reveal">Valsad</li>
+        <li class="area-item reveal">Vapi</li>
+        <li class="area-item reveal">Gondal</li>
+        <li class="area-item reveal">Veraval</li>
+        <li class="area-item reveal">Godhra</li>
+        <li class="area-item reveal">Patan</li>
+        <li class="area-item reveal">Dahod</li>
+        <li class="area-item reveal">Botad</li>
+        <li class="area-item reveal">Jetpur</li>
+        <li class="area-item reveal">Amreli</li>
+        <li class="area-item reveal">Deesa</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="section-padding contact-section" id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <h2>Contact Us for Wholesale Plywood, MDF, Block-Board, Flush Doors and HDHMR Boards</h2>
-        <p>Get the best deals on Plywood, Block-Boards, Flush Doors, MDF and HDHMR Boards in Rajkot, Saurashtra &
-          Gujarat.</p>
+        <h2>Contact Mahadev Traders, Rajkot</h2>
+        <p>Call or WhatsApp for current rates on plywood, block board, flush doors, MDF, HDHMR and laminates, or visit us
+          on Gondal Road.</p>
       </div>
       <div class="contact-grid reveal">
         <div class="contact-card">
           <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-          <h3>Office Location</h3>
+          <h3>Office</h3>
           <p>Nr. S.T. Workshop, Gondal Road</p>
-          <p>Rajkot - 360004, Gujarat</p>
-          <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank">View on Map</a>
+          <p>Rajkot 360004, Gujarat</p>
+          <a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Directions on Google Maps</a>
         </div>
         <div class="contact-card">
           <i class="fas fa-warehouse" aria-hidden="true"></i>
-          <h3>Warehouse Facility</h3>
+          <h3>Warehouse</h3>
           <p>Nr. Poojara Mobile, Samrat Industrial Area, Gondal Road</p>
-          <p>Rajkot - 360004, Gujarat</p>
-          <a href="https://maps.app.goo.gl/t4qJLHvuQD53iZB68" target="_blank">View on Map</a>
+          <p>Rajkot 360004, Gujarat</p>
+          <a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Directions on Google Maps</a>
         </div>
         <div class="contact-card">
           <i class="fas fa-phone-alt" aria-hidden="true"></i>
-          <h3>Phone Support</h3>
-          <p>Mon-Sat: 9am - 7:30pm</p>
-          <p>Sun: 9am - 12pm</p>
-          <a href="tel:+916355360702">+91 6355 360 702</a>
+          <h3>Phone &amp; WhatsApp</h3>
+          <p>Mon&ndash;Sat: 9 am &ndash; 7:30 pm</p>
+          <p>Sun: 9 am &ndash; 12 pm</p>
+          <a href="tel:+916355360702">+91 6355 360702</a>
         </div>
         <div class="contact-card">
           <i class="fas fa-envelope" aria-hidden="true"></i>
           <h3>Email</h3>
-          <p>Sales & General Inquiries</p>
+          <p>Rates, orders and tender documents</p>
           <p>Drop us a line anytime</p>
           <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
         </div>
       </div>
     </div>
   </section>
+  </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <div class="footer-col footer-about">
           <h3>Mahadev Traders</h3>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem;">
-            Your trusted partner for premium quality MDF / HDHMR, Plywood, Block-Boards, and Flush Doors in Rajkot,
-            Ahmedabad &amp;
-            Saurashtra. Authorized dealer of Motherwood MDF — Super HD+WR, Exterior Grade &amp; TurBo+. Over 30 years of
-            excellence in wholesale distribution across Gujarat.
-          </p>
+          <p>Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot, since 1995. Wholesale and retail, no minimum order, delivery across Gujarat.</p>
+          <address>
+            Nr. S.T. Workshop, Gondal Road,<br />Rajkot, Gujarat 360004<br />
+            <a href="tel:+916355360702">+91 6355 360702</a><br />
+            <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a>
+          </address>
+          <p class="footer-hours">Mon&ndash;Sat 9:00 am&ndash;7:30 pm &middot; Sun 9:00 am&ndash;12:00 pm</p>
         </div>
-        <div class="footer-col" style="min-width: 200px;">
-          <h3>Quick Links</h3>
-          <ul class="footer-links" style="list-style: none;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/products/">All Products</a></li>
-            <li><a href="/products/mdf-wholesale-rajkot.html">MDF Wholesale Rajkot</a></li>
-            <li><a href="/products/motherwood-mdf-super-hd-wr.html">Motherwood Super HD+WR</a></li>
-            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood Wholesaler Rajkot</a></li>
-            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors Gujarat</a></li>
-            <li><a href="/products/block-board-wholesale-supplier.html">Block Board Wholesaler</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></li>
+            <li><a href="/products/block-board-wholesale-supplier.html">Block Board</a></li>
+            <li><a href="/products/flush-doors-manufacturer-supplier.html">Flush Doors</a></li>
+            <li><a href="/products/mdf-wholesale-rajkot.html">MDF &amp; HDHMR</a></li>
+            <li><a href="/products/decorative-laminates-sheets.html">Laminates</a></li>
+            <li><a href="/products/">All products</a></li>
+            <li><a href="/productChart.html">Price &amp; spec chart</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Connect With Us</h3>
+          <h3>Brands</h3>
+          <ul class="footer-links">
+            <li><a href="/products/marllex-premium-plywood.html">Marllex plywood</a></li>
+            <li><a href="/products/marllex-flush-doors-premium.html">Marllex flush doors</a></li>
+            <li><a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF</a></li>
+            <li><a href="/products/simson-plywood-supplier.html">Simson doors &amp; boards</a></li>
+            <li><a href="/products/zevik-plywood-supplier.html">Zevik plywood</a></li>
+            <li><a href="/products/limelite-plywood-supplier.html">Limelite plywood</a></li>
+            <li><a href="/products/greytone-plywood-dealers.html">Greytone plywood</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="/#about">About us</a></li>
+            <li><a href="/services/">Trade services</a></li>
+            <li><a href="/#contact">Contact &amp; directions</a></li>
+            <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
+            <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+          </ul>
           <div class="social-links">
-            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank"
-              aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/916355360702" target="_blank" aria-label="Chat with us on WhatsApp"><i
-                class="fab fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank"
-              aria-label="Visit us on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
-            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" aria-label="Find us on Justdial"><i
-                class="fas fa-address-book" aria-hidden="true"></i></a>
-            <a href="https://maps.app.goo.gl/iGgzod36cLGykRej9" target="_blank"
-              aria-label="Find us on Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/mahadev_traders_rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="https://www.indiamart.com/mahadev-traders-rajkot/" target="_blank" rel="noopener" aria-label="Mahadev Traders on IndiaMART"><i class="fas fa-store" aria-hidden="true"></i></a>
+            <a href="https://jsdl.in/DT-50F5ACN1S8F" target="_blank" rel="noopener" aria-label="Mahadev Traders on Justdial"><i class="fas fa-address-book" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mahadev Traders. All Rights Reserved. | Premium Plywood, MDF, Block-Board & Flush Door Wholesaler
-          in Rajkot, Gujarat</p>
+        <p>&copy; 2026 Mahadev Traders, Rajkot. Plywood, block board, flush door and MDF dealer serving Rajkot, Saurashtra and Gujarat.</p>
       </div>
     </div>
   </footer>
+  <a class="wa-fab" href="https://wa.me/916355360702" target="_blank" rel="noopener" aria-label="Chat with Mahadev Traders on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.1.56 4.16 1.6 5.97L4 27l6.24-1.62a12.1 12.1 0 0 0 5.8 1.47h.01c6.63 0 12.03-5.36 12.03-11.97C28.08 8.36 22.67 3 16.04 3Zm0 21.83h-.01a10 10 0 0 1-5.1-1.39l-.37-.22-3.7.96.99-3.6-.24-.37a9.9 9.9 0 0 1-1.53-5.24c0-5.5 4.49-9.96 10-9.96 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 9.85-10.02 9.85Zm5.48-7.42c-.3-.15-1.78-.88-2.06-.98-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.48a9.1 9.1 0 0 1-1.67-2.07c-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.48.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.12-.28-.2-.58-.35Z"/></svg></a>
 
-  <script src="scripts/theme.js" defer></script>
-  <script src="scripts/navbar.js" defer></script>
-  <script async src="scripts/performance.js"></script>
-  <!-- Structured Data: LocalBusiness -->
-
-  <!-- Structured Data: Organization -->
-
-  <!-- Structured Data: Product - Motherwood MDF Super HD+WR -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Motherwood MDF Super HD+WR",
-  "alternateName": [
-    "Super HD+WR MDF",
-    "HDHMR MDF Board",
-    "High Density MDF Rajkot"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/motherwood-1200x764.webp",
-  "description": "Motherwood Super HD+WR (Super High Density + Water Resistant) is a premium HDHMR-grade MDF board engineered for high-humidity applications like kitchen cabinets, bathroom furniture, and moisture-prone interiors. Available in 3, 5.5, 7.5, 11, 16.75, 18, and 25mm thicknesses (8x4 ft). Wholesale supply in Rajkot, Ahmedabad, and across Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Motherwood"
-  },
-  "sku": "MW-SHDWR",
-  "mpn": "MW-SUPERHDWR-8X4",
-  "category": "MDF Board / HDHMR Board",
-  "url": "https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Motherwood MDF Exterior Grade -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Motherwood MDF Exterior Grade",
-  "alternateName": [
-    "Exterior Grade MDF",
-    "Outdoor MDF Board",
-    "Weather Resistant MDF Rajkot"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/motherwood-1200x764.webp",
-  "description": "Motherwood Exterior Grade MDF is specially engineered for outdoor and semi-outdoor applications. Its superior moisture resistance makes it ideal for exterior furniture, signage, façade cladding, and semi-exposed environments. Available for wholesale supply in Rajkot, Ahmedabad, and across Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Motherwood"
-  },
-  "sku": "MW-EXTGRADE",
-  "mpn": "MW-EXTERIOR-8X4",
-  "category": "MDF Board / Exterior Grade MDF",
-  "url": "https://mahadev-traders.com/products/motherwood-mdf-exterior-grade.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Motherwood MDF TurBo+ Grade -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Motherwood MDF TurBo+ Grade",
-  "alternateName": [
-    "TurBo+ MDF",
-    "Boilo MDF",
-    "Highest Density MDF Gujarat",
-    "Best MDF Board Rajkot"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/motherwood-1200x764.webp",
-  "description": "Motherwood TurBo+ is the highest-density, top-tier MDF grade offering the best-in-class moisture resistance. It passes the Boilo (boiling water resistance) test, making it suitable for demanding applications like premium kitchens, high-humidity furniture, and industrial use. Available in 3, 5.5, 8, 12, and 18mm thicknesses. Wholesale in Rajkot, Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Motherwood"
-  },
-  "sku": "MW-TURBOPLUS",
-  "mpn": "MW-TURBO-8X4",
-  "category": "MDF Board / Premium MDF",
-  "url": "https://mahadev-traders.com/products/motherwood-mdf-turbo-plus.html"
-}
-</script>
-
-  <!-- Structured Data: Product - HDHMR Board -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "HDHMR Board",
-  "alternateName": [
-    "HDHMR MDF Board",
-    "High Density High Moisture Resistant Board",
-    "HDHMR Dealer Rajkot",
-    "HDHMR Supplier Gujarat"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/motherwood-1200x764.webp",
-  "description": "HDHMR (High Density High Moisture Resistant) Board is a premium category of engineered wood with superior density and moisture resistance, ideal for kitchens, bathrooms, modular furniture, and moisture-prone areas. Mahadev Traders is the top wholesale HDHMR board supplier in Rajkot, Ahmedabad, and across Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Motherwood"
-  },
-  "sku": "MT-HDHMR",
-  "mpn": "MT-HDHMR-8X4",
-  "category": "HDHMR Board / High Density MDF",
-  "url": "https://mahadev-traders.com/services/hdhmr-board-supplier-rajkot.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Plywood Wholesaler -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Plywood",
-  "alternateName": [
-    "Plywood Wholesaler Rajkot",
-    "Marine Plywood Gujarat",
-    "Commercial Plywood Rajkot",
-    "BWP Plywood Ahmedabad",
-    "MR Grade Plywood Gujarat"
-  ],
-  "image": "https://mahadev-traders.com/assets/favicon.webp",
-  "description": "Mahadev Traders is the leading plywood wholesaler and dealer in Rajkot, Ahmedabad, and Saurashtra. We supply premium BWP (Boiling Water Proof) Marine Plywood, MR Grade Plywood, Commercial Plywood, and Shuttering Plywood at the best wholesale prices in Gujarat since 1995. Trusted brands include Marllex, Zevik, Simson, Greytone, and Limelite.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Mahadev Traders"
-  },
-  "sku": "MT-PLYWOOD",
-  "mpn": "MT-PLY-8X4",
-  "category": "Plywood / Building Materials",
-  "url": "https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Block Board -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Block Board",
-  "alternateName": [
-    "Block Board Wholesaler Rajkot",
-    "Block Board Supplier Gujarat",
-    "BWP Block Board Ahmedabad",
-    "Gurjan Block Board",
-    "Pine Block Board Rajkot"
-  ],
-  "image": "https://mahadev-traders.com/assets/favicon.webp",
-  "description": "Mahadev Traders is the leading block board wholesaler and supplier in Rajkot, Ahmedabad, and Gujarat. High-quality block boards with cores in Gurjan, Pine, Poplar, and Hardwood — available in BWP waterproof and MR grades. Available in 19mm, 25mm, and 30mm thickness in 8x4, 7x4, 6x4 ft sizes. Best wholesale prices for furniture manufacturers and contractors since 1995.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Mahadev Traders"
-  },
-  "sku": "MT-BLOCKBOARD",
-  "mpn": "MT-BB-8X4",
-  "category": "Block Board / Building Materials",
-  "url": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Flush Doors -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Flush Doors",
-  "alternateName": [
-    "Flush Door Manufacturer Rajkot",
-    "BWP Flush Doors Gujarat",
-    "Flush Door Supplier Ahmedabad",
-    "Waterproof Flush Door Rajkot",
-    "Laminated Flush Doors Gujarat"
-  ],
-  "image": "https://mahadev-traders.com/assets/favicon.webp",
-  "description": "Mahadev Traders is the leading flush door manufacturer and supplier in Rajkot, Ahmedabad, and Gujarat. Best wholesale prices for premium quality BWP (Boiling Water Proof) flush doors, pine wood flush doors, laminated flush doors, and waterproof bathroom doors. Serving contractors, builders, and furniture manufacturers across Saurashtra and Gujarat since 1995.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Mahadev Traders"
-  },
-  "sku": "MT-FLUSHDOOR",
-  "mpn": "MT-FD-STANDARD",
-  "category": "Flush Doors / Building Materials",
-  "url": "https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Marllex Premium Plywood -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Marllex Premium Plywood",
-  "alternateName": [
-    "Marllex Plywood Rajkot",
-    "Marllex BWP Plywood Gujarat",
-    "Marllex Marine Plywood"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/marllex-1200x764.webp",
-  "description": "Marllex Premium Plywood is a top-quality BWP (Boiling Water Proof) marine plywood known for its superior strength and durability. Ideal for kitchen cabinets, wardrobes, and furniture. Wholesale supply by Mahadev Traders in Rajkot, Ahmedabad, and across Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Marllex"
-  },
-  "sku": "MT-MARLLEX-PLY",
-  "mpn": "MARLLEX-PLY-8X4",
-  "category": "Plywood / Marine Plywood",
-  "url": "https://mahadev-traders.com/products/marllex-premium-plywood.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Zevik Plywood -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Zevik Plywood",
-  "alternateName": [
-    "Zevik Plywood Rajkot",
-    "Zevik BWP Plywood Gujarat",
-    "Zevik Commercial Plywood"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/zevik-1200x762.webp",
-  "description": "Zevik Plywood offers premium quality commercial and BWP grade plywood for furniture, interiors, and construction. Known for excellent finish and long-lasting performance. Wholesale supply by Mahadev Traders in Rajkot, Ahmedabad, and across Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Zevik"
-  },
-  "sku": "MT-ZEVIK-PLY",
-  "mpn": "ZEVIK-PLY-8X4",
-  "category": "Plywood / Commercial Plywood",
-  "url": "https://mahadev-traders.com/products/zevik-plywood-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Simson Plywood -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Simson Plywood",
-  "alternateName": [
-    "Simson Plywood Rajkot",
-    "Simson BWP Plywood Gujarat",
-    "Simson Marine Plywood"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/simson-1200x681.webp",
-  "description": "Simson Plywood is a trusted brand for premium BWP marine plywood and MR grade plywood. Engineered for strength and moisture resistance, ideal for residential and commercial furniture projects. Wholesale supply by Mahadev Traders in Rajkot, Ahmedabad, and Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Simson"
-  },
-  "sku": "MT-SIMSON-PLY",
-  "mpn": "SIMSON-PLY-8X4",
-  "category": "Plywood / Marine Plywood",
-  "url": "https://mahadev-traders.com/products/simson-plywood-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Greytone Plywood -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Greytone Plywood",
-  "alternateName": [
-    "Greytone Plywood Rajkot",
-    "Greytone BWP Plywood Gujarat",
-    "Greytone Commercial Plywood"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/greytone-1200x510.webp",
-  "description": "Greytone Plywood is a premium-grade plywood suitable for high-end furniture and residential interiors. Known for its strength and excellent bond quality. Wholesale supply by Mahadev Traders across Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Greytone"
-  },
-  "sku": "MT-GREYTONE-PLY",
-  "mpn": "GREYTONE-PLY-8X4",
-  "category": "Plywood / Building Materials",
-  "url": "https://mahadev-traders.com/products/greytone-plywood-dealers.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Limelite Plywood -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Limelite Plywood",
-  "alternateName": [
-    "Limelite Plywood Rajkot",
-    "Limelite BWP Plywood Gujarat",
-    "Limelite Marine Plywood"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/limelite-1200x515.webp",
-  "description": "Limelite Plywood is engineered for durability and high moisture resistance. Ideal for kitchen and bathroom furniture where quality and value meet. Wholesale supplier Mahadev Traders serving the whole of Saurashtra.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Limelite"
-  },
-  "sku": "MT-LIMELITE-PLY",
-  "mpn": "LIMELITE-PLY-8X4",
-  "category": "Plywood / Building Materials",
-  "url": "https://mahadev-traders.com/products/limelite-plywood-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Simson Block Board -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Simson Block Board",
-  "alternateName": [
-    "Simson Block Board Rajkot",
-    "Simson BWP Block Board Gujarat",
-    "Simson Furniture Board"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/simson-1200x681.webp",
-  "description": "Simson Block Board offers superior core stability with high-quality pine and hardwood. Best for making heavy-duty wardrobes and shelving units. Wholesale rates available at Mahadev Traders Rajkot.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Simson"
-  },
-  "sku": "MT-SIMSON-BB",
-  "mpn": "SIMSON-BB-8X4",
-  "category": "Block Board / Building Materials",
-  "url": "https://mahadev-traders.com/products/simson-plywood-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Marllex Block Board -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Marllex Block Board",
-  "alternateName": [
-    "Marllex Block Board Rajkot",
-    "Marllex BWP Block Board Gujarat",
-    "Marllex Gurjan Core Board"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/marllex-1200x764.webp",
-  "description": "Marllex Block Board features a high-density core for superior load-bearing capacity and dimensional stability. Ideal for premium furniture and partitions. Wholesale supplier Mahadev Traders, Rajkot.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Marllex"
-  },
-  "sku": "MT-MARLLEX-BB",
-  "mpn": "MARLLEX-BB-8X4",
-  "category": "Block Board / Building Materials",
-  "url": "https://mahadev-traders.com/products/marllex-premium-plywood.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Simson Flush Door -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Simson Flush Door",
-  "alternateName": [
-    "Simson Flush Door Rajkot",
-    "Simson BWP Flush Door Gujarat",
-    "Simson Waterproof Flush Door"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/simson-1200x681.webp",
-  "description": "Simson Flush Door is a durable, waterproof door made with treated wood and high-quality resin. Ideal for all-weather conditions and moisture-prone areas. Wholesale by Mahadev Traders, Rajkot.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Simson"
-  },
-  "sku": "MT-SIMSON-FD",
-  "mpn": "SIMSON-FD-STD",
-  "category": "Flush Doors / Building Materials",
-  "url": "https://mahadev-traders.com/products/simson-plywood-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Zevik Flush Door -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Zevik Flush Door",
-  "alternateName": [
-    "Zevik Flush Door Rajkot",
-    "Zevik BWP Flush Door Gujarat",
-    "Zevik Laminated Flush Door"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/zevik-1200x762.webp",
-  "description": "Zevik Flush Door provides strength and elegance with boiling water proof qualities. Ideal for entrance, bed rooms, and toilet doors. Wholesale supplier Mahadev Traders across Saurashtra and Gujarat.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Zevik"
-  },
-  "sku": "MT-ZEVIK-FD",
-  "mpn": "ZEVIK-FD-STD",
-  "category": "Flush Doors / Building Materials",
-  "url": "https://mahadev-traders.com/products/zevik-plywood-supplier.html"
-}
-</script>
-
-  <!-- Structured Data: Product - Marllex Flush Door -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Marllex Flush Door",
-  "alternateName": [
-    "Marllex Flush Door Rajkot",
-    "Marllex BWP Flush Door Gujarat",
-    "Marllex Premium Waterproof Door"
-  ],
-  "image": "https://mahadev-traders.com/assets/images/marllex-1200x764.webp",
-  "description": "Marllex Flush Door is a top-of-the-line BWP door known for supreme durability and impact resistance. Trusted for premium residential projects. Wholesale supply by Mahadev Traders, Rajkot.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Marllex"
-  },
-  "sku": "MT-MARLLEX-FD",
-  "mpn": "MARLLEX-FD-STD",
-  "category": "Flush Doors / Building Materials",
-  "url": "https://mahadev-traders.com/products/marllex-premium-plywood.html"
-}
-</script>
+  <script src="/scripts/theme.js" defer></script>
+  <script src="/scripts/navbar.js" defer></script>
 </body>
 
 </html>
