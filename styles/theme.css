@@ -155,6 +155,17 @@
   }
 }
 
+/* In-page links (#contact, #faq...) stop below the fixed navbar instead of under it. */
+html {
+  scroll-padding-top: calc(var(--navbar-height) + 12px);
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: calc(var(--navbar-mobile-height) + 12px);
+  }
+}
+
 /* Typography (Standardized) */
 body {
   font-family: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', sans-serif;
@@ -165,4 +176,31 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
+}
+
+/* Cross-document view transitions: pages cross-fade instead of flashing white,
+   with the header and WhatsApp button held in place. Browsers without support
+   simply navigate as before. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.22s;
+  animation-timing-function: ease;
+}
+
+.navbar {
+  view-transition-name: site-nav;
+}
+
+.wa-fab {
+  view-transition-name: wa-fab;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
 }
