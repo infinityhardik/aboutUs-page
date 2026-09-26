@@ -565,18 +565,6 @@
 
   <script src="../scripts/theme.js" defer></script>
   <script src="../scripts/navbar.js" defer></script>
-  <script src="../scripts/products-nav.js" defer></script>
-  <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.faq-item');
-        item.classList.toggle('active');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          if (i !== item) i.classList.remove('active');
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>

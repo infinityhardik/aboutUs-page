@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /cgi-bin/
 
 Sitemap: https://mahadev-traders.com/sitemap.xml
