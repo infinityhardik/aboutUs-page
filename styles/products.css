@@ -1515,3 +1515,10 @@ table td:first-child, .specs-table td:first-child {
   [data-theme='dark'] .product-hero h1,
   [data-theme='dark'] .service-hero h1 { -webkit-text-fill-color: transparent; }
 }
+
+/* Stock tables: scroll sideways on narrow screens instead of widening the page. */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1rem 0; }
+.table-scroll .specs-table { margin: 0; min-width: 32rem; }
+.product-intro ul, .specs-section ul { margin: 0.75rem 0 1rem 1.25rem; line-height: 1.7; }
+.product-intro li, .specs-section li { margin-bottom: 0.4rem; }
+.specs-section > p + p, .specs-section > p + h3, .specs-section > .table-scroll + p { margin-top: 0.75rem; }

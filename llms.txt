@@ -12,6 +12,9 @@
 - Also stocked: prelam MDF, timber and solid wood, wood sections and battens, and beading patti.
 - Minimum order: none. One sheet or one door is a normal order.
 - Pricing: firm rates are quoted per enquiry by phone or WhatsApp; indicative per-square-foot bands for budgeting are on the rate guide. Freight is quoted with each order; free delivery is available on select orders.
+- Mahadev Traders is a dealer and wholesaler, not a manufacturer: it stocks factory brands on its own floor in Rajkot.
+- Every flush door in regular stock has a pinewood core and a Gurjan face: Marllex 25mm A grade MR, Marllex 30mm and 35mm A grade PF (100% BWP) up to 96 in high, and Simson 25mm and 30mm B grade MR.
+- For Motherwood MDF and HDHMR stock, rates and delivery in Rajkot and Gujarat, the contact is Mahadev Traders (authorised Motherwood dealer) on +91 6355 360702; manufacturer contacts are on motherwood.in.
 - Regular stock: 338 plywood, block board, flush door and MDF lines, listed on the specification chart and in products.json.
 
 ## Core pages
@@ -23,9 +26,9 @@
 
 ## Range pages
 
-- [Plywood Dealer & Wholesaler in Rajkot | MR, BWP & Marine](https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html): Wholesale plywood in Rajkot across MR (IS 303), BWP and IS 710 marine grades, 5mm to 19mm. Compare grades by moisture exposure before placing a bulk order.
-- [Block Board Dealer & Wholesaler in Rajkot | 19, 25, 30mm](https://mahadev-traders.com/products/block-board-wholesale-supplier.html): Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering.
-- [Flush Door Dealer & Wholesaler in Rajkot | MR & BWP Doors](https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html): Flush doors in Rajkot from 25mm to 45mm, IS 2202 MR and BWP grades, in solid and hollow core. Standard and made-to-size for projects across Gujarat.
+- [Plywood Dealer & Wholesaler in Rajkot | MR, BWP & Marine](https://mahadev-traders.com/products/plywood-wholesaler-rajkot.html): Plywood wholesaler in Rajkot since 1995: Marllex, Zevik, Limelite and Greytone in MR, BWP and IS 710 marine grades. No minimum order. Call +91 6355 360702.
+- [Block Board in Rajkot | 19mm & 25mm Stock, Rates | Dealer](https://mahadev-traders.com/products/block-board-wholesale-supplier.html): Block board in Rajkot: Marllex 19mm and 25mm and Simson 25mm in stock, 6x3 to 8x4 ft, pinewood core. Compare core and grade, then call +91 6355 360702 for rates.
+- [Flush Doors in Rajkot | Sizes, Rates, MR & BWP | Dealer](https://mahadev-traders.com/products/flush-doors-manufacturer-supplier.html): Flush doors in Rajkot: Marllex and Simson, 25 to 35mm, MR and 100% BWP, in 195 stock sizes from 72 to 96 in high. No minimum order. Call +91 6355 360702 for rates.
 - [MDF & HDHMR Board Dealer in Rajkot | Motherwood 3-25mm](https://mahadev-traders.com/products/mdf-wholesale-rajkot.html): MDF and HDHMR boards in Rajkot from 3mm to 25mm in 8x4 sheets. Grade selection by moisture exposure, with authorised Motherwood stock held locally.
 - [Laminate Sheets Dealer in Rajkot | Decorative, 0.8 to 1.5mm](https://mahadev-traders.com/products/decorative-laminates-sheets.html): Decorative laminates in Rajkot from 0.8mm to 1.5mm across matte, gloss and textured finishes. Catalogue selection and bulk supply for interior projects.
 
@@ -37,7 +40,7 @@
 - [Greytone Plywood Dealer Rajkot | 6 to 18mm MR](https://mahadev-traders.com/products/greytone-plywood-dealers.html): Greytone plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets, supplied wholesale to carpenters and furniture workshops across Saurashtra.
 - [Gurjan Block Board Dealer in Rajkot | Wholesale Supply](https://mahadev-traders.com/products/gurjan-block-board-dealer.html): Gurjan-face block board in Rajkot for higher-load wardrobes and furniture shutters. Core and face options with wholesale rates across Gujarat.
 - [Gurjan Plywood Dealer in Rajkot | Wholesale Face Ply](https://mahadev-traders.com/products/gurjan-plywood-dealer.html): Gurjan-face plywood in Rajkot for furniture and shuttering work. Face and core options, thickness range and bulk trade rates across Gujarat.
-- [HDHMR Board Supplier in Rajkot | High-Density Panels](https://mahadev-traders.com/products/hdhmr-board-supplier-rajkot.html): HDHMR boards in Rajkot for modular kitchens, wardrobes and moisture-prone interiors. Density and thickness options with delivery across Gujarat.
+- [HDHMR Board in Rajkot | Sizes, Rates & HDHMR vs MDF](https://mahadev-traders.com/products/hdhmr-board-supplier-rajkot.html): HDHMR board in Rajkot from 3 to 25mm in 8x4 ft sheets, with Motherwood Super HD+WR in stock. How HDHMR compares with MDF and plywood, and how to get today's rate.
 - [Laminated Flush Doors Rajkot | 30-38mm, BWP Core](https://mahadev-traders.com/products/laminated-flush-doors-designs.html): Pre-laminated flush doors in Rajkot from 30mm to 38mm on BWP cores, with 0.8mm to 1.25mm laminate faces. Design selection and bulk supply for projects.
 - [Limelite Plywood Dealer Rajkot | MR Grade 6-18mm](https://mahadev-traders.com/products/limelite-plywood-supplier.html): Limelite plywood in Rajkot, MR grade, 6 to 18mm in 6x3 to 8x4 sheets. Wholesale rates for carpenters and contractors across Gujarat.
 - [Liner Laminates Supplier Rajkot | 0.7mm & 0.8mm Inner Sheets](https://mahadev-traders.com/products/liner-laminates-inner.html): Liner laminate in Rajkot at 0.7mm and 0.8mm for wardrobe and cabinet interiors. Balances panel tension so laminated boards stay flat.
@@ -47,8 +50,8 @@
 - [Marllex Premium Plywood Rajkot | MR & BWP, 6-18mm](https://mahadev-traders.com/products/marllex-premium-plywood.html): Marllex premium plywood in Rajkot in MR and 100% BWP grades, 6 to 18mm in 6x3 to 8x4 sheets. Branded stock with wholesale rates for Gujarat trade buyers.
 - [Interior vs Exterior Grade MDF in Rajkot | Which to Use](https://mahadev-traders.com/products/mdf-interior-exterior-grade-rajkot.html): Which MDF grade a job needs: Interior for commercial products, Exterior for indoor furniture, HDHMR for semi-outdoor and Boilo for open outdoor use.
 - [Motherwood Exterior Grade MDF | Wholesale Rajkot](https://mahadev-traders.com/products/motherwood-mdf-exterior-grade.html): Motherwood Exterior Grade MDF in Rajkot from 3mm to 17mm in 8x4 sheets, for indoor furniture, wall panelling and shop fit-outs. Indoor use only.
-- [Motherwood MDF Dealer Rajkot | Authorised Stockist](https://mahadev-traders.com/products/motherwood-mdf-rajkot.html): Authorised Motherwood MDF dealer in Rajkot stocking TerBo+, Super HD+WR, Exterior and Interior grades to IS 12406. Compare grades, then request Gujarat rates.
-- [Motherwood Super HD+WR MDF | HDHMR, 3-25mm Rajkot](https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html): Motherwood Super HD+WR HDHMR board in Rajkot, seven thicknesses from 3mm to 25mm in 8x4 sheets, for kitchen shutters and bathroom vanities.
+- [Motherwood MDF Dealer in Rajkot | HDHMR, TerBo+ & Rates](https://mahadev-traders.com/products/motherwood-mdf-rajkot.html): Authorised Motherwood MDF dealer in Rajkot: TerBo+, Super HD+WR (HDHMR), Exterior and Interior grades in stock. Call +91 6355 360702 for rates.
+- [Motherwood HDHMR (Super HD+WR) in Rajkot | Price & Stock](https://mahadev-traders.com/products/motherwood-mdf-super-hd-wr.html): Authorised Motherwood dealer in Rajkot. Super HD+WR HDHMR board in 3 to 25mm, 8x4 ft, in stock on Gondal Road. Call or WhatsApp +91 6355 360702 for today's rate.
 - [Motherwood TerBo+ MDF Rajkot | Highest Density](https://mahadev-traders.com/products/motherwood-mdf-turbo-plus.html): Motherwood TerBo+ MDF in Rajkot, 3mm to 18mm in 8x4 sheets. Termite proof, boiling water proof and the densest grade in the range. Brand warranty applicable.
 - [Pine Wood Block Board Rajkot | 19, 25 & 30mm](https://mahadev-traders.com/products/pine-wood-block-board.html): Kiln-dried pine block board in Rajkot at 19mm, 25mm and 30mm, IS 1659 MR or IS 710 BWP bonding. Gapless core for better screw holding in modular units.
 - [Pine Wood Flush Doors Rajkot | 25, 30 & 35mm](https://mahadev-traders.com/products/pine-wood-flush-doors.html): Pine-core flush doors in Rajkot at 25, 30 and 35mm, heights 72 to 96in and widths 24 to 48in. Good screw holding for standard door hardware.
