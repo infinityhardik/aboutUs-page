@@ -7,6 +7,7 @@
   <meta name="description" content="Block board in Rajkot at 19mm, 25mm and 30mm in 8x4 sheets, IS 1659 MR and BWP bonding. Compare poplar, pine, Gurjan and BWP cores before ordering." />
   <link rel="canonical" href="https://mahadev-traders.com/products/block-board-wholesale-supplier.html" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="color-scheme" content="light dark" />
   <script>
     /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
     (function () {
@@ -16,10 +17,13 @@
         if (t !== 'light' && t !== 'dark') {
           t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-        document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        t = 'dark';
       }
+      document.documentElement.setAttribute('data-theme', t);
+      /* Native UI (scrollbars, form controls, the canvas before CSS loads) follows the same scheme. */
+      var m = document.querySelector('meta[name="color-scheme"]');
+      if (m) m.content = t;
     })();
   </script>
   <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
@@ -31,8 +35,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/products.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
   <meta name="geo.position" content="22.2594209;70.7999294" />
@@ -109,6 +113,25 @@
 
   <!-- Main Content -->
   <section class="product-content">
+    <section class="key-facts" aria-labelledby="key-facts-title">
+      <h2 id="key-facts-title">Block board in Rajkot: key facts</h2>
+      <dl>
+          <div><dt>In stock</dt><dd>19 and 25mm in 6x3, 6x4, 7x3, 7x4, 8x3 and 8x4 ft sheets.</dd></div>
+          <div><dt>Special order</dt><dd>30mm.</dd></div>
+          <div><dt>Grades</dt><dd>A grade commercial (Marllex and unbranded, 19 and 25mm) and B grade MR (Simson and unbranded, 25mm).</dd></div>
+          <div><dt>Brands</dt><dd>Authorised Marllex and Simson dealer; unbranded stock too.</dd></div>
+          <div><dt>Construction</dt><dd>Gurjan face on a pinewood core.</dd></div>
+          <div><dt>Block board or plywood?</dt><dd>Block board is lighter than plywood of the same thickness and resists sagging on long spans, so it suits wardrobe shutters, long shelves and table tops.</dd></div>
+          <div><dt>How much to order</dt><dd>An 8x4 ft sheet covers 32 sq ft. Add up the panel areas from your drawing, allow about 10% for cutting waste and divide by 32, or send the drawing or cutting list with your enquiry.</dd></div>
+          <div><dt>Minimum order</dt><dd>None. One sheet is a normal order, and you can take one to check against the job first.</dd></div>
+          <div><dt>Rates</dt><dd>Quoted per order on <a href="tel:+916355360702">+91 6355 360702</a> or <a href="https://wa.me/916355360702" target="_blank" rel="noopener">WhatsApp</a>, in Gujarati, Hindi or English; budget bands are on the <a href="/productChart.html">rate guide</a>.</dd></div>
+          <div><dt>Trade and wholesale</dt><dd>For contractors, dealers and retailers: trade rates that drop with quantity, up to full truck loads; credit after a first order and KYC; samples for approval and pre-delivery inspection on bulk orders. See <a href="/services/">trade and wholesale terms</a>.</dd></div>
+          <div><dt>Payment and billing</dt><dd>UPI, bank transfer, cheque or cash, with a GST invoice.</dd></div>
+          <div><dt>Where to buy</dt><dd>Mahadev Traders, Gondal Road (near S.T. Workshop), Rajkot 360004. Mon&ndash;Sat 9 am&ndash;7:30 pm, Sun 9 am&ndash;12 pm.</dd></div>
+          <div><dt>Delivery</dt><dd>Across Gujarat. Regular stock reaches Rajkot sites in 4&ndash;6 hours and other Gujarat cities in 24&ndash;48 hours; freight is quoted with the order.</dd></div>
+      </dl>
+      <p class="key-facts-updated">Updated <time datetime="2026-11-21">21 November 2026</time></p>
+    </section>
     <div class="product-intro">
       <h2>What Is Block Board &amp; Why Do Gujarat's Top Carpenters Prefer It?</h2>
       <p>A <strong>block board</strong> is a core-based engineered wood product where solid timber strips (battens) are edge-glued together and sandwiched between veneer layers. This construction gives block boards superior strength, rigidity, and screw-holding capacity compared to plywood of the same thickness &mdash; making them the preferred choice for heavy-duty furniture applications.</p>
@@ -118,7 +141,7 @@
 
     <!-- Specification Table -->
     <div class="specs-section">
-      <h3>📋 Block Board Range &mdash; Core Types &amp; Specifications</h3>
+      <h3>Block Board Range &mdash; Core Types &amp; Specifications</h3>
       <table class="specs-table">
         <thead>
           <tr>
@@ -188,7 +211,7 @@
     </div>
 
     <div class="specs-section">
-      <h3>🔍 Block Board vs Plywood &mdash; When to Use Which?</h3>
+      <h3>Block Board vs Plywood &mdash; When to Use Which?</h3>
       <p>This is one of the most common questions we get from carpenters and interior designers. Here is a practical guide:</p>
       <table class="specs-table">
         <thead>
@@ -207,7 +230,7 @@
     </div>
 
     <div class="product-intro">
-      <h3>🏗️ Where Gujarat's Professionals Use Block Boards</h3>
+      <h3>Where Gujarat's Professionals Use Block Boards</h3>
       <ul style="list-style: none; padding: 0;">
         <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Wardrobe shutters &amp; doors</strong> &mdash; 19mm or 25mm block board provides the rigidity needed for large wardrobe doors that won't warp over time.</span></li>
         <li style="padding: 0.5rem 0; display: flex; gap: 0.8rem;"><i class="fas fa-check" style="color: var(--color-primary-text); margin-top: 4px;"></i><span><strong>Conference &amp; dining tables</strong> &mdash; Block board's resistance to sagging makes it ideal for long table tops that plywood cannot support.</span></li>
@@ -227,7 +250,7 @@
 
     </div>
     <div class="specs-section">
-          <h3>📋 Trade Supply &amp; Board Availability</h3>
+          <h3>Trade Supply &amp; Board Availability</h3>
           <table class="specs-table">
             <thead>
               <tr>
@@ -260,7 +283,7 @@
           </table>
         </div>
         <div class="specs-section" id="category-children">
-      <h3>&#128230; All Block Board Pages</h3>
+      <h3>All Block Board Pages</h3>
       <p>Poplar, pine, Gurjan-face and BWP cores for wardrobes, partitions and furniture carcasses. Every board below has its own page with thickness options, grades and application notes.</p>
       <div class="quick-links-grid">
         <a href="/products/poplar-block-board.html" class="quick-link"><i class="fas fa-leaf"></i><span>Poplar Block Board</span></a>
@@ -271,7 +294,7 @@
       </div>
     </div>
         <div class="specs-section" id="range-at-a-glance">
-      <h3>&#128203; The Block Board Range at a Glance</h3>
+      <h3>The Block Board Range at a Glance</h3>
       <p>Block board is chosen over plywood for tall shutters and long unsupported panels, because the batten core resists bending across a span. Every board below is a Gurjan face on a pinewood batten core.</p>
       <div style="overflow-x:auto;">
         <table class="specs-table">
@@ -306,12 +329,11 @@
           </tbody>
         </table>
       </div>
-      <p>These are the 18 block board lines held as regular stock in Rajkot. Sizes outside this
-        list are arranged on special request. The full catalogue of every size we hold across all ranges is on the
-        <a href="/productChart.html">specification chart</a>.</p>
+      <p>These are the 18 Gurjan-face, pinewood-core block board lines held as regular stock in Rajkot; poplar-core and BWP block board are also held in 19 and 25mm. Sizes outside this
+        list are arranged on special request. The <a href="/productChart.html">specification chart</a> lists all 338 of these lines across the ranges.</p>
     </div>
     <div class="specs-section" id="stock-sizes">
-      <h3>&#128207; Stock Sizes and Special Orders</h3>
+      <h3>Stock Sizes and Special Orders</h3>
       <p><strong>Held as regular stock:</strong> 19mm and 25mm in 6x3, 6x4, 7x3, 7x4, 8x3 and 8x4 ft sheets. These are on the floor in Rajkot and go out
         with the order.</p>
       <p><strong>Available on special request:</strong> 30mm. These are not carried as regular
@@ -319,7 +341,7 @@
         and the lead time will be confirmed alongside the rate.</p>
     </div>
     <div class="specs-section" id="ordering">
-      <h3>&#128230; Ordering &amp; Pricing</h3>
+      <h3>Ordering &amp; Pricing</h3>
       <p><strong>Minimum order: one sheet.</strong> There is no minimum order quantity here &mdash; you can buy a
         single sheet or a full truck load, and you are welcome to take one sheet first to check the material against
         your own job before committing to the sheets you actually need.</p>
@@ -340,7 +362,7 @@
         one go.</p>
     </div>
     <div class="whatsapp-cta-section">
-      <h3>💬 Get Block Board Wholesale Price List</h3>
+      <h3>Get Block Board Wholesale Price List</h3>
       <p>WhatsApp us your core type, thickness, and quantity for instant wholesale pricing</p>
       <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20wholesale%20rates%20for%20block%20boards"
         class="whatsapp-btn" target="_blank" rel="noopener">
@@ -350,7 +372,7 @@
 
     <!-- Related Products -->
     <div class="related-products">
-      <h3>🔗 Explore Our Complete Product Range</h3>
+      <h3>Explore Our Complete Product Range</h3>
       <div class="quick-links-grid">
         <a href="/products/gurjan-block-board-dealer.html" class="quick-link"><i class="fas fa-tree"></i><span>Gurjan Block Board</span></a>
         <a href="/products/pine-wood-block-board.html" class="quick-link"><i class="fas fa-leaf"></i><span>Pine Block Board</span></a>
@@ -364,48 +386,48 @@
     </div>
 
     <div class="faq-section">
-      <h3>❓ Frequently Asked Questions About Block Boards</h3>
+      <h3>Frequently Asked Questions About Block Boards</h3>
       <div class="faq-items">
-        <div class="faq-item">
-          <button class="faq-question"><span>What is the difference between block board and plywood?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">Block board has a core made of solid wood strips (battens) glued edge-to-edge, while plywood has multiple thin cross-grain veneer layers. Block board is better for large flat surfaces like wardrobe shutters and table tops because it resists sagging. Plywood is better for applications requiring bending or where the edges will be visible, as block board edges can show the core battens.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>What is the minimum order for wholesale block board rates?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">There is no minimum order &mdash; one sheet is a normal order. The rate moves with quantity, so larger orders are priced lower per sheet. Contact us for project-specific quotes &mdash; we regularly supply bulk orders to furniture manufacturers and contractors across Rajkot, Ahmedabad, Surat, and other Gujarat cities.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>Do you supply block boards to cities outside Rajkot?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">Yes, we deliver across Gujarat from our Rajkot warehouse. Regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. For bulk orders, we arrange dedicated transport with protective packaging to prevent edge damage during transit.</div></div>
-        </div>
-        <div class="faq-item">
-                  <button class="faq-question"><span>When should I choose Block Board over Plywood?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-                  <div class="faq-answer"><div class="faq-answer-content">Choose block board for large unsupported surfaces like wardrobe shutters or office partitions. It is much more resistant to bending (warping) over long spans compared to plywood, which is better for structural "skeletons."</div></div>
-                </div>
-        <div class="faq-item">
-                  <button class="faq-question"><span>What is the difference between Pine and Poplar cores?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-                  <div class="faq-answer"><div class="faq-answer-content">Pine core boards are heavier, denser, and have superior screw-holding capacity, making them ideal for high-end furniture. Poplar core boards are lighter and more cost-effective, suitable for budget modular furniture.</div></div>
-                </div>
-        <div class="faq-item">
-                  <button class="faq-question"><span>Do you supply cut-to-size block boards?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-                  <div class="faq-answer"><div class="faq-answer-content">For bulk factory orders, we can facilitate custom-sized boards directly from our manufacturing partners. For regular retail/contractor orders, we supply standard 8x4 sheets from our ready stock.</div></div>
-                </div>
-        <div class="faq-item">
-                  <button class="faq-question"><span>How do I verify the BWP (Waterproof) grade on-site?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-                  <div class="faq-answer"><div class="faq-answer-content">Authentic BWP block boards will have a specific IS:1659 marking. We also provide a 72-hour boiling water test certificate from the manufacturer for bulk institutional supplies.</div></div>
-                </div>
-        <div class="faq-item">
-                  <button class="faq-question"><span>What is the lead time for site delivery in Ahmedabad?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-                  <div class="faq-answer"><div class="faq-answer-content">We coordinate next-day delivery for Ahmedabad and Saurashtra regions for orders placed before 1 PM. Our logistics team ensures damage-free unloading at the site.</div></div>
-                </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>Which block board core type is best for wardrobes?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">For premium wardrobes, Gurjan block board offers the best combination of strength, durability, and screw-holding capacity. For budget-friendly projects, pine wood block board offers excellent value. We recommend 19mm thickness for wardrobe shutters and 25mm for extra-large doors exceeding 2.5 feet in width.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question"><span>Can I use block board in kitchens?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></button>
-          <div class="faq-answer"><div class="faq-answer-content">Yes, but only if you use BWP (waterproof) grade block board. Standard MR-grade block board will swell from kitchen moisture. For below-counter carcasses near the sink, we generally recommend marine plywood instead, as it provides better water resistance in high-splash zones.</div></div>
-        </div>
+        <details class="faq-item">
+          <summary class="faq-question"><span>What is the difference between block board and plywood?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">Block board has a core made of solid wood strips (battens) glued edge-to-edge, while plywood has multiple thin cross-grain veneer layers. Block board is better for large flat surfaces like wardrobe shutters and table tops because it resists sagging. Plywood is better for applications requiring bending or where the edges will be visible, as block board edges can show the core battens.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>What is the minimum order for wholesale block board rates?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">There is no minimum order &mdash; one sheet is a normal order. The rate moves with quantity, so larger orders are priced lower per sheet. Contact us for project-specific quotes &mdash; we regularly supply bulk orders to furniture manufacturers and contractors across Rajkot, Ahmedabad, Surat, and other Gujarat cities.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>Do you supply block boards to cities outside Rajkot?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">Yes, we deliver across Gujarat from our Rajkot warehouse. Regular delivery routes cover Ahmedabad, Morbi, Jamnagar, Bhavnagar, Junagadh, Surat, Vadodara, and Gandhidham. For bulk orders, we arrange dedicated transport with protective packaging to prevent edge damage during transit.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>When should I choose Block Board over Plywood?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">Choose block board for large unsupported surfaces like wardrobe shutters or office partitions. It is much more resistant to bending (warping) over long spans compared to plywood, which is better for structural "skeletons."</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>What is the difference between Pine and Poplar cores?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">Pine core boards are heavier, denser, and have superior screw-holding capacity, making them ideal for high-end furniture. Poplar core boards are lighter and more cost-effective, suitable for budget modular furniture.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>Do you supply cut-to-size block boards?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">For bulk factory orders, we can facilitate custom-sized boards directly from our manufacturing partners. For regular retail/contractor orders, we supply standard 8x4 sheets from our ready stock.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>How do I verify the BWP (Waterproof) grade on-site?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">Authentic BWP block boards will have a specific IS:1659 marking. We also provide a 72-hour boiling water test certificate from the manufacturer for bulk institutional supplies.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>What is the lead time for site delivery in Ahmedabad?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">We coordinate next-day delivery for Ahmedabad and Saurashtra regions for orders placed before 1 PM. Our logistics team ensures damage-free unloading at the site.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>Which block board core type is best for wardrobes?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">For premium wardrobes, Gurjan block board offers the best combination of strength, durability, and screw-holding capacity. For budget-friendly projects, pine wood block board offers excellent value. We recommend 19mm thickness for wardrobe shutters and 25mm for extra-large doors exceeding 2.5 feet in width.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question"><span>Can I use block board in kitchens?</span><span class="faq-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="faq-answer-content">Yes, but only if you use BWP (waterproof) grade block board. Standard MR-grade block board will swell from kitchen moisture. For below-counter carcasses near the sink, we generally recommend marine plywood instead, as it provides better water resistance in high-splash zones.</div>
+        </details>
       </div>
     </div>
 
@@ -472,6 +494,7 @@
             <li><a href="/#contact">Contact &amp; directions</a></li>
             <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
             <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+            <li><a href="https://www.google.com/preferences/source?q=mahadev-traders.com" target="_blank" rel="noopener">Add us as a preferred source on Google</a></li>
           </ul>
           <div class="social-links">
             <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -511,7 +534,7 @@
         "width": 1200,
         "height": 630
       },
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "breadcrumb": {
         "@id": "https://mahadev-traders.com/products/block-board-wholesale-supplier.html#breadcrumb"
       },
@@ -693,13 +716,21 @@
   ]
 }
   </script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*.json" } },
+          { "not": { "href_matches": "/*.txt" } },
+          { "not": { "href_matches": "/*.xml" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </body>
 
 </html>
-
-
-
-
-
-
-

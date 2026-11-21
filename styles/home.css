@@ -523,27 +523,19 @@
 }
 
 .accordion-item:hover,
-.accordion-item.active {
+.accordion-item[open] {
   border-color: var(--color-border-glow);
   box-shadow: var(--shadow-md);
 }
 
-.accordion-title {
-  margin: 0;
-}
-
 .accordion-header {
-  width: 100%;
   padding: 1.25rem 1.5rem;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  background: transparent;
-  border: 0;
-  text-align: left;
-  font-family: inherit;
+  list-style: none;
   font-weight: 600;
   font-size: 1.1rem;
   line-height: 1.4;
@@ -553,6 +545,10 @@
 
 [data-theme="dark"] .accordion-header {
   color: var(--color-text-main);
+}
+
+.accordion-header::-webkit-details-marker {
+  display: none;
 }
 
 .accordion-header:hover,
@@ -566,15 +562,30 @@
   outline-offset: -3px;
 }
 
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--transition-normal);
-  color: var(--color-text-muted);
+/* Closed <details> content is hidden with content-visibility, not display: none, so it
+   stays findable by find-in-page and by #:~:text= links. Animate its block size between
+   0 and auto (interpolate-size) instead of the old max-height trick. */
+.accordion-item::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
 }
 
-.accordion-body[hidden] {
-  display: none;
+.accordion-item:not([open])::details-content {
+  block-size: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-item::details-content {
+    transition: block-size, content-visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+}
+
+.accordion-body {
+  color: var(--color-text-muted);
 }
 
 [data-theme="dark"] .accordion-body {
@@ -1735,9 +1746,9 @@ ul.areas-grid {
    each section's real height once it has rendered. Sizes are measured desktop/mobile. */
 .home #grade-guide { content-visibility: auto; contain-intrinsic-size: auto 850px; }
 .home #why { content-visibility: auto; contain-intrinsic-size: auto 970px; }
-.home #about { content-visibility: auto; contain-intrinsic-size: auto 750px; }
+.home #about { content-visibility: auto; contain-intrinsic-size: auto 1660px; }
 .home #brands { content-visibility: auto; contain-intrinsic-size: auto 640px; }
-.home #faq { content-visibility: auto; contain-intrinsic-size: auto 1170px; }
+.home #faq { content-visibility: auto; contain-intrinsic-size: auto 1435px; }
 .home #locations { content-visibility: auto; contain-intrinsic-size: auto 1370px; }
 .home #contact { content-visibility: auto; contain-intrinsic-size: auto 720px; }
 .home .footer { content-visibility: auto; contain-intrinsic-size: auto 580px; }
@@ -1745,9 +1756,9 @@ ul.areas-grid {
 @media (max-width: 768px) {
   .home #grade-guide { contain-intrinsic-size: auto 1220px; }
   .home #why { contain-intrinsic-size: auto 1650px; }
-  .home #about { contain-intrinsic-size: auto 1110px; }
+  .home #about { contain-intrinsic-size: auto 3025px; }
   .home #brands { contain-intrinsic-size: auto 450px; }
-  .home #faq { contain-intrinsic-size: auto 1060px; }
+  .home #faq { contain-intrinsic-size: auto 1335px; }
   .home #locations { contain-intrinsic-size: auto 1830px; }
   .home #contact { contain-intrinsic-size: auto 1220px; }
   .home .footer { contain-intrinsic-size: auto 1630px; }
@@ -1786,4 +1797,15 @@ ul.areas-grid .area-item {
   ul.areas-grid .area-item {
     flex-basis: calc((100% - 0.75rem) / 2);
   }
+}
+
+/* "At a glance" facts under the About copy (shares .key-facts from index.css). */
+.about-facts {
+  margin: 3rem 0 0;
+}
+
+.about-facts h3 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  color: var(--color-text-main);
 }

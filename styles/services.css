@@ -565,16 +565,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: transparent;
-  border: none;
-  width: 100%;
-  text-align: left;
+  list-style: none;
   color: var(--color-primary-text);
   font-weight: 600;
   font-size: 1rem;
-  transition: all var(--transition-fast);
-  font-family: inherit;
+  transition: background-color var(--transition-fast);
   gap: 1rem;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
 }
 
 .faq-question:hover,
@@ -593,27 +593,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-normal);
+  transition: rotate var(--transition-normal);
   flex-shrink: 0;
 }
 
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
+.faq-item[open] .faq-icon {
+  rotate: 180deg;
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--transition-normal);
-  background: rgba(var(--color-primary-rgb), 0.03);
+/* Closed <details> content is hidden with content-visibility, not display: none, so it
+   stays findable by find-in-page and by #:~:text= links. */
+.faq-item::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
 }
 
-.faq-answer[hidden] {
-  display: none;
+.faq-item:not([open])::details-content {
+  block-size: 0;
 }
 
-.faq-item.active .faq-answer {
-  max-height: none;
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item::details-content {
+    transition: block-size, content-visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
 }
 
 .faq-answer-content {
@@ -621,6 +627,7 @@
   color: var(--color-text-main);
   line-height: 1.7;
   overflow-wrap: anywhere;
+  background: rgba(var(--color-primary-rgb), 0.03);
 }
 
 
@@ -714,4 +721,33 @@
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   [data-theme='dark'] .service-hero h1,
   [data-theme='dark'] .product-hero h1 { -webkit-text-fill-color: transparent; }
+}
+
+/* Wide spec tables scroll inside themselves on phones instead of widening the page
+   (the same rule products.css already applies). */
+@media (max-width: 768px) {
+  .specs-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Lists and links inside the services copy: visible bullets, breathing room, and links
+   that look like links. */
+.service-intro ul {
+  list-style: disc;
+  padding-inline-start: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.service-intro li {
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+}
+
+.service-intro a {
+  color: var(--color-primary-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }

@@ -45,6 +45,7 @@ class ThemeManager {
   // Apply without persisting, so following the OS does not count as a choice.
   applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    this.syncColorScheme(theme);
     this.updateToggleButton(theme);
   }
 
@@ -56,6 +57,7 @@ class ThemeManager {
 
     // Apply theme to HTML element
     document.documentElement.setAttribute('data-theme', theme);
+    this.syncColorScheme(theme);
 
     // Save preference to localStorage (may throw in private mode)
     try { localStorage.setItem(this.THEME_KEY, theme); } catch (e) { /* storage blocked */ }
@@ -92,6 +94,13 @@ class ThemeManager {
         btn.title = 'Light Mode';
       }
     });
+  }
+
+  // Keep <meta name="color-scheme"> in step so native UI (scrollbars, form controls)
+  // matches the theme on screen.
+  syncColorScheme(theme) {
+    const meta = document.querySelector('meta[name="color-scheme"]');
+    if (meta) meta.content = theme;
   }
 
   getCurrentTheme() {

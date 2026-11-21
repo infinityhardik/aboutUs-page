@@ -7,6 +7,7 @@
   <meta name="description" content="Compare plywood, block board, laminate, flush door and MDF grades in one table, then get current 2026 wholesale rates by WhatsApp. No minimum order." />
   <link rel="canonical" href="https://mahadev-traders.com/productChart.html" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="color-scheme" content="light dark" />
   <script>
     /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
     (function () {
@@ -16,10 +17,13 @@
         if (t !== 'light' && t !== 'dark') {
           t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-        document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        t = 'dark';
       }
+      document.documentElement.setAttribute('data-theme', t);
+      /* Native UI (scrollbars, form controls, the canvas before CSS loads) follows the same scheme. */
+      var m = document.querySelector('meta[name="color-scheme"]');
+      if (m) m.content = t;
     })();
   </script>
   <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
@@ -31,8 +35,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/productChart.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
   <meta name="geo.position" content="22.2594209;70.7999294" />
@@ -85,6 +89,7 @@
     </ol>
   </nav>
 
+    <main id="main">
     <!-- Hero Section -->
     <section class="hero" style="min-height: 50vh;">
         <div class="hero-bg"></div>
@@ -98,10 +103,21 @@
     <section class="chart-section">
         <div class="container">
             <div class="chart-intro">
-                <div class="seo-trust-note" style="margin:1rem 0;padding:.85rem 1rem;border:1px solid rgba(197, 143, 89,.18);border-radius:8px;background:var(--color-bg-surface);"><p style="margin:0;color:var(--color-text-muted);font-size:.95rem;"><strong>Curated by Mahadev Traders</strong> — wholesale plywood dealers in Rajkot since 1995. Last reviewed: May 16, 2026. Product availability, thickness options, and wholesale rates are verified from the Rajkot warehouse before every bulk quote.</p></div>
 
+    <section class="key-facts" aria-labelledby="key-facts-title">
+      <h2 id="key-facts-title">Plywood and door rates in Rajkot: key facts</h2>
+      <dl>
+          <div><dt>Rates</dt><dd>Quoted per order on <a href="tel:+916355360702">+91 6355 360702</a> or WhatsApp (Gujarati, Hindi or English), usually the same day; indicative bands are <a href="#rate-guide">below</a>.</dd></div>
+          <div><dt>Minimum order</dt><dd>None. One sheet or one door is a normal order.</dd></div>
+          <div><dt>Trade and wholesale</dt><dd>For contractors, dealers and retailers: trade rates that drop with quantity, up to full truck loads; credit after a first order and KYC; samples for approval and pre-delivery inspection on bulk orders. See <a href="/services/">trade and wholesale terms</a>.</dd></div>
+          <div><dt>Payment and billing</dt><dd>UPI, bank transfer, cheque or cash, with a GST invoice.</dd></div>
+          <div><dt>Where to buy</dt><dd>Mahadev Traders, Gondal Road (near S.T. Workshop), Rajkot 360004. Mon&ndash;Sat 9 am&ndash;7:30 pm, Sun 9 am&ndash;12 pm.</dd></div>
+          <div><dt>Delivery</dt><dd>Across Gujarat. Regular stock reaches Rajkot sites in 4&ndash;6 hours and other Gujarat cities in 24&ndash;48 hours; freight is quoted with the order.</dd></div>
+      </dl>
+      <p class="key-facts-updated">Updated <time datetime="2026-11-21">21 November 2026</time></p>
+    </section>
     <div class="specs-section" id="how-pricing-works">
-      <h3>&#128176; How Pricing Works Here</h3>
+      <h2>How Pricing Works Here</h2>
       <p>If you came looking for a rupee figure, here is the honest answer up front: <strong>we do not publish fixed
         per-sheet prices, because they would not stay true.</strong> The rate for a single sheet
         moves with the brand, the thickness, the grade, the batch currently in the warehouse, how much you are
@@ -111,7 +127,7 @@
         the phone, and you get the current best rate for that exact order &mdash; usually the same day. That is a real
         quote for your job; the bands below are only for sizing a budget before you ask.</p>
 
-      <h3 id="rate-guide">&#8377; Indicative Rate Bands</h3>
+      <h2 id="rate-guide">&#8377; Indicative Rate Bands</h2>
       <p>If you are sizing a budget before you enquire, these are the broad reference bands we work within, quoted
         per square foot. They are wide on purpose: each one spans the thinnest commercial board through to the
         heaviest premium grade, so they are a sanity check on a budget, not a quotation.</p>
@@ -541,6 +557,7 @@
             <div class="pagination" id="pagination"></div>
       </div>
     </section>
+    </main>
 
     <footer class="footer">
     <div class="container">
@@ -587,6 +604,7 @@
             <li><a href="/#contact">Contact &amp; directions</a></li>
             <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
             <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+            <li><a href="https://www.google.com/preferences/source?q=mahadev-traders.com" target="_blank" rel="noopener">Add us as a preferred source on Google</a></li>
           </ul>
           <div class="social-links">
             <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -667,26 +685,28 @@
 
             function renderPagination(totalPages) {
                 const container = document.getElementById('pagination');
-                container.innerHTML = '';
+                container.replaceChildren();
                 if (totalPages <= 1) return;
-                const mk = (label, disabled, onClick, active) => {
+                const mk = (label, disabled, onClick, active, name) => {
                     const b = document.createElement('button');
+                    b.type = 'button';
                     b.innerHTML = label;
                     b.disabled = !!disabled;
-                    if (active) b.classList.add('active');
+                    if (name) b.setAttribute('aria-label', name);
+                    if (active) { b.classList.add('active'); b.setAttribute('aria-current', 'page'); }
                     b.addEventListener('click', onClick);
                     container.appendChild(b);
                 };
-                mk('<i class="fas fa-chevron-left"></i>', currentPage === 1,
-                   () => { currentPage--; render(); });
+                mk('<i class="fas fa-chevron-left" aria-hidden="true"></i>', currentPage === 1,
+                   () => { currentPage--; render(); }, false, 'Previous page');
                 let startPage = Math.max(1, currentPage - 2);
                 const endPage = Math.min(totalPages, startPage + 4);
                 if (endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
                 for (let i = startPage; i <= endPage; i++) {
-                    mk(String(i), false, () => { currentPage = i; render(); }, i === currentPage);
+                    mk(String(i), false, () => { currentPage = i; render(); }, i === currentPage, 'Page ' + i);
                 }
-                mk('<i class="fas fa-chevron-right"></i>', currentPage === totalPages,
-                   () => { currentPage++; render(); });
+                mk('<i class="fas fa-chevron-right" aria-hidden="true"></i>', currentPage === totalPages,
+                   () => { currentPage++; render(); }, false, 'Next page');
             }
 
             render();
@@ -714,7 +734,7 @@
         "width": 1200,
         "height": 630
       },
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "breadcrumb": {
         "@id": "https://mahadev-traders.com/productChart.html#breadcrumb"
       },
@@ -726,9 +746,9 @@
       "@type": "Dataset",
       "@id": "https://mahadev-traders.com/productChart.html#dataset",
       "name": "Mahadev Traders stock directory: plywood, block board, flush door and MDF sizes",
-      "description": "Every size held by Mahadev Traders, Rajkot: 338 plywood, block board, flush door and MDF lines with thickness, sheet or door size, face, core, bonding grade and brand. Published as an HTML table and as JSON. Updated September 2026.",
+      "description": "Regular stock held by Mahadev Traders, Rajkot: 338 plywood, block board, flush door and MDF lines with thickness, sheet or door size, face, core, bonding grade and brand. Published as an HTML table and as JSON. Updated September 2026.",
       "url": "https://mahadev-traders.com/productChart.html",
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "creator": {
         "@id": "https://mahadev-traders.com/#business"
       },
@@ -795,6 +815,21 @@
     }
   ]
 }
+  </script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*.json" } },
+          { "not": { "href_matches": "/*.txt" } },
+          { "not": { "href_matches": "/*.xml" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }]
+  }
   </script>
 </body>
 

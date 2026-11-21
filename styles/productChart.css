@@ -165,3 +165,8 @@ body.high-contrast tr:hover td { background: #ffff00; color: #000; }
 body.high-contrast .btn-control { background: #ffff00; color: #000; border-color: #ffff00; }
 
 body.high-contrast .btn-control:hover { background: #fff; border-color: #fff; }
+
+/* The pricing notes are top-level sections (h2) but keep their original h3 size. */
+#how-pricing-works h2 {
+  font-size: 1.17em;
+}

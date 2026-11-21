@@ -7,6 +7,7 @@
   <meta name="description" content="Every board we stock in five ranges: plywood, block board, laminates, flush doors and MDF/HDHMR. Thicknesses, grades and trade rates for Rajkot buyers." />
   <link rel="canonical" href="https://mahadev-traders.com/products/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="color-scheme" content="light dark" />
   <script>
     /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
     (function () {
@@ -16,10 +17,13 @@
         if (t !== 'light' && t !== 'dark') {
           t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-        document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        t = 'dark';
       }
+      document.documentElement.setAttribute('data-theme', t);
+      /* Native UI (scrollbars, form controls, the canvas before CSS loads) follows the same scheme. */
+      var m = document.querySelector('meta[name="color-scheme"]');
+      if (m) m.content = t;
     })();
   </script>
   <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
@@ -32,8 +36,8 @@
   <link rel="stylesheet" href="/styles/products.css" />
   <link rel="stylesheet" href="/styles/common-search.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
   <meta name="geo.position" content="22.2594209;70.7999294" />
@@ -90,9 +94,7 @@
   <main>
     <section class="product-hero">
       <h1>Plywood, Block Board, Flush Door &amp; MDF <span class="h1-accent">Catalogue</span></h1>
-      <p>Complete selection of high-quality plywood, block boards, flush doors, and laminates. 30+ years of excellence
-        serving
-        Rajkot and Gujarat.</p>
+      <p>Every board Mahadev Traders stocks on Gondal Road, Rajkot: plywood, block board, flush doors, MDF &amp; HDHMR and laminates. Each range page compares grades, thicknesses and brands; the spec chart lists 338 regular stock lines, and poplar-core and BWP block board, shuttering plywood and Motherwood Interior grade MDF are held as well.</p>
       <div class="location-badge">
         <i class="fas fa-store"></i> Quality Assured Wholesale Supplier
       </div>
@@ -101,20 +103,60 @@
 
     <!-- Main Content -->
     <section class="product-content" id="static-products-section">
+    <section class="key-facts" aria-labelledby="key-facts-title">
+      <h2 id="key-facts-title">Mahadev Traders catalogue: key facts</h2>
+      <dl>
+          <div><dt>Ranges</dt><dd>Plywood, block board, flush doors, MDF &amp; HDHMR, and laminates.</dd></div>
+          <div><dt>Regular stock</dt><dd>338 plywood, block board, flush door and MDF lines on the <a href="/productChart.html">spec chart</a>, plus poplar-core and BWP block board, shuttering plywood and Motherwood Interior grade MDF.</dd></div>
+          <div><dt>Brands</dt><dd>Authorised dealer for Motherwood, Marllex, Simson, Zevik, Limelite and Greytone. Also stocks Action Tesa, Century, Vir, Greenply, Greenlam and E3 MDF. Merino, Royale Touche, Greenlam and AICA Sunmica laminates are supplied per order.</dd></div>
+          <div><dt>Which board?</dt><dd><a href="#by-job">Grade and thickness by job</a>: wardrobes, kitchens, bathrooms, doors, curves and outdoor use.</dd></div>
+          <div><dt>Minimum order</dt><dd>None. One sheet or one door is a normal order.</dd></div>
+          <div><dt>Rates</dt><dd>Quoted per order on <a href="tel:+916355360702">+91 6355 360702</a> or <a href="https://wa.me/916355360702" target="_blank" rel="noopener">WhatsApp</a>, in Gujarati, Hindi or English; budget bands are on the <a href="/productChart.html">rate guide</a>.</dd></div>
+          <div><dt>Trade and wholesale</dt><dd>For contractors, dealers and retailers: trade rates that drop with quantity, up to full truck loads; credit after a first order and KYC; samples for approval and pre-delivery inspection on bulk orders. See <a href="/services/">trade and wholesale terms</a>.</dd></div>
+          <div><dt>Payment and billing</dt><dd>UPI, bank transfer, cheque or cash, with a GST invoice.</dd></div>
+          <div><dt>Where to buy</dt><dd>Mahadev Traders, Gondal Road (near S.T. Workshop), Rajkot 360004. Mon&ndash;Sat 9 am&ndash;7:30 pm, Sun 9 am&ndash;12 pm.</dd></div>
+          <div><dt>Delivery</dt><dd>Across Gujarat. Regular stock reaches Rajkot sites in 4&ndash;6 hours and other Gujarat cities in 24&ndash;48 hours; freight is quoted with the order.</dd></div>
+      </dl>
+      <p class="key-facts-updated">Updated <time datetime="2026-11-21">21 November 2026</time></p>
+    </section>
+      <div class="specs-section" id="by-job">
+        <h2>Which Board for Which Job? Grade and Thickness Guide</h2>
+        <p>Pick the board by where it will sit and what it carries. Wet positions need 100% BWP; dry rooms do not, and MR costs less. If a job is not listed, send us the room, the load and the finish.</p>
+        <div style="overflow-x:auto;">
+          <table class="specs-table">
+            <thead><tr><th>Job</th><th>Board (grade)</th><th>Thickness</th></tr></thead>
+            <tbody>
+            <tr><td>Wardrobe and bed carcass, shelves</td><td><a href="/products/commercial-plywood-mr-grade.html">MR plywood</a> or <a href="/products/block-board-wholesale-supplier.html">block board</a> (MR)</td><td>18mm plywood; 19mm block board</td></tr>
+            <tr><td>Wardrobe shutters</td><td><a href="/products/gurjan-block-board-dealer.html">Gurjan block board</a> or MR plywood (MR / A grade)</td><td>19 or 25mm block board; 18mm plywood</td></tr>
+            <tr><td>Back panels</td><td>MR plywood or MDF (MR / Exterior)</td><td>6mm plywood; 3 to 7.5mm MDF</td></tr>
+            <tr><td>TV unit and wall panelling</td><td><a href="/products/motherwood-mdf-exterior-grade.html">Exterior grade MDF</a> (Exterior (indoor only))</td><td>3 to 17mm by design</td></tr>
+            <tr><td>Kitchen base units and sink cabinet</td><td><a href="/products/marine-plywood-710-rajkot.html">marine plywood</a> or <a href="/products/bwp-waterproof-block-board.html">BWP block board</a> (100% BWP)</td><td>18mm plywood; 19mm block board</td></tr>
+            <tr><td>Kitchen shutters</td><td><a href="/products/motherwood-mdf-super-hd-wr.html">HDHMR (Super HD+WR)</a></td><td>18mm</td></tr>
+            <tr><td>Tall kitchen units away from hob and sink</td><td>MR plywood (MR)</td><td>18mm</td></tr>
+            <tr><td>Bathroom vanity</td><td>BWP block board or marine plywood (100% BWP)</td><td>18mm plywood; 19mm block board</td></tr>
+            <tr><td>Bedroom and living-room doors</td><td><a href="/products/flush-doors-manufacturer-supplier.html">flush door</a> (MR)</td><td>25 or 30mm</td></tr>
+            <tr><td>Bathroom doors</td><td><a href="/products/waterproof-bathroom-doors.html">waterproof flush door</a> (100% BWP (Marllex PF))</td><td>30 or 35mm</td></tr>
+            <tr><td>Curves: arches, pillars, round tables</td><td><a href="/products/flexible-plywood-supplier.html">flexible plywood</a> (Commercial)</td><td>6mm, layered for thicker curves</td></tr>
+            <tr><td>Concrete formwork</td><td><a href="/products/shuttering-plywood-construction.html">shuttering plywood</a> (Film-faced)</td><td>12, 15 or 18mm</td></tr>
+            <tr><td>Covered balcony furniture</td><td>Marine plywood or HDHMR (100% BWP / HDHMR)</td><td>18mm</td></tr>
+            <tr><td>Open outdoor positions, CNC-profiled shutters</td><td><a href="/products/motherwood-mdf-turbo-plus.html">TerBo+ MDF (Boilo grade)</a></td><td>3 to 18mm</td></tr>
+            <tr><td>Outside faces of furniture</td><td><a href="/products/decorative-laminates-sheets.html">decorative laminate (sunmica)</a>, unbranded in stock</td><td>1mm on shutters; 0.8mm inside</td></tr>
+            <tr><td>Inside faces of wardrobes and cabinets</td><td><a href="/products/liner-laminates-inner.html">liner laminate</a></td><td>0.7 or 0.8mm</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <!-- Introduction -->
       <div class="product-intro">
-        <h2>🏆 Comprehensive Product Portfolio</h2>
-        <p>Mahadev Traders maintains an extensive inventory of premium building materials sourced from top
-          manufacturers.
-          Our product range is organised into five ranges &mdash; plywood, block board, laminates, flush doors,
-          and MDF &amp; HDHMR &mdash; to meet diverse construction and furniture manufacturing needs.</p>
+        <h2>Five Ranges in Stock in Rajkot</h2>
+        <p>Mahadev Traders stocks five ranges on Gondal Road, Rajkot: plywood, block board, laminates, flush doors, and
+          MDF &amp; HDHMR. Each range page compares grades, thicknesses and brands; each product page lists what is held in
+          regular stock and what is made to order.</p>
         <p>From residential renovations to large-scale commercial projects and furniture production, we supply the
           highest
           quality materials with competitive wholesale pricing and reliable delivery across Gujarat.</p>
 
       </div>
-
-      <div class="seo-trust-note" style="margin:1rem 0;padding:.85rem 1rem;border:1px solid rgba(197, 143, 89,.18);border-radius:8px;background:var(--color-bg-surface);"><p style="margin:0;color:var(--color-text-muted);font-size:.95rem;"><strong>Curated by Mahadev Traders</strong> — wholesale plywood dealers in Rajkot since 1995. Last reviewed: May 16, 2026. Product availability, thickness options, and wholesale rates are verified from the Rajkot warehouse before every bulk quote.</p></div>
 
       <div class="specs-section">
         <h3>Most Popular Wholesale Product Pages</h3>
@@ -138,7 +180,7 @@
       </div>
 
     <div class="specs-section" id="browse-by-category">
-      <h3>&#128203; Browse by Category</h3>
+      <h3>Browse by Category</h3>
       <p>Five ranges, each with a range page that compares the board types within it. If you already know the material, go straight to it; if you are still choosing, start at the range page.</p>
       <h4 style="margin:1.75rem 0 .5rem;color: var(--color-primary-text);"><a href="/products/plywood-wholesaler-rajkot.html">Plywood</a></h4>
       <p style="margin:0 0 .75rem;color:var(--color-text-muted);font-size:.95rem;">Commercial MR, marine IS 710, Gurjan-face, shuttering and flexible plywood, plus the brands we stock.</p>
@@ -196,7 +238,7 @@
     </div>
 
     <div class="specs-section" id="also-in-stock">
-      <h3>&#129717; Also in Stock: Prelam MDF, Timber, Wood Sections &amp; Beading Patti</h3>
+      <h3>Also in Stock: Prelam MDF, Timber, Wood Sections &amp; Beading Patti</h3>
       <p>Alongside the five ranges, we supply the materials that usually go into the same job:</p>
       <ul class="applications-list">
         <li><strong><a href="/products/mdf-wholesale-rajkot.html#prelam-mdf">Prelam MDF</a></strong> &mdash; MDF with a
@@ -213,7 +255,7 @@
     </div>
 
     <div class="specs-section" id="ordering">
-      <h3>&#128230; Ordering &amp; Pricing Across the Catalogue</h3>
+      <h3>Ordering &amp; Pricing Across the Catalogue</h3>
       <p><strong>No minimum order on anything listed here.</strong> One sheet, one door, or a full truck load are all
         normal orders, so you can take a single piece to test against your own job before committing to the quantity
         you need.</p>
@@ -341,7 +383,7 @@
           </a>
           <a href="/products/plywood-wholesaler-rajkot.html" class="product-card">
             <div class="product-card-icon"><i class="fas fa-box"></i></div>
-            <h3>Plywood Wholesaler Rajkot</h3>
+            <h3>Plywood: Full Range</h3>
             <p>Complete wholesale plywood supplier for bulk orders and contractors. Best prices on premium plywood
               products.</p>
             <span class="arrow"><i class="fas fa-arrow-right"></i></span>
@@ -395,7 +437,7 @@
           </a>
           <a href="/products/flush-doors-manufacturer-supplier.html" class="product-card">
             <div class="product-card-icon"><i class="fas fa-hammer"></i></div>
-            <h3>Flush Doors Manufacturing</h3>
+            <h3>Flush Doors: Full Range</h3>
             <p>Custom flush door manufacturing and supply. Direct access to manufacturer standards at wholesale prices.
             </p>
             <span class="arrow"><i class="fas fa-arrow-right"></i></span>
@@ -450,7 +492,7 @@
           </a>
           <a href="/products/block-board-wholesale-supplier.html" class="product-card">
             <div class="product-card-icon"><i class="fas fa-industry"></i></div>
-            <h3>Block Board Wholesale Supply</h3>
+            <h3>Block Board: Full Range</h3>
             <p>Bulk block board supply for furniture manufacturers. Competitive wholesale pricing with reliable
               delivery.
             </p>
@@ -502,14 +544,14 @@
         </h2>
         <p style="margin-bottom: 2rem; color: var(--color-text-muted); font-size: 1.05rem;">
           <strong>MDF Quality Hierarchy (Low → High):</strong> Interior Grade → Exterior Grade → Super HD+WR (HDHMR) →
-          <strong>TerBo+/Boilo (BEST — Highest Density)</strong>. Motherwood MDF authorized dealer in Rajkot. Also
+          <strong>TerBo+/Boilo (BEST — Highest Density)</strong>. Motherwood MDF authorised dealer in Rajkot. Also
           stocking Action Tesa, Century, Vir, Greenply, Greenlam, and E3 MDF boards for wholesale supply across Rajkot,
           Saurashtra, and Gujarat.
         </p>
         <div class="product-cards-grid">
           <a href="/products/mdf-wholesale-rajkot.html" class="product-card">
             <div class="product-card-icon"><i class="fas fa-layer-group"></i></div>
-            <h3>MDF Wholesale Rajkot</h3>
+            <h3>MDF &amp; HDHMR: Full Range</h3>
             <p>Complete range of MDF / HDHMR boards at wholesale prices. Motherwood, Action Tesa, Century, Vir,
               Greenply, Greenlam &amp; E3 brands available.</p>
             <span class="arrow"><i class="fas fa-arrow-right"></i></span>
@@ -551,7 +593,7 @@
           <div>
             <h3 style="color: var(--color-primary-text); margin-bottom: 0.5rem;"><i class="fas fa-check"></i> Premium Brands
             </h3>
-            <p>Authorised dealers for Motherwood, Marllex, Simson, Zevik and more. Genuine, factory-fresh stock carrying the manufacturer's own brand warranty.
+            <p>Authorised dealer for Motherwood, Marllex, Simson, Zevik, Limelite and Greytone: genuine, factory-fresh stock, with Motherwood's own warranty on its boards.
             </p>
           </div>
           <div>
@@ -629,6 +671,7 @@
             <li><a href="/#contact">Contact &amp; directions</a></li>
             <li><a href="https://maps.google.com/?cid=12013598871462242283" target="_blank" rel="noopener">Office on Google Maps</a></li>
             <li><a href="https://maps.google.com/?cid=863322595164647845" target="_blank" rel="noopener">Warehouse on Google Maps</a></li>
+            <li><a href="https://www.google.com/preferences/source?q=mahadev-traders.com" target="_blank" rel="noopener">Add us as a preferred source on Google</a></li>
           </ul>
           <div class="social-links">
             <a href="https://www.facebook.com/Mahadev.Traders.Plywood.Block.Board.and.Flush.Door/" target="_blank" rel="noopener" aria-label="Mahadev Traders on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -735,7 +778,7 @@
         "width": 1200,
         "height": 630
       },
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "breadcrumb": {
         "@id": "https://mahadev-traders.com/products/#breadcrumb"
       },
@@ -792,13 +835,21 @@
   ]
 }
   </script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*.json" } },
+          { "not": { "href_matches": "/*.txt" } },
+          { "not": { "href_matches": "/*.xml" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
