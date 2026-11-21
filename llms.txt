@@ -9,11 +9,13 @@
 - Phone and WhatsApp: +91 6355 360702. Email: mahadevtraders@hotmail.com.
 - Hours: Monday to Saturday 9:00 am to 7:30 pm; Sunday 9:00 am to 12:00 pm.
 - Authorised dealer for: Motherwood MDF; Marllex (also written Marlex) plywood, block board and flush doors; Simson flush doors and block board; Zevik, Limelite (and Limelite Pro) and Greytone plywood.
-- Also stocked (not as authorised dealer): Action Tesa, Century, Vir, Greenply, Greenlam and E3 MDF.
+- Also stocked (not as authorised dealer): Action Tesa, Century, Vir, Greenply, Greenlam and E3 MDF; Merino, Royale Touche, Greenlam and AICA Sunmica laminates.
 - Also stocked: prelam MDF, timber and solid wood, wood sections and battens, and beading patti.
 - Minimum order: none. One sheet or one door is a normal order.
 - Pricing: firm rates are quoted per enquiry by phone or WhatsApp; indicative per-square-foot bands for budgeting are on the rate guide. Freight is quoted with each order; free delivery is available on select orders.
-- Regular stock: 338 plywood, block board, flush door and MDF lines, listed on the specification chart and in products.json. Sizes outside that list are supplied on special request.
+- Regular stock: the 338 plywood, block board, flush door and Motherwood MDF lines listed on the specification chart and in products.json, plus poplar-core and BWP block board, shuttering plywood and Motherwood Interior grade MDF. Other sizes are supplied on special request.
+- Delivery: across Gujarat, including Saurashtra and Kutch (not Rajasthan). Regular stock reaches Rajkot sites in 4-6 hours and other Gujarat cities in 24-48 hours. Freight is quoted per order; free delivery on select orders.
+- Trade accounts: credit for registered contractors and firms after a first order and basic KYC; a dedicated account manager on orders over 500 sheets; pre-delivery inspection of bulk consignments; 6x6 inch and full-size samples for architect approval.
 - Last updated: 21 November 2026.
 
 ## Regular stock by grade
@@ -21,9 +23,10 @@
 - MR (semi-waterproof) plywood: Marllex, Zevik, Limelite, Limelite Pro, Greytone and unbranded, 6 to 18mm (6, 9, 12, 15, 18mm), sheets 6x3 to 8x4 ft.
 - 100% BWP (PF, phenol-bonded) plywood: Marllex PF, 6mm in 7x4 and 8x4 ft; 9, 12 and 18mm in 8x4 ft.
 - Flexible plywood: 6mm, 8x4 ft, Gurjan or hardwood mixed core.
-- Block board: Gurjan face on a pinewood core, 19 and 25mm, sheets 6x3 to 8x4 ft. Marllex A grade commercial (19, 25mm); Simson B grade MR (25mm).
+- Shuttering plywood: film-faced, densified, 12, 15 and 18mm (21mm to order).
+- Block board: Gurjan face on a pinewood core, 19 and 25mm, sheets 6x3 to 8x4 ft. Marllex A grade commercial (19, 25mm); Simson B grade MR (25mm). Poplar-core and BWP block board also in 19 and 25mm (30mm to order).
 - Flush doors: pinewood core, Gurjan face, 25, 30 and 35mm, 72 to 96 in high, 24 to 48 in wide. MR: Marllex 25mm, Simson and unbranded 25 and 30mm. 100% BWP: Marllex PF 30 and 35mm.
-- Motherwood MDF, all 8x4 ft: Exterior 3, 5.5, 7.3, 11, 17mm; Super HD+WR (HDHMR, above 850 kg/m3) 3, 5.5, 7.5, 11, 16.75, 18, 25mm; TerBo+ (Boilo grade, above 1050 kg/m3, termite proof and boiling water proof) 3, 5.5, 8, 12, 18mm. IS 12406.
+- Motherwood MDF, all 8x4 ft: Exterior 3, 5.5, 7.3, 11, 17mm; Super HD+WR (HDHMR, above 850 kg/m3) 3, 5.5, 7.5, 11, 16.75, 18, 25mm; TerBo+ (Boilo grade, above 1050 kg/m3, termite proof and boiling water proof) 3, 5.5, 8, 12, 18mm; Interior grade also held. IS 12406.
 - Not stocked: Simson plywood, Simson BWP doors, Zevik flush doors.
 
 ## Quick answers
@@ -83,7 +86,7 @@
 
 ## Optional
 
-- [Stock directory data](https://mahadev-traders.com/products.json): Every size held in regular stock with product type, thickness, size, face, core, grade and brand.
+- [Stock directory data](https://mahadev-traders.com/products.json): The 338 regular-stock lines of plywood, pinewood-core block board, flush doors and Motherwood MDF, with product type, thickness, size, face, core, grade and brand.
 - [XML sitemap](https://mahadev-traders.com/sitemap.xml): The canonical pages listed above.
 
 Older /services/*.html product mirrors and the misspelled /products/marlex-*.html pages have been removed; use the canonical URLs listed here.
