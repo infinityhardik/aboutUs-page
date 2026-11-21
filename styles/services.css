@@ -732,3 +732,22 @@
     -webkit-overflow-scrolling: touch;
   }
 }
+
+/* Lists and links inside the services copy: visible bullets, breathing room, and links
+   that look like links. */
+.service-intro ul {
+  list-style: disc;
+  padding-inline-start: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.service-intro li {
+  margin-bottom: 0.65rem;
+  line-height: 1.6;
+}
+
+.service-intro a {
+  color: var(--color-primary-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

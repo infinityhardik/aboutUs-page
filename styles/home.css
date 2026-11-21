@@ -1756,7 +1756,7 @@ ul.areas-grid {
 @media (max-width: 768px) {
   .home #grade-guide { contain-intrinsic-size: auto 1220px; }
   .home #why { contain-intrinsic-size: auto 1650px; }
-  .home #about { contain-intrinsic-size: auto 3000px; }
+  .home #about { contain-intrinsic-size: auto 3025px; }
   .home #brands { contain-intrinsic-size: auto 450px; }
   .home #faq { contain-intrinsic-size: auto 1335px; }
   .home #locations { contain-intrinsic-size: auto 1830px; }
