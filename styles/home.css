@@ -1746,9 +1746,9 @@ ul.areas-grid {
    each section's real height once it has rendered. Sizes are measured desktop/mobile. */
 .home #grade-guide { content-visibility: auto; contain-intrinsic-size: auto 850px; }
 .home #why { content-visibility: auto; contain-intrinsic-size: auto 970px; }
-.home #about { content-visibility: auto; contain-intrinsic-size: auto 1610px; }
+.home #about { content-visibility: auto; contain-intrinsic-size: auto 1660px; }
 .home #brands { content-visibility: auto; contain-intrinsic-size: auto 640px; }
-.home #faq { content-visibility: auto; contain-intrinsic-size: auto 1350px; }
+.home #faq { content-visibility: auto; contain-intrinsic-size: auto 1435px; }
 .home #locations { content-visibility: auto; contain-intrinsic-size: auto 1370px; }
 .home #contact { content-visibility: auto; contain-intrinsic-size: auto 720px; }
 .home .footer { content-visibility: auto; contain-intrinsic-size: auto 580px; }
@@ -1756,9 +1756,9 @@ ul.areas-grid {
 @media (max-width: 768px) {
   .home #grade-guide { contain-intrinsic-size: auto 1220px; }
   .home #why { contain-intrinsic-size: auto 1650px; }
-  .home #about { contain-intrinsic-size: auto 2870px; }
+  .home #about { contain-intrinsic-size: auto 3000px; }
   .home #brands { contain-intrinsic-size: auto 450px; }
-  .home #faq { contain-intrinsic-size: auto 1240px; }
+  .home #faq { contain-intrinsic-size: auto 1335px; }
   .home #locations { contain-intrinsic-size: auto 1830px; }
   .home #contact { contain-intrinsic-size: auto 1220px; }
   .home .footer { contain-intrinsic-size: auto 1630px; }
