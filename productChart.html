@@ -673,24 +673,26 @@
                 const container = document.getElementById('pagination');
                 container.replaceChildren();
                 if (totalPages <= 1) return;
-                const mk = (label, disabled, onClick, active) => {
+                const mk = (label, disabled, onClick, active, name) => {
                     const b = document.createElement('button');
+                    b.type = 'button';
                     b.innerHTML = label;
                     b.disabled = !!disabled;
-                    if (active) b.classList.add('active');
+                    if (name) b.setAttribute('aria-label', name);
+                    if (active) { b.classList.add('active'); b.setAttribute('aria-current', 'page'); }
                     b.addEventListener('click', onClick);
                     container.appendChild(b);
                 };
-                mk('<i class="fas fa-chevron-left"></i>', currentPage === 1,
-                   () => { currentPage--; render(); });
+                mk('<i class="fas fa-chevron-left" aria-hidden="true"></i>', currentPage === 1,
+                   () => { currentPage--; render(); }, false, 'Previous page');
                 let startPage = Math.max(1, currentPage - 2);
                 const endPage = Math.min(totalPages, startPage + 4);
                 if (endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
                 for (let i = startPage; i <= endPage; i++) {
-                    mk(String(i), false, () => { currentPage = i; render(); }, i === currentPage);
+                    mk(String(i), false, () => { currentPage = i; render(); }, i === currentPage, 'Page ' + i);
                 }
-                mk('<i class="fas fa-chevron-right"></i>', currentPage === totalPages,
-                   () => { currentPage++; render(); });
+                mk('<i class="fas fa-chevron-right" aria-hidden="true"></i>', currentPage === totalPages,
+                   () => { currentPage++; render(); }, false, 'Next page');
             }
 
             render();
