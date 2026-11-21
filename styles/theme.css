@@ -109,6 +109,20 @@
   --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Native UI (scrollbars, form controls, autofill, the page canvas) follows the theme.
+   Without JS the page tracks the OS; with JS, data-theme pins the scheme in use. */
+:root {
+  color-scheme: light dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
 /* Dark Theme.
    Applied three ways so every state resolves: an explicit choice via data-theme,
    the OS preference when no choice has been made, and the data-theme='light'

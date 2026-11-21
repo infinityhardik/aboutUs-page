@@ -7,6 +7,7 @@
   <meta name="description" content="Plywood, block board, flush door, MDF and laminate dealer on Gondal Road, Rajkot since 1995. Marllex, Motherwood and more. No minimum order; call for rates." />
   <link rel="canonical" href="https://mahadev-traders.com/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="color-scheme" content="light dark" />
   <script>
     /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
     (function () {
@@ -16,10 +17,13 @@
         if (t !== 'light' && t !== 'dark') {
           t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-        document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        t = 'dark';
       }
+      document.documentElement.setAttribute('data-theme', t);
+      /* Native UI (scrollbars, form controls, the canvas before CSS loads) follows the same scheme. */
+      var m = document.querySelector('meta[name="color-scheme"]');
+      if (m) m.content = t;
     })();
   </script>
   <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
@@ -31,8 +35,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/home.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
   <meta name="geo.position" content="22.2594209;70.7999294" />
@@ -429,6 +433,21 @@
           <a href="#contact" class="btn-primary">Visit or Call Us</a>
         </div>
       </div>
+      <section class="key-facts about-facts" aria-labelledby="about-facts-title">
+        <h3 id="about-facts-title">Mahadev Traders at a glance</h3>
+        <dl>
+          <div><dt>What we do</dt><dd>Plywood, block board, flush door, MDF, HDHMR and laminate dealer and wholesaler, selling to the trade and to home owners.</dd></div>
+          <div><dt>Since</dt><dd>1995, on Gondal Road, Rajkot.</dd></div>
+          <div><dt>Office</dt><dd>Gondal Road, near S.T. Workshop, Panchsheel Park, Samrat Industrial Area, Rajkot, Gujarat 360004.</dd></div>
+          <div><dt>Warehouse</dt><dd>Near Mavani Engineering Works, near Poojara Telecom, in the same Samrat Industrial Area.</dd></div>
+          <div><dt>Hours</dt><dd>Monday to Saturday 9:00 am to 7:30 pm; Sunday 9:00 am to 12:00 pm.</dd></div>
+          <div><dt>Brands</dt><dd>Authorised Motherwood MDF dealer; Marllex, Simson, Zevik, Limelite and Greytone plywood, block board and flush doors; Action Tesa, Century, Vir, Greenply, Greenlam and E3 MDF.</dd></div>
+          <div><dt>Regular stock</dt><dd>338 plywood, block board, flush door and MDF lines, listed on the <a href="/productChart.html">spec chart</a>.</dd></div>
+          <div><dt>Minimum order</dt><dd>None. One sheet or one door is a normal order.</dd></div>
+          <div><dt>Delivery</dt><dd>Rajkot, Saurashtra, Kutch and the rest of Gujarat; freight is quoted with each order.</dd></div>
+          <div><dt>Contact</dt><dd><a href="tel:+916355360702">+91 6355 360702</a> (call or WhatsApp) &middot; <a href="mailto:mahadevtraders@hotmail.com">mahadevtraders@hotmail.com</a></dd></div>
+        </dl>
+      </section>
     </div>
   </section>
 
@@ -499,143 +518,93 @@
         <h2>Frequently Asked Questions</h2>
       </div>
       <div class="accordion reveal">
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">
-              <span>Where is Mahadev Traders in Rajkot, and when are you open?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
+        <details class="accordion-item" id="faq-1">
+          <summary class="accordion-header"><span>Where is Mahadev Traders in Rajkot, and when are you open?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>Our office is on Gondal Road near the S.T. Workshop, in Panchsheel Park, Samrat Industrial Area, Rajkot
               360004. The warehouse is a few minutes away in the same area, near Mavani Engineering Works and Poojara
               Telecom. We are open Monday to Saturday from 9:00 am to
               7:30 pm and on Sunday from 9:00 am to 12:00 pm. Call <a href="tel:+916355360702">+91 6355 360702</a> before
               you come if you want a particular size kept aside.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
-              <span>Do you sell to home owners, or only to the trade?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
+        </details>
+        <details class="accordion-item" id="faq-2">
+          <summary class="accordion-header"><span>Do you sell to home owners, or only to the trade?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>Both. There is no minimum order: one sheet, one door or a full truck load are all normal orders. Carpenters
               and contractors buying regularly get trade rates, and a home owner can take a single sheet to check it
               against the job before ordering the rest.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
-              <span>Which plywood should I use for a kitchen?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
+        </details>
+        <details class="accordion-item" id="faq-3">
+          <summary class="accordion-header"><span>Which plywood should I use for a kitchen?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>Use 100% BWP <a href="/products/marine-plywood-710-rajkot.html">marine plywood to IS 710</a> for base
               cabinets, the sink unit and anything that will see water or steam. <a href="/products/commercial-plywood-mr-grade.html">MR
               grade plywood</a> is fine for dry wardrobes, beds and TV units. For carcasses 18mm is the working thickness,
               and 6mm is enough for back panels.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">
-              <span>What is the difference between BWP and BWR plywood?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
+        </details>
+        <details class="accordion-item" id="faq-4">
+          <summary class="accordion-header"><span>What is the difference between BWP and BWR plywood?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>BWP (Boiling Water Proof) is the higher grade. BWP plywood is bonded to withstand prolonged exposure to
               water and is the grade for kitchens and bathrooms, while BWR (Boiling Water Resistant) suits areas with only
               mild humidity. We supply <a href="/products/marine-plywood-710-rajkot.html">BWP marine plywood</a> and
               <a href="/products/waterproof-flush-doors-bwp.html">BWP flush doors</a> for wet areas.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-5" aria-expanded="false" aria-controls="faq-answer-5">
-              <span>What is MDF and how is it different from plywood?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
+        </details>
+        <details class="accordion-item" id="faq-5">
+          <summary class="accordion-header"><span>What is MDF and how is it different from plywood?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>MDF (Medium Density Fibreboard) is made from wood fibres bonded with resin under heat and pressure. Unlike
               plywood it has a smooth, uniform surface with no grain or knots, which makes it ideal for painting, routing
               and precision shutters, while plywood is stronger for load-bearing carcasses. Motherwood grades run, from
               entry to top: Interior, Exterior, Super HD+WR (HDHMR) and TerBo+. Compare them on the
               <a href="/products/motherwood-mdf-rajkot.html">Motherwood MDF page</a>.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-6" aria-expanded="false" aria-controls="faq-answer-6">
-              <span>What is HDHMR, and what is Super HD+WR?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
+        </details>
+        <details class="accordion-item" id="faq-6">
+          <summary class="accordion-header"><span>What is HDHMR, and what is Super HD+WR?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>HDHMR stands for High Density High Moisture Resistant board, a denser, more moisture-resistant category of
               fibreboard. Motherwood's <a href="/products/motherwood-mdf-super-hd-wr.html">Super HD+WR</a> is an HDHMR-grade
               board, stocked in 3, 5.5, 7.5, 11, 16.75, 18 and 25mm (8x4 ft), and suits kitchen shutters, bathroom vanities
               and humid interiors. See <a href="/products/hdhmr-board-supplier-rajkot.html">HDHMR boards</a> for how it
               compares with plywood.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-7" aria-expanded="false" aria-controls="faq-answer-7">
-              <span>What is TerBo+ MDF, and what does Boilo mean?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" hidden>
+        </details>
+        <details class="accordion-item" id="faq-7">
+          <summary class="accordion-header"><span>What is TerBo+ MDF, and what does Boilo mean?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p><a href="/products/motherwood-mdf-turbo-plus.html">TerBo+</a> is Motherwood's highest-density MDF, stocked in 3, 5.5, 8, 12 and 18mm. Its name spells out what it does: termite proof and boiling water proof. Boilo is the general trade name for the highest-density grade of MDF, and TerBo+ is Motherwood's board in that grade, which is why it is used for CNC-profiled shutters and demanding, humid positions.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-8" aria-expanded="false" aria-controls="faq-answer-8">
-              <span>What flush door sizes do you stock?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" hidden>
+        </details>
+        <details class="accordion-item" id="faq-8">
+          <summary class="accordion-header"><span>What flush door sizes do you stock?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p><a href="/products/flush-doors-manufacturer-supplier.html">Flush doors</a> in 25, 30 and 35mm thickness, in
               heights from 72 to 96 inches and widths from 24 to 48 inches. MR grade doors suit bedrooms and other dry
               rooms; 100% BWP doors are for bathrooms and wet areas. Stock is from Marllex and Simson.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-9" aria-expanded="false" aria-controls="faq-answer-9">
-              <span>Do you deliver outside Rajkot?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-9" role="region" aria-labelledby="faq-question-9" hidden>
+        </details>
+        <details class="accordion-item" id="faq-9">
+          <summary class="accordion-header"><span>Do you deliver outside Rajkot?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>Yes. We dispatch from our Gondal Road warehouse to Morbi, Jamnagar, Junagadh, Ahmedabad, Surat, Vadodara and
               across Gujarat. Freight depends on the route, the load and the timing, so it is quoted with the order; free
               delivery is available on select orders.</p>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h3 class="accordion-title">
-            <button class="accordion-header" type="button" id="faq-question-10" aria-expanded="false" aria-controls="faq-answer-10">
-              <span>How do I get current rates and place an order?</span>
-              <span class="arrow"><i class="fas fa-chevron-down" aria-hidden="true"></i></span>
-            </button>
-          </h3>
-          <div class="accordion-body" id="faq-answer-10" role="region" aria-labelledby="faq-question-10" hidden>
+        </details>
+        <details class="accordion-item" id="faq-10">
+          <summary class="accordion-header"><span>How do I get current rates and place an order?</span><span class="arrow" aria-hidden="true"><i class="fas fa-chevron-down"></i></span></summary>
+          <div class="accordion-body">
             <p>Call <a href="tel:+916355360702">+91 6355 360702</a> or send a <a href="https://wa.me/916355360702" target="_blank" rel="noopener">WhatsApp
               message</a> with the thickness, grade, quantity and delivery point, and you get the current rate for that
               order. Trade buyers can also order through <a href="https://vaives.com" target="_blank" rel="noopener">Vaives.com</a>.
               For a budget before you ask, see the <a href="/productChart.html">rate guide and spec chart</a>.</p>
           </div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -1073,7 +1042,7 @@
         "width": 1200,
         "height": 630
       },
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "about": {
         "@id": "https://mahadev-traders.com/#business"
       }
@@ -1170,7 +1139,21 @@
   ]
 }
   </script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*.json" } },
+          { "not": { "href_matches": "/*.txt" } },
+          { "not": { "href_matches": "/*.xml" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </body>
 
 </html>
-

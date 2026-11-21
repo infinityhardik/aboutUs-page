@@ -7,6 +7,7 @@
   <meta name="description" content="Compare plywood, block board, laminate, flush door and MDF grades in one table, then get current 2026 wholesale rates by WhatsApp. No minimum order." />
   <link rel="canonical" href="https://mahadev-traders.com/productChart.html" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="color-scheme" content="light dark" />
   <script>
     /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
     (function () {
@@ -16,10 +17,13 @@
         if (t !== 'light' && t !== 'dark') {
           t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-        document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        t = 'dark';
       }
+      document.documentElement.setAttribute('data-theme', t);
+      /* Native UI (scrollbars, form controls, the canvas before CSS loads) follows the same scheme. */
+      var m = document.querySelector('meta[name="color-scheme"]');
+      if (m) m.content = t;
     })();
   </script>
   <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
@@ -31,8 +35,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/productChart.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
   <meta name="geo.position" content="22.2594209;70.7999294" />
@@ -98,10 +102,9 @@
     <section class="chart-section">
         <div class="container">
             <div class="chart-intro">
-                <div class="seo-trust-note" style="margin:1rem 0;padding:.85rem 1rem;border:1px solid rgba(197, 143, 89,.18);border-radius:8px;background:var(--color-bg-surface);"><p style="margin:0;color:var(--color-text-muted);font-size:.95rem;"><strong>Curated by Mahadev Traders</strong> — wholesale plywood dealers in Rajkot since 1995. Last reviewed: May 16, 2026. Product availability, thickness options, and wholesale rates are verified from the Rajkot warehouse before every bulk quote.</p></div>
 
     <div class="specs-section" id="how-pricing-works">
-      <h3>&#128176; How Pricing Works Here</h3>
+      <h2>How Pricing Works Here</h2>
       <p>If you came looking for a rupee figure, here is the honest answer up front: <strong>we do not publish fixed
         per-sheet prices, because they would not stay true.</strong> The rate for a single sheet
         moves with the brand, the thickness, the grade, the batch currently in the warehouse, how much you are
@@ -111,7 +114,7 @@
         the phone, and you get the current best rate for that exact order &mdash; usually the same day. That is a real
         quote for your job; the bands below are only for sizing a budget before you ask.</p>
 
-      <h3 id="rate-guide">&#8377; Indicative Rate Bands</h3>
+      <h2 id="rate-guide">&#8377; Indicative Rate Bands</h2>
       <p>If you are sizing a budget before you enquire, these are the broad reference bands we work within, quoted
         per square foot. They are wide on purpose: each one spans the thinnest commercial board through to the
         heaviest premium grade, so they are a sanity check on a budget, not a quotation.</p>
@@ -667,7 +670,7 @@
 
             function renderPagination(totalPages) {
                 const container = document.getElementById('pagination');
-                container.innerHTML = '';
+                container.replaceChildren();
                 if (totalPages <= 1) return;
                 const mk = (label, disabled, onClick, active) => {
                     const b = document.createElement('button');
@@ -714,7 +717,7 @@
         "width": 1200,
         "height": 630
       },
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "breadcrumb": {
         "@id": "https://mahadev-traders.com/productChart.html#breadcrumb"
       },
@@ -728,7 +731,7 @@
       "name": "Mahadev Traders stock directory: plywood, block board, flush door and MDF sizes",
       "description": "Every size held by Mahadev Traders, Rajkot: 338 plywood, block board, flush door and MDF lines with thickness, sheet or door size, face, core, bonding grade and brand. Published as an HTML table and as JSON. Updated September 2026.",
       "url": "https://mahadev-traders.com/productChart.html",
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "creator": {
         "@id": "https://mahadev-traders.com/#business"
       },
@@ -795,6 +798,21 @@
     }
   ]
 }
+  </script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*.json" } },
+          { "not": { "href_matches": "/*.txt" } },
+          { "not": { "href_matches": "/*.xml" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }]
+  }
   </script>
 </body>
 

@@ -7,6 +7,7 @@
   <meta name="description" content="Grade advice before ordering, batch-matched bulk supply, tender documents and scheduled site delivery for trade buyers in Rajkot and Saurashtra." />
   <link rel="canonical" href="https://mahadev-traders.com/services/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="color-scheme" content="light dark" />
   <script>
     /* Resolve the theme before first paint (mirrors scripts/theme.js): saved choice, else OS, else dark. */
     (function () {
@@ -16,10 +17,13 @@
         if (t !== 'light' && t !== 'dark') {
           t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
         }
-        document.documentElement.setAttribute('data-theme', t);
       } catch (e) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        t = 'dark';
       }
+      document.documentElement.setAttribute('data-theme', t);
+      /* Native UI (scrollbars, form controls, the canvas before CSS loads) follows the same scheme. */
+      var m = document.querySelector('meta[name="color-scheme"]');
+      if (m) m.content = t;
     })();
   </script>
   <meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
@@ -31,8 +35,8 @@
   <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/services.css" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   <meta name="geo.region" content="IN-GJ" />
   <meta name="geo.placename" content="Rajkot" />
   <meta name="geo.position" content="22.2594209;70.7999294" />
@@ -95,7 +99,7 @@
     </section>
     <section class="service-content">
       <div class="service-intro">
-        <h2>&#127981; Buying Panels Is the Easy Part</h2>
+        <h2>Buying Panels Is the Easy Part</h2>
         <p>Mahadev Traders has supplied plywood, block board, laminates, flush doors and MDF from Gondal Road,
           Rajkot since 1995. Most of what a contractor or furniture manufacturer actually needs from a wholesaler
           is not the sheet &mdash; it is getting the right grade specified, the right quantity on site on the right
@@ -106,7 +110,7 @@
       </div>
 
       <div class="specs-section">
-        <h3>&#128203; Grade &amp; Specification Advice Before You Order</h3>
+        <h3>Grade &amp; Specification Advice Before You Order</h3>
         <p>The most expensive mistake in panel buying is specifying by thickness and price alone. A sink cabinet
           built from an interior-grade board fails within a season; a dry wardrobe built from BWP costs more than it
           needed to. Send us the room, the moisture exposure, the hardware load and the finish, and we will tell you
@@ -167,7 +171,7 @@
       </div>
 
       <div class="specs-section">
-        <h3>&#128230; What We Stock</h3>
+        <h3>What We Stock</h3>
         <p>All specifications, thickness options and grade comparisons live in the product catalogue:</p>
         <div class="quick-links-grid">
           <a href="/products/plywood-wholesaler-rajkot.html" class="quick-link"><i class="fas fa-cubes"></i><span>Plywood</span></a>
@@ -181,7 +185,7 @@
       </div>
 
             <div class="specs-section" id="ordering">
-        <h3>&#128230; Minimum Order &amp; How We Quote</h3>
+        <h3>Minimum Order &amp; How We Quote</h3>
         <p><strong>There is no minimum order quantity.</strong> A single sheet or door is a perfectly normal order.
           That matters on a project: you can take one piece of a grade you have not used before, test it against your
           own work, and only then place the bulk order.</p>
@@ -196,7 +200,7 @@
         one go.</p>
     </div>
       <div class="whatsapp-cta-section">
-        <h3>&#128172; Send Us the Job, Not Just a Thickness</h3>
+        <h3>Send Us the Job, Not Just a Thickness</h3>
         <p>Message the room, quantity, finish and delivery date. You will get a grade recommendation with the quote.</p>
         <a href="https://wa.me/916355360702?text=Hi%2C%20I%20need%20supply%20support%20for%20a%20project"
           class="whatsapp-btn" target="_blank" rel="noopener">
@@ -303,7 +307,7 @@
         "width": 1200,
         "height": 630
       },
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-11-21",
       "breadcrumb": {
         "@id": "https://mahadev-traders.com/services/#breadcrumb"
       },
@@ -463,7 +467,21 @@
   ]
 }
   </script>
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {
+        "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": "/*.json" } },
+          { "not": { "href_matches": "/*.txt" } },
+          { "not": { "href_matches": "/*.xml" } }
+        ]
+      },
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
 </body>
 
 </html>
-

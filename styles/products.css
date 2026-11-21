@@ -1292,7 +1292,7 @@ table td:first-child, .specs-table td:first-child {
   transition: border-color 0.3s ease;
 }
 
-.faq-item.active {
+.faq-item[open] {
   border-color: var(--color-primary);
 }
 
@@ -1302,16 +1302,16 @@ table td:first-child, .specs-table td:first-child {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: transparent;
-  border: none;
-  width: 100%;
-  text-align: left;
+  list-style: none;
   color: var(--color-primary-text);
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.2s ease;
-  font-family: inherit;
+  transition: background-color 0.2s ease;
   gap: 1rem;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
 }
 
 .faq-question:hover,
@@ -1330,27 +1330,34 @@ table td:first-child, .specs-table td:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: rotate 0.3s ease;
   flex-shrink: 0;
 }
 
-.faq-item.active .faq-icon {
-  transform: rotate(180deg);
+.faq-item[open] .faq-icon {
+  rotate: 180deg;
 }
 
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background: rgba(var(--color-primary-rgb), 0.03);
+/* Closed <details> content is hidden with content-visibility, not display: none, so it
+   stays findable by find-in-page and by #:~:text= links. Animate its block size between
+   0 and auto (interpolate-size) instead of the old max-height trick. */
+.faq-item::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
 }
 
-.faq-answer[hidden] {
-  display: none;
+.faq-item:not([open])::details-content {
+  block-size: 0;
 }
 
-.faq-item.active .faq-answer {
-  max-height: none;
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item::details-content {
+    transition: block-size, content-visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
 }
 
 .faq-answer-content {
@@ -1359,6 +1366,7 @@ table td:first-child, .specs-table td:first-child {
   line-height: 1.7;
   font-size: 0.95rem;
   overflow-wrap: anywhere;
+  background: rgba(var(--color-primary-rgb), 0.03);
 }
 
 .faq-answer-content a {
@@ -1372,7 +1380,7 @@ table td:first-child, .specs-table td:first-child {
   border-color: var(--color-border-glow);
 }
 
-[data-theme='dark'] .faq-item.active {
+[data-theme='dark'] .faq-item[open] {
   border-color: var(--color-primary);
 }
 
@@ -1380,12 +1388,9 @@ table td:first-child, .specs-table td:first-child {
   background: rgba(var(--color-primary-rgb), 0.1);
 }
 
-[data-theme='dark'] .faq-answer {
-  background: rgba(var(--color-primary-rgb), 0.06);
-}
-
 [data-theme='dark'] .faq-answer-content {
   color: #d1d5db;
+  background: rgba(var(--color-primary-rgb), 0.06);
 }
 
 /* Responsive FAQ */
