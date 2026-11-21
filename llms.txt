@@ -16,7 +16,7 @@
 - Pricing: firm rates are quoted per enquiry by phone or WhatsApp; indicative per-square-foot bands for budgeting are on the rate guide. Freight is quoted with each order; free delivery is available on select orders.
 - Regular stock: the 338 plywood, block board, flush door and Motherwood MDF lines listed on the specification chart and in products.json, plus poplar-core and BWP block board, shuttering plywood and Motherwood Interior grade MDF. Other sizes are supplied on special request.
 - Delivery: across Gujarat, including Saurashtra and Kutch (not Rajasthan). Regular stock reaches Rajkot sites in 4-6 hours and other Gujarat cities in 24-48 hours. Freight is quoted per order; free delivery on select orders.
-- Trade accounts: credit for registered contractors and firms after a first order and basic KYC; a dedicated account manager on orders over 500 sheets; pre-delivery inspection of bulk consignments; 6x6 inch and full-size samples for architect approval.
+- Trade accounts (details: https://mahadev-traders.com/services/): credit for registered contractors and firms after a first order and basic KYC; a dedicated account manager on orders over 500 sheets; pre-delivery inspection of bulk consignments; 6x6 inch and full-size samples for architect approval.
 - Last updated: 21 November 2026.
 
 ## Regular stock by grade
@@ -47,7 +47,7 @@
 - [Plywood, Block Board & Flush Doors in Rajkot | Mahadev Traders](https://mahadev-traders.com/): Authorised Marllex, Motherwood & Simson dealer on Gondal Road, Rajkot since 1995: plywood, block board, flush doors, MDF, laminates. No minimum order.
 - [Plywood, Block Board, Flush Door & MDF Catalogue | Rajkot](https://mahadev-traders.com/products/): Every board we stock in five ranges: plywood, block board, laminates, flush doors and MDF/HDHMR. Thicknesses, grades and trade rates for Rajkot buyers.
 - [Plywood Rates in Rajkot 2026 | Price Guide & Spec Chart](https://mahadev-traders.com/productChart.html): Compare plywood, block board, laminate, flush door and MDF grades in one table, then get current 2026 wholesale rates by WhatsApp. No minimum order.
-- [Trade Supply Services, Rajkot | Mahadev Traders](https://mahadev-traders.com/services/): Grade advice before ordering, batch-matched bulk supply, tender documents and scheduled site delivery for trade buyers in Rajkot and Saurashtra.
+- [Bulk Plywood, Door & MDF Supply for Contractors, Rajkot](https://mahadev-traders.com/services/): Bulk supply from Rajkot for builders, contractors, interior firms and furniture factories: credit after KYC, samples, inspection and 24–48 hour delivery.
 
 ## Range pages
 
